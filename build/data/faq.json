@@ -1,0 +1,93 @@
+{
+    "faq-ari-1": {
+        "q": "Does Arien’s attack require a hero behind the target?",
+        "a": "No, this effect says \"**Up to** 1 enemy hero\"",
+        "ref": [
+            "ari-r-ii-violent-torrent",
+            "ari-r-iii-raging-waters"
+        ]
+    },
+    "faq-ari-2": {
+        "q": "Do Arien’s Waveform & Arcane Swap perform movement?",
+        "a": "No. The Primary Green **places** Arien, the Alt Green **swaps**. These are not movement and are not restricted by effects that restrict movement.",
+        "ref": [
+            "ari-g-ii-waveform",
+            "ari-g-iii-waveform-upgrade",
+            "ari-g-ii-arcane-swap",
+            "ari-g-iii-arcane-swap-upgrade"
+        ]
+    },
+    "faq-ari-3": {
+        "q": "What does Arien's Slippery Ground restrict?",
+        "a": "This card restricts the movement, by a movement action, of Heroes in radius. It will not affect pushing, swapping, or placement effects (including fast travel!). It also will not restrict movement as part of other actions (such as Brogan’s Primary Red or Tigerclaw’s Primary Green). Additionally, because movement restrictions are checked at the beginning of a movement, a Hero can freely move into and through the radius of Arien’s effect without being affected.",
+        "ref": [
+            "ari-b-ii-slippery-ground",
+            "ari-b-iii-slippery-upgrade"
+        ]
+    },
+    "faq-dod-1": {
+        "q": "What is an “empty minion spawn point in the battle zone”?",
+        "a": "Dodger’s magic (thematically) grows stronger as minions are defeated. Many of her cards check for “empty minion spawn points in the battle zone.” These are the minion spawn points printed on the board, but only the ones in the current battle zone — there is only 1 battle zone (2, on the 2-lane map). Only empty spaces (with **nothing** on them) are counted.",
+        "ref": [
+            "dod-y-xxx",
+            "dod-y-h-xxx",
+            "dod-s-xxx"
+        ]
+    },
+    "faq-dod-2": {
+        "q": "What minions can Dodger respawn with her Necromancy?",
+        "a": "She can return a friendly defeated/removed minion of any type to any spawn point. \n- It need not be a matching minion type or color: if her friendly ranged minion is defeated, Dodger could respawn it on an enemy melee minion spawn point. \n- It must be a minion that was originally in play in this wave, before being defeated or removed. Dodger cannot “respawn” a minion that was not originally in play at the start of the wave.\n - She must respawn a minion directly onto a spawn point. She cannot respawn the minion on a space adjacent to the spawn point. Note that this is different than respawning minions after the lane pushes.",
+        "ref": [
+            "dod-y-xxx",
+            "dod-s-xxx",
+            "dod-g-ii-xxx",
+            "dod-g-iii-xxx"
+        ]
+    },
+    "faq-tig-1": {
+        "q": "Does Tigerclaw’s Blink Strike attack require movement?",
+        "a": "Yes! If Tigerclaw cannot move through the target in a straight line, the effect will “fizzle” — stop resolving — and he will not attack. A crafty opponent can anticipate and deny this attack with clever positioning.",
+        "ref": [
+            "tig-y-blink-strike",
+            "tig-y-h-blink-strike"
+        ]
+    },
+    "faq-tig-2": {
+        "q": "How does Tiger’s Silver (Blend into Shadows) activate?",
+        "a": "Tiger must begin his turn adjacent to an obstacle (including any unit), then place himself into a space in radius that is not adjacent to an enemy unit. If he does so, he will be immune and can move through units during the next turn. Remember that immunity means he cannot be targeted or affected by any action, can move through tokens (not stop movement on them), and may ignore token effects.",
+        "ref": [
+            "tig-rsq-xxx"
+        ]
+    },
+    "faq-tig-3": {
+        "q": "Does Tigerclaw’s Primary Green (Light-Fingered) require an enemy hero?",
+        "a": "Yes, to perform it completely. After Tigerclaw performs the first movement on the card, it checks for an adjacent enemy hero to steal from. If there is no adjacent enemy hero, the card “fizzles” — stops resolving — and he will not make the final movement. In this case, it is usually better to simply play the card for its movement.\n - Note that Tiger can move next to an enemy hero with no coins (or whom he chooses not to rob) in order to get the full movement.\n - If Tigerclaw is not able to move 2 spaces in a straight line, he will not make the final movement at all.\n - There are cases where performing Primary Green without an enemy hero is still advantageous, such as if other effects restrict movement actions (such as Arien’s Alt Blue or Xargatha’s Primary Blue) or other effects will reward him for performing a skill action.",
+        "ref": [
+            "tig-rsq-xxx"
+        ]
+    },
+    "faq-tig-4": {
+        "q": "What happens if Tigerclaw’s Alt Green (Poison Dagger) reduces a value below 1?",
+        "a": "Values can drop to 0 and even be negative:\n- Initiative values are resolved in the normal order from highest to lowest.\n- Negative defense values are calculated normally and may still block an attack if the Defense Total is greater than or equal to the Attack Total.\n- Negative Attack Totals will still defeat a Minion and must still be defended against (or will defeat the hero).",
+        "ref": [
+            "tig-rsq-xxx"
+        ]
+    },
+    "faq-xar-1": {
+        "q": "What does Xargatha's Stone Gaze affect and not affect?",
+        "a": "It prevents “movement actions”, that is, selecting the movement option when resolving a card:\n - They can’t use a normal movement action to move.\n - They can’t use a movement action to fast travel (which chooses, then replaces, a movement action).\n - They can use a “place” or “swap” effect (such as Arien’s Alt Blue).\n - The can be pushed or moved by another effect (if the effect ignores immunity).\n - They can take another action type that involves movement (such as Brogan’s Primary Red) or a Fast Travel (Silverarrow’s Gold).",
+        "ref": [
+            "xar-b-i-stone-gaze",
+            "xar-b-ii-petrifying-stare",
+            "xar-b-iii-turn-into-statues"
+        ]
+    },
+    "faq-xar-2": {
+        "q": "Does Xargatha's Constrict affect heavy minions as well?",
+        "a": "No. Initially you can only kill **melee** minions, but on Tier 3 you can get melee or ranged minions, but never the heavy minion.",
+        "ref": [
+            "xar-g-ii-constrict",
+            "xar-g-iii-final-embrace"
+        ]
+    }
+}

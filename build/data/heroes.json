@@ -1,0 +1,259 @@
+[
+    {
+        "id": "ari",
+        "name": "Arien",
+        "icon": "/hero/arien.png",
+        "expansion": "core",
+        "complexity": 1,
+        "roles": ["Tactician", "Disabler", "Durable", "Pusher"]
+    },
+    {
+        "id": "bro",
+        "name": "Brogan",
+        "icon": "/hero/brogan.png",
+        "expansion": "core",
+        "complexity": 1,
+        "roles": ["Durable", "Disabler", "Pusher", "Farming"]
+    },
+    {
+        "id": "tig",
+        "name": "Tigerclaw",
+        "icon": "/hero/tigerclaw2.png",
+        "expansion": "core",
+        "complexity": 1,
+        "roles": ["Melee", "Disabler", "Farming"]
+    },
+    {
+        "id": "was",
+        "name": "Wasp",
+        "icon": "/hero/wasp.png",
+        "expansion": "core",
+        "complexity": 1,
+        "roles": ["Disabler", "Tactician", "Sniper"]
+    },
+    {
+        "id": "sab",
+        "name": "Sabina",
+        "icon": "/hero/sabina.png",
+        "expansion": "core",
+        "complexity": 1,
+        "roles": ["Tactician", "Pusher"]
+    },
+    {
+        "id": "xar",
+        "name": "Xargatha",
+        "icon": "/hero/xargatha.png",
+        "expansion": "core",
+        "complexity": 1,
+        "roles": ["Tactician", "Pusher", "Disabler", "Durable", "Sniper"],
+        "cards": "cards/xargatha.json"
+    },
+    {
+        "id": "dod",
+        "name": "Dodger",
+        "icon": "/hero/dodger.png",
+        "expansion": "core",
+        "complexity": 1,
+        "roles": ["Damager", "Sniper", "Pusher", "Farming", "Disabler"]
+    },
+    {
+        "id": "row",
+        "name": "Rowenna",
+        "icon": "/hero/rowenna.png",
+        "expansion": "arcane",
+        "complexity": 2,
+        "roles": ["Melee", "Durable", "Healer", "Farming", "Pusher", "Tactician"]
+    },
+    {
+        "id": "gar",
+        "name": "Garrus",
+        "icon": "/hero/garrus.png",
+        "expansion": "defiant",
+        "complexity": 2,
+        "roles": ["Disabler", "Durable", "Tactician"]
+    },
+    {
+        "id": "bai",
+        "name": "Bain",
+        "icon": "/hero/bain.png",
+        "expansion": "defiant",
+        "complexity": 2,
+        "roles": ["Tactician", "Sniper", "Healer", "Farming", "Durable"]
+    },
+    {
+        "id": "whi",
+        "name": "Whisper",
+        "icon": "/hero/whisper.png",
+        "expansion": "devoted",
+        "complexity": 2,
+        "roles": ["Damager", "Durable", "Tactician", "Pusher"]
+    },
+    {
+        "id": "mis",
+        "name": "Misa",
+        "icon": "/hero/misa.png",
+        "expansion": "devoted",
+        "complexity": 2,
+        "roles": ["Tactician", "Durable", "Damager"]
+    },
+    {
+        "id": "urs",
+        "name": "Ursafar",
+        "icon": "/hero/ursafar.png",
+        "expansion": "devoted",
+        "complexity": 2,
+        "roles": ["Durable", "Pusher", "Farming", "Melee"]
+    },
+    {
+        "id": "sil",
+        "name": "Silverarrow",
+        "icon": "/hero/silverarrow.png",
+        "expansion": "devoted",
+        "complexity": 2,
+        "roles": ["Sniper", "Damager", "Disabler", "Healer", "Farming"]
+    },
+    {
+        "id": "min",
+        "name": "Min",
+        "icon": "/hero/min.png",
+        "expansion": "renowned",
+        "complexity": 2,
+        "roles": ["Tokens", "Disabler", "Damager", "Melee"]
+    },
+    {
+        "id": "mra",
+        "name": "Mrak",
+        "icon": "/hero/mrak.png",
+        "expansion": "arcane",
+        "complexity": 3,
+        "roles": ["Melee", "Tokens", "Durable", "Disabler", "Tactician"]
+    },
+    {
+        "id": "cut",
+        "name": "Cutter",
+        "icon": "/hero/cutter.png",
+        "expansion": "defiant",
+        "complexity": 3,
+        "roles": ["Tactician", "Disabler", "Farming"]
+    },
+    {
+        "id": "tri",
+        "name": "Trinkets",
+        "icon": "/hero/trinkets.png",
+        "expansion": "defiant",
+        "complexity": 3,
+        "roles": ["Sniper", "Damager", "Pusher"]
+    },
+    {
+        "id": "tal",
+        "name": "Tali",
+        "icon": "/hero/tali.png",
+        "expansion": "devoted",
+        "complexity": 3,
+        "roles": ["Damager", "Pusher", "Healer", "Durable", "Tokens"]
+    },
+    {
+        "id": "swi",
+        "name": "Swift",
+        "icon": "/hero/swift.png",
+        "expansion": "renowned",
+        "complexity": 3,
+        "roles": ["Sniper", "Farming", "Tactician"]
+    },
+    {
+        "id": "wuk",
+        "name": "Wuk",
+        "icon": "/hero/wuk.png",
+        "expansion": "renowned",
+        "complexity": 3,
+        "roles": ["Tokens", "Pusher", "Durable", "Sniper", "Tactician", "Healer"]
+    },
+    {
+        "id": "han",
+        "name": "Hanu",
+        "icon": "/hero/hanu.png",
+        "expansion": "renowned",
+        "complexity": 3,
+        "roles": ["Tactician", "Sniper", "Pusher"]
+    },
+    {
+        "id": "bry",
+        "name": "Brynn",
+        "icon": "/hero/brynn.png",
+        "expansion": "wayward",
+        "complexity": 3,
+        "roles": ["Tactician", "Damager", "Durable"]
+    },
+    {
+        "id": "mor",
+        "name": "Mortimer",
+        "icon": "/hero/mortimer.png",
+        "expansion": "wayward",
+        "complexity": 3,
+        "roles": ["Melee", "Tokens", "Farming", "Durable", "Pusher"]
+    },
+    {
+        "id": "wid",
+        "name": "Widget & Pyro",
+        "icon": "/hero/widget.png",
+        "expansion": "wayward",
+        "complexity": 3,
+        "roles": ["Melee", "Tokens", "Damager"]
+    },
+    {
+        "id": "sno",
+        "name": "Snorri",
+        "icon": "/hero/snorri.png",
+        "expansion": "arcane",
+        "complexity": 4,
+        "roles": ["Sniper", "Farming", "Durable", "Damager", "Pusher", "Healer"]
+    },
+    {
+        "id": "raz",
+        "name": "Razzle",
+        "icon": "/hero/razzle.png",
+        "expansion": "arcane",
+        "complexity": 4,
+        "roles": ["Tactician", "Melee"]
+    },
+    {
+        "id": "gyd",
+        "name": "Gydion",
+        "icon": "/hero/gydion.png",
+        "expansion": "arcane",
+        "complexity": 4,
+        "roles": ["Sniper", "Tactician", "Farming", "Damager", "Pusher", "Tokens"]
+    },
+    {
+        "id": "neb",
+        "name": "Nebkher",
+        "icon": "/hero/nebkher.png",
+        "expansion": "defiant",
+        "complexity": 4,
+        "roles": ["Disabler", "Tokens", "Sniper"]
+    },
+    {
+        "id": "ign",
+        "name": "Ignatia",
+        "icon": "/hero/ignatia.png",
+        "expansion": "renowned",
+        "complexity": 4,
+        "roles": ["Sniper", "Damager", "Tokens", "Tactician", "Pusher"]
+    },
+    {
+        "id": "tak",
+        "name": "Takahide",
+        "icon": "/hero/takahide.png",
+        "expansion": "wayward",
+        "complexity": 4,
+        "roles": ["Durable", "Sniper", "Tactician", "Damager", "Farming"]
+    },
+    {
+        "id": "emm",
+        "name": "Emmitt",
+        "icon": "/hero/emmitt.png",
+        "expansion": "wayward",
+        "complexity": 4,
+        "roles": ["Melee", "Tactician", "Durable", "Disabler", "Tokens"]
+    }
+]

@@ -1,0 +1,259 @@
+[
+    {
+        "id": "xar-y-cleave",
+        "name": "Cleave",
+        "color": "Y",
+        "type": "Basic Attack",
+        "initiative": 11,
+        "attributes": {
+            "movement": 1,
+            "defense": 2,
+            "attack": 4
+        },
+        "text": "Target a unit adjacent to you.\nAfter the attack: May repeat once on a different enemy hero.\n(You may repeat even if the original target was a minion.)"
+    },
+    {
+        "id": "xar-y-h-desperate-cleave",
+        "name": "Desperate Cleave",
+        "color": "Y",
+        "tier": "H",
+        "type": "Basic Attack",
+        "initiative": 10,
+        "attributes": {
+            "movement": 1,
+            "defense": 1,
+            "attack": 3
+        },
+        "text": "Target a hero adjacent to you.\nAfter the attack: May repeat once on a different enemy hero."
+    },
+    {
+        "id": "xar-s-sirens-call",
+        "name": "Siren's Call",
+        "color": "S",
+        "type": "Basic Skill - Ranged",
+        "initiative": 3,
+        "attributes": {
+            "defense": 3,
+            "range": 3
+        },
+        "text": "Target an enemy unit not adjacent to you and in range; if able, move the target up to 3 spaces to a space adjacent to you."
+    },
+    {
+        "id": "xar-u-iv-metamorphosis",
+        "name": "Metamorphosis",
+        "color": "U",
+        "tier": "IV",
+        "type": "Ultimate",
+        "initiative": 0,
+        "attributes": {},
+        "text": "Gain +1 Movement and +1 Initiative for each enemy unit adjacent to you. You may move through obstacles."
+    },
+    {
+        "id": "xar-g-i-charm",
+        "name": "Charm",
+        "color": "G",
+        "tier": "I",
+        "type": "Movement",
+        "initiative": 5,
+        "attributes": {
+            "defense": 3,
+            "movement": 2,
+            "radius": 2
+        },
+        "text": "Before or after movement, you may move an enemy ranged minion in radius up to 2 spaces."
+    },
+    {
+        "id": "xar-g-ii-constrict",
+        "name": "Constrict",
+        "color": "G",
+        "tier": "II",
+        "type": "Skill",
+        "initiative": 4,
+        "attributes": {
+            "defense": 3,
+            "attack": 2
+        },
+        "text": "End of round: Defeat an enemy melee minion adjacent to you.\n(Before the end of round minion battle.)"
+    },
+    {
+        "id": "xar-g-ii-control",
+        "name": "Control",
+        "color": "G",
+        "tier": "II",
+        "type": "Movement",
+        "initiative": 4,
+        "attributes": {
+            "defense": 3,
+            "movement": 2,
+            "radius": 2
+        },
+        "text": "Before or after movement, you may move an enemy ranged or melee minion in radius up to 2 spaces."
+    },
+    {
+        "id": "xar-g-iii-final-embrace",
+        "name": "Final Embrace",
+        "color": "G",
+        "tier": "III",
+        "type": "Skill",
+        "initiative": 4,
+        "attributes": {
+            "defense": 4,
+            "movement": 2
+        },
+        "text": "End of round: Defeat an enemy melee or ranged minion adjacent to you."
+    },
+    {
+        "id": "xar-g-iii-dominate",
+        "name": "Dominate",
+        "color": "G",
+        "tier": "III",
+        "type": "Movement",
+        "initiative": 4,
+        "attributes": {
+            "defense": 4,
+            "movement": 2,
+            "radius": 2
+        },
+        "text": "Before or after movement, you may move an enemy minion in radius up to 2 spaces; ignore heavy minion immunity."
+    },
+    {
+        "id": "xar-b-i-stone-gaze",
+        "name": "Stone Gaze",
+        "color": "B",
+        "tier": "I",
+        "initiative": 9,
+        "attributes": {
+            "defense": 5,
+            "movement": 3,
+            "radius": 2
+        },
+        "type": "Skill",
+        "text": "Next turn: Enemy heroes in radius count as both heroes and terrain, and cannot perform movement actions. (If you move, the radius \"moves\" with you.)"
+    },
+    {
+        "id": "xar-b-ii-petrifying-stare",
+        "name": "Petrifying Stare",
+        "color": "B",
+        "tier": "II",
+        "initiative": 10,
+        "attributes": {
+            "defense": 6,
+            "movement": 3,
+            "radius": 3
+        },
+        "type": "Skill",
+        "text": "Next turn: Enemy heroes in radius count as both heroes and terrain, and cannot perform movement actions."
+    },
+    {
+        "id": "xar-b-ii-fresh-converts",
+        "name": "Fresh Converts",
+        "color": "B",
+        "tier": "II",
+        "initiative": 10,
+        "attributes": {
+            "defense": 6,
+            "movement": 3
+        },
+        "type": "Skill",
+        "text": "If you are adjacent to an enemy minion, you may retrieve a discarded card."
+    },
+    {
+        "id": "xar-b-iii-turn-into-statues",
+        "name": "Turn into Statues",
+        "color": "B",
+        "tier": "III",
+        "type": "Skill",
+        "initiative": 10,
+        "attributes": {
+            "defense": 6,
+            "movement": 3,
+            "radius": 4
+        },
+        "text": "Next turn: Enemy heroes in radius count as both heroes and terrain, and cannot perform movement actions."
+    },
+    {
+        "id": "xar-b-iii-devoted-followers",
+        "name": "Devoted Followers",
+        "color": "B",
+        "tier": "III",
+        "type": "Skill",
+        "initiative": 10,
+        "attributes": {
+            "defense": 6,
+            "movement": 3
+        },
+        "text": "If you are adjacent to an enemy unit, you may retrieve a discarded card."
+    },
+    {
+        "id": "xar-r-i-threatening-slash",
+        "name": "Threatening Slash",
+        "color": "R",
+        "tier": "I",
+        "type": "Attack",
+        "initiative": 7,
+        "attributes": {
+            "defense": 6,
+            "movement": 5,
+            "attack": "5+"
+        },
+        "text": "Target a unit adjacent to you. +1 Attack for each other enemy unit adjacent to you.\n(Do not count the target when calculating the attack bonus.)"
+    },
+    {
+        "id": "xar-r-ii-deadly-swipe",
+        "name": "Deadly Swipe",
+        "color": "R",
+        "tier": "II",
+        "type": "Attack",
+        "initiative": 8,
+        "attributes": {
+            "defense": 7,
+            "movement": 5,
+            "attack": "5+"
+        },
+        "text": "Target a unit adjacent to you. +2 Attack for each other enemy unit adjacent to you."
+    },
+    {
+        "id": "xar-r-ii-long-thrust",
+        "name": "Long Thrust",
+        "color": "R",
+        "tier": "II",
+        "type": "Attack - Ranged",
+        "initiative": 8,
+        "attributes": {
+            "movement": 4,
+            "defense": 4,
+            "range": "1+",
+            "attack": 3
+        },
+        "text": "Target a unit in range. +1 Range for each enemy unit adjacent to you."
+    },
+    {
+        "id": "xar-r-iii-rapid-thrusts",
+        "name": "Rapid Thrusts",
+        "color": "R",
+        "tier": "III",
+        "type": "Attack - Ranged",
+        "initiative": 8,
+        "attributes": {
+            "movement": 4,
+            "defense": 4,
+            "range": "1+",
+            "attack": 4
+        },
+        "text": "Target a unit in range. +1 Range for each enemy unit adjacent to you. May repeat once on a different enemy hero."
+    },
+    {
+        "id": "xar-r-iii-lethal-spin",
+        "name": "Lethal Spin",
+        "color": "R",
+        "tier": "III",
+        "type": "Attack",
+        "initiative": 8,
+        "attributes": {
+            "defense": 7,
+            "movement": 5,
+            "attack": "5+"
+        },
+        "text": "Target a unit adjacent to you. +3 Attack for each other enemy unit adjacent to you."
+    }
+]
