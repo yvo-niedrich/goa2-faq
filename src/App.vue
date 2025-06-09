@@ -14,15 +14,15 @@ const { width, height, isMobile, isTablet, isDesktop } = useViewport();
         </nav>
     </header>
 
-    <div class="content">
+    <div class="debug">
+        <p>Width: {{ width }}</p>
+        <p>Height: {{ height }}</p>
+        <p>Mobile: {{ isMobile }}</p>
+        <p>Tablet: {{ isTablet }}</p>
+        <p>Desktop: {{ isDesktop }}</p>
+    </div>
 
-        <div class="debug">
-            <p>Width: {{ width }}</p>
-            <p>Height: {{ height }}</p>
-            <p>Mobile: {{ isMobile }}</p>
-            <p>Tablet: {{ isTablet }}</p>
-            <p>Desktop: {{ isDesktop }}</p>
-        </div>
+    <div class="content">
         <RouterView />
     </div>
 </template>
@@ -53,13 +53,16 @@ header {
 }
 
 .debug {
-    position: absolute;
+    position: fixed;
     top: 5px;
     right: 5px;
+    z-index: 20;
+
+    opacity: .75;
 
     background: #FFF;
     border: 1px solid #000;
-    padding: 5px;
+    padding: 4px 6px;
     border-radius: 1em;
     font-size: 12px;
 }

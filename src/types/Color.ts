@@ -10,6 +10,7 @@ export enum Color {
 export function toColor(e: string): Color {
     switch (e.toLowerCase()) {
         case 'y':
+        case 'yellow':
         case 'gold':
             return Color.Gold;
         case 'g':
@@ -28,6 +29,7 @@ export function toColor(e: string): Color {
             return Color.Ultimate;
         case 's':
         case 'silver':
+        case 'grey':
             return Color.Silver;
         default:
             throw new Error('Invalid Color: ' + e);

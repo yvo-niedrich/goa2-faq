@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue';
 import { filterHeroesByExpansions, get } from '@/data/heroes'
-import HeroIcon from '@/components/icons/IconHero.vue'
+import HeroIcon from '@/components/icons/HeroIcon.vue'
 import router from '@/router';
 import { useViewport } from '@/viewport';
 import type { Expansion } from '@/types/Expansion';
-import HeroCardOverview from '@/components/HeroCardOverview.vue';
+import HeroOverview from '@/components/HeroOverview.vue';
 
 const props = defineProps<{
     hero?: string;
@@ -36,34 +36,80 @@ const portraitHeight = computed(() => isDesktop.value ? 250 : isTablet.value ? 2
 </script>
 
 <template>
-    <div class="list">
-        <HeroIcon v-for="h of list" :key="h.id" :height="portraitHeight" :name="h.name" :path="h.icon"
-            :class="{ 'hidden': (selectedHero?.id ?? h.id) !== h.id, 'selected': selectedHero?.id === h.id }"
-            :onClick="() => router.push({ name: 'heroes', params: { hero: h.id } })" />
+    <div class="hero-selection">
+        <Transition :name="'slide-' + (selectedHero ? 'left' : 'right')">
+            <div v-if="!selectedHero" class="list">
+                <HeroIcon v-for="h of list" :key="h.id" :height="portraitHeight" :name="h.name" :path="h.icon"
+                    :onClick="() => router.push({ name: 'heroes', params: { hero: h.id } })" />
+
+            </div>
+            <div class="details" v-else>
+                <HeroOverview :hero="selectedHero" />
+            </div>
+        </Transition>
     </div>
-    <div v-if="selectedHero">
-        <HeroCardOverview :hero="selectedHero" />
-    </div>
+
 </template>
 
 <style lang="scss">
-.list {
-    text-align: center;
+.hero-selection {
+    position: relative;
+    overflow: hidden;
 
-    .hero-icon {
-        margin-right: -2em;
-        margin-bottom: 0.25em;
+    .list {
+        text-align: center;
+        padding: 0 1.25em;
+
+        .hero-icon {
+            margin-left: -1.1em;
+            margin-right: -1.1em;
+            margin-bottom: 0.25em;
+        }
     }
-}
 
-/* we will explain what these classes do next! */
-.v-enter-active,
-.v-leave-active {
-    transition: opacity 0.5s ease;
-}
+    .details,
+    .list {
+        width: 100%;
+    }
 
-.v-enter-from,
-.v-leave-to {
-    opacity: 0;
+
+    .details.slide-right-leave-active,
+    .list.slide-left-leave-active {
+        position: absolute;
+        transition: all 1s ease-out,
+            opacity .75s ease-out .15s;
+
+    }
+
+
+    .slide-left-enter-active,
+    .slide-right-enter-active,
+    .slide-left-leave-active,
+    .slide-right-leave-active {
+        transition: all 1s ease-out;
+        min-height: 25vw;
+    }
+
+    .slide-left-enter-from {
+        opacity: 0;
+        transform: translateX(105%);
+    }
+
+    .slide-left-leave-to {
+        opacity: 0;
+        transform: translateX(-105%);
+    }
+
+    .slide-right-enter-from {
+        opacity: 0;
+        transform: translateX(-105%);
+    }
+
+    .slide-right-leave-to {
+        opacity: 0;
+        transform: translateX(105%);
+    }
+
+
 }
 </style>

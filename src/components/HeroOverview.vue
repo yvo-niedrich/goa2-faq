@@ -1,0 +1,125 @@
+<script setup lang="ts">
+import { computed } from 'vue';
+import HeroCard from '@/components/HeroCard.vue';
+import HeroIcon from '@/components/icons/HeroIcon.vue';
+import { useViewport } from '@/viewport';
+
+const props = defineProps<{
+    hero: Hero;
+}>();
+
+
+const { isTablet, isDesktop } = useViewport();
+const portraitHeight = computed(() => isDesktop.value ? 380 : isTablet.value ? 300 : 240);
+
+
+function column(c: Card) {
+    switch (c.color) {
+        case 'y': return 0;
+        case 's': return 0.1;
+        case 'u': return 0.2;
+        case 'r': return 1;
+        case 'g': return 2;
+        case 'b': return 3;
+    }
+}
+
+
+const heroCards = computed(() => props.hero.cards.slice(0).sort((a, b) => {
+    const ca = column(a),
+        cb = column(b);
+    if (ca < cb) return -1;
+    if (ca > cb) return 1;
+    return a.tier > b.tier ? 1 : -1;
+}).reduce<Card[][]>(
+    (acc, current) => {
+        acc[Math.trunc(column(current))].push(current);
+        return acc;
+    },
+    [[], [], [], []] as Card[][]
+))
+
+</script>
+
+<template>
+    <div>
+        <div class="hero-portrait">
+            <HeroIcon :height="portraitHeight" :name="hero.name" :path="hero.icon" />
+            <div>
+                <h2>
+                    <span class="hero-class">{{ $t(hero.class) }}</span>
+                    <span class="hero-complexity">
+                        <template v-for="index in 5" :key="index">
+                            {{ Math.abs(index - 5) < hero.complexity ? '&starf;' : '&star;' }} </template>
+                    </span>
+                </h2>
+                <div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse harum officia deserunt velit
+                    voluptates nisi magnam,
+                    veritatis consequatur in qui, quibusdam fugit accusantium commodi praesentium provident sunt eum
+                    eaque optio.
+                </div>
+            </div>
+
+        </div>
+        <div class="card-column-container">
+            <div v-for="(cardColumn, idx) in heroCards" :key="idx">
+                <div v-for="card of cardColumn" :key="card.id">
+                    <HeroCard :card="card" />
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<style lang="scss">
+.hero-portrait {
+    background: #151e2280;
+    margin: 2px;
+    border-radius: 1em;
+    border: 1px solid #000;
+    box-shadow: 0 0 1px #CCC;
+
+    padding: 1em;
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+
+    h2 {
+        position: relative;
+        border-bottom: 1px solid gray;
+
+        .hero-class {
+            color: greenyellow;
+            font-style: italic;
+            padding-left: .75em;
+        }
+
+        .hero-complexity {
+            position: absolute;
+            top: 0em;
+            right: .5em;
+
+
+            color: yellow;
+            text-shadow: 0 0 2px #000;
+            font-size: 1.5em;
+            line-height: 1em;
+        }
+
+
+    }
+
+
+}
+
+.card-column-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    @media (max-width: 1180px) {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2em;
+    }
+}
+</style>

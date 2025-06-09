@@ -12,11 +12,14 @@ interface CardRaw {
     text: string;
 }
 
-function loadJSON(path: string) {
-    return JSON.parse(readFileSync(__data + '/' + path).toString());
-}
-
 const cache: { [file: string]: CardRaw[] } = {};
+
+function getFile(f: string): CardRaw[] {
+    if (!cache.hasOwnProperty(f)) {
+        cache[f] = JSON.parse(readFileSync(__data + '/' + f).toString());
+    }
+    return cache[f];
+}
 
 export function translationMap(file: string | string[] = []): TranslationMap {
     if (typeof file === 'string') {
@@ -30,11 +33,7 @@ export function translationMap(file: string | string[] = []): TranslationMap {
     const t: TranslationMap = {};
 
     for (const f of file) {
-        if (!cache.hasOwnProperty(f)) {
-            cache[f] = loadJSON(f);
-        }
-
-        for (const card of cache[f]) {
+        for (const card of getFile(f)) {
             if (t.hasOwnProperty(`${card.id}.text`)) {
                 throw new Error(`Card is not unique: ${card.id} (${card.name})`);
             }
@@ -54,11 +53,7 @@ export function loadCards(file: string | string[], withTranslation = true): Card
     const c: Card[] = [];
 
     for (const f of file) {
-        if (!cache.hasOwnProperty(f)) {
-            cache[f] = loadJSON(f);
-        }
-
-        for (const card of cache[f]) {
+        for (const card of getFile(f)) {
             c.push({
                 id: card.id,
                 name: card.name,

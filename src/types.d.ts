@@ -24,6 +24,7 @@ interface Card {
 interface Hero {
     id: string;
     name: string;
+    class: string;
     icon: string;
     complexity: number;
     expansion: 'Core' | 'Devoted' | 'Defiant' | 'Wayward' | 'Renowned' | 'Arcane';

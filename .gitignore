@@ -32,5 +32,5 @@ coverage
 logs/
 tests_output/
 
-src/data/generated/*
+src/**/*.generated.*
 !src/data/generated/.gitkeep

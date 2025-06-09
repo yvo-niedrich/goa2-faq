@@ -6,6 +6,7 @@
     "scripts": {
         "dev": "vite",
         "build-data": "tsx --tsconfig tsconfig.build.json build/build.ts",
+        "build-titles": "tsx --tsconfig tsconfig.build.json build/titles.ts",
         "build": "run-p type-check \"build-only {@}\" --",
         "preview": "vite preview",
         "test:unit": "vitest",

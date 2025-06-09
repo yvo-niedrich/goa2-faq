@@ -16,7 +16,7 @@ const props = withDefaults(
 const f = 293 / 387;
 
 const fs = computed(() => {
-    return Math.min(2, Math.max(0.75, props.height / 200))
+    return Math.min(2, Math.max(0.75, props.height / (props.name.length >= 12 ? 210 : 180)))
 })
 
 function handleClick() {
@@ -28,10 +28,10 @@ function handleClick() {
 </script>
 
 <template>
-    <div class="hero-icon" :class="{ animate, inline }" @click="handleClick"
-        :style="{ backgroundImage: `url(${path})`, height: `${height}px`, width: `${height * f}px`, fontSize: `${fs}rem` }">
+    <div class="hero-icon" :class="{ animate, inline, pointer: !!onClick }" @click="handleClick"
+        :style="{ backgroundImage: `url(${path})`, height: `${height}px`, width: `${height * f}px` }">
         <div v-if="name" class="name-overlay">
-            <div class="name-overlay-text">{{ name }}</div>
+            <div class="name-overlay-text" :style="{ fontSize: `${fs}rem` }">{{ name }}</div>
         </div>
     </div>
 </template>
@@ -44,6 +44,10 @@ function handleClick() {
         display: inline-block;
     }
 
+    &.pointer {
+        cursor: pointer;
+    }
+
     clip-path: polygon(22% 0%, 100% 0%, 78% 100%, 0% 100%);
 
     mask-image: url("/mask.svg");
@@ -51,7 +55,6 @@ function handleClick() {
     mask-repeat: no-repeat;
     mask-position: center;
 
-    cursor: pointer;
     pointer-events: all;
 
     transition-duration: .5s;
@@ -79,11 +82,11 @@ function handleClick() {
         padding: .2em 0;
         align-items: center;
         font-weight: bold;
-        color: #eee;
-        background-color: rgba(0, 0, 0, .5);
+        color: #dfdfdf;
+        background-color: rgba(0, 0, 0, .6);
         text-shadow: #000 0 0 3px;
-        border-top: 1px solid rgba(255, 255, 255, .5);
-        border-bottom: 1px solid rgba(255, 255, 255, .5);
+        border-top: 1px solid rgba(255, 255, 255, .4);
+        border-bottom: 1px solid rgba(255, 255, 255, .4);
     }
 
     &.animate:hover .name-overlay-text {

@@ -1,6 +1,7 @@
 [
     {
         "id": "ari",
+        "class": "The Tidemaster",
         "name": "Arien",
         "icon": "/hero/arien.png",
         "expansion": "core",
@@ -9,6 +10,7 @@
     },
     {
         "id": "bro",
+        "class": "The Destroyer",
         "name": "Brogan",
         "icon": "/hero/brogan.png",
         "expansion": "core",
@@ -17,6 +19,7 @@
     },
     {
         "id": "tig",
+        "class": "The Cutpurse",
         "name": "Tigerclaw",
         "icon": "/hero/tigerclaw2.png",
         "expansion": "core",
@@ -25,6 +28,7 @@
     },
     {
         "id": "was",
+        "class": "The Warmaiden",
         "name": "Wasp",
         "icon": "/hero/wasp.png",
         "expansion": "core",
@@ -33,6 +37,7 @@
     },
     {
         "id": "sab",
+        "class": "The Commander",
         "name": "Sabina",
         "icon": "/hero/sabina.png",
         "expansion": "core",
@@ -42,6 +47,7 @@
     {
         "id": "xar",
         "name": "Xargatha",
+        "class": "The Changed",
         "icon": "/hero/xargatha.png",
         "expansion": "core",
         "complexity": 1,
@@ -50,6 +56,7 @@
     },
     {
         "id": "dod",
+        "class": "The Warlock",
         "name": "Dodger",
         "icon": "/hero/dodger.png",
         "expansion": "core",
@@ -58,6 +65,7 @@
     },
     {
         "id": "row",
+        "class": "The Vanguard",
         "name": "Rowenna",
         "icon": "/hero/rowenna.png",
         "expansion": "arcane",
@@ -66,6 +74,7 @@
     },
     {
         "id": "gar",
+        "class": "The Gladiator",
         "name": "Garrus",
         "icon": "/hero/garrus.png",
         "expansion": "defiant",
@@ -74,6 +83,7 @@
     },
     {
         "id": "bai",
+        "class": "The Bounty Hunter",
         "name": "Bain",
         "icon": "/hero/bain.png",
         "expansion": "defiant",
@@ -82,6 +92,7 @@
     },
     {
         "id": "whi",
+        "class": "The Outcast",
         "name": "Whisper",
         "icon": "/hero/whisper.png",
         "expansion": "devoted",
@@ -90,6 +101,7 @@
     },
     {
         "id": "mis",
+        "class": "The Samurai",
         "name": "Misa",
         "icon": "/hero/misa.png",
         "expansion": "devoted",
@@ -98,6 +110,7 @@
     },
     {
         "id": "urs",
+        "class": "The Savage",
         "name": "Ursafar",
         "icon": "/hero/ursafar.png",
         "expansion": "devoted",
@@ -106,6 +119,7 @@
     },
     {
         "id": "sil",
+        "class": "The Pathfinder",
         "name": "Silverarrow",
         "icon": "/hero/silverarrow.png",
         "expansion": "devoted",
@@ -114,6 +128,7 @@
     },
     {
         "id": "min",
+        "class": "The Dragonmonk",
         "name": "Min",
         "icon": "/hero/min.png",
         "expansion": "renowned",
@@ -122,6 +137,7 @@
     },
     {
         "id": "mra",
+        "class": "The Stoneshaper",
         "name": "Mrak",
         "icon": "/hero/mrak.png",
         "expansion": "arcane",
@@ -130,6 +146,7 @@
     },
     {
         "id": "cut",
+        "class": "The Sky Pirate",
         "name": "Cutter",
         "icon": "/hero/cutter.png",
         "expansion": "defiant",
@@ -138,6 +155,7 @@
     },
     {
         "id": "tri",
+        "class": "The Scavenger",
         "name": "Trinkets",
         "icon": "/hero/trinkets.png",
         "expansion": "defiant",
@@ -146,6 +164,7 @@
     },
     {
         "id": "tal",
+        "class": "The Spiritcaller",
         "name": "Tali",
         "icon": "/hero/tali.png",
         "expansion": "devoted",
@@ -154,6 +173,7 @@
     },
     {
         "id": "swi",
+        "class": "The Sharpshooter",
         "name": "Swift",
         "icon": "/hero/swift.png",
         "expansion": "renowned",
@@ -162,6 +182,7 @@
     },
     {
         "id": "wuk",
+        "class": "The Grove Guardian",
         "name": "Wuk",
         "icon": "/hero/wuk.png",
         "expansion": "renowned",
@@ -170,6 +191,7 @@
     },
     {
         "id": "han",
+        "class": "The Trickster",
         "name": "Hanu",
         "icon": "/hero/hanu.png",
         "expansion": "renowned",
@@ -178,6 +200,7 @@
     },
     {
         "id": "bry",
+        "class": "The Seeker",
         "name": "Brynn",
         "icon": "/hero/brynn.png",
         "expansion": "wayward",
@@ -186,6 +209,7 @@
     },
     {
         "id": "mor",
+        "class": "The Awakener",
         "name": "Mortimer",
         "icon": "/hero/mortimer.png",
         "expansion": "wayward",
@@ -195,6 +219,7 @@
     {
         "id": "wid",
         "name": "Widget & Pyro",
+        "class": "The Dragonbonded",
         "icon": "/hero/widget.png",
         "expansion": "wayward",
         "complexity": 3,
@@ -202,6 +227,7 @@
     },
     {
         "id": "sno",
+        "class": "The Runescribe",
         "name": "Snorri",
         "icon": "/hero/snorri.png",
         "expansion": "arcane",
@@ -210,6 +236,7 @@
     },
     {
         "id": "raz",
+        "class": "The Fay",
         "name": "Razzle",
         "icon": "/hero/razzle.png",
         "expansion": "arcane",
@@ -218,6 +245,7 @@
     },
     {
         "id": "gyd",
+        "class": "The Archwizard",
         "name": "Gydion",
         "icon": "/hero/gydion.png",
         "expansion": "arcane",
@@ -226,6 +254,7 @@
     },
     {
         "id": "neb",
+        "class": "The Harbinger",
         "name": "Nebkher",
         "icon": "/hero/nebkher.png",
         "expansion": "defiant",
@@ -234,6 +263,7 @@
     },
     {
         "id": "ign",
+        "class": "The Mad",
         "name": "Ignatia",
         "icon": "/hero/ignatia.png",
         "expansion": "renowned",
@@ -242,6 +272,7 @@
     },
     {
         "id": "tak",
+        "class": "The Warlord",
         "name": "Takahide",
         "icon": "/hero/takahide.png",
         "expansion": "wayward",
@@ -250,6 +281,7 @@
     },
     {
         "id": "emm",
+        "class": "The Traveller",
         "name": "Emmitt",
         "icon": "/hero/emmitt.png",
         "expansion": "wayward",

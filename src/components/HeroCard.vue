@@ -1,13 +1,23 @@
 <script setup lang="ts">
 import { toString as typeToString } from '@/types/CardType';
+import { count as countFaq } from '@/data/faq'
+import { computed } from 'vue';
 
 
-defineProps<{ card: Card; }>();
+const props = defineProps<{ card: Card; }>();
+
+const hasFaq = computed(() => countFaq(props.card.id) > 0)
+
+function showFAQs() {
+    if (hasFaq.value) {
+        alert('Would show FAQ for: ' + props.card.id);
+    }
+}
 
 </script>
 
 <template>
-    <div class="card-details" :class="{ [`card-color-${card.color}`]: true }">
+    <div class="card-details" :class="{ [`card-color-${card.color}`]: true, 'has-faq': hasFaq }" @click="showFAQs()">
         <h2 class="card-name">{{ card.name }}</h2>
         <div v-if="card.tier" class="card-level">{{ card.tier }}</div>
         <div class="card-effect-type">{{ typeToString(card.type) }}</div>
@@ -34,6 +44,32 @@ defineProps<{ card: Card; }>();
     border-radius: 1em;
 
     color: var(--color-text-dark);
+
+    &.has-faq {
+        padding-bottom: 1.75em;
+        cursor: pointer;
+
+        &::after {
+            transition: .5s ease-out;
+            content: '?!';
+
+            position: absolute;
+            bottom: .5em;
+            right: .5em;
+
+            background: #ffffff50;
+            box-shadow: 0 0 2px #FFFFFF50;
+
+            border: 1px solid black;
+            padding: 0 .35em;
+            border-radius: .5em;
+        }
+
+        &:hover::after {
+            background: #e01919;
+        }
+    }
+
 
     @media (max-width: 1280px) {
         padding: 0.75em;
@@ -101,7 +137,6 @@ defineProps<{ card: Card; }>();
         top: -5px;
         left: -5px;
         padding-left: 5px;
-        margin-bottom: 5px;
 
 
         border-top-left-radius: .25em;
@@ -127,6 +162,7 @@ defineProps<{ card: Card; }>();
 
     .card-effect-type {
         text-align: center;
+        margin-bottom: .25em;
 
         border-top: 1px solid rgba(0, 0, 0, .8);
         border-bottom: 1px solid rgba(0, 0, 0, .4);

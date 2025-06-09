@@ -12,6 +12,7 @@ export function load(filterFn: (h: HeroBuild) => boolean = () => true, withCards
         const hero: HeroBuild = {
             id: r.id,
             name: r.name,
+            class: r.class,
             icon: r.icon,
             complexity: r.complexity,
             expansion: toExpansion(r.expansion),
@@ -20,9 +21,18 @@ export function load(filterFn: (h: HeroBuild) => boolean = () => true, withCards
         };
 
         if (filterFn(hero)) {
+            translationCache[`${hero.id}.class`] = hero.class;
+            hero.class = `${hero.id}.class`;
+
             h.push(hero);
         }
     }
 
     return h;
+}
+
+const translationCache: TranslationMap = {};
+
+export function translationMap(): TranslationMap {
+    return translationCache;
 }
