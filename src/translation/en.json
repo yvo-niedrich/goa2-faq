@@ -7,7 +7,7 @@
     "ari-silver-spell-break.text": "**This turn:** Enemy heroes in radius cannot perform skill actions or play reaction cards.",
     "ari-red-i-dangerous-current.text": "Target a unit adjacent to you.\nBefore the attack: Up to 1 enemy hero in a line of 2 spaces behind the target discards a card or is defeated.",
     "ari-red-ii-raging-stream.text": "Target a unit adjacent to you.\nBefore the attack: Up to 1 enemy hero in any of the 3 spaces in a straight line directly behind the target discards a card or is defeated.",
-    "ari-red-iii-violent-torrent.text": "Target a unit adjacent to you.\nBefore the attack: Up to 1 enemy hero in any of the 3 spaces in a straight line directly behind the target discards a card or is defeated.\n*May repeat once on a different unit.*",
+    "ari-red-iii-violent-torrent.text": "Target a unit adjacent to you.\nBefore the attack: Up to 1 enemy hero in any of the 5 spaces in a straight line directly behind the target discards a card or is defeated.\n*May repeat once on a different unit.*",
     "ari-red-ii-rogue-wave.text": "Target a unit in range. After the attack: You may push an enemy unit adjacent to you up to 2 spaces.",
     "ari-red-iii-tidal-blast.text": "Target a unit in range. After the attack: You may push an enemy unit adjacent to you up to 3 spaces.",
     "ari-green-i-liquid-leap.text": "Place yourself into a space in range without a spawn point and not adjacent to an empty spawn point.",

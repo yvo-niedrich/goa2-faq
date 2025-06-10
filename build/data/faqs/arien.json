@@ -1,0 +1,23 @@
+{
+    "faq-ari-1": {
+        "q": "Does Arien’s attack require a hero behind the target?",
+        "a": "No, this effect says \"**Up to** 1 enemy hero\"",
+        "ref": ["ari-red-iii-violent-torrent", "ari-red-ii-raging-stream"]
+    },
+    "faq-ari-2": {
+        "q": "Do Arien’s green skill cards perform movement?",
+        "a": "No. The primary Green **places** Arien, the alternative Green **swaps**. These are not movement and are not restricted by effects that restrict movement.",
+        "ref": [
+            "ari-green-i-liquid-leap",
+            "ari-green-ii-magical-current",
+            "ari-green-ii-arcane-whirlpool",
+            "ari-green-iii-stranger-tide",
+            "ari-green-iii-ebb-and-flow"
+        ]
+    },
+    "faq-ari-3": {
+        "q": "What does Arien's Slippery Ground restrict?",
+        "a": "This card restricts the movement, by a movement action, of Heroes in radius. It will **not** affect pushing, swapping, or placement effects (including fast travel!). It also will **not** restrict movement as part of other actions (such as Brogan’s Primary Red or Tigerclaw’s Primary Green).\nAdditionally, because movement restrictions are checked at the beginning of a movement, a Hero can freely move into and through the radius of Arien’s effect without being affected.",
+        "ref": ["ari-blue-ii-slippery-ground", "ari-blue-iii-deluge"]
+    }
+}

@@ -1,9 +1,27 @@
-import { default as faq } from '../data/faq.json';
+import { readdirSync, readFileSync } from 'fs';
+import { __data } from './paths';
 
 interface FAQ {
     q: string;
     a: string;
     ref: string[];
+}
+
+type FAQMap = { [key: string]: FAQ };
+
+const faq = {} as FAQMap;
+const faqPath = __data + '/faqs';
+const files = readdirSync(faqPath);
+for (const file of files) {
+    if (!file.includes('.json')) continue;
+    const fMap: FAQMap = JSON.parse(readFileSync(faqPath + '/' + file, { flag: 'r' }).toString());
+    for (const key of Object.keys(fMap)) {
+        if (faq.hasOwnProperty(key)) {
+            throw new Error(`Duplicate FAQ key: ${key} (${file})`);
+        }
+
+        faq[key] = fMap[key];
+    }
 }
 
 export function cardIndex(filter: string[] = [], warn = true): CardFaqMap {
