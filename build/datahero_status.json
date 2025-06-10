@@ -104,8 +104,7 @@
             "defense": [2, 5],
             "initiative": 7,
             "movement": 5
-        },
-        "cards": "cards/dodger.json"
+        }
     },
     {
         "id": "row",

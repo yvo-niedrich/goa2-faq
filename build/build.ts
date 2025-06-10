@@ -5,8 +5,8 @@ import { writeCardFaqMap, writeHeroData, writeTranslations } from './scripts/fil
 
 const uniqueFn = (e: string, i: number, self: string[]) => i === self.indexOf(e);
 
-// const heroes = loadHeroes((h) => h.cards.length > 0);
-const heroes = loadHeroes();
+const heroes = loadHeroes((h) => h.cards.length > 0);
+// const heroes = loadHeroes();
 const faqMap = FaQCardIndex(heroes.map((h) => h.cards.map((c) => c.id)).flat());
 
 writeHeroData(heroes);

@@ -74,7 +74,7 @@ const heroCards = computed(() => props.hero.cards.slice(0).sort((a, b) => {
 
 <style lang="scss">
 .hero-portrait {
-    background: #151e2280;
+    background: linear-gradient(0deg, var(--color-background-highlight) 30%, var(--color-background-mute) 90%);
     margin: 2px;
     border-radius: 1em;
     border: 1px solid #000;
@@ -90,8 +90,9 @@ const heroCards = computed(() => props.hero.cards.slice(0).sort((a, b) => {
         border-bottom: 1px solid gray;
 
         .hero-class {
-            color: greenyellow;
+            color: var(--color-text-highlight);
             font-style: italic;
+            font-weight: 200;
             padding-left: .75em;
         }
 

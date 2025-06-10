@@ -26,7 +26,7 @@ export function toType(value: string): CardType {
                 basic = true;
                 break;
             default:
-                if (['attack', 'movement', 'ultimate', 'skill'].includes(word)) {
+                if (['attack', 'movement', 'ultimate', 'skill', 'defense'].includes(word)) {
                     type = word as CardType['type'];
                 }
         }

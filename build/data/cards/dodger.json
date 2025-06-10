@@ -1,0 +1,154 @@
+[
+    {
+        "id": "dod-gold-dread-razor",
+        "name": "Dread Razor",
+        "color": "gold",
+        "type": "Basic Attack - Ranged",
+        "tier": null,
+        "text": "**Choose one** —\n- Target a unit adjacent to you.\n- If you are adjacent to an empty spawn point in the battle zone, target a unit in range."
+    },
+    {
+        "id": "dod-gold-h-rusty-razor",
+        "name": "Rusty Razor",
+        "color": "gold",
+        "type": "Basic Attack - Ranged",
+        "tier": "H",
+        "text": "**Choose one** —\n- Target a hero adjacent to you.\n- If you are adjacent to an empty spawn point in the battle zone, target a hero in range."
+    },
+    {
+        "id": "dod-silver-death-trap",
+        "name": "Death Trap",
+        "color": "silver",
+        "type": "Basic Skill",
+        "tier": null,
+        "text": "An enemy hero in radius who is adjacent to an empty spawn point in the battle zone discards a card, if able."
+    },
+    {
+        "id": "dod-ult-iv-tide-of-darkness",
+        "name": "Tide of Darkness",
+        "color": "ultimate",
+        "type": "Ultimate",
+        "tier": "IV",
+        "text": "While you are performing an action, all spaces count as if they were in the battle zone and had a friendly minion spawn point."
+    },
+    {
+        "id": "dod-green-i-dark-ritual",
+        "name": "Dark Ritual",
+        "color": "green",
+        "type": "Skill",
+        "tier": "I",
+        "text": "If there are 2 or more enemy spawn points in radius in the battle zone, gain 1 coin."
+    },
+    {
+        "id": "dod-green-ii-darker-ritual",
+        "name": "Darker Ritual",
+        "color": "green",
+        "type": "Skill",
+        "tier": "II",
+        "text": "If there are 2 or more enemy spawn points in radius in the battle zone, gain 2 coins."
+    },
+    {
+        "id": "dod-green-iii-darkest-ritual",
+        "name": "Darkest Ritual",
+        "color": "green",
+        "type": "Skill",
+        "tier": "III",
+        "text": "If there are 2 or more enemy spawn points in radius in the battle zone, gain 2 coins.\nIf you have your Ultimate, gain an 🗡️ Attack item.\n *(Use any spare card from the box with the corresponding icon)*"
+    },
+    {
+        "id": "dod-green-ii-necromancy",
+        "name": "Necromancy",
+        "color": "green",
+        "type": "Skill",
+        "tier": "II",
+        "text": "Respawn a friendly minion in an empty friendly spawn point adjacent to you in the battle zone."
+    },
+    {
+        "id": "dod-green-iii-necomastery",
+        "name": "Necomastery",
+        "color": "green",
+        "type": "Skill",
+        "tier": "III",
+        "text": "Respawn a friendly minion in an empty friendly spawn point in radius in the battle zone."
+    },
+    {
+        "id": "dod-blue-i-shield-of-decay",
+        "name": "Shield of Decay",
+        "color": "blue",
+        "type": "Defense",
+        "tier": "I",
+        "text": "+2 🛡️ Defense if there are 2 or more empty spawn points in radius in the battle zone."
+    },
+    {
+        "id": "dod-blue-ii-vampiric-shield",
+        "name": "Vampiric Shield",
+        "color": "blue",
+        "type": "Defense",
+        "tier": "II",
+        "text": "+2 🛡️ Defense if there are 2 or more empty spawn points in radius in the battle zone."
+    },
+    {
+        "id": "dod-blue-iii-aegis-of-doom",
+        "name": "Aegis of Doom",
+        "color": "blue",
+        "type": "Defense",
+        "tier": "III",
+        "text": "+4 🛡️ Defense if there are 2 or more empty spawn points in radius in the battle zone."
+    },
+    {
+        "id": "dod-blue-i-weakness",
+        "name": "Weakness",
+        "color": "blue",
+        "type": "Skill",
+        "tier": "II",
+        "text": "**This turn:** Enemy heroes in radius have -4 🗡️ Attack.\n*(They can still attack, even with negative attack value)*"
+    },
+    {
+        "id": "dod-blue-iii-enfeeblement",
+        "name": "Enfeeblement",
+        "color": "blue",
+        "type": "Skill",
+        "tier": "III",
+        "text": "**This turn:** Enemy heroes in radius have −6 🗡️ Attack and cannot repeat actions."
+    },
+    {
+        "id": "dod-red-i-littlefinger-of-death",
+        "name": "Littlefinger of Death",
+        "color": "red",
+        "type": "Attack - Ranged",
+        "tier": "I",
+        "text": "**Choose one** —\n- Target a unit adjacent to you.\n- Target a hero in range who has one or more cards in the discard."
+    },
+    {
+        "id": "dod-red-ii-finger-of-death",
+        "name": "Finger of Death",
+        "color": "red",
+        "type": "Attack - Ranged",
+        "tier": "II",
+        "text": "**Choose one** —\n- Target a unit adjacent to you.\n- Target a hero in range who has one or more cards in the discard."
+    },
+    {
+        "id": "dod-red-iii-middlefinger-of-death",
+        "name": "Middlefinger of Death",
+        "color": "red",
+        "type": "Attack - Ranged",
+        "tier": "III",
+        "text": "Choose one or both, on different targets:\n- Target a unit adjacent to you.\n- Target a hero in range who has one or more cards in the discard."
+    },
+    {
+        "id": "dod-red-ii-burning-skull",
+        "name": "Burning Skull",
+        "color": "red",
+        "type": "Attack - Ranged",
+        "tier": "II",
+        "text": "Target a unit in range.\n**After the attack:** Move up to 1 minion adjacent to you 1 space, to a space not adjacent to you."
+    },
+    {
+        "id": "dod-red-iii-blazing-skull",
+        "name": "Blazing Skull",
+        "color": "red",
+        "type": "Attack - Ranged",
+        "tier": "III",
+        "text": "Target a unit in range.\nAfter the attack: Move up to 2 minions adjacent to you 1 space each, to spaces not adjacent to you."
+    }
+]

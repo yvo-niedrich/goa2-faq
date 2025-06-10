@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import { useViewport } from '@/viewport';
+import FaqPopup from './components/FaqPopup.vue';
 
 const { width, height, isMobile, isTablet, isDesktop } = useViewport();
 </script>
@@ -24,6 +25,7 @@ const { width, height, isMobile, isTablet, isDesktop } = useViewport();
 
     <div class="content">
         <RouterView />
+        <FaqPopup />
     </div>
 </template>
 
@@ -35,7 +37,7 @@ header {
     width: 100%;
     position: sticky;
     top: 0;
-    background: rgba(48, 68, 77, .75);
+    background: rgba(var(--color-background-soft-rgb), .8);
 
     z-index: 10;
     border-bottom: 1px solid black;
@@ -60,8 +62,8 @@ header {
 
     opacity: .75;
 
-    background: #FFF;
-    border: 1px solid #000;
+    background: var(--color-background);
+    border: 1px solid var(--color-border);
     padding: 4px 6px;
     border-radius: 1em;
     font-size: 12px;
@@ -80,7 +82,7 @@ header .wrapper {
 nav {
     width: 100%;
     text-align: center;
-    background: radial-gradient(circle, rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, 0) 95%);
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 95%);
 }
 
 nav a.router-link-exact-active {

@@ -16,6 +16,7 @@ export function load(filterFn: (h: HeroBuild) => boolean = () => true, withCards
             icon: r.icon,
             complexity: r.complexity,
             expansion: toExpansion(r.expansion),
+            stats: r.stats,
             cards: withCards && typeof r.cards === 'string' ? loadCards(r.cards) : [],
             ...(!withCards && typeof r.cards === 'string' ? { cardsJson: r.cards } : {}),
         };

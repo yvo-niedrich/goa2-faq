@@ -4,12 +4,12 @@ import { __data } from './paths';
 import { toType } from '@/types/CardType';
 
 interface CardRaw {
-    id: string;
+    id: string; // all lowercase: %color%-%tier%-%name_NonAlphaNumToDash%
     name: string;
-    color: string;
-    type: string;
-    tier?: string;
-    text: string;
+    color: 'gold' | 'silver' | 'red' | 'blue' | 'green';
+    type: string; // (Basic) Skill / Attack (Ranged)
+    tier?: 'I' | 'II' | 'III' | 'IV' | 'H' | null; // Top right, next to the name
+    text: string; // Markdown Parsable (italics, bold, newlines, ...)
 }
 
 const cache: { [file: string]: CardRaw[] } = {};

@@ -9,7 +9,7 @@ interface CardAttributes {
 interface CardType {
     basic: boolean;
     ranged: boolean;
-    type: 'attack' | 'movement' | 'ultimate' | 'skill';
+    type: 'attack' | 'movement' | 'ultimate' | 'skill' | 'defense';
 }
 
 interface Card {
@@ -28,6 +28,9 @@ interface Hero {
     icon: string;
     complexity: number;
     expansion: 'Core' | 'Devoted' | 'Defiant' | 'Wayward' | 'Renowned' | 'Arcane';
+    stats: {
+        ['attack' | 'defense' | 'initiative' | 'movement']: number | [number, number];
+    };
     cards: Card[];
 }
 

@@ -1,4 +1,73 @@
-@import './base.css';
+/* semantic color variables for this project */
+:root {
+    --color-background-rgb: 21, 30, 34;
+    --color-background-soft-rgb: 48, 68, 77;
+
+    --color-background: rgb(21, 30, 34);
+    --color-background-soft: rgb(48, 68, 77);
+    --color-background-mute: rgb(34, 49, 55);
+    --color-background-highlight: rgb(82, 133, 155);
+
+    --color-border: rgb(91, 120, 133);
+    --color-border-shadow: rgb(48, 68, 77);
+    --color-border-hover: rgb(100, 135, 151);
+
+    /* --color-heading: rgb(87, 154, 255); */
+    --color-heading: rgb(129, 171, 255);
+    --color-text: rgb(255, 255, 255);
+    --color-heading-dark: rgb(15, 22, 29);
+    --color-text-dark: rgb(19, 27, 34);
+
+    --section-gap: 160px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    font-weight: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.heading {
+    color: var(--color-heading);
+}
+
+body {
+    min-height: 100vh;
+    color: var(--color-text);
+    background: var(--color-background);
+    transition:
+        color 0.5s,
+        background-color 0.5s;
+    line-height: 1.6;
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        'Segoe UI',
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        'Fira Sans',
+        'Droid Sans',
+        'Helvetica Neue',
+        sans-serif;
+    font-size: 15px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+strong {
+    font-weight: bold;
+}
 
 #app {
     max-width: 1280px;
@@ -8,11 +77,11 @@
 
     transition: 0.2s ease;
     font-size: 15px;
-    background: #30444d;
+    background: var(--color-background-soft);
 
-    border-left: 1px solid #5b7885;
-    border-right: 1px solid #5b7885;
-    box-shadow: 0 0 8px #30444d;
+    border-left: 1px solid var(--color-border);
+    border-right: 1px solid var(--color-border);
+    box-shadow: 0 0 8px var(--color-border-shadow);
 }
 
 @media (max-width: 1280px) {

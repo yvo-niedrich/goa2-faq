@@ -53,6 +53,8 @@ const portraitHeight = computed(() => isDesktop.value ? 250 : isTablet.value ? 2
 
 <style lang="scss">
 .hero-selection {
+    --animation-transition-time: .5s;
+
     position: relative;
     overflow: hidden;
 
@@ -76,8 +78,8 @@ const portraitHeight = computed(() => isDesktop.value ? 250 : isTablet.value ? 2
     .details.slide-right-leave-active,
     .list.slide-left-leave-active {
         position: absolute;
-        transition: all 1s ease-out,
-            opacity .75s ease-out .15s;
+        transition: all var(--animation-transition-time) ease-out,
+            opacity .25s ease-out .15s;
 
     }
 
@@ -86,7 +88,7 @@ const portraitHeight = computed(() => isDesktop.value ? 250 : isTablet.value ? 2
     .slide-right-enter-active,
     .slide-left-leave-active,
     .slide-right-leave-active {
-        transition: all 1s ease-out;
+        transition: all var(--animation-transition-time) ease-out;
         min-height: 25vw;
     }
 

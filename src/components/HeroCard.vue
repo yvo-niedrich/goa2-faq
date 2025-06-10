@@ -1,16 +1,17 @@
 <script setup lang="ts">
 import { toString as typeToString } from '@/types/CardType';
 import { count as countFaq } from '@/data/faq'
+import { useFaqStore } from '@/stores/faq'
 import { computed } from 'vue';
+import Markdown from './Markdown.vue';
 
 
 const props = defineProps<{ card: Card; }>();
-
 const hasFaq = computed(() => countFaq(props.card.id) > 0)
 
 function showFAQs() {
     if (hasFaq.value) {
-        alert('Would show FAQ for: ' + props.card.id);
+        useFaqStore().show(props.card.id)
     }
 }
 
@@ -21,7 +22,9 @@ function showFAQs() {
         <h2 class="card-name">{{ card.name }}</h2>
         <div v-if="card.tier" class="card-level">{{ card.tier }}</div>
         <div class="card-effect-type">{{ typeToString(card.type) }}</div>
-        <div class="card-effect-text">{{ $t(card.text) }}</div>
+        <div class="card-effect-text">
+            <Markdown :text="$t(card.text)" />
+        </div>
     </div>
 </template>
 
@@ -98,12 +101,12 @@ function showFAQs() {
 
     &.card-color-b {
         background: #283db5;
-        background: linear-gradient(180deg, rgba(40, 61, 181, 1) 0%, rgba(71, 95, 230, 1) 75%);
+        background: linear-gradient(180deg, rgb(57, 81, 212) 0%, rgb(102, 124, 247) 75%);
     }
 
     &.card-color-u {
         background: #1c0333;
-        background: linear-gradient(180deg, rgba(28, 3, 51, 1) 0%, rgba(109, 80, 125, 1) 60%);
+        background: linear-gradient(180deg, rgb(33, 3, 61) 0%, rgb(104, 73, 119) 38%, rgb(140, 107, 156) 65%);
 
         .card-name {
             color: white;
@@ -170,11 +173,11 @@ function showFAQs() {
         background: radial-gradient(circle, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 95%);
     }
 
-    .card-effect-text {
-        white-space: pre-wrap;
-        word-wrap: break-word;
-        font-family: inherit;
-    }
+    // .card-effect-text {
+    //     white-space: pre-wrap;
+    //     word-wrap: break-word;
+    //     font-family: inherit;
+    // }
 
 }
 </style>

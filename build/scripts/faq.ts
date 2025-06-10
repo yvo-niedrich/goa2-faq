@@ -11,7 +11,6 @@ export function cardIndex(filter: string[] = [], warn = true): CardFaqMap {
 
     for (const fid of Object.keys(faq)) {
         const record: FAQ = faq[fid];
-        let used = false;
 
         if (typeof record.ref === 'string') {
             record.ref = [record.ref];
@@ -19,6 +18,9 @@ export function cardIndex(filter: string[] = [], warn = true): CardFaqMap {
 
         for (const cid of record.ref) {
             if (filter.length !== 0 && !filter.includes(cid)) {
+                if (warn) {
+                    console.warn(`[FAQ] Card \`${cid}\` not found (${fid})`);
+                }
                 continue;
             }
 
@@ -26,11 +28,6 @@ export function cardIndex(filter: string[] = [], warn = true): CardFaqMap {
                 idx[cid] = [];
             }
             idx[cid].push(fid);
-            used = true;
-        }
-
-        if (!used && warn) {
-            console.warn('Unused FAQ record: ' + fid);
         }
     }
 
