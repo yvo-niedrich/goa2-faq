@@ -20,7 +20,7 @@ function showFAQs() {
 <template>
     <div class="card-details" :class="{ [`card-color-${card.color}`]: true, 'has-faq': hasFaq }" @click="showFAQs()">
         <h2 class="card-name">{{ card.name }}</h2>
-        <div v-if="card.tier" class="card-level">{{ card.tier }}</div>
+        <div v-if="card.tier" class="card-tier">{{ card.tier }}</div>
         <div class="card-effect-type">{{ typeToString(card.type) }}</div>
         <div class="card-effect-text">
             <Markdown :text="$t(card.text)" />
@@ -146,13 +146,14 @@ function showFAQs() {
         border-bottom-left-radius: .25em;
     }
 
-    .card-level {
+    .card-tier {
         position: absolute;
-        top: .4em;
-        right: .4em;
+        top: .3em;
+        right: .3em;
 
-        width: 2em;
-        height: 2em;
+        width: 1.8em;
+        height: 1.8em;
+        line-height: 1.5em;
         padding-top: 2px;
 
         background-color: #000;
@@ -173,11 +174,9 @@ function showFAQs() {
         background: radial-gradient(circle, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 95%);
     }
 
-    // .card-effect-text {
-    //     white-space: pre-wrap;
-    //     word-wrap: break-word;
-    //     font-family: inherit;
-    // }
+    .card-effect-text {
+        // ...
+    }
 
 }
 </style>

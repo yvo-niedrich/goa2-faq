@@ -6,7 +6,7 @@ import { toType } from '@/types/CardType';
 interface CardRaw {
     id: string; // all lowercase: %color%-%tier%-%name_NonAlphaNumToDash%
     name: string;
-    color: 'gold' | 'silver' | 'red' | 'blue' | 'green';
+    color: 'gold' | 'silver' | 'red' | 'blue' | 'green' | 'ultimate' | 'black';
     type: string; // (Basic) Skill / Attack (Ranged)
     tier?: 'I' | 'II' | 'III' | 'IV' | 'H' | null; // Top right, next to the name
     text: string; // Markdown Parsable (italics, bold, newlines, ...)
@@ -16,7 +16,12 @@ const cache: { [file: string]: CardRaw[] } = {};
 
 function getFile(f: string): CardRaw[] {
     if (!cache.hasOwnProperty(f)) {
-        cache[f] = JSON.parse(readFileSync(__data + '/' + f).toString());
+        try {
+            cache[f] = JSON.parse(readFileSync(__data + '/' + f).toString());
+        } catch (err) {
+            console.error('Could not load: ' + f);
+            throw err;
+        }
     }
     return cache[f];
 }

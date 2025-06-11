@@ -14,7 +14,15 @@ const faqPath = __data + '/faqs';
 const files = readdirSync(faqPath);
 for (const file of files) {
     if (!file.includes('.json')) continue;
-    const fMap: FAQMap = JSON.parse(readFileSync(faqPath + '/' + file, { flag: 'r' }).toString());
+
+    let fMap: FAQMap;
+    try {
+        fMap = JSON.parse(readFileSync(faqPath + '/' + file).toString());
+    } catch (err) {
+        console.error('Could not load faq: ' + file);
+        throw err;
+    }
+
     for (const key of Object.keys(fMap)) {
         if (faq.hasOwnProperty(key)) {
             throw new Error(`Duplicate FAQ key: ${key} (${file})`);
@@ -32,6 +40,10 @@ export function cardIndex(filter: string[] = [], warn = true): CardFaqMap {
 
         if (typeof record.ref === 'string') {
             record.ref = [record.ref];
+        }
+
+        if ((!record.ref || record.ref.length === 0) && warn) {
+            console.warn(`[FAQ] No cards referenced for ${fid}`);
         }
 
         for (const cid of record.ref) {

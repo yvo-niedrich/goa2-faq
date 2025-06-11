@@ -14,6 +14,8 @@
 
     /* --color-heading: rgb(87, 154, 255); */
     --color-heading: rgb(129, 171, 255);
+    --color-heading-full: rgb(73, 146, 255);
+    --color-heading-bright: rgb(184, 208, 255);
     --color-text: rgb(255, 255, 255);
     --color-heading-dark: rgb(15, 22, 29);
     --color-text-dark: rgb(19, 27, 34);

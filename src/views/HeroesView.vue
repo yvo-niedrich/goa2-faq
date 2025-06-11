@@ -63,9 +63,21 @@ const portraitHeight = computed(() => isDesktop.value ? 250 : isTablet.value ? 2
         padding: 0 1.25em;
 
         .hero-icon {
-            margin-left: -1.1em;
-            margin-right: -1.1em;
-            margin-bottom: 0.25em;
+            margin-left: -1.15rem;
+            margin-right: -1.15rem;
+            margin-bottom: 0.25rem;
+
+
+
+            @media (max-width: 1024px) {
+                margin-left: -.9em;
+                margin-right: -.9em;
+            }
+
+            @media (max-width: 765px) {
+                margin-left: -.8em;
+                margin-right: -.8em;
+            }
         }
     }
 

@@ -29,7 +29,10 @@ interface Hero {
     complexity: number;
     expansion: 'Core' | 'Devoted' | 'Defiant' | 'Wayward' | 'Renowned' | 'Arcane';
     stats: {
-        ['attack' | 'defense' | 'initiative' | 'movement']: number | [number, number];
+        attack: number | [number, number];
+        defense: number | [number, number];
+        initiative: number | [number, number];
+        movement: number | [number, number];
     };
     cards: Card[];
 }

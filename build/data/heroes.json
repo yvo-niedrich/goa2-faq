@@ -34,7 +34,7 @@
         "id": "tig",
         "class": "The Cutpurse",
         "name": "Tigerclaw",
-        "icon": "/hero/tigerclaw2.png",
+        "icon": "/hero/tigerclaw.png",
         "expansion": "core",
         "complexity": 1,
         "roles": ["Melee", "Disabler", "Farming"],
@@ -43,7 +43,8 @@
             "defense": [1, 4],
             "initiative": 8,
             "movement": [7, 8]
-        }
+        },
+        "cards": "cards/tigerclaw.json"
     },
     {
         "id": "was",
@@ -58,7 +59,8 @@
             "defense": [3, 5],
             "initiative": 6,
             "movement": 5
-        }
+        },
+        "cards": "cards/wasp.json"
     },
     {
         "id": "sab",
@@ -73,7 +75,8 @@
             "defense": 3,
             "initiative": 5,
             "movement": [5, 6]
-        }
+        },
+        "cards": "cards/sabina.json"
     },
     {
         "id": "xar",

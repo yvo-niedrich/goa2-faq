@@ -1,0 +1,152 @@
+[
+    {
+        "id": "was-gold-magnetic-dagger",
+        "name": "Magnetic Dagger",
+        "color": "gold",
+        "type": "Basic Attack",
+        "text": "Target a unit adjacent to you.\nAfter the attack: *This turn:* Enemy units in radius cannot be swapped or placed by themselves or by enemy heroes."
+    },
+    {
+        "id": "was-silver-static-barrier",
+        "name": "Static Barrier",
+        "color": "silver",
+        "type": "Basic Skill",
+        "text": "**This turn:** While an enemy hero outside of radius is performing an action, spaces in radius count as obstacles. While an enemy hero in radius is performing an action, spaces outside of radius count as obstacles."
+    },
+    {
+        "id": "was-red-i-shock",
+        "name": "Shock",
+        "color": "red",
+        "tier": "I",
+        "type": "Attack",
+        "text": "Target a unit adjacent to you.\nAfter the attack: An enemy hero in radius and not adjacent to you discards a card, if able."
+    },
+    {
+        "id": "was-red-ii-charged-boomerang",
+        "name": "Charged Boomerang",
+        "color": "red",
+        "tier": "II",
+        "type": "Attack - Ranged",
+        "text": "Target a unit in range and not in a straight line.\n(*Units adjacent to you are in a straight line from you.*)"
+    },
+    {
+        "id": "was-red-ii-electrocute",
+        "name": "Electrocute",
+        "color": "red",
+        "tier": "II",
+        "type": "Attack",
+        "text": "Target a unit adjacent to you.\nAfter the attack: An enemy hero in radius and not adjacent to you discards a card, if able."
+    },
+    {
+        "id": "was-red-iii-electroblast",
+        "name": "Electroblast",
+        "color": "red",
+        "tier": "III",
+        "type": "Attack",
+        "text": "Target a unit adjacent to you. After the attack:\nAn enemy hero in radius and not adjacent to you discards a card, or is defeated."
+    },
+    {
+        "id": "was-red-iii-thunder-boomerang",
+        "name": "Thunder Boomerang",
+        "color": "red",
+        "tier": "III",
+        "type": "Attack - Ranged",
+        "text": "Target a unit in range and not in a straight line.\nAfter the attack: If you targeted a hero, may repeat once on a different target."
+    },
+    {
+        "id": "was-blue-i-lift-up",
+        "name": "Lift Up",
+        "color": "blue",
+        "type": "Skill",
+        "tier": "I",
+        "text": "Move a unit, or a token, in radius 1 space, without moving it away from you or closer to you. May repeat once on the same target."
+    },
+    {
+        "id": "was-blue-ii-control-gravity",
+        "name": "Control Gravity",
+        "color": "blue",
+        "type": "Skill",
+        "tier": "II",
+        "text": "Move a unit, or a token, in radius 1 space, without moving it away from you or closer to you. May repeat once on the same target."
+    },
+    {
+        "id": "was-blue-ii-kinetic-repulse",
+        "name": "Kinetic Repulse",
+        "color": "blue",
+        "type": "Skill",
+        "tier": "II",
+        "text": "Push up to 2 enemy units adjacent to you 3 spaces; if a pushed hero is stopped by an obstacle, that hero discards a card, if able."
+    },
+    {
+        "id": "was-blue-iii-center-of-mass",
+        "name": "Center of Mass",
+        "color": "blue",
+        "type": "Skill",
+        "tier": "III",
+        "text": "Move a unit, or a token, in radius 1 space, without moving it away from you or closer to you. May repeat up to two times on the same target."
+    },
+    {
+        "id": "was-blue-iii-kinetic-blast",
+        "name": "Kinetic Blast",
+        "color": "blue",
+        "type": "Skill",
+        "tier": "III",
+        "text": "Push up to 2 enemy units adjacent to you 3 or 4 spaces; if a pushed hero is stopped by an obstacle, that hero discards a card, if able."
+    },
+    {
+        "id": "was-green-i-stop-projectiles",
+        "name": "Stop Projectiles",
+        "color": "green",
+        "type": "Defense - Ranged",
+        "tier": "I",
+        "text": "Block a ranged attack."
+    },
+    {
+        "id": "was-green-ii-deflect-projectiles",
+        "name": "Deflect Projectiles",
+        "color": "green",
+        "type": "Defense - Ranged",
+        "tier": "II",
+        "text": "Block a ranged attack; if you do, an enemy hero in range, other than the attacker, discards a card, if able."
+    },
+    {
+        "id": "was-green-iii-reflect-projectiles",
+        "name": "Reflect Projectiles",
+        "color": "green",
+        "type": "Defense - Ranged",
+        "tier": "III",
+        "text": "Block a ranged attack; if you do, an enemy hero in range discards a card, if able."
+    },
+    {
+        "id": "was-green-ii-telekinesis",
+        "name": "Telekinesis",
+        "color": "green",
+        "type": "Skill - Ranged",
+        "tier": "II",
+        "text": "Place a unit or a token in range, which is not in a straight line, into a space adjacent to you."
+    },
+    {
+        "id": "was-green-iii-mass-telekinesis",
+        "name": "Mass Telekinesis",
+        "color": "green",
+        "type": "Skill - Ranged",
+        "tier": "III",
+        "text": "Place a unit or a token in range, which is not in a straight line, into a space adjacent to you. May repeat once."
+    },
+    {
+        "id": "was-gold-h-crackling-dagger",
+        "name": "Crackling Dagger",
+        "color": "gold",
+        "type": "Basic Attack",
+        "tier": "H",
+        "text": "Target a hero adjacent to you.\nAfter the attack: **This turn:** Enemy units in radius cannot be swapped or placed by themselves or by enemy heroes."
+    },
+    {
+        "id": "was-ult-iv-high-voltage",
+        "name": "High Voltage",
+        "color": "black",
+        "type": "Ultimate",
+        "tier": "IV",
+        "text": "Each time after you perform a basic skill, you may defeat an enemy minion in radius; an enemy hero who was adjacent to that minion discards a card, if able."
+    }
+]
