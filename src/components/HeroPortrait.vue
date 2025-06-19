@@ -33,7 +33,7 @@ const { isTablet, isDesktop } = useViewport();
                 <HeroStat :name="$t('app.stat.initiative')" :value="hero.stats.initiative" />
                 <HeroStat :name="$t('app.stat.movement')" :value="hero.stats.movement" />
             </div>
-            <div>
+            <div v-if="isDesktop || isTablet">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse harum officia deserunt velit
                 voluptates nisi magnam,
                 veritatis consequatur in qui, quibusdam fugit accusantium commodi praesentium provident sunt eum

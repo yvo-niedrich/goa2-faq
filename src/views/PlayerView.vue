@@ -178,7 +178,7 @@ const cards = computed(() => [
         gap: 1rem;
         position: relative;
         width: 100%;
-        min-width: 365px;
+        min-width: 320px;
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 2rem;
@@ -188,6 +188,15 @@ const cards = computed(() => [
         width: 100%;
         margin: 0 auto;
         padding: 2rem 0 0 0;
+
+
+        @media (max-width: 750px) {
+            padding-top: 1rem;
+        }
+
+        @media (max-width: 480px) {
+            padding-top: .5rem;
+        }
     }
 
     .slide {
