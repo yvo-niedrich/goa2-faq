@@ -7,8 +7,19 @@ import vueDevTools from 'vite-plugin-vue-devtools';
 import nightwatchPlugin from 'vite-plugin-nightwatch';
 import { VitePWA } from 'vite-plugin-pwa';
 
+const hash = (Math.random() + 1).toString(36).substring(2);
+
 // https://vite.dev/config/
 export default defineConfig({
+    base: '/goa2-faq/',
+
+    define: {
+        __APP_VERSION__: JSON.stringify(require('./package.json').version),
+        __APP_REPO__: JSON.stringify(require('./package.json').repository.url),
+        __APP_URL__: JSON.stringify(require('./package.json').homepage),
+        __APP_BUILD_HASH__: '\"' + hash + '\"',
+    },
+
     plugins: [
         vue(),
         vueJsx(),
