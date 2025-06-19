@@ -10,8 +10,9 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
+        "build": "npm run build-data && npm run build-app",
         "build-data": "tsx --tsconfig tsconfig.build.json build/build.ts",
-        "build": "run-p type-check \"build-only {@}\" --",
+        "build-app": "run-p type-check \"build-only {@}\" --",
         "preview": "vite preview",
         "test:unit": "vitest",
         "test:e2e": "nightwatch tests/e2e/*",

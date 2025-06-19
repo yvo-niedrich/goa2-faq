@@ -10,17 +10,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Build Vue
-        run: |
-          npm ci
-          npm run build-data
-          npm run build
-          cd dist
-          ln -s index.html 404.html
-          git config --global user.email "ci@github.com"
-          git config --global user.name "Bot"
-          git init
-          git add -A
-          git commit -m 'deploy pages'
-          git push -f https://yvo-niedrich:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git master:gh-pages
-        shell: bash
+      - id: Build-Vue
+        uses: xRealNeon/VuePagesAction@1.0.1
+        with:
+          username: 'yvo-niedrich'
+          reponame: 'goa2-faq'
+          token: ${{ secrets.GITHUB_TOKEN }}
