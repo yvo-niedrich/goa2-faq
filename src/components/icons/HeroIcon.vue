@@ -45,7 +45,7 @@ function handleClick() {
     position: relative;
     clip-path: polygon(22% 0%, 100% 0%, 78% 100%, 0% 100%);
 
-    mask-image: url("/mask.svg");
+    mask-image: url('data:image/svg+xml,<svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="220pt" height="290pt" viewBox="0 0 220 290"><polygon points="48.4,0 220,0 171.6,290 0,290" style="fill:%23000000;stroke:none;" /></svg>');
     mask-size: contain;
     mask-repeat: no-repeat;
     mask-position: center;

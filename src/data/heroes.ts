@@ -2,8 +2,15 @@ import { Expansion, expansions as allExpansions } from '@/types/Expansion';
 import { default as inferredHeroes } from './heroes.generated.json';
 
 /* eslint-disable  @typescript-eslint/no-explicit-any */
-export const heroes: { [id: string]: Hero } = inferredHeroes as any;
+export const heroes: { [id: string]: Hero } = inferredHeroes as any as { [id: string]: Hero };
 export const heroIds = Object.keys(heroes);
+
+const baseUrl = import.meta.env.BASE_URL;
+if (baseUrl) {
+    heroIds.forEach((key) => {
+        heroes[key].icon = baseUrl + heroes[key].icon.replace(/^\/*/g, '');
+    });
+}
 
 export const expansions = allExpansions.filter(
     (e) => !!Object.values(heroes).find((h) => h.expansion === e),
