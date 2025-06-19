@@ -16,7 +16,7 @@ const props = withDefaults(
 const f = 293 / 387;
 
 const fs = computed(() => {
-    return Math.min(2, Math.max(0.75, props.height / (props.name.length >= 12 ? 210 : 180)))
+    return Math.min(2, Math.max(0.75, props.height / ((props.name?.length ?? 0) >= 12 ? 210 : 180)))
 })
 
 function handleClick() {
