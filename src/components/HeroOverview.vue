@@ -54,29 +54,37 @@ function unsetFavorite() {
 </template>
 
 <style lang="scss">
-.card-column-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    .card-column-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
 
-    @media (max-width: 1080px) {
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 1.5em;
-    }
+        @media (max-width: 1080px) {
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 1.5em;
+        }
 
-    @media (max-width: 720px) {
-        column-gap: .65em;
-    }
-}
+        @media (max-width: 720px) {
+            column-gap: .65em;
+        }
 
-.btn-favorite {
-    cursor: pointer;
+        @media (max-width: 495px) {
+            grid-template-columns: 1fr;
 
-    &.inactive {
-        opacity: .6;
-
-        &:hover {
-            opacity: 1;
+            .hero-card-details {
+                margin: 0.75em auto;
+            }
         }
     }
-}
+
+    .btn-favorite {
+        cursor: pointer;
+
+        &.inactive {
+            opacity: .6;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
 </style>

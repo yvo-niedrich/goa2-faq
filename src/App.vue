@@ -101,6 +101,11 @@ header {
         a:first-of-type {
             border: 0;
         }
+
+        @media (max-width: 500px) {
+            text-align: left;
+            padding-left: 1em;
+        }
     }
 }
 

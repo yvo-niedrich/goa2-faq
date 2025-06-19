@@ -60,30 +60,33 @@ const cards = computed(() => [
     getCard('g', store.green, (card: Card) => store.green = card.id),
     getCard('b', store.blue, (card: Card) => store.blue = card.id),
     getCard('u'),
-])
+]);
 
 
-const { width } = useViewport();
-const widthBoundary = 675;
-const widthBoundary2 = 1060;
+    const viewport = useViewport();
 
-const visibleCount = computed(() => width.value >= widthBoundary2 ? 3.8 : (width.value >= widthBoundary ? 2.5 : 1.5));
-
-const navigableSlides = computed(() => cards.value.length - Math.floor(visibleCount.value));
-const isAtStart = computed(() => store.focus <= 0);
-const isAtEnd = computed(() => store.focus >= navigableSlides.value);
+    function getVisibleCount(width: int) {
+        if (width >= (viewport.desktopBoundary)) return 3.8;
+        if (width >= viewport.mobileBoundary) return 2.5;
+        return 1;
+    }
 
 
-const choice = ref<null | { cards: Card[], select: CardFn }>(null);
+    const visibleCount = computed(() => getVisibleCount(viewport.width.value));
+    const navigableSlides = computed(() => cards.value.length - Math.floor(visibleCount.value));
+    const isAtStart = computed(() => store.focus <= 0);
+    const isAtEnd = computed(() => store.focus >= navigableSlides.value);
 
 
-function setNewCard(cards: Card[], select: CardFn) {
-    if (cards.length === 0) return;
-    if (cards.length === 1) return select(cards[0]);
+    const choice = ref<null | { cards: Card[], select: CardFn }>(null);
 
-    choice.value = { cards, select };
-}
 
+    function setNewCard(cards: Card[], select: CardFn) {
+        if (cards.length === 0) return;
+        if (cards.length === 1) return select(cards[0]);
+
+        choice.value = { cards, select };
+    }
 
 </script>
 
@@ -98,12 +101,10 @@ function setNewCard(cards: Card[], select: CardFn) {
             <Carousel :items-to-show="visibleCount" :model-value="store.focus"
                 @update:modelValue="val => store.focus = Math.min(val, navigableSlides)" :wrap-around="false"
                 snap-align="center-even" :breakpoints="{
-                    0: { itemsToShow: 1.5, snapAlign: 'center' },
-                    675: { itemsToShow: 2.15, snapAlign: 'center-even' },
-                    720: { itemsToShow: 2.3, snapAlign: 'center-even' },
-                    800: { itemsToShow: 2.5, snapAlign: 'center-even' },
-                    [widthBoundary2]: { itemsToShow: 3.5, snapAlign: 'start' },
-                }" class="carousel">
+    0: { itemsToShow: 1, snapAlign: 'center' },
+    [viewport.mobileBoundary]: { itemsToShow: getVisibleCount(viewport.mobileBoundary), snapAlign: 'center-even' },
+    [viewport.desktopBoundary]: { itemsToShow: getVisibleCount(viewport.desktopBoundary), snapAlign: 'center-even' },
+}" class="carousel">
 
                 <template #addons>
                     <Navigation>
@@ -158,11 +159,7 @@ function setNewCard(cards: Card[], select: CardFn) {
                                 <path d="M6 12L12 18L18 12" stroke="currentColor" stroke-width="2"
                                     stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-
-
                         </div>
-
-
 
                         <HeroCard class="card" :card="card.data" />
                     </div>
@@ -174,251 +171,250 @@ function setNewCard(cards: Card[], select: CardFn) {
 </template>
 
 <style scoped lang="scss">
-.carousel-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    position: relative;
-    width: 100%;
-    min-width: 470px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-.carousel {
-
-    width: 100%;
-    margin: 0 auto;
-    padding: 2rem 0 0 0;
-}
-
-.slide {
-    padding: 0.5rem;
-    transition: transform 0.5s ease-out;
-
-    &.is-left {
-        transform: perspective(500px) rotateY(25deg) translateX(2em);
-    }
-
-    &.is-right {
-        transform: perspective(500px) rotateY(-25deg) translateX(-2em);
-    }
-
-    &.is-muted {
-        opacity: 0.3;
-    }
-}
-
-.carousel-mask {
-    transition: .5s ease-out;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 7em;
-    z-index: 2;
-    pointer-events: none;
-
-    @media (max-width: 750px) {
-        width: 4em;
-    }
-
-    &.left {
-        left: 0;
-        background: linear-gradient(to right, rgba(var(--color-background-soft-rgb), 0.9), transparent);
-    }
-
-    &.right {
-        right: 0;
-        background: linear-gradient(to left, rgba(var(--color-background-soft-rgb), 0.9), transparent);
-    }
-
-    &.hidden {
-        opacity: 0;
-    }
-}
-
-.nav-button {
-    transition: .5s ease-out;
-
-    position: absolute;
-    top: 40%;
-    transform: translateY(-50%) scaleY(2);
-    background: none;
-    border: none;
-    font-size: 2rem;
-    font-weight: 800;
-    cursor: pointer;
-    color: var(--color-text-dark);
-    text-shadow: 0 0 1px #555;
-    z-index: 10;
-    border-radius: .4rem;
-    padding: 2.25rem .25rem;
-
-
-    &.prev {
-        left: -2.15rem;
-        background: linear-gradient(to right, rgba(var(--color-heading-bright-rgb), .4), transparent);
-        background-position: -1em;
-        background-repeat: no-repeat;
-    }
-
-    &.next {
-        right: -2.15rem;
-        background: linear-gradient(to left, rgba(var(--color-heading-bright-rgb), .4), transparent);
-        background-position: 1em;
-        background-repeat: no-repeat;
-    }
-
-    &.prev:hover,
-    &.next:hover {
-        background-position: 0;
-    }
-
-    &.disabled {
-        opacity: 0.3;
-        pointer-events: none;
-    }
-}
-
-
-.custom-pagination {
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-    margin: 1rem 2.5rem;
-
-
-    @media (max-width: 750px) {
-        margin: 1rem 1.5rem;
-    }
-
-    .pagination-bullet {
-        height: 1.25em;
-
-        width: 18%;
-
-        max-width: 10em;
-        border-radius: .35em;
-        opacity: 0.6;
-        cursor: pointer;
-        border: 1px solid var(--color-border);
-        transition: all 0.2s ease-in-out;
-
-        &.active {
-            opacity: 1;
-            border: 1px solid var(--color-border-dark);
-            box-shadow: 0 0 3px #000;
-        }
-
-        &.color-y {
-            background-color: gold;
-        }
-
-        &.color-s {
-            background-color: silver;
-        }
-
-        &.color-r {
-            background-color: red;
-        }
-
-        &.color-g {
-            background-color: green;
-        }
-
-        &.color-b {
-            background-color: blue;
-        }
-
-        &.color-u {
-            background-color: rgb(90, 0, 90);
-        }
-    }
-}
-
-.slide-card-container {
-    height: 100%;
-    position: relative;
-    padding: 1.75rem 0;
-
-    .card-modification {
-        transition: .5s ease-out;
-        text-align: center;
-        position: absolute;
-        width: 40%;
+    .carousel-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        position: relative;
+        width: 100%;
+        min-width: 400px;
+        max-width: 1200px;
         margin: 0 auto;
-        left: 50%;
-        transform: translate(-50%, 0);
-        cursor: pointer;
-        height: 1.75rem;
+        padding: 0 2rem;
+    }
 
-        opacity: .5;
+    .carousel {
+        width: 100%;
+        margin: 0 auto;
+        padding: 2rem 0 0 0;
+    }
 
-        &:hover {
-            opacity: 1;
+    .slide {
+        padding: 0.5rem;
+        transition: transform 0.5s ease-out;
+
+        &.is-left {
+            transform: perspective(500px) rotateY(25deg) translateX(2em);
         }
 
-        &.downgrade {
-            bottom: 0;
+        &.is-right {
+            transform: perspective(500px) rotateY(-25deg) translateX(-2em);
+        }
 
-            border-bottom: 1px solid var(--color-background);
-            border-left: 1px solid var(--color-background);
-            border-right: 1px solid var(--color-background);
-            border-bottom-right-radius: 1em;
-            border-bottom-left-radius: 1em;
+        &.is-muted {
+            opacity: 0.3;
+        }
+    }
 
-            background: linear-gradient(to top, rgba(var(--color-background-highlight-rgb), 0.5), transparent);
+    .carousel-mask {
+        transition: .5s ease-out;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 7em;
+        z-index: 2;
+        pointer-events: none;
 
-            &>* {
-                vertical-align: text-bottom;
+        @media (max-width: 750px) {
+            width: 4em;
+        }
+
+        &.left {
+            left: 0;
+            background: linear-gradient(to right, rgba(var(--color-background-soft-rgb), 0.9), transparent);
+        }
+
+        &.right {
+            right: 0;
+            background: linear-gradient(to left, rgba(var(--color-background-soft-rgb), 0.9), transparent);
+        }
+
+        &.hidden {
+            opacity: 0;
+        }
+    }
+
+    .nav-button {
+        transition: .5s ease-out;
+
+        position: absolute;
+        top: 40%;
+        transform: translateY(-50%) scaleY(2);
+        background: none;
+        border: none;
+        font-size: 2rem;
+        font-weight: 800;
+        cursor: pointer;
+        color: var(--color-text-dark);
+        text-shadow: 0 0 1px #555;
+        z-index: 10;
+        border-radius: .4rem;
+        padding: 2.25rem .25rem;
+
+
+        &.prev {
+            left: -2.15rem;
+            background: linear-gradient(to right, rgba(var(--color-heading-bright-rgb), .4), transparent);
+            background-position: -1em;
+            background-repeat: no-repeat;
+        }
+
+        &.next {
+            right: -2.15rem;
+            background: linear-gradient(to left, rgba(var(--color-heading-bright-rgb), .4), transparent);
+            background-position: 1em;
+            background-repeat: no-repeat;
+        }
+
+        &.prev:hover,
+        &.next:hover {
+            background-position: 0;
+        }
+
+        &.disabled {
+            opacity: 0.3;
+            pointer-events: none;
+        }
+    }
+
+
+    .custom-pagination {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        margin: 1.25rem 2.5rem;
+
+
+        @media (max-width: 750px) {
+            margin: 1.15rem 1.5rem;
+        }
+
+        .pagination-bullet {
+            height: 1.4em;
+
+            width: 18%;
+
+            max-width: 10em;
+            border-radius: .35em;
+            opacity: 0.6;
+            cursor: pointer;
+            border: 1px solid var(--color-border);
+            transition: all 0.2s ease-in-out;
+
+            &.active {
+                opacity: 1;
+                border: 1px solid var(--color-border-dark);
+                box-shadow: 0 0 3px #000;
+            }
+
+            &.color-y {
+                background-color: gold;
+            }
+
+            &.color-s {
+                background-color: silver;
+            }
+
+            &.color-r {
+                background-color: red;
+            }
+
+            &.color-g {
+                background-color: green;
+            }
+
+            &.color-b {
+                background-color: blue;
+            }
+
+            &.color-u {
+                background-color: rgb(90, 0, 90);
             }
         }
+    }
 
-        &.upgrade {
-            top: 0;
+    .slide-card-container {
+        height: 100%;
+        position: relative;
+        padding: 1.75rem 0;
 
-            border-top: 1px solid var(--color-background);
-            border-left: 1px solid var(--color-background);
-            border-right: 1px solid var(--color-background);
-            border-top-right-radius: 1em;
-            border-top-left-radius: 1em;
+        .card-modification {
+            transition: .5s ease-out;
+            text-align: center;
+            position: absolute;
+            width: 40%;
+            margin: 0 auto;
+            left: 50%;
+            transform: translate(-50%, 0);
+            cursor: pointer;
+            height: 1.75rem;
 
-            background: linear-gradient(to bottom, rgba(var(--color-background-highlight-rgb), 0.5), transparent);
-        }
+            opacity: .5;
 
-        &.downgrade.disabled,
-        &.upgrade.disabled {
-            opacity: 0;
-            background: none;
-            border: none;
-            cursor: default;
-        }
-
-        .modification-icon {
-            width: 2.25em;
-
-            &.upgrade {
-                text-align: text-top;
+            &:hover {
+                opacity: 1;
             }
 
             &.downgrade {
-                text-align: text-bottom;
+                bottom: 0;
+
+                border-bottom: 1px solid var(--color-background);
+                border-left: 1px solid var(--color-background);
+                border-right: 1px solid var(--color-background);
+                border-bottom-right-radius: 1em;
+                border-bottom-left-radius: 1em;
+
+                background: linear-gradient(to top, rgba(var(--color-background-highlight-rgb), 0.5), transparent);
+
+                &>* {
+                    vertical-align: text-bottom;
+                }
+            }
+
+            &.upgrade {
+                top: 0;
+
+                border-top: 1px solid var(--color-background);
+                border-left: 1px solid var(--color-background);
+                border-right: 1px solid var(--color-background);
+                border-top-right-radius: 1em;
+                border-top-left-radius: 1em;
+
+                background: linear-gradient(to bottom, rgba(var(--color-background-highlight-rgb), 0.5), transparent);
+            }
+
+            &.downgrade.disabled,
+            &.upgrade.disabled {
+                opacity: 0;
+                background: none;
+                border: none;
+                cursor: default;
+            }
+
+            .modification-icon {
+                width: 2.25em;
+
+                &.upgrade {
+                    text-align: text-top;
+                }
+
+                &.downgrade {
+                    text-align: text-bottom;
+                }
             }
         }
     }
-}
 
-.card {
-    margin: 0;
-    user-select: none;
-    touch-action: pan-y;
+    .card {
+        margin: 0;
+        user-select: none;
+        touch-action: pan-y;
 
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
-    height: 100%;
-    align-items: center;
-    justify-content: center;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+        height: 100%;
+        align-items: center;
+        justify-content: center;
 
-}
+    }
 </style>

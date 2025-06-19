@@ -78,7 +78,6 @@ function showFAQs() {
         }
     }
 
-
     @media (max-width: 1280px) {
         padding: 0.75em;
         margin: 0.75em 0.5em;
