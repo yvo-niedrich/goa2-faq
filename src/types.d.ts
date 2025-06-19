@@ -1,4 +1,4 @@
-interface CardAttributes {
+declare interface CardAttributes {
     movement?: number;
     defense?: number;
     attack?: number | string;
@@ -6,13 +6,13 @@ interface CardAttributes {
     radius?: number;
 }
 
-interface CardType {
+declare interface CardType {
     basic: boolean;
     ranged: boolean;
     type: 'attack' | 'movement' | 'ultimate' | 'skill' | 'defense';
 }
 
-interface Card {
+declare interface Card {
     id: string;
     name: string;
     color: 'y' | 'g' | 'b' | 'r' | 'u' | 's';
@@ -21,7 +21,7 @@ interface Card {
     text: string;
 }
 
-interface Hero {
+declare interface Hero {
     id: string;
     name: string;
     class: string;
@@ -37,12 +37,12 @@ interface Hero {
     cards: Card[];
 }
 
-interface HeroRecord {
+declare interface HeroRecord {
     name: string;
     cards: Card[];
 }
 
-interface FaqRecord {
+declare interface FaqRecord {
     q: string;
     a: string;
     ref: string[];
