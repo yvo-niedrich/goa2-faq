@@ -65,7 +65,7 @@ const cards = computed(() => [
 
     const viewport = useViewport();
 
-    function getVisibleCount(width: int) {
+    function getVisibleCount(width: number) {
         if (width >= (viewport.desktopBoundary)) return 3.8;
         if (width >= viewport.mobileBoundary) return 2.5;
         return 1;
@@ -178,7 +178,7 @@ const cards = computed(() => [
         gap: 1rem;
         position: relative;
         width: 100%;
-        min-width: 400px;
+        min-width: 365px;
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 2rem;
@@ -217,7 +217,11 @@ const cards = computed(() => [
         pointer-events: none;
 
         @media (max-width: 750px) {
-            width: 4em;
+            width: 3.5em;
+        }
+
+        @media (max-width: 480px) {
+            width: 2em;
         }
 
         &.left {
