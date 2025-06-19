@@ -1,5 +1,5 @@
 {
-    "faq-xar-1": {
+    "faq-xar-uxm2IDQl": {
         "q": "What does Xargatha's Stone Gaze affect and not affect?",
         "a": "It prevents “movement actions”, that is, selecting the movement option when resolving a card:\n - They **can’t** use a normal movement action to move.\n - They **can’t** use a movement action to fast travel (which chooses, then replaces, a movement action).\n - They **can** use a “place” or “swap” effect (such as Arien’s Alt Blue).\n - The **can** be pushed or moved by another effect (if the effect ignores immunity).\n - They **can** take another action type that involves movement (such as Brogan’s Primary Red) or a Fast Travel (Silverarrow’s Gold).",
         "ref": [
@@ -8,7 +8,7 @@
             "xar-blue-iii-turn-into-statues"
         ]
     },
-    "faq-xar-2": {
+    "faq-xar-BBNWEowq": {
         "q": "Does Xargatha's Constrict affect heavy minions as well?",
         "a": "No. Initially you can only kill **melee** minions, but on Tier 3 you can get melee or ranged minions, but never the heavy minion.",
         "ref": ["xar-green-ii-constrict", "xar-green-iii-final-embrace"]

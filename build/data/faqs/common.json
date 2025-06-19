@@ -1,17 +1,26 @@
 {
-    "faq-common-1": {
+    "faq-common-OmbzNwt1": {
         "q": "What does immunity protect from?",
         "a": " Basically everything. An immune unit can’t be targeted or affected by any action. They can choose to move through and ignore tokens.",
         "ref": ["tig-silver-blend-into-shadows"]
     },
-    "faq-common-2": {
+    "faq-common-J6uK9mGB": {
         "q": "Why is there a range 1 attack? Isn’t that non-ranged?",
         "a": "A range of 1 can only target an adjacent space (but the range may be increased by items or other effects). A range of 0 has no targets.\nSome cards **explicitly** interact with ranged or non-ranged attacks.",
         "ref": ["sab-gold-point-blank-shot"]
     },
-    "faq-common-3": {
+    "faq-common-5eb64zdk": {
         "q": "Is Fast Travel the same thing as movement?",
         "a": "No. Fast Travel is a special type of action that usually replaces a Movement action. They are related but different:\n\n- When you would take a Movement action, you can fast travel instead.\n- If you use a primary Movement action to Fast Travel, you would ignore the card text, since you are replacing the action.\n- A card that lets you move (“Move 2 spaces…”) would not let you Fast Travel instead.\n- If you are prevented from moving or from taking a Movement action, you could not use a Movement action to Fast Travel.\n- If you are limited in how you move (“May only move 1 space”), you may still Fast Travel as normal, since you are allowed to select, then replace, the Movement action (and Fast Travel is a placement, not movement).",
-        "ref": ["silverarrow"]
+        "ref": ["sil-silver-trailblazer"]
+    },
+    "faq-common-Xe16hzf0": {
+        "q": "Does my effect trigger next round?",
+        "a": "No. Active effects always “clear” at the end of the round: A “next turn” effect played on Turn 4 will **not** carry over to the next round.",
+        "ref": [
+            "xar-blue-i-stone-gaze",
+            "xar-blue-ii-petrifying-stare",
+            "xar-blue-iii-turn-into-statues"
+        ]
     }
 }

@@ -1,21 +1,24 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue';
-import { filterHeroesByExpansions, get } from '@/data/heroes'
-import HeroIcon from '@/components/icons/HeroIcon.vue'
+import { defaultHeroSortFn, filterHeroesByExpansions, get } from '@/data/heroes'
 import router from '@/router';
-import { useViewport } from '@/viewport';
-import type { Expansion } from '@/types/Expansion';
 import HeroOverview from '@/components/HeroOverview.vue';
+import HeroSelection from '@/components/HeroSelection.vue';
+import SearchInput from '@/components/SearchInput.vue';
 
 const props = defineProps<{
     hero?: string;
 }>();
 
-const { isTablet, isDesktop } = useViewport();
-
-const filterExp = ref<Expansion[]>([]);
+const filterExp = ref<string>('');
 const filterComplexity = ref<number[]>([]);
-const filterName = ref('');
+const filterName = ref<string>('');
+
+const list = computed(() => filterHeroesByExpansions(filterExp.value)
+    .filter(h => filterComplexity.value.length === 0 || filterComplexity.value.includes(h.complexity))
+    .filter(h => h.name.toLowerCase().includes(filterName.value.toLowerCase()))
+    .sort(defaultHeroSortFn)
+);
 
 const selectedHero = computed(() => {
     if (!props.hero) return null;
@@ -27,68 +30,46 @@ const selectedHero = computed(() => {
     }
 });
 
-const list = computed(() => filterHeroesByExpansions(filterExp.value)
-    .filter(h => filterComplexity.value.length === 0 || filterComplexity.value.includes(h.complexity))
-    .filter(h => h.name.toLowerCase().includes(filterName.value.toLowerCase()))
-);
-
-const portraitHeight = computed(() => isDesktop.value ? 250 : isTablet.value ? 200 : 150);
 </script>
 
 <template>
-    <div class="hero-selection">
+    <div class="hero-overview">
         <Transition :name="'slide-' + (selectedHero ? 'left' : 'right')">
-            <div v-if="!selectedHero" class="list">
-                <HeroIcon v-for="h of list" :key="h.id" :height="portraitHeight" :name="h.name" :path="h.icon"
-                    :onClick="() => router.push({ name: 'heroes', params: { hero: h.id } })" />
-
+            <div class="overview-selection" v-if="!selectedHero">
+                <div class="search-bar">
+                    <SearchInput v-model="filterName" :placeholder="$t('app.button.search')" />
+                </div>
+                <HeroSelection :heroes="list"
+                    :onClick="(h) => router.push({ name: 'heroes', params: { hero: h.id } })" />
             </div>
-            <div class="details" v-else>
+
+            <div class="overview-details" v-else>
                 <HeroOverview :hero="selectedHero" />
             </div>
         </Transition>
     </div>
-
 </template>
 
 <style lang="scss">
-.hero-selection {
+.hero-overview {
     --animation-transition-time: .5s;
 
     position: relative;
     overflow: hidden;
 
-    .list {
-        text-align: center;
-        padding: 0 1.25em;
-
-        .hero-icon {
-            margin-left: -1.15rem;
-            margin-right: -1.15rem;
-            margin-bottom: 0.25rem;
-
-
-
-            @media (max-width: 1024px) {
-                margin-left: -.9em;
-                margin-right: -.9em;
-            }
-
-            @media (max-width: 765px) {
-                margin-left: -.8em;
-                margin-right: -.8em;
-            }
-        }
-    }
-
-    .details,
-    .list {
+    &>* {
         width: 100%;
     }
 
+    .search-bar {
+        width: 30em;
+        max-width: 80%;
+        margin: 0 auto 1em auto;
+        text-align: center;
+    }
 
-    .details.slide-right-leave-active,
-    .list.slide-left-leave-active {
+    .overview-details.slide-right-leave-active,
+    .overview-selection.slide-left-leave-active {
         position: absolute;
         transition: all var(--animation-transition-time) ease-out,
             opacity .25s ease-out .15s;

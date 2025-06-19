@@ -28,7 +28,8 @@
             "defense": 8,
             "initiative": 1,
             "movement": [2, 4]
-        }
+        },
+        "cards": "cards/brogan.json"
     },
     {
         "id": "tig",
@@ -198,7 +199,8 @@
             "defense": 6,
             "initiative": 5,
             "movement": [1, 5]
-        }
+        },
+        "cards": "cards/ursafar.json"
     },
     {
         "id": "sil",
@@ -213,7 +215,8 @@
             "defense": 1,
             "initiative": 7,
             "movement": [6, 7]
-        }
+        },
+        "cards": "cards/silverarrow.json"
     },
     {
         "id": "min",

@@ -1,16 +1,17 @@
+import { useStorage } from '@vueuse/core';
 import { defineStore } from 'pinia';
 import { ref } from 'vue';
 
 export const useCompanionStore = defineStore('companion', () => {
-    const id = ref<string | null>(null);
-    const gold = ref<string | null>(null);
-    const silver = ref<string | null>(null);
-    const red = ref<string | null>(null);
-    const green = ref<string | null>(null);
-    const blue = ref<string | null>(null);
+    const id = useStorage<string | null>('goa2-faq.companion.id', null);
+    const gold = useStorage<string | null>('goa2-faq.companion.gold', null);
+    const silver = useStorage<string | null>('goa2-faq.companion.silver', null);
+    const red = useStorage<string | null>('goa2-faq.companion.red', null);
+    const green = useStorage<string | null>('goa2-faq.companion.green', null);
+    const blue = useStorage<string | null>('goa2-faq.companion.blue', null);
+    const focus = ref(0);
 
-    function reset() {
-        id.value = null;
+    function resetCards() {
         gold.value = null;
         silver.value = null;
         red.value = null;
@@ -18,5 +19,11 @@ export const useCompanionStore = defineStore('companion', () => {
         blue.value = null;
     }
 
-    return { id, gold, silver, red, green, blue, reset };
+    function reset() {
+        id.value = null;
+        focus.value = 0;
+        resetCards();
+    }
+
+    return { id, gold, silver, red, green, blue, focus, reset, resetCards };
 });

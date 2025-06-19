@@ -1,11 +1,3 @@
-function capitalizeFirstLetter(val: string): string {
-    return String(val).charAt(0).toUpperCase() + String(val).slice(1);
-}
-
-export function toString(t: CardType): string {
-    return `${t.basic ? 'Basic ' : ''} ${capitalizeFirstLetter(t.type || 'unknown')}${t.ranged ? ' - Ranged' : ''}`;
-}
-
 export function toType(value: string): CardType {
     let basic = false;
     let ranged = false;
@@ -37,4 +29,26 @@ export function toType(value: string): CardType {
     }
 
     return { ranged, basic, type };
+}
+
+function tierToNum(t: Card['tier'] | null) {
+    switch (t) {
+        case 'I':
+            return 1;
+        case 'II':
+            return 2;
+        case 'III':
+            return 3;
+        case 'IV':
+            return 4;
+        case 'H':
+            return -1;
+        default:
+            return 0;
+    }
+}
+
+export function sortTier(a: Card['tier'] | null, b: Card['tier'] | null) {
+    if (a === b) return 0;
+    return tierToNum(a) > tierToNum(b) ? 1 : -1;
 }

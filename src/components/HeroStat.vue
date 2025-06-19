@@ -40,17 +40,18 @@ const statPotential = computed(() => Array.isArray(props.value) ? props.value[1]
 
         .stat-bar {
             display: inline-block;
-            height: 50%;
+            vertical-align: middle;
+            height: 55%;
             width: 10%;
-            margin: 0 1%;
+            margin: auto 1%;
             border: 1px solid #000;
-            border-radius: .15rem;
-            box-shadow: 0 0 2px 1px var(--color-border);
+            border-radius: .2rem;
+            background-color: #00000030;
+            box-shadow: 0 0 2px 0px var(--color-border);
 
-            background-color: #00000040;
 
             &.full {
-                background: var(--color-heading-full);
+                background: var(--color-heading-strong);
             }
 
             &.potential {

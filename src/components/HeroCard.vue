@@ -1,10 +1,8 @@
 <script setup lang="ts">
-import { toString as typeToString } from '@/types/CardType';
 import { count as countFaq } from '@/data/faq'
 import { useFaqStore } from '@/stores/faq'
 import { computed } from 'vue';
 import Markdown from './Markdown.vue';
-
 
 const props = defineProps<{ card: Card; }>();
 const hasFaq = computed(() => countFaq(props.card.id) > 0)
@@ -18,11 +16,16 @@ function showFAQs() {
 </script>
 
 <template>
-    <div class="card-details" :class="{ [`card-color-${card.color}`]: true, 'has-faq': hasFaq }" @click="showFAQs()">
-        <h2 class="card-name">{{ card.name }}</h2>
-        <div v-if="card.tier" class="card-tier">{{ card.tier }}</div>
-        <div class="card-effect-type">{{ typeToString(card.type) }}</div>
-        <div class="card-effect-text">
+    <div class="hero-card-details" :class="{ [`hero-card-color-${card.color}`]: true, 'has-faq': hasFaq }"
+        @click="showFAQs()">
+        <h2 class="hero-card-name">{{ card.name }}</h2>
+        <div v-if="card.tier" class="hero-card-tier">{{ card.tier }}</div>
+        <div class="hero-card-effect-type">
+            {{ card.type.basic ? $t('app.card-type.basic') : '' }}
+            {{ card.type.type ? $t('app.card-type.' + card.type.type) : '????' }}
+            {{ card.type.ranged ? ' - ' + $t('app.card-type.ranged') : '' }}
+        </div>
+        <div class="hero-card-effect-text">
             <Markdown :text="$t(card.text)" />
         </div>
     </div>
@@ -30,7 +33,7 @@ function showFAQs() {
 
 
 <style lang="scss">
-.card-details {
+.hero-card-details {
     flex: auto;
     flex-direction: column;
 
@@ -55,13 +58,14 @@ function showFAQs() {
         &::after {
             transition: .5s ease-out;
             content: '?!';
+            font-weight: 600;
 
             position: absolute;
             bottom: .5em;
             right: .5em;
 
-            background: #ffffff50;
-            box-shadow: 0 0 2px #FFFFFF50;
+            background: #ffffff80;
+            box-shadow: 0 0 3px 1px #FFFFFF60;
 
             border: 1px solid black;
             padding: 0 .35em;
@@ -69,7 +73,8 @@ function showFAQs() {
         }
 
         &:hover::after {
-            background: #e01919;
+            background: var(--color-heading-bright);
+            box-shadow: none;
         }
     }
 
@@ -79,41 +84,41 @@ function showFAQs() {
         margin: 0.75em 0.5em;
     }
 
-    &.card-color-y {
+    &.hero-card-color-y {
         background: #e3c100;
         background: linear-gradient(180deg, rgb(223, 189, 0) 0%, rgb(255, 228, 75) 75%);
     }
 
-    &.card-color-s {
+    &.hero-card-color-s {
         background: #b0b0b0;
         background: linear-gradient(180deg, rgb(158, 158, 158) 0%, rgb(209, 209, 209) 75%);
     }
 
-    &.card-color-r {
+    &.hero-card-color-r {
         background: #cc2f2f;
         background: linear-gradient(180deg, rgba(204, 47, 47, 1) 0%, rgba(255, 89, 89, 1) 75%);
     }
 
-    &.card-color-g {
+    &.hero-card-color-g {
         background: #1dab1d;
         background: linear-gradient(180deg, rgba(29, 171, 29, 1) 0%, rgba(67, 217, 67, 1) 75%);
     }
 
-    &.card-color-b {
+    &.hero-card-color-b {
         background: #283db5;
         background: linear-gradient(180deg, rgb(57, 81, 212) 0%, rgb(102, 124, 247) 75%);
     }
 
-    &.card-color-u {
+    &.hero-card-color-u {
         background: #1c0333;
         background: linear-gradient(180deg, rgb(33, 3, 61) 0%, rgb(104, 73, 119) 38%, rgb(140, 107, 156) 65%);
 
-        .card-name {
+        .hero-card-name {
             color: white;
         }
     }
 
-    .card-attribute-value {
+    .hero-card-attribute-value {
         margin: .25em 0;
         width: 1.65em;
         text-align: center;
@@ -125,12 +130,12 @@ function showFAQs() {
         background-color: rgba(255, 255, 255, 0.75);
     }
 
-    .card-attribute-value.attribute-initiative {
+    .hero-card-attribute-value.attribute-initiative {
         margin-top: 0;
         margin-bottom: 1.25em;
     }
 
-    .card-name {
+    .hero-card-name {
         font-weight: 600;
         font-size: 1.75em;
 
@@ -146,7 +151,7 @@ function showFAQs() {
         border-bottom-left-radius: .25em;
     }
 
-    .card-tier {
+    .hero-card-tier {
         position: absolute;
         top: .3em;
         right: .3em;
@@ -164,17 +169,17 @@ function showFAQs() {
         box-shadow: 0 0 3px #BBB;
     }
 
-    .card-effect-type {
+    .hero-card-effect-type {
         text-align: center;
         margin-bottom: .25em;
 
-        border-top: 1px solid rgba(0, 0, 0, .8);
-        border-bottom: 1px solid rgba(0, 0, 0, .4);
+        border-top: 1px solid rgba(0, 0, 0, .75);
+        border-bottom: 1px solid rgba(0, 0, 0, .75);
 
         background: radial-gradient(circle, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 95%);
     }
 
-    .card-effect-text {
+    .hero-card-effect-text {
         // ...
     }
 

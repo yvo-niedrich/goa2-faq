@@ -2,6 +2,7 @@
 :root {
     --color-background-rgb: 21, 30, 34;
     --color-background-soft-rgb: 48, 68, 77;
+    --color-background-highlight-rgb: 82, 133, 155;
 
     --color-background: rgb(21, 30, 34);
     --color-background-soft: rgb(48, 68, 77);
@@ -12,15 +13,14 @@
     --color-border-shadow: rgb(48, 68, 77);
     --color-border-hover: rgb(100, 135, 151);
 
-    /* --color-heading: rgb(87, 154, 255); */
+    --color-heading-bright-rgb: 175, 202, 255;
+
     --color-heading: rgb(129, 171, 255);
-    --color-heading-full: rgb(73, 146, 255);
-    --color-heading-bright: rgb(184, 208, 255);
+    --color-heading-strong: rgb(65, 141, 255);
+    --color-heading-bright: rgb(175, 202, 255);
     --color-text: rgb(255, 255, 255);
     --color-heading-dark: rgb(15, 22, 29);
     --color-text-dark: rgb(19, 27, 34);
-
-    --section-gap: 160px;
 }
 
 *,
@@ -78,7 +78,7 @@ strong {
     font-weight: normal;
 
     transition: 0.2s ease;
-    font-size: 15px;
+    font-size: 14px;
     background: var(--color-background-soft);
 
     border-left: 1px solid var(--color-border);
@@ -90,7 +90,7 @@ strong {
     #app {
         padding: 0;
         font-weight: normal;
-        font-size: 14px;
+        font-size: 13px;
     }
 }
 

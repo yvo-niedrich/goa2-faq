@@ -2,7 +2,7 @@
 import { computed } from 'vue';
 import { useFaqStore } from '@/stores/faq'
 import { get as getFAQs } from '@/data/faq'
-import Markdown from './Markdown.vue';
+import Markdown from '../Markdown.vue';
 
 const faqStore = useFaqStore()
 
@@ -35,7 +35,7 @@ const records = computed(() => {
 .faq-overlay {
     position: fixed;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.75);
     display: flex;
     align-items: center;
     justify-content: center;

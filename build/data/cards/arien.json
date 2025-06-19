@@ -109,7 +109,7 @@
         "color": "blue",
         "type": "Defense",
         "tier": "I",
-        "text": "*Ignore all minion defense modifiers.*\n**This turn:** You are immune to attack actions of all enemy heroes, except this attacker."
+        "text": "Ignore all minion defense modifiers.\n_(This includes your minions, as well as enemy minions)_"
     },
     {
         "id": "ari-blue-ii-expert-duelist",
@@ -117,7 +117,7 @@
         "color": "blue",
         "type": "Defense",
         "tier": "II",
-        "text": "*Ignore all minion defense modifiers.*\n**This turn:** You are immune to attack actions of all enemy heroes, except this attacker."
+        "text": "Ignore all minion defense modifiers.\n**This turn:** You are immune to attack actions of all enemy heroes, except this attacker."
     },
     {
         "id": "ari-blue-ii-slippery-ground",

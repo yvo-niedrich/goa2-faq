@@ -43,7 +43,7 @@
         "color": "green",
         "tier": "II",
         "type": "Skill",
-        "text": "End of round: Defeat an enemy melee minion adjacent to you.\n(Before the end of round minion battle.)"
+        "text": "**End of round:** Defeat an enemy melee minion adjacent to you.\n(Before the end of round minion battle.)"
     },
     {
         "id": "xar-green-ii-control",
@@ -59,7 +59,7 @@
         "color": "green",
         "tier": "III",
         "type": "Skill",
-        "text": "End of round: Defeat an enemy melee or ranged minion adjacent to you."
+        "text": "**End of round:** Defeat an enemy melee or ranged minion adjacent to you."
     },
     {
         "id": "xar-green-iii-dominate",
@@ -75,7 +75,7 @@
         "color": "blue",
         "tier": "I",
         "type": "Skill",
-        "text": "Next turn: Enemy heroes in radius count as both heroes and terrain, and cannot perform movement actions. (If you move, the radius \"moves\" with you.)"
+        "text": "**Next turn:** Enemy heroes in radius count as both heroes and terrain, and cannot perform movement actions. (If you move, the radius \"moves\" with you.)"
     },
     {
         "id": "xar-blue-ii-petrifying-stare",
@@ -83,7 +83,7 @@
         "color": "blue",
         "tier": "II",
         "type": "Skill",
-        "text": "Next turn: Enemy heroes in radius count as both heroes and terrain, and cannot perform movement actions."
+        "text": "**Next turn:** Enemy heroes in radius count as both heroes and terrain, and cannot perform movement actions."
     },
     {
         "id": "xar-blue-ii-fresh-converts",
@@ -99,7 +99,7 @@
         "color": "blue",
         "tier": "III",
         "type": "Skill",
-        "text": "Next turn: Enemy heroes in radius count as both heroes and terrain, and cannot perform movement actions."
+        "text": "**Next turn:** Enemy heroes in radius count as both heroes and terrain, and cannot perform movement actions."
     },
     {
         "id": "xar-blue-iii-devoted-followers",

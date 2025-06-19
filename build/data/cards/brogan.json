@@ -1,0 +1,154 @@
+[
+    {
+        "id": "bro-goldonslaught",
+        "name": "Onslaught",
+        "color": "gold",
+        "type": "Basic Attack",
+        "tier": null,
+        "text": "Target a unit adjacent to you. After the attack: Move into the space it occupied, if able."
+    },
+    {
+        "id": "bro-silver-bulwark",
+        "name": "Bulwark",
+        "color": "silver",
+        "type": "Basic Skill",
+        "tier": null,
+        "text": "You may retrieve a discarded card.\n**This turn:** You and friendly units in radius cannot be moved, pushed, swapped or placed by enemy heroes."
+    },
+    {
+        "id": "bro-red-i-mad-dash",
+        "name": "Mad Dash",
+        "color": "red",
+        "type": "Attack",
+        "tier": "I",
+        "text": "Before the attack: Move 2 spaces in a straight line to a space adjacent to an enemy unit, then target that unit.\n(*If you cannot make this move, you cannot attack.*)"
+    },
+    {
+        "id": "bro-blue-i-brutal-jab",
+        "name": "Brutal Jab",
+        "color": "blue",
+        "type": "Skill",
+        "tier": "I",
+        "text": "You may move 1 space. Push an enemy unit or a token adjacent to you up to 1 space."
+    },
+    {
+        "id": "bro-green-i-shield",
+        "name": "Shield",
+        "color": "green",
+        "type": "Skill",
+        "tier": "I",
+        "text": "**This round:** When any friendly minion in radius is defeated you may discard a silver card. If you do, the minion is not removed.\n(*The enemy hero still gains the coins for defeating the minion.*)"
+    },
+    {
+        "id": "bro-blue-ii-shield-bash",
+        "name": "Shield Bash",
+        "color": "blue",
+        "type": "Skill",
+        "tier": "II",
+        "text": "An enemy hero adjacent to you who has played an attack card this turn discards a card, if able."
+    },
+    {
+        "id": "bro-blue-ii-mighty-punch",
+        "name": "Mighty Punch",
+        "color": "blue",
+        "type": "Skill",
+        "tier": "II",
+        "text": "You may move 1 space. Push an enemy unit or a token adjacent to you up to 2 spaces."
+    },
+    {
+        "id": "bro-blue-iii-counterattack",
+        "name": "Counterattack",
+        "color": "blue",
+        "type": "Skill",
+        "tier": "III",
+        "text": "An enemy hero adjacent to you who has played an attack card this turn discards a card, or is defeated."
+    },
+    {
+        "id": "bro-blue-iii-savage-kick",
+        "name": "Savage Kick",
+        "color": "blue",
+        "type": "Skill",
+        "tier": "III",
+        "text": "Move up to 2 spaces. Push an enemy unit or a token adjacent to you up to 2 spaces."
+    },
+    {
+        "id": "bro-red-ii-throwing-axe",
+        "name": "Throwing Axe",
+        "color": "red",
+        "type": "Attack - Ranged",
+        "tier": "II",
+        "text": "**Choose one —**\n- Target a unit adjacent to you.\n- You may discard a card; if you do, target a unit in range."
+    },
+    {
+        "id": "bro-red-ii-bullrush",
+        "name": "Bullrush",
+        "color": "red",
+        "type": "Attack",
+        "tier": "II",
+        "text": "Before the attack: Move 2 or 3 spaces in a straight line to a space adjacent to an enemy unit, then target that unit."
+    },
+    {
+        "id": "bro-red-iii-furious-charge",
+        "name": "Furious Charge",
+        "color": "red",
+        "type": "Attack",
+        "tier": "III",
+        "text": "Before the attack: Move 2, 3, or 4 spaces in a straight line to a space adjacent to an enemy unit, then target that unit."
+    },
+    {
+        "id": "bro-red-iii-throwing-spear",
+        "name": "Throwing Spear",
+        "color": "red",
+        "type": "Attack - Ranged",
+        "tier": "III",
+        "text": "**Choose one —**\n- Target a unit adjacent to you.\n- You may discard a card. If you have a card in the discard, target a unit in range."
+    },
+    {
+        "id": "bro-green-ii-war-drummer",
+        "name": "War Drummer",
+        "color": "green",
+        "type": "Skill - Ranged",
+        "tier": "II",
+        "text": "A friendly hero in range gains 1 coin; if any hero was defeated this round, that friendly hero gains 3 coins instead."
+    },
+    {
+        "id": "bro-green-ii-bolster",
+        "name": "Bolster",
+        "color": "green",
+        "type": "Skill",
+        "tier": "II",
+        "text": "**This round:** When any friendly minion in radius is defeated you may discard a silver card. If you do, the minion is not removed."
+    },
+    {
+        "id": "bro-green-iii-fortify",
+        "name": "Fortify",
+        "color": "green",
+        "type": "Skill",
+        "tier": "III",
+        "text": "**This round:** When any friendly minion in radius is defeated you may discard a basic card. If you do, the minion is not removed."
+    },
+    {
+        "id": "bro-green-iii-master-skald",
+        "name": "Master Skald",
+        "color": "green",
+        "type": "Skill - Ranged",
+        "tier": "III",
+        "text": "A friendly hero in range gains 2 coins; if any hero was defeated this round, that friendly hero gains 4 coins instead."
+    },
+    {
+        "id": "bro-gold-h-leap-forward",
+        "name": "Leap Forward",
+        "color": "gold",
+        "type": "Basic Attack",
+        "tier": "H",
+        "text": "Target a hero adjacent to you. After the attack: Move into the space it occupied, if able."
+    },
+    {
+        "id": "bro-purple-iv-one-man-army",
+        "name": "One Man Army",
+        "color": "purple",
+        "type": "Ultimate",
+        "tier": "IV",
+        "text": "During minion battle you count as a heavy minion; if you would be removed, lose the push instead."
+    }
+]

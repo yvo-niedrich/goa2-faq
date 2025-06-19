@@ -1,12 +1,7 @@
 {
-    "faq-sabina-1": {
+    "faq-sabina-AR1boyR4": {
         "q": "Does Sabina gain the attack bonus against Heroes who have played but not resolved an attack card?",
         "a": "Yes: the card only checks for Heroes that **played** an attack card, regardless of whether they’ve resolved the action, which action they performed, and even whether this is still their card for the turn (it will “remember” whether they have played a card, even if it is discarded or switched for another card by an effect).",
         "ref": ["sab-red-i-quickdraw", "sab-red-ii-gunslinger", "sab-red-iii-dead-shot"]
-    },
-    "faq-sabina-2": {
-        "q": "How does Sabina’s Tier III Primary Blue (Field Promotion) treat friendly minions “as both melee and ranged”?",
-        "a": "Such minions would apply their penalties to adjacent units and ranged units, giving -2 Defense to an adjacent Hero.",
-        "ref": []
     }
 }

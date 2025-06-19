@@ -30,6 +30,9 @@ function handleClick() {
 <template>
     <div class="hero-icon" :class="{ animate, inline, pointer: !!onClick }" @click="handleClick"
         :style="{ backgroundImage: `url(${path})`, height: `${height}px`, width: `${height * f}px` }">
+        <div class="icon-container">
+            <slot />
+        </div>
         <div v-if="name" class="name-overlay">
             <div class="name-overlay-text" :style="{ fontSize: `${fs}rem` }">{{ name }}</div>
         </div>
@@ -37,17 +40,9 @@ function handleClick() {
 </template>
 
 
-<style lang="scss">
+<style lang="scss" scoped>
 .hero-icon {
-
-    &.inline {
-        display: inline-block;
-    }
-
-    &.pointer {
-        cursor: pointer;
-    }
-
+    position: relative;
     clip-path: polygon(22% 0%, 100% 0%, 78% 100%, 0% 100%);
 
     mask-image: url("/mask.svg");
@@ -61,6 +56,21 @@ function handleClick() {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+
+
+    &.inline {
+        display: inline-block;
+    }
+
+    &.pointer {
+        cursor: pointer;
+    }
+
+    .icon-container {
+        position: absolute;
+        top: 5px;
+        left: 25%;
+    }
 
     .name-overlay,
     .name-overlay-text {

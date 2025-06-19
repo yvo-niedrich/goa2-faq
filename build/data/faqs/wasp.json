@@ -1,21 +1,21 @@
 {
-    "faq-wasp-1": {
+    "faq-wasp-P8qD2hsM": {
         "q": "How does Wasp’s Static Barrier work?",
         "a": "Static Barrier divides the map into 2 regions: spaces within its radius and outside its radius. Enemy units cannot **move** or **fast travel** across the “barrier” between the two regions:\n- They cannot take a move action (to move or fast travel) to move across the barrier.\n- They cannot use an attack or skill involving movement to cross the barrier.\n- They cannot cross the barrier on their path, even if they cross back. That is, a hero outside the barrier cannot walk into the radius and then walk back out.\n- They can use a “place” or “swap” effect (such as Arien’s Alt Blue) to cross the barrier.\n- They can be pushed across the barrier (pushing is not movement) or moved by another player’s card.",
         "ref": ["was-silver-static-barrier"]
     },
-    "faq-wasp-3": {
+    "faq-wasp-iOUfdU2P": {
         "q": "How does Wasp’s ability move units and tokens?",
         "a": "The target cannot move farther away or closer, so the distance between you and the target must remain unchanged.",
         "ref": ["was-blue-i-lift-up", "was-blue-ii-control-gravity", "was-blue-iii-center-of-mass"]
     },
 
-    "faq-wasp-4": {
+    "faq-wasp-6LS6R1fC": {
         "q": "When does Wasp’s  push ability force a discard?",
         "a": "This card pushes adjacent enemies away from you (in a straight line). If an enemy Hero cannot be pushed the full distance, because an obstacle is located along the straight line path, the Hero is forced to discard.",
         "ref": ["was-blue-ii-kinetic-repulse", "was-blue-iii-kinetic-blast"]
     },
-    "faq-wasp-5": {
+    "faq-wasp-uCXB6YGe": {
         "q": "Why do Wasp’s Tier II and III abilities say “If you do”? Why would the block fail?",
         "a": "You can always discard a card to attempt to defend, even if it does not defend successfully.",
         "ref": ["was-green-ii-deflect-projectiles", "was-green-iii-reflect-projectiles"]

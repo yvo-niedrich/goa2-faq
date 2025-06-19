@@ -1,10 +1,10 @@
 {
-    "faq-dod-1": {
+    "faq-dod-DYMXRSjX": {
         "q": "What is an “empty minion spawn point in the battle zone”?",
         "a": "Dodger’s magic (thematically) grows stronger as minions are defeated. Many of her cards check for “empty minion spawn points in the battle zone.” These are the minion spawn points printed on the board, but only the ones in the current battle zone — there is only 1 battle zone (2, on the 2-lane map). Only empty spaces (with **nothing** on them) are counted.",
         "ref": ["dod-gold-dread-razor", "dod-gold-h-rusty-razor", "dod-silver-death-trap"]
     },
-    "faq-dod-2": {
+    "faq-dod-9oAe2b05": {
         "q": "What minions can Dodger respawn with her Necromancy?",
         "a": "She can return a friendly defeated/removed minion of any type to any spawn point. \n- It need not be a matching minion type or color: if her friendly ranged minion is defeated, Dodger could respawn it on an enemy melee minion spawn point. \n- It must be a minion that was originally in play in this wave, before being defeated or removed. Dodger cannot “respawn” a minion that was not originally in play at the start of the wave.\n - She must respawn a minion directly onto a spawn point. She cannot respawn the minion on a space adjacent to the spawn point. Note that this is different than respawning minions after the lane pushes.",
         "ref": ["dod-green-ii-necromancy", "dod-green-iii-necomastery"]

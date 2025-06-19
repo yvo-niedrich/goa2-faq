@@ -7,6 +7,15 @@ export enum Expansion {
     Wayward = 'Arcane',
 }
 
+export const expansions = [
+    Expansion.Core,
+    Expansion.Arcane,
+    Expansion.Defiant,
+    Expansion.Devoted,
+    Expansion.Renowned,
+    Expansion.Wayward,
+];
+
 export function toExpansion(e: string): Expansion {
     switch (e.toLowerCase()) {
         case 'core':
