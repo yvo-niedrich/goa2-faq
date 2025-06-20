@@ -1,9 +1,10 @@
 import { mkdir, writeFileSync } from 'fs';
 import { __src } from './paths';
+import { source, path as translationPath } from './translations';
 
 export function writeTranslations(data: TranslationMap) {
-    mkdir(__src + '/translation', { recursive: true }, (err) => err && console.error(err));
-    writeFileSync(__src + '/translation/en.json', JSON.stringify(data, null, 4), {
+    mkdir(translationPath, { recursive: true }, (err) => err && console.error(err));
+    writeFileSync(`${translationPath}/${source}.json`, JSON.stringify(data, null, 4), {
         flag: 'w',
     });
 }

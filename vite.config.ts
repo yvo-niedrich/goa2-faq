@@ -32,6 +32,7 @@ export default defineConfig({
                 name: 'Guards of Atlantis 2 :: FAQ',
                 short_name: 'GoA2 :: FAQ',
                 description: 'Card Texts & FAQ',
+                background_color: '#ffffff',
                 theme_color: '#689db4',
                 icons: [
                     {

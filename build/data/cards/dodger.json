@@ -37,7 +37,7 @@
         "color": "green",
         "type": "Skill",
         "tier": "I",
-        "text": "If there are 2 or more enemy spawn points in radius in the battle zone, gain 1 coin."
+        "text": "If there are 2 or more empty spawn points in radius in the battle zone, gain 1 coin."
     },
     {
         "id": "dod-green-ii-darker-ritual",
@@ -45,7 +45,7 @@
         "color": "green",
         "type": "Skill",
         "tier": "II",
-        "text": "If there are 2 or more enemy spawn points in radius in the battle zone, gain 2 coins."
+        "text": "If there are 2 or more empty spawn points in radius in the battle zone, gain 2 coins."
     },
     {
         "id": "dod-green-iii-darkest-ritual",
@@ -53,7 +53,7 @@
         "color": "green",
         "type": "Skill",
         "tier": "III",
-        "text": "If there are 2 or more enemy spawn points in radius in the battle zone, gain 2 coins.\nIf you have your Ultimate, gain an 🗡️ Attack item.\n *(Use any spare card from the box with the corresponding icon)*"
+        "text": "If there are 2 or more empty spawn points in radius in the battle zone, gain 2 coins.\nIf you have your Ultimate, gain an 🗡️ Attack item.\n *(Use any spare card from the box with the corresponding icon)*"
     },
     {
         "id": "dod-green-ii-necromancy",

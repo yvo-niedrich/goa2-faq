@@ -1,9 +1,10 @@
-import { __src } from './paths';
+import { __public } from './paths';
 import { readFileSync } from 'fs';
 
 type TranslationMap = { [key: string]: string };
 
 const _cache: { [key: string]: TranslationMap } = {};
+export const path = __public + '/locales';
 export const source = 'en';
 export const languages = ['de'];
 
@@ -35,7 +36,7 @@ function load(lang: string, cache = false) {
 
     let langData: TranslationMap;
     try {
-        langData = JSON.parse(readFileSync(__src + '/translation/' + lang + '.json').toString());
+        langData = JSON.parse(readFileSync(`${path}/${lang}.json`).toString());
     } catch (err) {
         console.error('Could not load language: ' + lang);
         throw err;

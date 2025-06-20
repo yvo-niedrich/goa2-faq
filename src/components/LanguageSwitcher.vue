@@ -1,19 +1,16 @@
 <script lang="ts" setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue';
-import { useI18n } from 'vue-i18n';
-import { useLanguageStore, locales } from '@/stores/language'
+    import { ref, onMounted, onBeforeUnmount } from 'vue';
+    import { useLanguageStore, locales } from '@/stores/language'
 
-const { locale } = useI18n();
-const store = useLanguageStore();
-const open = ref(false);
-const dropdownRef = ref(null);
+    const store = useLanguageStore();
+    const open = ref(false);
+    const dropdownRef = ref(null);
 
-function toggle() {
-    open.value = !open.value;
-}
+    function toggle() {
+        open.value = !open.value;
+    }
 
-function select(code) {
-    locale.value = code;
+    function select(code) {
     store.language = code;
     open.value = false;
 }
@@ -36,8 +33,8 @@ onBeforeUnmount(() => {
 <template>
     <div ref="dropdownRef" class="language-selector">
         <button class="selector-button" @click="toggle">
-            <span class="flag">{{ locales[locale].flag }}</span>
-            <span class="label">{{ locales[locale].label }}</span>
+            <span class="flag">{{ locales[store.language].flag }}</span>
+            <span class="label">{{ locales[store.language].label }}</span>
             <span class="chevron">▾</span>
         </button>
 
