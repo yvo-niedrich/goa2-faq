@@ -74,7 +74,7 @@ const { isTablet, isDesktop } = useViewport();
             }
 
             @media (max-width: 500px) {
-                padding-top: 1em;
+                padding-top: .75em;
             }
 
             .hero-class {
@@ -97,6 +97,7 @@ const { isTablet, isDesktop } = useViewport();
 
                 @media (max-width: 500px) {
                     right: 0;
+                    font-size: 1.1em;
                 }
             }
 

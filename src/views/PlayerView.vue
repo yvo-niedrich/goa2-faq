@@ -187,7 +187,7 @@ const cards = computed(() => [
     .carousel {
         width: 100%;
         margin: 0 auto;
-        padding: 2rem 0 0 0;
+        padding: 1rem 0 0 0;
 
 
         @media (max-width: 750px) {
@@ -350,20 +350,25 @@ const cards = computed(() => [
     .slide-card-container {
         height: 100%;
         position: relative;
-        padding: 1.75rem 0;
+        padding: 2rem 0;
 
         .card-modification {
             transition: .5s ease-out;
             text-align: center;
             position: absolute;
+            vertical-align: text-bottom;
             width: 40%;
             margin: 0 auto;
             left: 50%;
             transform: translate(-50%, 0);
             cursor: pointer;
-            height: 1.75rem;
+            height: 2rem;
 
             opacity: .5;
+
+            &>* {
+                vertical-align: text-bottom;
+            }
 
             &:hover {
                 opacity: 1;
@@ -380,8 +385,9 @@ const cards = computed(() => [
 
                 background: linear-gradient(to top, rgba(var(--color-background-highlight-rgb), 0.5), transparent);
 
-                &>* {
-                    vertical-align: text-bottom;
+
+                &:hover svg {
+                    transform: translateY(7px);
                 }
             }
 
@@ -394,7 +400,12 @@ const cards = computed(() => [
                 border-top-right-radius: 1em;
                 border-top-left-radius: 1em;
 
+
                 background: linear-gradient(to bottom, rgba(var(--color-background-highlight-rgb), 0.5), transparent);
+
+                &:hover svg {
+                    transform: translateY(-7px);
+                }
             }
 
             &.downgrade.disabled,
@@ -405,16 +416,8 @@ const cards = computed(() => [
                 cursor: default;
             }
 
-            .modification-icon {
-                width: 2.25em;
-
-                &.upgrade {
-                    text-align: text-top;
-                }
-
-                &.downgrade {
-                    text-align: text-bottom;
-                }
+            svg {
+                transition: 0.5s ease-out;
             }
         }
     }

@@ -47,98 +47,99 @@ const debug = false;
 </template>
 
 <style lang="scss" scoped>
-header {
-    height: 2.5rem;
-    text-align: center;
-
-    width: 100%;
-    position: sticky;
-    top: 0;
-    background: rgba(var(--color-background-soft-rgb), .8);
-
-    z-index: 10;
-    border-bottom: 1px solid black;
-    box-shadow: 0 1px 0 rgba(180, 180, 180, .5);
-
-    .wrapper {
-        display: flex;
-        place-items: flex-start;
-        flex-wrap: wrap;
-    }
-
-    .logo {
-        display: inline-block;
-    }
-
-    nav {
-        padding: .2rem;
-        width: 100%;
-        height: 100%;
+    header {
+        font-size: 1.1em;
+        height: 2.5rem;
         text-align: center;
-        background: radial-gradient(circle, rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 95%);
 
-        a.disabled {
-            opacity: 0.5;
-            pointer-events: none;
+        width: 100%;
+        position: sticky;
+        top: 0;
+        background: rgba(var(--color-background-soft-rgb), .8);
+
+        z-index: 10;
+        border-bottom: 1px solid black;
+        box-shadow: 0 1px 0 rgba(180, 180, 180, .5);
+
+        .wrapper {
+            display: flex;
+            place-items: flex-start;
+            flex-wrap: wrap;
         }
 
-        a.router-link-exact-active {
-            color: var(--color-text);
-        }
-
-        a.router-link-exact-active:hover {
-            background-color: transparent;
-        }
-
-        a {
+        .logo {
             display: inline-block;
+        }
+
+        nav {
+            padding: .2rem;
+            width: 100%;
             height: 100%;
-            padding: .2em 1rem;
-            border-left: 1px solid var(--color-border);
-            vertical-align: top;
+            text-align: center;
+            background: radial-gradient(circle, rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 95%);
+
+            a.disabled {
+                opacity: 0.5;
+                pointer-events: none;
+            }
+
+            a.router-link-exact-active {
+                color: var(--color-text);
+            }
+
+            a.router-link-exact-active:hover {
+                background-color: transparent;
+            }
+
+            a {
+                display: inline-block;
+                height: 100%;
+                padding: .2em 1rem;
+                border-left: 1px solid var(--color-border);
+                vertical-align: top;
+            }
+
+            a:first-of-type {
+                border: 0;
+            }
+
+            @media (max-width: 500px) {
+                text-align: left;
+                padding-left: 1em;
+            }
+        }
+    }
+
+    .content {
+        position: relative;
+        transition: 0.2s ease;
+        padding: 1rem 2rem 2rem 2rem;
+
+        @media (max-width: 1280px) {
+            padding: 1rem;
         }
 
-        a:first-of-type {
-            border: 0;
+        @media (max-width: 900px) {
+            padding: 1rem .5rem;
         }
 
-        @media (max-width: 500px) {
-            text-align: left;
-            padding-left: 1em;
+        @media (max-width: 600px) {
+            padding: 1rem .25rem;
         }
     }
-}
 
-.content {
-    position: relative;
-    transition: 0.2s ease;
-    padding: 1rem 2rem 2rem 2rem;
+    .debug {
+        position: fixed;
+        top: 5px;
+        right: 5px;
+        z-index: 20;
 
-    @media (max-width: 1280px) {
-        padding: 1rem;
+        opacity: .75;
+
+        background: var(--color-background);
+        border: 1px solid var(--color-border);
+        padding: 4px 6px;
+        border-radius: 1em;
+        font-size: 12px;
     }
-
-    @media (max-width: 900px) {
-        padding: 1rem .5rem;
-    }
-
-    @media (max-width: 600px) {
-        padding: 1rem .25rem;
-    }
-}
-
-.debug {
-    position: fixed;
-    top: 5px;
-    right: 5px;
-    z-index: 20;
-
-    opacity: .75;
-
-    background: var(--color-background);
-    border: 1px solid var(--color-border);
-    padding: 4px 6px;
-    border-radius: 1em;
-    font-size: 12px;
-}
 </style>

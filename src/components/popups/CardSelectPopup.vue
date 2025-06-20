@@ -31,63 +31,70 @@ function choice(c: Card) {
 </template>
 
 <style lang="scss">
-.card-select-overlay {
-    position: fixed;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.75);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 900;
-}
-
-
-.card-select-popup {
-    background: #202d33;
-    border: 1px solid #FFF;
-    box-shadow: 0 0 10px 4px #000;
-
-    border-radius: 0.75rem;
-    padding: 1.5rem;
-    max-width: 800px;
-    width: 90%;
-    max-height: 90vh;
-    min-height: 15vh;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-
-
-    .card-select-scroll {
-        overflow-y: auto;
-        flex: 1;
-        padding-right: 0.5rem;
+    .card-select-overlay {
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.75);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 900;
     }
 
-    .close-btn {
-        top: .05rem;
-        right: .15rem;
 
-        margin: 0;
-        padding: .2em;
-        line-height: .75em;
+    .card-select-popup {
+        transition: .5s ease-out;
+        background: #202d33;
+        border: 1px solid #FFF;
+        box-shadow: 0 0 10px 4px #000;
 
-        position: absolute;
-        background: transparent;
-        border: none;
-        font-size: 1.5rem;
-        cursor: pointer;
-        color: var(--color-text);
+        border-radius: 0.75rem;
+        padding: 1.5rem;
+        max-width: 800px;
+        width: 90%;
+        max-height: 90vh;
+        min-height: 15vh;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        flex-direction: column;
 
-        opacity: .5;
-        transition: 1s ease-out;
-
-        &:hover {
-            opacity: 1;
-            text-shadow: 1px 1px 3px #999;
+        @media (max-width: 520px) {
+            font-size: .9em;
+            padding: 1rem .5rem;
+            width: 95%;
         }
-    }
 
-}
+
+        .card-select-scroll {
+            overflow-y: auto;
+            flex: 1;
+            padding-right: 0.5rem;
+        }
+
+        .close-btn {
+            top: .05rem;
+            right: .15rem;
+
+            margin: 0;
+            padding: .2em;
+            line-height: .75em;
+
+            position: absolute;
+            background: transparent;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--color-text);
+
+            opacity: .5;
+            transition: 1s ease-out;
+
+            &:hover {
+                opacity: 1;
+                text-shadow: 1px 1px 3px #999;
+            }
+        }
+
+    }
 </style>
