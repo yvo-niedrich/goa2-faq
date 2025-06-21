@@ -1,4 +1,4 @@
-import { readdirSync, readFileSync } from 'fs';
+import { readdirSync, readFileSync, writeFileSync } from 'fs';
 import { __data } from './paths';
 
 interface FAQ {
@@ -8,6 +8,17 @@ interface FAQ {
 }
 
 type FAQMap = { [key: string]: FAQ };
+
+function generateId(length = 8) {
+    let result = '';
+    const c = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789',
+        l = c.length;
+    const charactersLength = c.length;
+    for (let i = 0; i < length; i++) {
+        result += c.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
+}
 
 const faq = {} as FAQMap;
 const faqPath = __data + '/faqs';
@@ -23,12 +34,32 @@ for (const file of files) {
         throw err;
     }
 
+    let fileUpdated = false;
     for (const key of Object.keys(fMap)) {
         if (faq.hasOwnProperty(key)) {
             throw new Error(`Duplicate FAQ key: ${key} (${file})`);
         }
 
-        faq[key] = fMap[key];
+        if (key.match(/-\d+$/)) {
+            let newKey;
+            while (true) {
+                newKey = key.replace(/-\d+$/, '-' + generateId());
+                if (!faq.hasOwnProperty(newKey)) {
+                    break;
+                }
+            }
+
+            fileUpdated = true;
+            faq[newKey] = fMap[newKey] = fMap[key];
+            delete fMap[key];
+        } else {
+            faq[key] = fMap[key];
+        }
+    }
+
+    if (fileUpdated) {
+        console.log('FAQ file updated: ' + file);
+        writeFileSync(faqPath + '/' + file, JSON.stringify(fMap));
     }
 }
 

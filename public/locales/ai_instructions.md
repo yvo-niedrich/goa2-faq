@@ -21,16 +21,17 @@
 
 ## In-Game Terminology
 
-| English Term  | German Translation            | Notes                                    |
-| ------------- | ----------------------------- | ---------------------------------------- |
-| Hero          | Held / Helden                 | Use singular/plural appropriately        |
-| Minion        | Minion / Minions              | Do **not** translate — keep in English   |
-| Unit          | Einheit / Einheiten           | Translate normally                       |
-| Adjacent      | **benachbart**                | Always use "benachbart", not "anliegend" |
-| Target (verb) | **visieren** / **anvisieren** | Use forms like "visiere ... an"          |
-| Turn          | **Zug**                       | 1 Runde = 4 Züge                         |
-| Round         | **Runde**                     | Distinguish from "Zug"                   |
-| Move          | Bewegung / bewegen            | Use contextually for movement actions    |
+| English Term  | German Translation            | Notes                                         |
+| ------------- | ----------------------------- | --------------------------------------------- |
+| Hero          | Held / Helden                 | Use singular/plural appropriately             |
+| Minion        | Minion / Minions              | Do **not** translate — keep in English        |
+| Unit          | Einheit / Einheiten           | Translate normally                            |
+| Adjacent      | **benachbart**                | Always use "benachbart", not "anliegend"      |
+| Target (verb) | **visieren** / **anvisieren** | Use forms like "visiere ... an"               |
+| Turn          | **Zug**                       | 1 Runde = 4 Züge                              |
+| Round         | **Runde**                     | Distinguish from "Zug"                        |
+| Move          | Bewegung / bewegen            | Use contextually for movement actions         |
+| Fizzle        | verpuffen                     | Abilities that can be executed only partially |
 
 ---
 

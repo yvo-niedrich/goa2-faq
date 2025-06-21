@@ -1,0 +1,22 @@
+{
+    "faq-bro-UGm22plF": {
+        "q": "Is the movement required?",
+        "a": "Yes. Unless otherwise indicated, card text is mandatory. Brogan most move into the space where the target was, if he is able to (if it is empty).",
+        "ref": ["bro-gold-onslaught"]
+    },
+    "faq-bro-fbDz04ez": {
+        "q": "Does Brogan’s Primary Red attack require movement?",
+        "a": "Yes! If Brogan cannot move 2 spaces in a straight line to a space adjacent to an enemy unit, the effect will “fizzle” — stop resolving — and he will not attack. A crafty opponent can anticipate and deny this attack with clever positioning.\n- Brogan can charge next to an immune unit, at which point his attack would fizzle.\n- Brogan can charge through Min’s Smoke Bomb Token, since the Smoke Bomb only prevents targeting across the Smoke Bomb and Brogan would not target until after the movement.",
+        "ref": ["bro-red-i-mad-dash", "bro-red-ii-bullrush", "bro-red-iii-furious-charge"]
+    },
+    "faq-bro-U8USFZ6w": {
+        "q": "Does Brogan’s Primary Green (Shield) work during Minion Battle?",
+        "a": "No. Minions are not “defeated” in Minion Battle, they are removed.",
+        "ref": ["bro-green-i-shield", "bro-green-ii-bolster", "bro-green-iii-fortify"]
+    },
+    "faq-bro-6XDWvftE": {
+        "q": "Can Brogan’s “Shield Bash” target a Hero who has played an attack card but not attacked?",
+        "a": "Yes: it only checks for Heroes that “played” an attack card, regardless of whether they’ve resolved the action, which action they performed, and even whether this is still their card for the turn (it will “remember” whether they have played a card, even if it is discarded or switched for another card by an effect).",
+        "ref": ["bro-blue-ii-shield-bash", "bro-blue-iii-counterattack"]
+    }
+}
