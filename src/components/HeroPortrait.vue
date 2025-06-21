@@ -15,7 +15,7 @@ const { isTablet, isDesktop } = useViewport();
 <template>
     <div class="hero-portrait">
         <HeroIcon :height="portraitHeight" :name="hero.name" :path="hero.icon">
-            <template v-slot:default>
+            <template v-slot:top-left>
                 <slot name="actions" />
             </template>
         </HeroIcon>

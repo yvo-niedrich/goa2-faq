@@ -291,7 +291,8 @@
             "defense": 4,
             "initiative": [5, 8],
             "movement": 5
-        }
+        },
+        "cards": "cards/tali.json"
     },
     {
         "id": "swi",

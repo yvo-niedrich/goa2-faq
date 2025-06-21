@@ -44,7 +44,11 @@ export const filterHeroesByExpansions = (
 
 export function defaultHeroSortFn(a: Hero, b: Hero) {
     if (a.expansion === b.expansion) {
-        return a.name > b.name ? 1 : -1;
+        if (a.complexity === b.complexity) {
+            return a.name > b.name ? 1 : -1;
+        } else {
+            return a.complexity > b.complexity ? 1 : -1;
+        }
     }
 
     return expansions.indexOf(a.expansion as unknown as Expansion) >

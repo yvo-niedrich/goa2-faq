@@ -22,7 +22,13 @@ const portraitHeight = computed(() => isDesktop.value ? 250 : isTablet.value ? 2
 <template>
     <div class="list">
         <HeroIcon v-for="h of list" :key="h.id" :height="portraitHeight * (scale || 1)" :name="h.name" :path="h.icon"
-            :onClick="() => onClick ? onClick(h) : false" />
+            :onClick="() => onClick ? onClick(h) : false">
+            <template v-slot:top-right>
+                <span class="hero-complexity" style="text-shadow: 1px 1px 3px #000;">
+                    <template v-for="index in h.complexity" :key="index">&starf;</template>
+                </span>
+            </template>
+        </HeroIcon>
     </div>
 </template>
 
