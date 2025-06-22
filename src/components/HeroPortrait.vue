@@ -14,18 +14,14 @@ const { isTablet, isDesktop } = useViewport();
 
 <template>
     <div class="hero-portrait">
-        <HeroIcon :height="portraitHeight" :name="hero.name" :path="hero.icon">
-            <template v-slot:top-left>
+        <HeroIcon :height="portraitHeight" :name="hero.name" :path="hero.icon" :complexity="hero.complexity">
+            <template v-slot:default>
                 <slot name="actions" />
             </template>
         </HeroIcon>
         <div>
             <h2>
                 <span class="hero-class">{{ $t(hero.class) }}</span>
-                <span class="hero-complexity">
-                    <template v-for="index in 5" :key="index">
-                        {{ Math.abs(index - 5) < hero.complexity ? '&starf;' : '&star;' }} </template>
-                </span>
             </h2>
             <div class="hero-stats">
                 <HeroStat :name="$t('app.stat.attack')" :value="hero.stats.attack" />
@@ -73,10 +69,6 @@ const { isTablet, isDesktop } = useViewport();
                 margin-top: -.2em;
             }
 
-            @media (max-width: 500px) {
-                padding-top: .75em;
-            }
-
             .hero-class {
                 color: var(--color-text-highlight);
                 font-style: italic;
@@ -119,7 +111,7 @@ const { isTablet, isDesktop } = useViewport();
 
             @media (max-width: 920px) {
                 margin: .75em .5em;
-                column-gap: 5%;
+                column-gap: 3%;
             }
 
             @media (max-width: 720px) {

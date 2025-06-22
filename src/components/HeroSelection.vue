@@ -22,42 +22,36 @@ const portraitHeight = computed(() => isDesktop.value ? 250 : isTablet.value ? 2
 <template>
     <div class="list">
         <HeroIcon v-for="h of list" :key="h.id" :height="portraitHeight * (scale || 1)" :name="h.name" :path="h.icon"
-            :onClick="() => onClick ? onClick(h) : false">
-            <template v-slot:top-right>
-                <span class="hero-complexity" style="text-shadow: 1px 1px 3px #000;">
-                    <template v-for="index in h.complexity" :key="index">&starf;</template>
-                </span>
-            </template>
-        </HeroIcon>
+            :complexity="h.complexity" :onClick="() => onClick ? onClick(h) : false" />
     </div>
 </template>
 
 <style lang="scss">
-.list {
+    .list {
 
-    transition: .5s ease-out;
+        transition: .5s ease-out;
 
-    text-align: center;
-    padding: 0 1.25em;
-
-    @media (max-width: 765px) {
-        padding: 0 .5em;
-    }
-
-    .hero-icon {
-        margin-left: -1.15rem;
-        margin-right: -1.15rem;
-        margin-bottom: 0.25rem;
-
-        @media (max-width: 1024px) {
-            margin-left: -1em;
-            margin-right: -1em;
-        }
+        text-align: center;
+        padding: 0 1.25em;
 
         @media (max-width: 765px) {
-            margin-left: -.825em;
-            margin-right: -.825em;
+            padding: 0 .5em;
+        }
+
+        .hero-icon {
+            margin-left: -1.15rem;
+            margin-right: -1.15rem;
+            margin-bottom: 0.25rem;
+
+            @media (max-width: 1080px) {
+                margin-left: -1rem;
+                margin-right: -1rem;
+            }
+
+            @media (max-width: 765px) {
+                margin-left: -.725rem;
+                margin-right: -.725rem;
+            }
         }
     }
-}
 </style>

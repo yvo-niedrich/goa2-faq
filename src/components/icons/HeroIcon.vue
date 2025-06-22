@@ -4,6 +4,7 @@ import { computed } from 'vue';
 const props = withDefaults(
     defineProps<{
         name?: string;
+        complexity?: number;
         path: string;
         height?: number;
         animate?: boolean;
@@ -29,15 +30,15 @@ function handleClick() {
 
 <template>
     <div class="hero-icon" :class="{ animate, inline, pointer: !!onClick }" @click="handleClick"
-        :style="{ backgroundImage: `url(${path})`, height: `${height}px`, width: `${height * f}px` }">
+        :style="{ backgroundImage: `url(${path})`, height: `${height}px`, width: `${height * f}px`, fontSize: `${fs}rem` }">
         <div class="icon-container-left">
-            <slot name="top-left" />
+            <slot />
         </div>
-        <div class="icon-container-right">
-            <slot name="top-right" />
+        <div v-if="complexity" class="hero-complexity">
+            <template v-for="index in complexity" :key="index">&starf;</template>
         </div>
         <div v-if="name" class="name-overlay">
-            <div class="name-overlay-text" :style="{ fontSize: `${fs}rem` }">{{ name }}</div>
+            <div class="name-overlay-text">{{ name }}</div>
         </div>
     </div>
 </template>
@@ -75,16 +76,22 @@ function handleClick() {
             left: 22.5%;
         }
 
-        .icon-container-right {
-            position: absolute;
-            top: 2px;
-            right: 4%;
-        }
-
         .name-overlay,
         .name-overlay-text {
             display: flex;
             justify-content: center;
+        }
+
+        .hero-complexity {
+            transition: .5s ease-out;
+            position: absolute;
+            top: 0;
+            right: 4%;
+
+            line-height: 1em;
+            color: var(--color-text);
+            text-shadow: 1px 1px 4px #000;
+            font-size: 1.1em;
         }
 
         .name-overlay {

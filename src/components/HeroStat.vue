@@ -26,38 +26,38 @@ const statPotential = computed(() => Array.isArray(props.value) ? props.value[1]
 
 
 <style lang="scss">
-.stat {
-    display: grid;
-    grid-template-columns: 2fr 5fr;
+    .stat {
+        display: grid;
+        grid-template-columns: 4fr 11fr;
 
-    .stat-name {
-        margin-right: 5%;
-        text-align: right;
-    }
+        .stat-name {
+            margin-right: 5%;
+            text-align: right;
+        }
 
-    .stat-value {
-        text-align: center;
+        .stat-value {
+            text-align: center;
 
-        .stat-bar {
-            display: inline-block;
-            vertical-align: middle;
-            height: 55%;
-            width: 10%;
-            margin: auto 1%;
-            border: 1px solid #000;
-            border-radius: .2rem;
-            background-color: #00000030;
-            box-shadow: 0 0 2px 0px var(--color-border);
+            .stat-bar {
+                display: inline-block;
+                vertical-align: middle;
+                height: 55%;
+                width: 10%;
+                margin: auto 1%;
+                border: 1px solid #000;
+                border-radius: .2rem;
+                background-color: #00000030;
+                box-shadow: 0 0 2px 0px var(--color-border);
 
 
-            &.full {
-                background: var(--color-heading-strong);
-            }
+                &.full {
+                    background: var(--color-heading-strong);
+                }
 
-            &.potential {
-                background: var(--color-heading-bright);
+                &.potential {
+                    background: var(--color-heading-bright);
+                }
             }
         }
     }
-}
 </style>
