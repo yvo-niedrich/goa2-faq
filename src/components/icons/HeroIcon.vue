@@ -83,6 +83,7 @@ function handleClick() {
         }
 
         .hero-complexity {
+            user-select: none;
             transition: .5s ease-out;
             position: absolute;
             top: 0;
@@ -104,7 +105,7 @@ function handleClick() {
         }
 
         .name-overlay-text {
-            transition-duration: .5s;
+            transition-duration: 1s;
             padding: .2em 0;
             align-items: center;
             font-weight: bold;

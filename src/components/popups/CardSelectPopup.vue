@@ -22,7 +22,9 @@ function choice(c: Card) {
                 <div class="card-select-scroll">
                     <div v-for="(card, id) in cards" :key="id" class="card-select-record">
                         <HeroCard :card="card" />
-                        <input type="button" value="Select" @click="() => choice(card)" />
+                        <div style="text-align: center;">
+                            <input class="popup-select" type="button" value="Select" @click="() => choice(card)" />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -95,6 +97,42 @@ function choice(c: Card) {
                 text-shadow: 1px 1px 3px #999;
             }
         }
+
+        .card-select-record:not(:last-of-type) {
+            padding-bottom: 1em;
+            margin-bottom: 1em;
+            border-bottom: 2px dashed var(--color-background-highlight);
+        }
+
+        .hero-card-details {
+            margin: .5em auto;
+            max-width: 95%;
+        }
+
+        input[type="button"] {
+            background-color: var(--color-background-highlight);
+            color: var(--color-text-dark);
+            border: 1px solid #000;
+            margin: 0 auto;
+            padding: 0.65em 15%;
+            font-size: 1rem;
+            border-radius: 1em;
+            cursor: pointer;
+            transition: 0.4s ease;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+
+            &:hover {
+
+                box-shadow: 0 1px 2px rgba(60, 60, 60, 0.5);
+                background-color: var(--color-background-soft);
+                color: #000;
+            }
+
+            &:active {
+                transform: scale(0.97);
+            }
+        }
+
 
     }
 </style>
