@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/goa2-faq/sw.js', { scope: '/goa2-faq/' })})}
