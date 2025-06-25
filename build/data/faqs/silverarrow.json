@@ -2,7 +2,7 @@
     "faq-sil-VBPVBU86": {
         "q": "When can Silverarrow’s Gold Fast Travel?",
         "a": "The Fast Travel has all the normal restrictions of a Fast Travel action: there must be no enemy Heroes or Minions in her Zone, and if not, she can move anywhere in her Zone or to an adjacent Zone with no enemy Heroes or Minions.\n_Note that this is a rare instance of a Fast Travel which is not replacing a movement action. Silverarrow could Fast Travel (if valid), even if she cannot move due to another effect._",
-        "ref": ["sil-gold-shoot-and-scoot"]
+        "ref": ["sil-gold-shoot-and-scoot", "sil-gold-h-keep-the-distance"]
     },
     "faq-sil-BNCeD4CM": {
         "q": "Does Silverarrow’s Primary Blue (Grasping Roots) affect a Hero who moves in range of Silverarrow during their movement?",
