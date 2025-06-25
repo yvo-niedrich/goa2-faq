@@ -1,7 +1,7 @@
 {
     "faq-xar-uxm2IDQl": {
         "q": "What does Xargatha's Stone Gaze affect and not affect?",
-        "a": "It prevents “movement actions”, that is, selecting the movement option when resolving a card:\n - They **can’t** use a normal movement action to move.\n - They **can’t** use a movement action to fast travel (which chooses, then replaces, a movement action).\n - They **can** use a “place” or “swap” effect (such as Arien’s Alt Blue).\n - The **can** be pushed or moved by another effect (if the effect ignores immunity).\n - They **can** take another action type that involves movement (such as Brogan’s Primary Red) or a Fast Travel (Silverarrow’s Gold).",
+        "a": "It prevents “movement actions”, that is, selecting the movement option when resolving a card:\n - ❌ They **can’t** use a normal movement action to move.\n - ❌ They **can’t** use a movement action to fast travel (which chooses, then replaces, a movement action).\n - ✅ They **can** use a “place” or “swap” effect (such as Arien’s Alt Blue).\n - ✅ They **can** be pushed or moved by another effect (if the effect ignores immunity).\n - ✅ They **can** take another action type that involves movement (such as Brogan’s Primary Red) or a Fast Travel (Silverarrow’s Gold).",
         "ref": [
             "xar-blue-i-stone-gaze",
             "xar-blue-ii-petrifying-stare",

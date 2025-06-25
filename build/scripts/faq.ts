@@ -34,26 +34,38 @@ for (const file of files) {
         throw err;
     }
 
+    if (Array.isArray(fMap)) {
+        fMap = Object.assign({}, fMap);
+    }
+
     let fileUpdated = false;
     for (const key of Object.keys(fMap)) {
-        if (faq.hasOwnProperty(key)) {
-            throw new Error(`Duplicate FAQ key: ${key} (${file})`);
+        let faqKey = key;
+
+        if (Number.isInteger(faqKey) || faqKey.match(/^\d+$/)) {
+            faqKey = `faq-${file.substring(0, 3)}-${faqKey}`;
         }
 
-        if (key.match(/-\d+$/)) {
-            let newKey;
+        if (faqKey.match(/-\d+$/)) {
             while (true) {
-                newKey = key.replace(/-\d+$/, '-' + generateId());
+                const newKey = faqKey.replace(/-\d+$/, '-' + generateId());
                 if (!faq.hasOwnProperty(newKey)) {
+                    faqKey = newKey;
                     break;
                 }
             }
+        }
 
-            fileUpdated = true;
-            faq[newKey] = fMap[newKey] = fMap[key];
-            delete fMap[key];
-        } else {
+        if (faq.hasOwnProperty(faqKey)) {
+            throw new Error(`Duplicate FAQ key: ${faqKey} (${file})`);
+        }
+
+        if (faqKey === key) {
             faq[key] = fMap[key];
+        } else {
+            fileUpdated = true;
+            faq[faqKey] = fMap[faqKey] = fMap[key];
+            delete fMap[key];
         }
     }
 

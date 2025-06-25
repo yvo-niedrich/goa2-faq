@@ -169,7 +169,8 @@
             "defense": 4,
             "initiative": 7,
             "movement": [3, 5]
-        }
+        },
+        "cards": "cards/whisper.json"
     },
     {
         "id": "mis",
@@ -184,7 +185,8 @@
             "defense": 5,
             "initiative": 7,
             "movement": [1, 8]
-        }
+        },
+        "cards": "cards/misa.json"
     },
     {
         "id": "urs",
