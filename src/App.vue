@@ -1,21 +1,20 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import { useViewport } from '@/viewport';
-import FaqPopup from './components/popups/FaqPopup.vue';
-import LanguageSwitcher from './components/LanguageSwitcher.vue';
-import { useCompanionStore } from './stores/companion';
-import { computed } from 'vue';
-import { get } from './data/heroes';
+    import { RouterLink, RouterView } from 'vue-router'
+    import { useViewport } from '@/viewport';
+    import FaqPopup from './components/popups/FaqPopup.vue';
+    import LanguageSwitcher from './components/LanguageSwitcher.vue';
+    import { useCompanionStore } from './stores/companion';
+    import { computed } from 'vue';
+    import { get } from './data/heroes';
     import TimeIndicator from './components/TimeIndicator.vue';
 
-const { width, height, isMobile, isTablet, isDesktop } = useViewport();
+    const { width, height, isMobile, isTablet, isDesktop } = useViewport();
 
-const store = useCompanionStore();
-const selectedHeroName = computed(() => store.id ? get(store.id)?.name : null);
-const debug = false;
-
+    const store = useCompanionStore();
+    const selectedHeroName = computed(() => store.id ? get(store.id)?.name : null);
+    const debug = false;
     const build_date = __APP_BUILD_DATE__;
-    const build_number = __APP_BUILD_HASH__;
+    const FEATURE_REPORT_FAQS = import.meta.env.DEV;
 
 </script>
 
@@ -27,7 +26,7 @@ const debug = false;
                 {{ $t('app.header.dashboard') }}
                 <span v-if="selectedHeroName">[{{ selectedHeroName }}]</span>
             </RouterLink>
-            <RouterLink to="/contribute">+</RouterLink>
+            <RouterLink v-if="FEATURE_REPORT_FAQS" to="/contribute">+</RouterLink>
 
 
             <div style="position: absolute; top: 3px; right: 5px;">
