@@ -33,6 +33,7 @@
 | Move          | Bewegung / bewegen            | Use contextually for movement actions         |
 | Fizzle        | verpuffen                     | Abilities that can be executed only partially |
 | Fast Travel   | Schnellreise                  | Alternative movement                          |
+| spawn point   | Spawnpunkt                    | Location for minions to appear                |
 
 ---
 
