@@ -1,10 +1,12 @@
 <script lang="ts" setup>
     import { ref, onMounted, onBeforeUnmount } from 'vue';
     import { useLanguageStore, locales } from '@/stores/language'
+    import { useViewport } from '@/viewport';
 
     const store = useLanguageStore();
     const open = ref(false);
     const dropdownRef = ref(null);
+    const { isMobile } = useViewport();
 
     function toggle() {
         open.value = !open.value;
@@ -34,14 +36,14 @@ onBeforeUnmount(() => {
     <div ref="dropdownRef" class="language-selector">
         <button class="selector-button" @click="toggle">
             <span class="flag">{{ locales[store.language].flag }}</span>
-            <span class="label">{{ locales[store.language].label }}</span>
+            <span v-if="!isMobile" class="label">{{ locales[store.language].label }}</span>
             <span class="chevron">▾</span>
         </button>
 
         <div v-if="open" class="dropdown">
             <button v-for="(lang, code) in locales" :key="code" class="dropdown-item" @click="select(code)">
                 <span class="flag">{{ lang.flag }}</span>
-                <span class="label">{{ lang.label }}</span>
+                <span v-if="!isMobile" class="label">{{ lang.label }}</span>
             </button>
         </div>
     </div>

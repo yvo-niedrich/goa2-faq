@@ -4,14 +4,14 @@
     import HeroStat from './HeroStat.vue';
     import HeroIcon from './icons/HeroIcon.vue';
 
-    defineProps<{ hero: Hero; }>();
+    const props = defineProps<{ hero: Hero; portraitMin?: number }>();
     const { isTablet, isDesktop, isMobileHorizontal } = useViewport();
-    const portraitHeight = computed(() => {
-        if (isDesktop.value) return 380;
+    const portraitHeight = computed(() => Math.max(props.portraitMin ?? 0, (() => {
+        if (isDesktop.value) return 350;
         if (isTablet.value) return 300;
         if (isMobileHorizontal.value) return 200;
         return 150;
-    });
+    })()));
 </script>
 
 <template>
