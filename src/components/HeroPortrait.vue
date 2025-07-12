@@ -5,13 +5,13 @@
     import HeroIcon from './icons/HeroIcon.vue';
 
     const props = defineProps<{ hero: Hero; portraitMin?: number }>();
-    const { isTablet, isDesktop, isMobileHorizontal } = useViewport();
-    const portraitHeight = computed(() => Math.max(props.portraitMin ?? 0, (() => {
-        if (isDesktop.value) return 350;
-        if (isTablet.value) return 300;
-        if (isMobileHorizontal.value) return 200;
-        return 150;
-    })()));
+const { isTablet, isDesktop, isMobileHorizontal, isMobileVertical } = useViewport();
+const portraitHeight = computed(() => Math.max(props.portraitMin ?? 0, (() => {
+    if (isDesktop.value) return 350;
+    if (isTablet.value) return 300;
+    if (isMobileHorizontal.value) return 200;
+    return 150;
+})()));
 </script>
 
 <template>
@@ -24,6 +24,7 @@
         <div>
             <h2>
                 <span class="hero-class">{{ $t(hero.class) }}</span>
+                <span v-if="!isMobileVertical" class="hero-expansion">{{ $t(hero.expansion) }}</span>
             </h2>
             <div class="hero-stats">
                 <HeroStat :name="$t('app.stat.attack')" :value="hero.stats.attack" />
@@ -42,17 +43,17 @@
 </template>
 
 <style lang="scss">
-    .hero-portrait {
-        transition: .25s ease-out;
-        background: linear-gradient(0deg, var(--color-background-highlight) 30%, var(--color-background-mute) 90%);
-        margin: 2px;
-        border-radius: 1em;
-        border: 1px solid #000;
-        box-shadow: 0 0 1px #CCC;
+.hero-portrait {
+    transition: .25s ease-out;
+    background: linear-gradient(0deg, var(--color-background-highlight) 30%, var(--color-background-mute) 90%);
+    margin: 2px;
+    border-radius: 1em;
+    border: 1px solid #000;
+    box-shadow: 0 0 1px #CCC;
 
-        padding: 1em;
+    padding: 1em;
 
-        display: grid;
+    display: grid;
         grid-template-columns: auto 1fr;
 
         @media (max-width: 720px) {
@@ -78,6 +79,13 @@
                 padding-left: .75em;
             }
 
+                        .hero-expansion {
+                            position: absolute;
+                            right: 0;
+                            font-size: .65em;
+                            color: var(--color-text-muted);
+                            opacity: .5;
+                        }
             .hero-complexity {
                 position: absolute;
                 top: 0em;
