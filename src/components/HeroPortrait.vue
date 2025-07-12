@@ -1,15 +1,17 @@
 <script setup lang="ts">
-import { useViewport } from '@/viewport';
-import { computed } from 'vue';
-import HeroStat from './HeroStat.vue';
-import HeroIcon from './icons/HeroIcon.vue';
+    import { useViewport } from '@/viewport';
+    import { computed } from 'vue';
+    import HeroStat from './HeroStat.vue';
+    import HeroIcon from './icons/HeroIcon.vue';
 
-defineProps<{
-    hero: Hero;
-}>();
-
-const { isTablet, isDesktop } = useViewport();
-    const portraitHeight = computed(() => isDesktop.value ? 380 : isTablet.value ? 300 : 200);
+    defineProps<{ hero: Hero; }>();
+    const { isTablet, isDesktop, isMobileHorizontal } = useViewport();
+    const portraitHeight = computed(() => {
+        if (isDesktop.value) return 380;
+        if (isTablet.value) return 300;
+        if (isMobileHorizontal.value) return 200;
+        return 150;
+    });
 </script>
 
 <template>
@@ -58,7 +60,7 @@ const { isTablet, isDesktop } = useViewport();
         }
 
         @media (max-width: 500px) {
-            padding: .75em;
+            padding: 0.6em .75em;
         }
 
         h2 {
