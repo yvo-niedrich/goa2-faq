@@ -49,7 +49,7 @@
         <FaqPopup />
 
         <div class="footer">
-            {{ $t('last update') }}
+            {{ $t('app.last-update') }}
             <TimeIndicator :date="build_date" />
         </div>
     </div>

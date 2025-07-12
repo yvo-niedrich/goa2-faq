@@ -2,6 +2,7 @@
     "app.header.overview": "Heroes",
     "app.header.dashboard": "My Dashboard",
     "app.button.search": "Search...",
+    "app.last-update": "Last update",
     "app.card.upgrade": "Upgrade",
     "app.card.downgrade": "Downgrade",
     "app.card-type.basic": "Basic",

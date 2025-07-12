@@ -45,7 +45,7 @@ onMounted(() => {
     interval = setInterval(() => {
         console.log('now updated');
         nowRef.value = new Date();
-    }, 60000); // 1 minute
+    }, 60000) as number; // 1 minute
 });
 
 onUnmounted(() => {

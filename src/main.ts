@@ -13,5 +13,4 @@ app.use(createPinia());
 app.use(router);
 app.use(getI18n());
 
-// await router.isReady();
 app.mount('#app');
