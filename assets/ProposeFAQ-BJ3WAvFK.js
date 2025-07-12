@@ -1,0 +1,14 @@
+import{d as A,n as m,c as $,e as n,g as t,v as q,x as v,a4 as Q,F as y,r as k,z as x,A as h,h as F,a5 as N,a6 as U,B as g,o as s,k as B}from"./index-2T3owiVC.js";const H={class:"p-4 space-y-4"},I=["value"],V={key:0},M={class:"space-y-1 max-h-40 overflow-y-auto border p-2 rounded"},S=["id","value"],j=["for"],P=A({__name:"ProposeFAQ",setup(C){function f(u=8){let e="";const o="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789",i=o.length;for(let d=0;d<u;d++)e+=o.charAt(Math.floor(Math.random()*i));return e}const l=m(),p=m([]),a=m(""),r=m(""),c=m(f()),w=$(()=>l.value?l.value.cards:[]);function _(){var d;if(!(l.value&&a.value))return!1;const u=["documentation"];r.value.trim()||u.push("help wanted");const e=`FAQ Proposal: ${l.value.name}`,o=`
+**Hero**: ${(d=l.value)==null?void 0:d.name}
+**Cards**: ${p.value.map(b=>b.name).join(", ")||"None"}
+
+**Question**:
+${a.value.trim()}
+
+**Answer**:
+${r.value.trim()||"_No answer provided_"}
+
+\`\`\`json
+${JSON.stringify({[c.value]:{q:a.value.trim(),a:r.value.trim()||null,ref:p.value.map(b=>b.id)}},null,4)}
+\`\`\`
+    `.trim(),i=`https://github.com/yvo-niedrich/goa2-faq/issues/new?title=${encodeURIComponent(e)}&body=${encodeURIComponent(o)}&labels=${encodeURIComponent(u.join(","))}`;window.open(i,"_blank"),c.value=f()}return(u,e)=>(s(),n("div",H,[e[9]||(e[9]=t("h2",{class:"text-xl font-bold"},"Propose a New FAQ Entry",-1)),t("div",null,[e[5]||(e[5]=t("label",{for:"hero",class:"block font-medium mb-1"},"Select Hero",-1)),v(t("select",{id:"hero","onUpdate:modelValue":e[0]||(e[0]=o=>l.value=o),class:"w-full p-2 border rounded"},[e[4]||(e[4]=t("option",{disabled:"",value:""},"-- Choose a hero --",-1)),(s(!0),n(y,null,k(Object.values(h(F)).sort(h(N)),o=>(s(),n("option",{key:o.id,value:o},x(o.name),9,I))),128))],512),[[Q,l.value]])]),w.value.length>0?(s(),n("div",V,[e[6]||(e[6]=t("label",{class:"block font-medium mb-1"},"Related Cards",-1)),t("div",M,[(s(!0),n(y,null,k(w.value,o=>(s(),n("div",{key:o.id,class:"flex items-center gap-2"},[v(t("input",{type:"checkbox",id:o.id,value:o,"onUpdate:modelValue":e[1]||(e[1]=i=>p.value=i)},null,8,S),[[U,p.value]]),t("label",{for:o.id},x(o.name),9,j)]))),128))])])):q("",!0),t("div",null,[e[7]||(e[7]=t("label",{for:"faqQuestion",class:"block font-medium mb-1"},"Question",-1)),v(t("input",{type:"text",id:"faqQuestion","onUpdate:modelValue":e[2]||(e[2]=o=>a.value=o),placeholder:"How does this ability interact with ...?"},null,512),[[g,a.value]])]),t("div",null,[e[8]||(e[8]=t("label",{for:"faqAnswer",class:"block font-medium mb-1"},"Answer (optional)",-1)),v(t("textarea",{id:"faqAnswer","onUpdate:modelValue":e[3]||(e[3]=o=>r.value=o),rows:"3",class:"w-full p-2 border rounded",placeholder:"e.g. Yes, because..."},null,512),[[g,r.value]])]),t("button",{onClick:_,class:"bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded"}," Submit as GitHub Issue ")]))}}),T=A({__name:"ProposeFAQ",setup(C){return(f,l)=>(s(),B(P))}});export{T as default};
