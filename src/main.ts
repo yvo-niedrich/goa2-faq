@@ -15,3 +15,5 @@ app.use(getI18n());
 
 // await router.isReady();
 app.mount('#app');
+
+console.log(__BUILD_DATE__);

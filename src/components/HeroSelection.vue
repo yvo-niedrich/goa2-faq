@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import { defaultHeroSortFn, heroes as allHeroes } from '@/data/heroes';
-import HeroIcon from '@/components/icons/HeroIcon.vue'
-import { useViewport } from '@/viewport';
-import { computed } from 'vue';
+    import { sortByExpansion, heroes as allHeroes } from '@/data/heroes';
+    import HeroIcon from '@/components/icons/HeroIcon.vue'
+    import { useViewport } from '@/viewport';
+    import { computed } from 'vue';
 
-const props = defineProps<{
-    'heroes'?: Hero[];
-    'onClick'?: (h: Hero) => unknown;
-    'scale'?: number
-}>();
+    const props = defineProps<{
+        'heroes'?: Hero[];
+        'onClick'?: (h: Hero) => unknown;
+        'scale'?: number
+    }>();
 
 
-const list = computed(() => props.heroes || Object.values(allHeroes).sort(defaultHeroSortFn));
+    const list = computed(() => props.heroes || Object.values(allHeroes).sort(sortByExpansion));
 
 const { isTablet, isDesktop } = useViewport();
 const portraitHeight = computed(() => isDesktop.value ? 250 : isTablet.value ? 200 : 150);

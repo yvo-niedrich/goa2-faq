@@ -42,7 +42,7 @@ export const filterHeroesByExpansions = (
     );
 };
 
-export function defaultHeroSortFn(a: Hero, b: Hero) {
+export function sortByExpansion(a: Hero, b: Hero) {
     if (a.expansion === b.expansion) {
         if (a.complexity === b.complexity) {
             return a.name > b.name ? 1 : -1;
@@ -55,6 +55,10 @@ export function defaultHeroSortFn(a: Hero, b: Hero) {
         expansions.indexOf(b.expansion as unknown as Expansion)
         ? 1
         : -1;
+}
+
+export function sortByName(a: Hero, b: Hero) {
+    return a.name > b.name ? 1 : -1;
 }
 
 const cardColorValue = {

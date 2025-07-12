@@ -18,6 +18,7 @@ export default defineConfig({
         __APP_REPO__: JSON.stringify(require('./package.json').repository.url),
         __APP_URL__: JSON.stringify(require('./package.json').homepage),
         __APP_BUILD_HASH__: '\"' + hash + '\"',
+        __APP_BUILD_DATE__: JSON.stringify(new Date().toISOString()),
     },
 
     plugins: [

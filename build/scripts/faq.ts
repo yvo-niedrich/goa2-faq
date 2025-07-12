@@ -13,9 +13,8 @@ function generateId(length = 8) {
     let result = '';
     const c = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789',
         l = c.length;
-    const charactersLength = c.length;
     for (let i = 0; i < length; i++) {
-        result += c.charAt(Math.floor(Math.random() * charactersLength));
+        result += c.charAt(Math.floor(Math.random() * l));
     }
     return result;
 }

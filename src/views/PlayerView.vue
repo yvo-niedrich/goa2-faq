@@ -13,7 +13,7 @@ import { get, sortCardsByTier } from '@/data/heroes';
 import { useCompanionStore } from '@/stores/companion';
 import { sortTier } from '@/types/CardType';
 
-type CardFn = (c: Card) => any;
+    type CardFn = (c: Card) => boolean | void;
 
 const store = useCompanionStore();
 
@@ -54,11 +54,11 @@ function getCard(color: Card['color'], id?: string | null, modifyFn?: CardFn) {
 }
 
 const cards = computed(() => [
-    getCard('y', store.gold, (card: Card) => store.gold = card.id),
-    getCard('s', store.silver, (card: Card) => store.silver = card.id),
-    getCard('r', store.red, (card: Card) => store.red = card.id),
-    getCard('g', store.green, (card: Card) => store.green = card.id),
-    getCard('b', store.blue, (card: Card) => store.blue = card.id),
+    getCard('y', store.gold, (card: Card) => { store.gold = card.id }),
+    getCard('s', store.silver, (card: Card) => { store.silver = card.id }),
+    getCard('r', store.red, (card: Card) => { store.red = card.id }),
+    getCard('g', store.green, (card: Card) => { store.green = card.id }),
+    getCard('b', store.blue, (card: Card) => { store.blue = card.id }),
     getCard('u'),
 ]);
 
@@ -182,6 +182,10 @@ const cards = computed(() => [
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 2rem;
+
+        @media (max-width: 480px) {
+            // padding: 0 1rem;
+        }
     }
 
     .carousel {
@@ -217,6 +221,7 @@ const cards = computed(() => [
     }
 
     .carousel-mask {
+        opacity: 1;
         transition: .5s ease-out;
         position: absolute;
         top: 0;
@@ -236,11 +241,19 @@ const cards = computed(() => [
         &.left {
             left: 0;
             background: linear-gradient(to right, rgba(var(--color-background-soft-rgb), 0.9), transparent);
+
+            @media (max-width: 480px) {
+                opacity: 0;
+            }
         }
 
         &.right {
             right: 0;
             background: linear-gradient(to left, rgba(var(--color-background-soft-rgb), 0.9), transparent);
+
+            @media (max-width: 480px) {
+                opacity: 0;
+            }
         }
 
         &.hidden {
@@ -260,7 +273,7 @@ const cards = computed(() => [
         font-weight: 800;
         cursor: pointer;
         color: var(--color-text-dark);
-        text-shadow: 0 0 1px #555;
+        text-shadow: 0 0 1px #666;
         z-index: 10;
         border-radius: .4rem;
         padding: 2.25rem .25rem;
@@ -303,8 +316,13 @@ const cards = computed(() => [
             margin: 1.15rem 1.5rem;
         }
 
+
+        @media (max-width: 480px) {
+            margin: 1rem;
+        }
+
         .pagination-bullet {
-            height: 1.4em;
+            height: 1.5em;
 
             width: 18%;
 
@@ -357,7 +375,7 @@ const cards = computed(() => [
             text-align: center;
             position: absolute;
             vertical-align: text-bottom;
-            width: 40%;
+            width: 45%;
             margin: 0 auto;
             left: 50%;
             transform: translate(-50%, 0);

@@ -6,12 +6,16 @@ import LanguageSwitcher from './components/LanguageSwitcher.vue';
 import { useCompanionStore } from './stores/companion';
 import { computed } from 'vue';
 import { get } from './data/heroes';
+    import TimeIndicator from './components/TimeIndicator.vue';
 
 const { width, height, isMobile, isTablet, isDesktop } = useViewport();
 
 const store = useCompanionStore();
 const selectedHeroName = computed(() => store.id ? get(store.id)?.name : null);
 const debug = false;
+
+    const build_date = __APP_BUILD_DATE__;
+    const build_number = __APP_BUILD_HASH__;
 
 </script>
 
@@ -23,6 +27,7 @@ const debug = false;
                 {{ $t('app.header.dashboard') }}
                 <span v-if="selectedHeroName">[{{ selectedHeroName }}]</span>
             </RouterLink>
+            <RouterLink to="/contribute">+</RouterLink>
 
 
             <div style="position: absolute; top: 3px; right: 5px;">
@@ -43,6 +48,11 @@ const debug = false;
     <div class="content">
         <RouterView />
         <FaqPopup />
+
+        <div class="footer">
+            {{ $t('last update') }}
+            <TimeIndicator :date="build_date" />
+        </div>
     </div>
 </template>
 
@@ -125,6 +135,18 @@ const debug = false;
 
         @media (max-width: 600px) {
             padding: 1rem .25rem;
+        }
+
+        @media (max-width: 480px) {
+            padding: .5rem .175rem 1rem;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 3px;
+            right: 1.25em;
+            font-size: .6rem;
+            color: var(--color-border);
         }
     }
 

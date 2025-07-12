@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue';
-import { defaultHeroSortFn, filterHeroesByExpansions, get } from '@/data/heroes'
+    import { sortByExpansion, filterHeroesByExpansions, get } from '@/data/heroes'
 import router from '@/router';
 import HeroOverview from '@/components/HeroOverview.vue';
 import HeroSelection from '@/components/HeroSelection.vue';
@@ -17,7 +17,7 @@ const filterName = ref<string>('');
 const list = computed(() => filterHeroesByExpansions(filterExp.value)
     .filter(h => filterComplexity.value.length === 0 || filterComplexity.value.includes(h.complexity))
     .filter(h => h.name.toLowerCase().includes(filterName.value.toLowerCase()))
-    .sort(defaultHeroSortFn)
+    .sort(sortByExpansion)
 );
 
 const selectedHero = computed(() => {

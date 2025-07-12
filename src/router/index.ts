@@ -19,6 +19,12 @@ const router = createRouter({
             props: true,
             component: () => import('@/views/PlayerView.vue'),
         },
+        {
+            path: '/contribute',
+            name: 'contribute',
+            props: true,
+            component: () => import('@/views/ProposeFAQ.vue'),
+        },
     ],
     scrollBehavior() {
         return { top: 0 };
