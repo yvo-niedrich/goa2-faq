@@ -1,20 +1,57 @@
 <script setup lang="ts">
-    import { RouterLink, RouterView } from 'vue-router'
-    import { useViewport } from '@/viewport';
-    import FaqPopup from './components/popups/FaqPopup.vue';
-    import LanguageSwitcher from './components/LanguageSwitcher.vue';
-    import { useCompanionStore } from './stores/companion';
-    import { computed } from 'vue';
-    import { get } from './data/heroes';
-    import TimeIndicator from './components/TimeIndicator.vue';
+import { RouterLink, RouterView, useRoute, useRouter } from 'vue-router'
+import { useViewport } from '@/viewport';
+import FaqPopup from './components/popups/FaqPopup.vue';
+import LanguageSwitcher from './components/LanguageSwitcher.vue';
+import { useCompanionStore } from './stores/companion';
+import { computed, onMounted } from 'vue';
+import { get } from './data/heroes';
+import TimeIndicator from './components/TimeIndicator.vue';
+import { useAppStore } from './stores/app';
+import { expansions } from './types/Expansion';
 
-    const { width, height, isMobile, isTablet, isDesktop } = useViewport();
+const { width, height, isMobile, isTablet, isDesktop } = useViewport();
 
-    const store = useCompanionStore();
-    const selectedHeroName = computed(() => store.id ? get(store.id)?.name : null);
-    const debug = false;
-    const build_date = __APP_BUILD_DATE__;
-    const FEATURE_REPORT_FAQS = import.meta.env.DEV;
+const store = useCompanionStore();
+const selectedHeroName = computed(() => store.id ? get(store.id)?.name : null);
+const debug = false;
+const build_date = __APP_BUILD_DATE__;
+const FEATURE_REPORT_FAQS = import.meta.env.DEV;
+
+
+const router = useRouter();
+const route = useRoute();
+onMounted(async () => {
+    await router.isReady();
+    const query = route.query;
+
+    if (Object.keys(query).length <= 0) return;
+
+    let qExpansions: string[];
+    if (typeof query.expansions === 'string') {
+        qExpansions = query.expansions.split(',')
+    } else if (Array.isArray(query.expansions)) {
+        qExpansions = query.expansions;
+    }
+
+    if (!qExpansions || !qExpansions.length) {
+        return;
+    }
+
+    qExpansions = qExpansions
+        .map(e => e.trim())
+        .map(e => e.charAt(0).toUpperCase() + e.slice(1).toLocaleLowerCase())
+        .filter(e => expansions.includes(e as any));
+
+    if (!qExpansions.length) return;
+
+    const store = useAppStore();
+    store.filteredExpansions = qExpansions;
+
+    if (Object.keys(query).length > 0) {
+        router.replace({ query: {} });
+    }
+});
 
 </script>
 

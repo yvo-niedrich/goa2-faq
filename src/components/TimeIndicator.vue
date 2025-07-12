@@ -7,13 +7,10 @@ const props = defineProps<{
     date: string;
 }>();
 
-console.log(props.date);
-
 const dd = computed(() => new Date(props.date));
 const nowRef = ref(new Date());
 
-const relative = computed(() => {
-    console.log('recalc');
+    const relative = computed(() => {
     const rtf = new Intl.RelativeTimeFormat(locale.value, { numeric: 'auto' });
     const diffMs = dd.value.getTime() - nowRef.value.getTime();
     const diffSec = Math.round(diffMs / 1000);
@@ -43,7 +40,6 @@ let interval: number;
 
 onMounted(() => {
     interval = setInterval(() => {
-        console.log('now updated');
         nowRef.value = new Date();
     }, 60000) as number; // 1 minute
 });

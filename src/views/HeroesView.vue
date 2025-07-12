@@ -1,16 +1,17 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue';
-    import { sortByExpansion, filterHeroesByExpansions, get } from '@/data/heroes'
+import { sortByExpansion, filterHeroesByExpansions, get } from '@/data/heroes'
 import router from '@/router';
 import HeroOverview from '@/components/HeroOverview.vue';
 import HeroSelection from '@/components/HeroSelection.vue';
 import SearchInput from '@/components/SearchInput.vue';
+import { useAppStore } from '@/stores/app';
+import { storeToRefs } from 'pinia';
 
-const props = defineProps<{
-    hero?: string;
-}>();
+const props = defineProps<{ hero?: string; }>();
 
-const filterExp = ref<string>('');
+const { filteredExpansions: filterExp } = storeToRefs(useAppStore());
+
 const filterComplexity = ref<number[]>([]);
 const filterName = ref<string>('');
 
@@ -37,7 +38,8 @@ const selectedHero = computed(() => {
         <Transition :name="'slide-' + (selectedHero ? 'left' : 'right')">
             <div class="overview-selection" v-if="!selectedHero">
                 <div class="search-bar">
-                    <SearchInput v-model="filterName" :placeholder="$t('app.button.search')" />
+                    <SearchInput v-model:name="filterName" v-model:expansions="filterExp"
+                        :placeholder="$t('app.button.search')" />
                 </div>
                 <HeroSelection :heroes="list"
                     :onClick="(h) => router.push({ name: 'heroes', params: { hero: h.id } })" />

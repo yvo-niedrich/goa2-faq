@@ -12,24 +12,24 @@
         open.value = !open.value;
     }
 
-    function select(code) {
-    store.language = code;
-    open.value = false;
-}
-
-function handleClickOutside(event) {
-    if (dropdownRef.value && !dropdownRef.value.contains(event.target)) {
+    function select(code: string) {
+        store.language = code;
         open.value = false;
     }
-}
 
-onMounted(() => {
-    document.addEventListener('click', handleClickOutside);
-});
+    function handleClickOutside(event) {
+        if (dropdownRef.value && !dropdownRef.value.contains(event.target)) {
+            open.value = false;
+        }
+    }
 
-onBeforeUnmount(() => {
-    document.removeEventListener('click', handleClickOutside);
-});
+    onMounted(() => {
+        document.addEventListener('click', handleClickOutside);
+    });
+
+    onBeforeUnmount(() => {
+        document.removeEventListener('click', handleClickOutside);
+    });
 </script>
 
 <template>
