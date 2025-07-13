@@ -20,7 +20,7 @@ const router = createRouter({
             component: () => import('@/views/PlayerView.vue'),
         },
         {
-            path: '/settings',
+            path: '/settings/:setting?',
             name: 'settings',
             props: true,
             component: () => import('@/views/AppSettings.vue'),

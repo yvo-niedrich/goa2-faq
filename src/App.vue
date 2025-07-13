@@ -133,6 +133,7 @@ header {
                     }
 
                     &.multi-line {
+                        padding-top: .15em;
                         line-height: 1rem;
                     }
 

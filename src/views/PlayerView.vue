@@ -13,7 +13,7 @@ import { get, sortCardsByTier } from '@/data/heroes';
 import { useCompanionStore } from '@/stores/companion';
 import { sortTier } from '@/types/CardType';
 
-    type CardFn = (c: Card) => boolean | void;
+type CardFn = (c: Card) => boolean | void;
 
 const store = useCompanionStore();
 
@@ -62,37 +62,45 @@ const cards = computed(() => [
     getCard('u'),
 ]);
 
+function tierToLevel(t: string | null) {
+    if (t === 'II') return 1;
+    if (t === 'III') return 2;
+    return 0;
+}
 
-    const viewport = useViewport();
-
-    function getVisibleCount(width: number) {
-        if (width >= (viewport.desktopBoundary)) return 3.8;
-        if (width >= viewport.mobileBoundary) return 2.5;
-        return 1;
-    }
-
-
-    const visibleCount = computed(() => getVisibleCount(viewport.width.value));
-    const navigableSlides = computed(() => cards.value.length - Math.floor(visibleCount.value));
-    const isAtStart = computed(() => store.focus <= 0);
-    const isAtEnd = computed(() => store.focus >= navigableSlides.value);
+const heroLevel = computed(() => cards.value.reduce((agg, card) => agg + tierToLevel(card.data.tier), 1))
 
 
-    const choice = ref<null | { cards: Card[], select: CardFn }>(null);
+const viewport = useViewport();
+
+function getVisibleCount(width: number) {
+    if (width >= (viewport.desktopBoundary)) return 3.8;
+    if (width >= viewport.mobileBoundary) return 2.5;
+    return 1;
+}
 
 
-    function setNewCard(cards: Card[], select: CardFn) {
-        if (cards.length === 0) return;
-        if (cards.length === 1) return select(cards[0]);
+const visibleCount = computed(() => getVisibleCount(viewport.width.value));
+const navigableSlides = computed(() => cards.value.length - Math.floor(visibleCount.value));
+const isAtStart = computed(() => store.focus <= 0);
+const isAtEnd = computed(() => store.focus >= navigableSlides.value);
 
-        choice.value = { cards, select };
-    }
+
+const choice = ref<null | { cards: Card[], select: CardFn }>(null);
+
+
+function setNewCard(cards: Card[], select: CardFn) {
+    if (cards.length === 0) return;
+    if (cards.length === 1) return select(cards[0]);
+
+    choice.value = { cards, select };
+}
 
 </script>
 
 <template>
     <div>
-        <HeroPortrait :hero="hero" />
+        <HeroPortrait :hero="hero" :level="heroLevel" />
 
         <CardSelectPopup v-if="choice?.cards" :cards="choice.cards" :select="choice.select"
             :close="() => choice = null" />

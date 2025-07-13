@@ -4,7 +4,7 @@
     import HeroStat from './HeroStat.vue';
     import HeroIcon from './icons/HeroIcon.vue';
 
-    const props = defineProps<{ hero: Hero; portraitMin?: number }>();
+const props = defineProps<{ hero: Hero; portraitMin?: number; level?: number }>();
 const { isTablet, isDesktop, isMobileHorizontal, isMobileVertical } = useViewport();
 const portraitHeight = computed(() => Math.max(props.portraitMin ?? 0, (() => {
     if (isDesktop.value) return 350;
@@ -24,6 +24,7 @@ const portraitHeight = computed(() => Math.max(props.portraitMin ?? 0, (() => {
         <div>
             <h2>
                 <span class="hero-class">{{ $t(hero.class) }}</span>
+                <span v-if="!!level" class="hero-level">{{ level }}</span>
                 <span v-if="!isMobileVertical" class="hero-expansion">{{ $t(hero.expansion) }}</span>
             </h2>
             <div class="hero-stats">
@@ -79,6 +80,26 @@ const portraitHeight = computed(() => Math.max(props.portraitMin ?? 0, (() => {
                 padding-left: .75em;
             }
 
+                        .hero-level {
+                            padding-left: 1em;
+                            font-weight: bold;
+                            font-size: .6em;
+            
+                            text-align: right;
+            
+                            @media (max-width: 500px) {
+                                padding-left: .5em;
+                            }
+            
+                            &::before {
+                                content: '(LVL ';
+                            }
+            
+                            &::after {
+                                content: ')';
+                            }
+                        }
+            
                         .hero-expansion {
                             position: absolute;
                             right: 0;
@@ -86,6 +107,7 @@ const portraitHeight = computed(() => Math.max(props.portraitMin ?? 0, (() => {
                             color: var(--color-text-muted);
                             opacity: .5;
                         }
+
             .hero-complexity {
                 position: absolute;
                 top: 0em;
