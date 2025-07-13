@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { RouterLink, RouterView, useRoute, useRouter } from 'vue-router'
-import { useViewport } from '@/viewport';
 import FaqPopup from './components/popups/FaqPopup.vue';
 import LanguageSwitcher from './components/LanguageSwitcher.vue';
 import { useCompanionStore } from './stores/companion';
@@ -10,13 +9,10 @@ import TimeIndicator from './components/TimeIndicator.vue';
 import { useAppStore } from './stores/app';
 import { expansions } from './types/Expansion';
 
-const { width, height, isMobile, isTablet, isDesktop } = useViewport();
-
 const store = useCompanionStore();
 const selectedHeroName = computed(() => store.id ? get(store.id)?.name : null);
-const debug = false;
 const build_date = __APP_BUILD_DATE__;
-const FEATURE_REPORT_FAQS = import.meta.env.DEV;
+const IS_DEV = import.meta.env.DEV;
 
 
 const router = useRouter();
@@ -59,11 +55,14 @@ onMounted(async () => {
     <header>
         <nav>
             <RouterLink to="/hero">{{ $t('app.header.overview') }}</RouterLink>
-            <RouterLink to="/me" :class="{ disabled: !selectedHeroName }">
+            <RouterLink to="/me" :class="{ disabled: !selectedHeroName, 'multi-line': !!selectedHeroName }">
                 {{ $t('app.header.dashboard') }}
-                <span v-if="selectedHeroName">[{{ selectedHeroName }}]</span>
+                <span v-if="selectedHeroName"><br /></span>
+                <span v-if="selectedHeroName" class="selected-hero-name">{{ selectedHeroName }}</span>
             </RouterLink>
-            <RouterLink v-if="FEATURE_REPORT_FAQS" to="/contribute">+</RouterLink>
+            <RouterLink v-if="IS_DEV" to="/settings"><img style="margin-top: .4rem;" src="@/assets/gear.svg"
+                    width="24" />
+            </RouterLink>
 
 
             <div style="position: absolute; top: 3px; right: 5px;">
@@ -72,14 +71,6 @@ onMounted(async () => {
 
         </nav>
     </header>
-
-    <div v-if="debug" class="debug">
-        <p>Width: {{ width }}</p>
-        <p>Height: {{ height }}</p>
-        <p>Mobile: {{ isMobile }}</p>
-        <p>Tablet: {{ isTablet }}</p>
-        <p>Desktop: {{ isDesktop }}</p>
-    </div>
 
     <div class="content">
         <RouterView />
@@ -92,13 +83,13 @@ onMounted(async () => {
     </div>
 </template>
 
-<style lang="scss" scoped>
-    header {
-        font-size: 1.1em;
-        height: 2.5rem;
-        text-align: center;
+<style scoped lang="scss">
+header {
+    font-size: 1.1em;
+    height: 2.5rem;
+    text-align: center;
 
-        width: 100%;
+    width: 100%;
         position: sticky;
         top: 0;
         background: rgba(var(--color-background-soft-rgb), .8);
@@ -117,41 +108,50 @@ onMounted(async () => {
             display: inline-block;
         }
 
-        nav {
-            padding: .2rem;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            background: radial-gradient(circle, rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 95%);
-
-            a.disabled {
-                opacity: 0.5;
-                pointer-events: none;
-            }
-
-            a.router-link-exact-active {
-                color: var(--color-text);
-            }
-
-            a.router-link-exact-active:hover {
-                background-color: transparent;
-            }
-
-            a {
-                display: inline-block;
+            nav {
+                width: 100%;
                 height: 100%;
-                padding: .2em 1rem;
-                border-left: 1px solid var(--color-border);
-                vertical-align: top;
-            }
+                text-align: center;
+                background: radial-gradient(circle, rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 95%);
 
-            a:first-of-type {
-                border: 0;
-            }
+                @media (max-width: 500px) {
+                    text-align: left;
+                    padding-left: 1em;
+                }
 
-            @media (max-width: 500px) {
-                text-align: left;
-                padding-left: 1em;
+                a {
+                    display: inline-block;
+                    height: 100%;
+                    line-height: 2rem;
+                    padding: 0 .65rem;
+                    border-left: 1px solid var(--color-border);
+                    vertical-align: top;
+
+                    &.disabled {
+                        opacity: 0.5;
+                        pointer-events: none;
+                    }
+
+                    &.multi-line {
+                        line-height: 1rem;
+                    }
+
+                    &.router-link-exact-active {
+                        color: var(--color-text);
+                    }
+
+                    &.router-link-exact-active:hover {
+                        background-color: transparent;
+                    }
+
+                    &:first-of-type {
+                        border: 0;
+                    }
+
+                    .selected-hero-name {
+                        font-size: .75em;
+
+                    }
             }
         }
     }

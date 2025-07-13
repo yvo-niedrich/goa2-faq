@@ -20,10 +20,10 @@ const router = createRouter({
             component: () => import('@/views/PlayerView.vue'),
         },
         {
-            path: '/contribute',
-            name: 'contribute',
+            path: '/settings',
+            name: 'settings',
             props: true,
-            component: () => import('@/views/ProposeFAQ.vue'),
+            component: () => import('@/views/AppSettings.vue'),
         },
     ],
     scrollBehavior() {

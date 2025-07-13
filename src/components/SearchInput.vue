@@ -51,8 +51,7 @@ onBeforeUnmount(() => {
             <div v-if="expansions !== null" class="search-input__selector">
                 <div ref="dropdownRef" class="selector">
                     <button class="selector-button" @click="toggle">
-                        <span class="icon" :class="{ 'muted': count === 0 }"><img
-                                src="@/components/icons/stack.svg"></span>
+                        <span class="icon" :class="{ 'muted': count === 0 }"><img src="@/assets/stack.svg"></span>
                         <span class="label">{{ count || '\xA0' }}</span>
                         <span class="chevron">▾</span>
                     </button>
