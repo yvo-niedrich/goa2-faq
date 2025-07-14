@@ -1,61 +1,31 @@
-# goa2-faq
+# Guards of Atlantis 2 - FAQ
 
-This template should help get you started developing with Vue 3 in Vite.
+This companion app for the boardgame Guards of Atlantis 2 (2nd printing) aims to ease the
+experience for new players by providing card translations and FAQs to clarify confusing or
+unexpected rules and interactions. The intention is **not** to provide strategy guides or
+a lookup for information that's meant to be fuzzy by the games designers.
 
-## Recommended IDE Setup
+## How to use
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+### Hero Overview
+Select a hero of your choice in the hero selection. Here you can see their profile
+and a list of all available cards. Any card with a **[?!]** in the bottom right corner
+has FAQ entries attached to it. Click or tap on the card to reveal
+the questions and answers. <br />
+[![Mobile: Overview](docs/mobile_overview_thumb.jpg)](docs/mobile_overview.jpg)
+[![Mobile: Profile](docs/mobile_profile_thumb.jpg)](docs/mobile_profile.jpg)
 
-## Type Support for `.vue` Imports in TS
+### Personal Dashboard
+Bookmark your hero for the game with your dashboard by clicking the ❤️-icon on their
+profile image. In the dashboard view you can manage your hand for quick reference
+access by matching upgrades (or downgrades if you changed your mind). FAQ
+records are again available by clicking or tapping on a card. <br />
+[![Mobile: Dashboard](docs/mobile_dashboard_thumb.jpg)](docs/mobile_dashboard.jpg)
+[![Mobile: FAQ](docs/mobile_faq_thumb.jpg)](docs/mobile_faq.jpg)
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+## Contributing
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
-
-### Run End-to-End Tests with [Nightwatch](https://nightwatchjs.org/)
-
-```sh
-# When using CI, the project must be built first.
-npm run build
-
-# Runs the end-to-end tests
-npm run test:e2e
-# Runs the tests only on Chrome
-npm run test:e2e -- --env chrome
-# Runs the tests of a specific file
-npm run test:e2e -- tests/e2e/example.ts
-# Runs the tests in debug mode
-npm run test:e2e -- --debug
-```
-    
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+Your (community) contribution is required to improve this FAQ. Please consider
+ - [adding missing heroes](docs/contribute-hero.md)
+ - [adding more languages](docs/contribute-translate.md)
+ - [posing and answering questions \[WIP\]](https://github.com/yvo-niedrich/goa2-faq/issues/1)
