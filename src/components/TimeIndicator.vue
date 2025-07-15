@@ -38,10 +38,11 @@ const nowRef = ref(new Date());
 
 let interval: number;
 
+/* eslint-disable  @typescript-eslint/no-explicit-any */
 onMounted(() => {
     interval = setInterval(() => {
         nowRef.value = new Date();
-    }, 60000) as number; // 1 minute
+    }, 60000) as any as number; // 1 minute
 });
 
 onUnmounted(() => {

@@ -6,6 +6,8 @@
     "app.card-type.basic": "Basis",
     "app.card-type.ranged": "Fernkampf",
     "app.card-type.attack": "Angriff",
+    "app.card-type.basic.attack": "Basis Angriff",
+    "app.card-type.basic.skill": "Basis Fähigkeit",
     "app.card-type.movement": "Bewegung",
     "app.card-type.ultimate": "Ultimate",
     "app.card-type.skill": "Fähigkeit",

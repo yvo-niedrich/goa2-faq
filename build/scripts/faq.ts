@@ -74,8 +74,10 @@ for (const file of files) {
     }
 }
 
-export function cardIndex(filter: string[] = [], warn = true): CardFaqMap {
-    const idx: CardFaqMap = {};
+type CardIdToFAQIds = { [key: string]: string[] };
+
+export function cardIndex(filter: string[] = [], warn = true): CardIdToFAQIds {
+    const idx: CardIdToFAQIds = {};
 
     for (const fid of Object.keys(faq)) {
         const record: FAQ = faq[fid];

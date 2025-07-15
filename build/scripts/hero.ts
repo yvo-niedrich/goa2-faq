@@ -1,6 +1,9 @@
-import { toExpansion } from '@/types/Expansion';
+/* eslint-disable  @typescript-eslint/no-explicit-any */
+import { toExpansion } from '../../src/types/Expansion';
 import { default as heroes } from '../data/heroes.json';
 import { loadCards } from './cards';
+
+import '../../env.d.ts';
 
 export interface HeroBuild extends Hero {
     cardsJson?: string;
