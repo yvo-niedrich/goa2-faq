@@ -50,11 +50,14 @@
 </template>
 
 
-<style scoped>
+<style lang="scss" scoped>
 .language-selector {
     position: relative;
     display: inline-block;
     font-family: sans-serif;
+button {
+        line-height: 1.15rem;
+    }
 }
 
 .selector-button {
@@ -116,6 +119,9 @@
 
 .flag {
     font-size: 1.2em;
+@media (max-width: 768px) {
+        font-size: 1.5em;
+    }
 }
 
 .label {
