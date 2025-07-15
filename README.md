@@ -28,4 +28,4 @@ records are again available by clicking or tapping on a card. <br />
 Your (community) contribution is required to improve this FAQ. Please consider
  - [adding missing heroes](docs/contribute-hero.md)
  - [adding more languages](docs/contribute-translate.md)
- - [posing and answering questions \[WIP\]](https://github.com/yvo-niedrich/goa2-faq/issues/1)
+ - [proposing and answering questions \[WIP\]](https://github.com/yvo-niedrich/goa2-faq/issues/1)

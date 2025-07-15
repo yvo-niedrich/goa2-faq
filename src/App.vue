@@ -12,8 +12,6 @@ import { expansions } from './types/Expansion';
 const store = useCompanionStore();
 const selectedHeroName = computed(() => store.id ? get(store.id)?.name : null);
 const build_date = __APP_BUILD_DATE__;
-const IS_DEV = import.meta.env.DEV;
-
 
 const router = useRouter();
 const route = useRoute();
@@ -60,8 +58,7 @@ onMounted(async () => {
                 <span v-if="selectedHeroName"><br /></span>
                 <span v-if="selectedHeroName" class="selected-hero-name">{{ selectedHeroName }}</span>
             </RouterLink>
-            <RouterLink v-if="IS_DEV" to="/settings"><img style="margin-top: .4rem;" src="@/assets/gear.svg"
-                    width="24" />
+            <RouterLink to="/settings"><img style="margin-top: .4rem;" src="@/assets/gear.svg" width="24" />
             </RouterLink>
 
 
@@ -123,7 +120,7 @@ header {
                     display: inline-block;
                     height: 100%;
                     line-height: 2rem;
-                    padding: 0 .65rem;
+                    padding: 0 .75rem;
                     border-left: 1px solid var(--color-border);
                     vertical-align: top;
 
@@ -163,19 +160,19 @@ header {
         padding: 1rem 2rem 2rem 2rem;
 
         @media (max-width: 1280px) {
-            padding: 1rem;
+            padding: 1rem 1rem 1.5rem;
         }
 
         @media (max-width: 900px) {
-            padding: 1rem .5rem;
+            padding: 1rem .5rem 1.5rem;
         }
 
         @media (max-width: 600px) {
-            padding: 1rem .25rem;
+            padding: 1rem .25rem 1.5rem;
         }
 
         @media (max-width: 480px) {
-            padding: .5rem .175rem 1rem;
+            padding: .5rem .175rem 1.5rem;
         }
 
         .footer {

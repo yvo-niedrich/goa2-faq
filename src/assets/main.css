@@ -8,6 +8,7 @@
     --color-background-soft: rgb(48, 68, 77);
     --color-background-mute: rgb(34, 49, 55);
     --color-background-highlight: rgb(82, 133, 155);
+    --color-background-hyperlink: rgba(0, 168, 109, .25);
 
     --color-border: rgb(91, 120, 133);
     --color-border-shadow: rgb(48, 68, 77);
@@ -19,6 +20,7 @@
     --color-heading-strong: rgb(65, 141, 255);
     --color-heading-bright: rgb(175, 202, 255);
     --color-text: rgb(255, 255, 255);
+    --color-text-hyperlink: rgb(0, 168, 109);
     --color-text-muted: rgb(163, 163, 163);
     --color-heading-dark: rgb(15, 22, 29);
     --color-text-dark: rgb(19, 27, 34);
@@ -95,16 +97,18 @@ strong {
     }
 }
 
-a,
-.green {
+a {
     text-decoration: none;
-    color: hsla(160, 100%, 37%, 1);
+    color: var(--color-text-hyperlink);
+    /* color: hsla(160, 100%, 37%, 1); */
+
     transition: 0.4s;
     padding: 3px;
 }
 
 @media (hover: hover) {
     a:hover {
-        background-color: hsla(160, 100%, 37%, 0.2);
+        color: var(--color-text);
+        background-color: var(--color-background-hyperlink);
     }
 }
