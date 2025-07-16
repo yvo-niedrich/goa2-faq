@@ -12,6 +12,7 @@ import { expansions } from './types/Expansion';
 const store = useCompanionStore();
 const selectedHeroName = computed(() => store.id ? get(store.id)?.name : null);
 const build_date = __APP_BUILD_DATE__;
+const version_number = __APP_VERSION__;
 
 const router = useRouter();
 const route = useRoute();
@@ -74,6 +75,7 @@ onMounted(async () => {
         <FaqPopup />
 
         <div class="footer">
+            v{{ version_number }} &raquo;
             {{ $t('app.last-update') }}
             <TimeIndicator :date="build_date" />
         </div>

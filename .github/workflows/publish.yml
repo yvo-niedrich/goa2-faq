@@ -1,16 +1,32 @@
-name: Publish to pages
+name: Publish on Release
+
 on:
-  push:
-    branches: [main]
+  release:
+    types: [published]
+
 jobs:
-  build_vue:
+  publish_new_version:
+    name: Update version number and deploy
     runs-on: ubuntu-latest
-    name: Build Vue
+
+    permissions:
+      contents: write
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - id: Build-Vue
+      - name: Update package.json version
+        run: |
+          VERSION="${GITHUB_REF##*/}"
+          VERSION="${VERSION#v}" # strip "v"-prefix if present
+          jq ".version = \"$VERSION\"" package.json > package.json.tmp && mv package.json.tmp package.json
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git commit -m "update version: $VERSION [no ci]"
+          git push
+
+      - name: Build and publish to GitHub Pages
         uses: xRealNeon/VuePagesAction@1.0.1
         with:
           username: 'yvo-niedrich'
