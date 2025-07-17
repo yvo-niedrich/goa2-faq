@@ -1,0 +1,154 @@
+[
+    {
+        "id": "bry-gold-familiar-ground",
+        "name": "Familiar Ground",
+        "color": "gold",
+        "type": "Basic Attack - Ranged",
+        "tier": null,
+        "text": "**Choose one —**\n- Target a unit adjacent to you.\n- Target a hero in range who is adjacent to 3 or more obstacles.\n\n_(You, other heroes, minions, tokens, and terrain are obstacles.)_"
+    },
+    {
+        "id": "bry-gold-h-home-turf",
+        "name": "Home Turf",
+        "color": "gold",
+        "type": "Basic Attack",
+        "tier": "H",
+        "text": "**Choose one —**\n- Target a hero adjacent to you.\n- Target a hero in range who is adjacent to 3 or more obstacles.\n\n_(You, other heroes, minions, tokens, and terrain are obstacles.)_"
+    },
+    {
+        "id": "bry-silver-decoy",
+        "name": "Decoy",
+        "color": "silver",
+        "type": "Basic Skill",
+        "tier": null,
+        "text": "**Choose up to two times,** on different targets —\n- Move an enemy minion in radius 1 space.\n- Move an enemy hero in radius who is adjacent to 3 or more obstacles 1 space."
+    },
+    {
+        "id": "bry-red-i-high ground",
+        "name": "High Ground",
+        "color": "red",
+        "type": "Attack",
+        "tier": "I",
+        "text": "Target a unit adjacent to you.\nIf you target a hero adjacent to 3 or more obstacles, +2 🗡️ attack."
+    },
+    {
+        "id": "bry-red-ii-elevated-ambush",
+        "name": "Elevated Ambush",
+        "color": "red",
+        "type": "Attack",
+        "tier": "II",
+        "text": "Target a unit adjacent to you.\nIf you target a hero adjacent to 3 or more obstacles, +2 🗡️ attack."
+    },
+    {
+        "id": "bry-red-iii-peak-precision",
+        "name": "Peak Precision",
+        "color": "red",
+        "type": "Attack",
+        "tier": "III",
+        "text": "Target a unit adjacent to you.\nIf you target a hero adjacent to 3 or more obstacles, +2 🗡️ attack and After the Attack: You may retrieve this card."
+    },
+    {
+        "id": "bry-red-ii-split-attack",
+        "name": "Split Attack",
+        "color": "red",
+        "type": "Attack - Ranged",
+        "tier": "II",
+        "text": "Target a unit in range. If you target a hero who is adjacent to 3 or more obstacles, may repeat once on a different unit adjacent to you."
+    },
+    {
+        "id": "bry-red-iii-split-throw",
+        "name": "Split Throw",
+        "color": "red",
+        "type": "Attack - Ranged",
+        "tier": "III",
+        "text": "Target a unit in range. If you target a hero who is adjacent to 3 or more obstacles, may repeat once on a different unit."
+    },
+    {
+        "id": "bry-green-i-bear-trap",
+        "name": "Bear Trap",
+        "color": "green",
+        "type": "Skill",
+        "tier": "I",
+        "text": "**Choose one —**\n- An enemy hero adjacent to you discards a card, if able.\n- An enemy hero in radius who is adjacent to 3 or more obstacles discards a card, if able."
+    },
+    {
+        "id": "bry-green-ii-log-trap",
+        "name": "Log Trap",
+        "color": "green",
+        "type": "Skill",
+        "tier": "II",
+        "text": "**Choose one —**\n- An enemy hero adjacent to you discards a card, if able.\n- An enemy hero in radius who is adjacent to 3 or more obstacles discards a card, if able."
+    },
+    {
+        "id": "bry-green-ii-true-grit",
+        "name": "True Grit",
+        "color": "green",
+        "type": "Skill",
+        "tier": "II",
+        "text": "You may retrieve a discarded attack card. If an enemy hero in radius is adjacent to 3 or more obstacles, move up to 3 spaces."
+    },
+    {
+        "id": "bry-green-iii-deadfall-trap",
+        "name": "Deadfall Trap",
+        "color": "green",
+        "type": "Skill",
+        "tier": "III",
+        "text": "**Choose one —**\n- An enemy hero adjacent to you discards a card, or is defeated.\n- An enemy hero in radius who is adjacent to 3 or more obstacles discards a card, or is defeated."
+    },
+    {
+        "id": "bry-green-iii-die-hard",
+        "name": "Die Hard",
+        "color": "green",
+        "type": "Skill",
+        "tier": "III",
+        "text": "You may retrieve a discarded attack card. If an enemy hero in radius is adjacent to 3 or more obstacles, move up to 4 spaces."
+    },
+    {
+        "id": "bry-blue-i-tread-lightly",
+        "name": "Tread Lightly",
+        "color": "blue",
+        "type": "Skill",
+        "tier": "I",
+        "text": "Swap with either a unit adjacent to you, or with an enemy hero in radius who is adjacent to 3 or more obstacles."
+    },
+    {
+        "id": "bry-blue-ii-cover-tracks",
+        "name": "Cover Tracks",
+        "color": "blue",
+        "type": "Skill",
+        "tier": "II",
+        "text": "Swap with either a unit adjacent to you, or with an enemy hero in radius who is adjacent to 3 or more obstacles. You may move 1 space."
+    },
+    {
+        "id": "bry-blue-ii-mountain-guide",
+        "name": "Mountain Guide",
+        "color": "blue",
+        "type": "Skill",
+        "tier": "II",
+        "text": "You may move a friendly unit, which is adjacent to you, up to 2 spaces. If an enemy hero in radius is adjacent to 3 or more obstacles, move a different friendly unit in radius up to 2 spaces."
+    },
+    {
+        "id": "bry-blue-iii-hide-traces",
+        "name": "Hide Traces",
+        "color": "blue",
+        "type": "Skill",
+        "tier": "III",
+        "text": "Swap with either a unit adjacent to you, or with an enemy hero in radius who is adjacent to 3 or more obstacles. Move up to 2 spaces."
+    },
+    {
+        "id": "bry-blue-iii-expedition-leader",
+        "name": "Expedition Leader",
+        "color": "blue",
+        "type": "Skill",
+        "tier": "III",
+        "text": "You may move a friendly unit, which is adjacent to you, up to 3 spaces. If an enemy hero in radius is adjacent to 3 or more obstacles, move a different friendly unit in radius up to 3 spaces."
+    },
+    {
+        "id": "bry-ult-iv-over-the-top",
+        "name": "Over the Top",
+        "color": "ultimate",
+        "type": "Ultimate",
+        "tier": "IV",
+        "text": "While you are performing actions, all enemy heroes in play count as being adjacent to 3 or more obstacles."
+    }
+]

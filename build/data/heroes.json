@@ -354,7 +354,8 @@
             "defense": 4,
             "initiative": 7,
             "movement": [5, 6]
-        }
+        },
+        "cards": "cards/brynn.json"
     },
     {
         "id": "mor",
@@ -384,7 +385,8 @@
             "defense": 4,
             "initiative": 4,
             "movement": [5, 6]
-        }
+        },
+        "cards": "cards/widget.json"
     },
     {
         "id": "sno",
