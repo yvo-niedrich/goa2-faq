@@ -84,7 +84,7 @@
         "name": "Arcane Whirlpool",
         "color": "green",
         "type": "Skill - Ranged",
-        "tier": "III",
+        "tier": "II",
         "text": "Swap with an enemy minion in range.\n(*Swap places with the target. This is not movement.*)"
     },
     {
