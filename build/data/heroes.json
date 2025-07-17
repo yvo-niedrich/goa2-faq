@@ -370,7 +370,8 @@
             "defense": 7,
             "initiative": 2,
             "movement": 4
-        }
+        },
+        "cards": "cards/mortimer.json"
     },
     {
         "id": "wid",
