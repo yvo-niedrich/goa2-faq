@@ -36,3 +36,4 @@ tests_output/
 
 src/**/*.generated.*
 !src/data/generated/.gitkeep
+*.missing.json

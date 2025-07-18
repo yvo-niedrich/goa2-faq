@@ -1,0 +1,173 @@
+[
+    {
+        "id": "min-gold-fast-as-lightning",
+        "name": "Fast as Lightning",
+        "color": "gold",
+        "type": "basic attack - ranged",
+        "tier": null,
+        "text": "Target a unit in range.\nAfter the attack: Apply the “After the attack” text of your resolved or discarded red card.\n_(If it has radius, use that card's value.)_",
+        "alternative": false
+    },
+    {
+        "id": "min-gold-h-chop-down",
+        "name": "Chop Down",
+        "color": "gold",
+        "type": "basic attack - ranged",
+        "tier": "H",
+        "text": "Target a hero adjacent to you.\nAfter the attack: Apply the “After the attack” text of your resolved or discarded red card.",
+        "alternative": false
+    },
+    {
+        "id": "min-silver-smoke-bomb",
+        "name": "Smoke Bomb",
+        "color": "silver",
+        "type": "basic skill",
+        "tier": null,
+        "text": "Place a ::token_smoke_bomb:: smoke bomb token in radius;\nenemy heroes cannot target another you or another unit if there is the Smoke Bomb on a straight line between that enemy hero and their target.",
+        "alternative": false
+    },
+    {
+        "id": "min-purple-iv-flurry-of-blows",
+        "name": "Flurry of blows",
+        "color": "purple",
+        "type": "ultimate",
+        "tier": "IV",
+        "text": "Each time after you perform an attack action, you may repeat it once on a different target.",
+        "alternative": false
+    },
+    {
+        "id": "min-blue-i-trip-mine",
+        "name": "Trip Mine",
+        "color": "blue",
+        "type": "skill",
+        "tier": "I",
+        "text": "Place 2 mine tokens, 1 ::token_blast:: blast and 1 ::token_dud:: dud, facedown in radius; units may move through them; remove mine tokens after an enemy hero moves through them; for every blast removed, that hero discards a card, if able.",
+        "alternative": false
+    },
+    {
+        "id": "min-red-i-crane-stance",
+        "name": "Crane Stance",
+        "color": "red",
+        "type": "attack",
+        "tier": "I",
+        "text": "Target a unit adjacent to you.\nAfter the attack: Push an enemy unit adjacent to you up to 3 spaces.",
+        "alternative": false
+    },
+    {
+        "id": "min-green-i-poof-",
+        "name": "Poof!",
+        "color": "green",
+        "type": "skill - ranged",
+        "tier": "I",
+        "text": "Swap with a ::token_smoke_bomb:: Smoke bomb in range;\nif you do, block the attack.",
+        "alternative": false
+    },
+    {
+        "id": "min-blue-ii-cluster-mine",
+        "name": "Cluster Mine",
+        "color": "blue",
+        "type": "skill",
+        "tier": "II",
+        "text": "Place 3 mine tokens, 1 ::token_blast:: blast and 2 ::token_dud::\nduds, facedown in radius; units may move through them; remove mine tokens after an enemy hero moves through them; for every blast removed, that hero discards a card, if able.",
+        "alternative": false
+    },
+    {
+        "id": "min-red-ii-tiger-stance",
+        "name": "Tiger Stance",
+        "color": "red",
+        "type": "attack",
+        "tier": "II",
+        "text": "Target a unit adjacent to you.\nAfter the attack: You may move 1 space to a space adjacent to the target. Push an enemy unit adjacent to you up to 3 spaces.",
+        "alternative": false
+    },
+    {
+        "id": "min-green-ii-vanish",
+        "name": "Vanish",
+        "color": "green",
+        "type": "skill - ranged",
+        "tier": "II",
+        "text": "Swap with a ::token_smoke_bomb:: Smoke bomb in range;\nif you do, block the attack.",
+        "alternative": false
+    },
+    {
+        "id": "min-blue-ii-death-grenade",
+        "name": "Death Grenade",
+        "color": "blue",
+        "type": "skill",
+        "tier": "II",
+        "text": "Place a ::token_grenade:: Grenade token into a space in radius. **End of turn:** Up to 1 enemy hero adjacent to that token discards a card, or is defeated. Remove the Grenade token.",
+        "alternative": true
+    },
+    {
+        "id": "min-red-ii-viper-stance",
+        "name": "Viper Stance",
+        "color": "red",
+        "type": "attack",
+        "tier": "II",
+        "text": "Target a unit adjacent to you.\nAfter the attack: You may swap with a ::token_smoke_bomb:: Smoke bomb in radius.",
+        "alternative": true
+    },
+    {
+        "id": "min-green-ii-inner-strength",
+        "name": "Inner Strength",
+        "color": "green",
+        "type": "skill",
+        "tier": "II",
+        "text": "**This round:** Double your item bonuses.",
+        "alternative": true
+    },
+    {
+        "id": "min-blue-iii-minefield",
+        "name": "Minefield",
+        "color": "blue",
+        "type": "skill",
+        "tier": "III",
+        "text": "Place 3 mine tokens, 2 ::token_blast:: blasts and 1 ::token_dud::\ndud, facedown in radius; units may move through them; remove mien tokens after an enemy hero moves through them; for every blast removed, that hero discards a card, if able.",
+        "alternative": false
+    },
+    {
+        "id": "min-red-iii-dragon-stance",
+        "name": "Dragon Stance",
+        "color": "red",
+        "type": "attack",
+        "tier": "III",
+        "text": "Target a unit adjacent to you.\nAfter the attack: You may move 1 or 2 spaces to a space adjacent to the target. Push an enemy unit adjacent to you up to 3 spaces.",
+        "alternative": false
+    },
+    {
+        "id": "min-green-iii-ruse",
+        "name": "Ruse",
+        "color": "green",
+        "type": "skill - ranged",
+        "tier": "III",
+        "text": "Swap with a ::token_smoke_bomb:: Smoke bomb in range;\nif you do, block the attack. You may place the Smoke bomb into a space in range.",
+        "alternative": false
+    },
+    {
+        "id": "min-blue-iii-holy-death-grenade",
+        "name": "Holy Death Grenade",
+        "color": "blue",
+        "type": "skill",
+        "tier": "III",
+        "text": "Place a ::token_grenade:: grenade token into a space in radius. **End of turn:** Up to 2 enemy heroes adjacent to that token discard a card, or are defeated. Remove the Grenade token.",
+        "alternative": true
+    },
+    {
+        "id": "min-red-iii-cobra-stance",
+        "name": "Cobra Stance",
+        "color": "red",
+        "type": "attack",
+        "tier": "III",
+        "text": "Target a unit adjacent to you.\nAfter the attack: You may swap with a ::token_smoke_bomb:: Smoke bomb radius; if you do, you may place the Smoke bomb into a space in radius.",
+        "alternative": true
+    },
+    {
+        "id": "min-green-iii-perfect-self",
+        "name": "Perfect Self",
+        "color": "green",
+        "type": "skill",
+        "tier": "III",
+        "text": "**Choose one, or both —**\n-  **This round:** Double your item bonuses.\n-  Take a Tier II card from your deck and add it to your dashboard as a permanent item.",
+        "alternative": true
+    }
+]

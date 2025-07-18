@@ -1,0 +1,173 @@
+[
+    {
+        "id": "neb-gold-mind-grip",
+        "name": "Mind Grip",
+        "color": "gold",
+        "type": "basic skill - ranged",
+        "tier": null,
+        "text": "**Choose one —**\n- Perform an action on the card in the previous turn slot of an enemy hero in range; if you would place any tokens, place ::token_illusion:: Illusion tokens instead; skip giving markers.\n- Defeat a minion adjacent to you.",
+        "alternative": false
+    },
+    {
+        "id": "neb-gold-h-mind-probe",
+        "name": "Mind Probe",
+        "color": "gold",
+        "type": "basic skill - ranged",
+        "tier": "H",
+        "text": "Perform the action on the card in the previous turn slot of an enemy hero in range; if you would place any tokens this way, place ::token_illusion::\nIllusion tokens instead; do not use markers.",
+        "alternative": false
+    },
+    {
+        "id": "neb-silver-diabolical-laughter",
+        "name": "Diabolical Laughter",
+        "color": "silver",
+        "type": "basic skill",
+        "tier": null,
+        "text": "Laugh diabolically;\nif you do, **choose up to three times —**\n- Swap with an ::token_illusion:: Illusion token in radius.\n- Place an Illusion token in an adjacent space.\n- Swap two resolved cards of an enemy hero in radius, without canceling active effects.",
+        "alternative": false
+    },
+    {
+        "id": "neb-purple-iv-what-the-hell-are-you-",
+        "name": "What the Hell Are You?",
+        "color": "purple",
+        "type": "ultimate",
+        "tier": "IV",
+        "text": "Each time after you laugh diabolically as part of performing an action, all enemy heroes in radius discard a card, or are defeated.",
+        "alternative": false
+    },
+    {
+        "id": "neb-blue-i-imbue-doubt",
+        "name": "Imbue Doubt",
+        "color": "blue",
+        "type": "skill",
+        "tier": "I",
+        "text": "Name a color. **Next turn, after playing cards:**\nAn enemy hero in radius discards a card of that color, if able.",
+        "alternative": false
+    },
+    {
+        "id": "neb-red-i-phantasmal-sentry",
+        "name": "Phantasmal Sentry",
+        "color": "red",
+        "type": "attack - ranged",
+        "tier": "I",
+        "text": "**Choose one —**\n- Target a hero in range adjacent to an ::token_illusion:: Illusion token in range.\n- Target a unit adjacent to you.",
+        "alternative": false
+    },
+    {
+        "id": "neb-green-i-fleeting-image",
+        "name": "Fleeting Image",
+        "color": "green",
+        "type": "skill",
+        "tier": "I",
+        "text": "Place an ::token_illusion:: Illusion token in radius.\nYou may swap with an Illusion token in play.",
+        "alternative": false
+    },
+    {
+        "id": "neb-blue-ii-time-to-reconsider",
+        "name": "Time to Reconsider",
+        "color": "blue",
+        "type": "skill",
+        "tier": "II",
+        "text": "Name a color. **Next turn, after playing cards:**\nAn enemy hero in radius discards a card of that color, if able.",
+        "alternative": false
+    },
+    {
+        "id": "neb-blue-ii-crack-in-reality",
+        "name": "Crack in Reality",
+        "color": "blue",
+        "type": "skill",
+        "tier": "II",
+        "text": "Split the board into two sides with a straight line of spaces drawn through your space.\n**This turn:** Units on either side of the line cannot interact with objects and spaces on the other side of the line, as if they did not exist.\n_(This includes movement, placement, radius-based effects, etc.)_",
+        "alternative": true
+    },
+    {
+        "id": "neb-red-ii-phantasmal-warrior",
+        "name": "Phantasmal Warrior",
+        "color": "red",
+        "type": "attack - ranged",
+        "tier": "II",
+        "text": "**Choose one —**\n- Before the attack: Move an ::token_illusion:: Illusion token in range up to 1 space to a space adjacent to an enemy hero in range. Target that hero.\n- Target a unit adjacent to you.",
+        "alternative": false
+    },
+    {
+        "id": "neb-red-ii-twist-fate",
+        "name": "Twist Fate",
+        "color": "red",
+        "type": "attack - ranged",
+        "tier": "II",
+        "text": "Target a unit in range.\nAfter the attack: You may swap an enemy unit in range with an ::token_illusion:: Illusion token adjacent to you.",
+        "alternative": true
+    },
+    {
+        "id": "neb-green-ii-multiple-projections",
+        "name": "Multiple Projections",
+        "color": "green",
+        "type": "skill",
+        "tier": "II",
+        "text": "Place up to 2 ::token_illusion:: Illusion tokens in radius.\nYou may swap with an Illusion token in play.",
+        "alternative": false
+    },
+    {
+        "id": "neb-green-ii-illusionary-force",
+        "name": "Illusionary Force",
+        "color": "green",
+        "type": "skill",
+        "tier": "II",
+        "text": "Place up to 2 ::token_illusion:: Illusion tokens in radius.\n**This round:** While you are performing actions, all Illusion tokens count as both tokens and friendly melee minions.",
+        "alternative": true
+    },
+    {
+        "id": "neb-blue-iii-an-illusion-of-choice",
+        "name": "An Illusion of Choice",
+        "color": "blue",
+        "type": "skill",
+        "tier": "III",
+        "text": "Name a color. **Next turn, after playing cards:**\nUp to two enemy heroes in radius each discard a card of that color, if able.",
+        "alternative": false
+    },
+    {
+        "id": "neb-blue-iii-shift-reality",
+        "name": "Shift Reality",
+        "color": "blue",
+        "type": "skill",
+        "tier": "III",
+        "text": "Split the board into two sides with a straight line of spaces drawn through your space.\n**This turn:** Units on either side of the line cannot interact with you, nor with objects and spaces on the other side of the line, as if they did not exist.",
+        "alternative": true
+    },
+    {
+        "id": "neb-red-iii-phantasmal-champion",
+        "name": "Phantasmal Champion",
+        "color": "red",
+        "type": "attack - ranged",
+        "tier": "III",
+        "text": "**Choose one —**\n- Before the attack: Move an ::token_illusion:: Illusion token in range up to 2 spaces to a space adjacent to an enemy hero in range. Target that hero.\n- Target a unit adjacent to you.",
+        "alternative": false
+    },
+    {
+        "id": "neb-red-iii-devious-scheme",
+        "name": "Devious Scheme",
+        "color": "red",
+        "type": "attack - ranged",
+        "tier": "III",
+        "text": "Target a unit in range.\nAfter the attack: You may swap an enemy unit in range with an ::token_illusion:: Illusion token in range.",
+        "alternative": true
+    },
+    {
+        "id": "neb-green-iii-master-of-illusions",
+        "name": "Master of Illusions",
+        "color": "green",
+        "type": "skill",
+        "tier": "III",
+        "text": "Place up to 3 ::token_illusion:: Illusion tokens in radius.\nYou may swap with an Illusion token in play.",
+        "alternative": false
+    },
+    {
+        "id": "neb-green-iii-illusionary-army",
+        "name": "Illusionary Army",
+        "color": "green",
+        "type": "skill",
+        "tier": "III",
+        "text": "Place up to 3 ::token_illusion:: Illusion tokens in radius.\n**This round:** While you are performing actions, all Illusion tokens count as both tokens and friendly melee minions.",
+        "alternative": true
+    }
+]

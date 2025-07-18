@@ -1,12 +1,12 @@
-import { __public } from './paths';
-import { readFileSync } from 'fs';
+import { __public, __root } from './paths';
+import { readFileSync, writeFileSync } from 'fs';
 
 type TranslationMap = { [key: string]: string };
 
 const _cache: { [key: string]: TranslationMap } = {};
 export const path = __public + '/locales';
 export const source = 'en';
-export const languages = ['de'];
+export const translations = ['de'];
 
 export function applicationTranslations(): TranslationMap {
     return {
@@ -83,8 +83,10 @@ export function verifyTranslations(lang: string) {
             acc[k] = sourceData[k];
             return acc;
         }, {} as TranslationMap);
-        console.log(`\n ------ Missing Translations: ${lang}------`);
-        console.log(JSON.stringify(missingEntries, null, 2));
-        console.log('\n');
+
+        console.warn(`Missing Translations: ${lang}.missing.json (${missing.length})`);
+        writeFileSync(`${__root}/${lang}.missing.json`, JSON.stringify(missingEntries, null, 2), {
+            flag: 'w',
+        });
     }
 }

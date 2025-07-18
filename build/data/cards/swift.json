@@ -1,0 +1,173 @@
+[
+    {
+        "id": "swi-gold-reload-",
+        "name": "Reload!",
+        "color": "gold",
+        "type": "basic skill",
+        "tier": null,
+        "text": "**Choose one —**\n- Perform the primary action of your rightmost resolved card.\n- Defeat a minion adjacent to you.",
+        "alternative": false
+    },
+    {
+        "id": "swi-gold-h-backup",
+        "name": "Backup",
+        "color": "gold",
+        "type": "basic skill",
+        "tier": "H",
+        "text": "Perform the primary action of your rightmost resolved card. If you perform an Attack action this way, you cannot target minions.",
+        "alternative": false
+    },
+    {
+        "id": "swi-silver-bounce",
+        "name": "Bounce",
+        "color": "silver",
+        "type": "basic skill",
+        "tier": null,
+        "text": "Move 2 spaces in a straight line, ignoring obstacles; if this card is already resolved as you perform this action, may repeat once.",
+        "alternative": false
+    },
+    {
+        "id": "swi-purple-iv-bullet-time",
+        "name": "Bullet Time",
+        "color": "purple",
+        "type": "ultimate",
+        "tier": "IV",
+        "text": "After you resolve a basic card, you may perform the primary action on that card;\nyou cannot target the same enemy hero twice in the same turn this way.",
+        "alternative": false
+    },
+    {
+        "id": "swi-blue-i-steam-jump",
+        "name": "Steam Jump",
+        "color": "blue",
+        "type": "skill",
+        "tier": "I",
+        "text": "Place yourself into a space in a straight line in radius. Push an enemy unit adjacent to you up to 1 space.",
+        "alternative": false
+    },
+    {
+        "id": "swi-red-i-snipe",
+        "name": "Snipe",
+        "color": "red",
+        "type": "attack - ranged",
+        "tier": "I",
+        "text": "Target a unit at maximum range, and in in a straight line.",
+        "alternative": false
+    },
+    {
+        "id": "swi-green-i-suppress",
+        "name": "Suppress",
+        "color": "green",
+        "type": "skill",
+        "tier": "I",
+        "text": "An enemy hero in radius who is not adjacent to terrain discards a card, if able.",
+        "alternative": false
+    },
+    {
+        "id": "swi-blue-ii-assault-jump",
+        "name": "Assault Jump",
+        "color": "blue",
+        "type": "skill",
+        "tier": "II",
+        "text": "Place yourself into a space in a straight line in radius. Push an enemy unit adjacent to you up to 2 spaces.",
+        "alternative": false
+    },
+    {
+        "id": "swi-red-ii-prepared-shot",
+        "name": "Prepared Shot",
+        "color": "red",
+        "type": "attack - ranged",
+        "tier": "II",
+        "text": "Target a unit in range, in a straight line, and not adjacent to you.",
+        "alternative": false
+    },
+    {
+        "id": "swi-green-ii-pin-down",
+        "name": "Pin Down",
+        "color": "green",
+        "type": "skill",
+        "tier": "II",
+        "text": "An enemy hero in radius who is not adjacent to terrain discards a card, if able.",
+        "alternative": false
+    },
+    {
+        "id": "swi-blue-ii-delayed-jump",
+        "name": "Delayed Jump",
+        "color": "blue",
+        "type": "skill",
+        "tier": "II",
+        "text": "**End of turn:** Place yourself into a space in radius not in a straight line from you.",
+        "alternative": true
+    },
+    {
+        "id": "swi-red-ii-shotgun",
+        "name": "Shotgun",
+        "color": "red",
+        "type": "attack - ranged",
+        "tier": "II",
+        "text": "Target a unit in range. Before the attack:\nAn enemy hero adjacent to the target discards a card, if able.",
+        "alternative": true
+    },
+    {
+        "id": "swi-green-ii-mark-for-death",
+        "name": "Mark for Death",
+        "color": "green",
+        "type": "skill",
+        "tier": "II",
+        "text": "Move an enemy minion in radius up to 3 spaces to a space in radius.\n**Next turn:** The first time an enemy minion in radius is defeated, gain 1 coin.",
+        "alternative": true
+    },
+    {
+        "id": "swi-blue-iii-drop-trooper",
+        "name": "Drop Trooper",
+        "color": "blue",
+        "type": "skill",
+        "tier": "III",
+        "text": "Place yourself into a space in a straight line in radius. Push up to two enemy units adjacent to you up to 2 spaces.",
+        "alternative": false
+    },
+    {
+        "id": "swi-red-iii-killshot",
+        "name": "Killshot",
+        "color": "red",
+        "type": "attack - ranged",
+        "tier": "III",
+        "text": "Target a unit in range, in a straight line, and not adjacent to you.",
+        "alternative": false
+    },
+    {
+        "id": "swi-green-iii-killing-ground",
+        "name": "Killing Ground",
+        "color": "green",
+        "type": "skill",
+        "tier": "III",
+        "text": "An enemy hero in radius who is not adjacent to terrain discards a card, or is defeated.",
+        "alternative": false
+    },
+    {
+        "id": "swi-blue-iii-mobile-scout",
+        "name": "Mobile Scout",
+        "color": "blue",
+        "type": "skill",
+        "tier": "III",
+        "text": "**End of turn:** Place yourself into a space in radius not in a straight line from you.\nYou may then fast travel, if able.",
+        "alternative": true
+    },
+    {
+        "id": "swi-red-iii-super-shotgun",
+        "name": "Super-Shotgun",
+        "color": "red",
+        "type": "attack - ranged",
+        "tier": "III",
+        "text": "Target a unit in range. Before the attack:\nAn enemy hero adjacent to the target discards a card, or is defeated.",
+        "alternative": true
+    },
+    {
+        "id": "swi-green-iii-hunting-season",
+        "name": "Hunting Season",
+        "color": "green",
+        "type": "skill",
+        "tier": "III",
+        "text": "Move up to two enemy minions in radius, up to 3 spaces each, to spaces in radius.\n**Next turn:** The first two times an enemy minion in radius is defeated, gain 1 coin.",
+        "alternative": true
+    }
+]

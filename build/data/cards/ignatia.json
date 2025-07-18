@@ -1,0 +1,173 @@
+[
+    {
+        "id": "ign-gold-chaos-bolt",
+        "name": "Chaos Bolt",
+        "color": "gold",
+        "type": "basic attack - ranged",
+        "tier": null,
+        "text": "::tiebreaker_blue::: Target a minion adjacent to you.\n--- \n::tiebreaker_orange:: Target a hero in range.",
+        "alternative": false
+    },
+    {
+        "id": "ign-gold-h-unreliable-jolt",
+        "name": "Unreliable Jolt",
+        "color": "gold",
+        "type": "basic attack - ranged",
+        "tier": "H",
+        "text": "::tiebreaker_blue::: Target a hero adjacent to you.\n--- \n::tiebreaker_orange:: Target a hero in range not adjacent to you.",
+        "alternative": false
+    },
+    {
+        "id": "ign-silver-equilibrium",
+        "name": "Equilibrium",
+        "color": "silver",
+        "type": "basic skill",
+        "tier": null,
+        "text": "**This round:** Each time you perform or repeat a primary action, you may apply either ::tiebreaker_blue:: or ::tiebreaker_orange::\ncard text, regardless of the Tie Breaker coin.",
+        "alternative": false
+    },
+    {
+        "id": "ign-purple-iv-chaos-incarnate",
+        "name": "Chaos Incarnate",
+        "color": "purple",
+        "type": "ultimate",
+        "tier": "IV",
+        "text": "The first time each turn after youy perform a primary actionm you may flip the Tie Breaker coin; if you do, you may perform that action again, choosing different targets.",
+        "alternative": false
+    },
+    {
+        "id": "ign-blue-i-abrupt-combustion",
+        "name": "Abrupt Combustion",
+        "color": "blue",
+        "type": "skill",
+        "tier": "I",
+        "text": "::tiebreaker_blue::: An enemy hero in radius, adjacent to a token or a minion discards a card, if able.\n--- \n::tiebreaker_orange:: Remove an enemy minion in radius adjacent to an enemy hero.",
+        "alternative": false
+    },
+    {
+        "id": "ign-red-i-playing-with-fire",
+        "name": "Playing with Fire",
+        "color": "red",
+        "type": "attack - ranged",
+        "tier": "I",
+        "text": "::tiebreaker_blue::: Target a unit in range not in a straight line.\n--- \n::tiebreaker_orange:: Target a unit in range in a straight line.",
+        "alternative": false
+    },
+    {
+        "id": "ign-green-i-path-of-ashes",
+        "name": "Path of Ashes",
+        "color": "green",
+        "type": "skill",
+        "tier": "I",
+        "text": "::tiebreaker_blue::: Move up to 2 spaces in a straight line.\nPlace a ::token_magma:: magma token in each empty space you moved through, or out of.\n--- \n::tiebreaker_orange:: Place up to 2 magma tokens in radius.",
+        "alternative": false
+    },
+    {
+        "id": "ign-blue-ii-spontaneous-immolation",
+        "name": "Spontaneous Immolation",
+        "color": "blue",
+        "type": "skill",
+        "tier": "II",
+        "text": "::tiebreaker_blue::: An enemy hero in radius adjacent to a token or a minion discards a card, if able.\n--- \n::tiebreaker_orange:: Remove an enemy minion in radius adjacent to an enemy hero.",
+        "alternative": false
+    },
+    {
+        "id": "ign-blue-ii-searing-heat",
+        "name": "Searing Heat",
+        "color": "blue",
+        "type": "skill",
+        "tier": "II",
+        "text": "::tiebreaker_blue::: Move a friendly hero in radius 2 spaces in a straight line.\n--- \n::tiebreaker_orange:: Move an enemy hero in radius 2 spaces in a straight line.",
+        "alternative": true
+    },
+    {
+        "id": "ign-red-ii-erratic-fireblast",
+        "name": "Erratic Fireblast",
+        "color": "red",
+        "type": "attack - ranged",
+        "tier": "II",
+        "text": "::tiebreaker_blue::: Target a unit in range not in a straight line.\n--- \n::tiebreaker_orange:: Target a unit in range in a straight line.",
+        "alternative": false
+    },
+    {
+        "id": "ign-red-ii-crack-of-doom",
+        "name": "Crack of Doom",
+        "color": "red",
+        "type": "attack - ranged",
+        "tier": "II",
+        "text": "::tiebreaker_blue:: Target a unit adjacent to you.\n--- \n::tiebreaker_orange::: Target a unit at a maximum range.",
+        "alternative": true
+    },
+    {
+        "id": "ign-green-ii-path-of-cinders",
+        "name": "Path of Cinders",
+        "color": "green",
+        "type": "skill",
+        "tier": "II",
+        "text": "::tiebreaker_blue::: Move up to 3 spaces in a straight line.\nPlace a ::token_magma:: magma token in each empty space you moved through, or out of.\n--- \n::tiebreaker_orange:: Place up to 3 magma tokens in radius.",
+        "alternative": false
+    },
+    {
+        "id": "ign-green-ii-unstable-portal",
+        "name": "Unstable Portal",
+        "color": "green",
+        "type": "skill",
+        "tier": "II",
+        "text": "::tiebreaker_blue::: Swap with a friendly unit in radius.\n--- \n::tiebreaker_orange:: Swap with an enemy unit in radius.",
+        "alternative": true
+    },
+    {
+        "id": "ign-blue-ii-violent-conflagration",
+        "name": "Violent Conflagration",
+        "color": "blue",
+        "type": "skill",
+        "tier": "II",
+        "text": "::tiebreaker_blue::: An enemy hero in radius adjacent to a token or a minion discards a card, or is defeated.\n--- \n::tiebreaker_orange:: Defeat an enemy minion in radius adjacent to an enemy hero.",
+        "alternative": false
+    },
+    {
+        "id": "ign-blue-ii-scorching-blaze",
+        "name": "Scorching Blaze",
+        "color": "blue",
+        "type": "skill",
+        "tier": "II",
+        "text": "::tiebreaker_blue::: Move a friendly hero in radius 2 or 3 spaces in a straight line.\n--- \n::tiebreaker_orange:: Move an enemy hero in radius 2 or 3 spaces in a straight line.",
+        "alternative": true
+    },
+    {
+        "id": "ign-red-iii-loosely-aimed-firebolts",
+        "name": "Loosely-Aimed Firebolts",
+        "color": "red",
+        "type": "attack - ranged",
+        "tier": "III",
+        "text": "::tiebreaker_blue::: Target a unit in range not in a straight line.\n--- \n::tiebreaker_orange:: Target a unit in range in a straight line.\nMay repeat once on a different hero.",
+        "alternative": false
+    },
+    {
+        "id": "ign-red-iii-imminent-eruption",
+        "name": "Imminent Eruption",
+        "color": "red",
+        "type": "attack - ranged",
+        "tier": "III",
+        "text": "::tiebreaker_blue::: Target a unit adjacent to you.\nMay repeat once on a minion.\n--- \n::tiebreaker_orange:: Target a unit at maximum range.",
+        "alternative": true
+    },
+    {
+        "id": "ign-green-iii-path-of-flames",
+        "name": "Path of Flames",
+        "color": "green",
+        "type": "skill",
+        "tier": "III",
+        "text": "::tiebreaker_blue::: Move up to 4 spaces in a straight line.\nPlace a ::token_magma:: magma token in each empty space you moved through, or out of.\n--- \n::tiebreaker_orange:: Place up to 4 magma tokens in radius.",
+        "alternative": false
+    },
+    {
+        "id": "ign-green-iii-chaos-gate",
+        "name": "Chaos Gate",
+        "color": "green",
+        "type": "skill",
+        "tier": "III",
+        "text": "::tiebreaker_blue::: Swap with a friendly unit in radius.\nYou may move that unit 1 space.\n--- \n::tiebreaker_orange:: Swap with an enemy unit in radius.\nYou may move 1 space.",
+        "alternative": true
+    }
+]

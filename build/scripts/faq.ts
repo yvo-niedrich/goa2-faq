@@ -108,6 +108,10 @@ export function cardIndex(filter: string[] = [], warn = true): CardIdToFAQIds {
     return idx;
 }
 
+interface TranslationMap {
+    [key: string]: string;
+}
+
 export function translationMap(filter: string[] = []): TranslationMap {
     const t: TranslationMap = {};
 

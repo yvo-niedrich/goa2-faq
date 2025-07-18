@@ -1,0 +1,191 @@
+[
+    {
+        "id": "tak-gold-i-float-like-a-butterfly",
+        "name": "Float like a Butterfly",
+        "color": "gold",
+        "type": "basic movement",
+        "tier": "I",
+        "text": "Swap this card with a different gold card in your deck.\n_(This card starts the game in your hand.)_",
+        "alternative": false
+    },
+    {
+        "id": "tak-gold-ii-sting-like-a-bee",
+        "name": "Sting like a Bee",
+        "color": "gold",
+        "type": "basic attack - ranged",
+        "tier": "II",
+        "text": "Target a unit at maximum range.\nAfter the attack: Swap this card with a different gold card in your deck.\n_(This card starts the game in your deck.)_",
+        "alternative": false
+    },
+    {
+        "id": "tak-gold-iii-strike-like-a-tiger",
+        "name": "Strike like a Tiger",
+        "color": "gold",
+        "type": "basic attack",
+        "tier": "III",
+        "text": "Target a unit adjacent to you.\nAfter the attack: Swap this card with a different gold card in your deck.\n_(This card starts the game in your deck.)_",
+        "alternative": false
+    },
+    {
+        "id": "tak-silver-bushido",
+        "name": "Bushido",
+        "color": "silver",
+        "type": "basic skill",
+        "tier": null,
+        "text": "Swap your gold card with a different gold card in your deck; if you swap a resolved or discarded card this way, place the new card facedown.",
+        "alternative": false
+    },
+    {
+        "id": "tak-silver-h-shameful-display",
+        "name": "Shameful Display",
+        "color": "silver",
+        "type": "basic defense",
+        "tier": "H",
+        "text": "_(You are defeated.)_",
+        "alternative": false
+    },
+    {
+        "id": "tak-red-i-set-an-example",
+        "name": "Set an Example",
+        "color": "red",
+        "type": "attack",
+        "tier": "I",
+        "text": "Target a unit adjacent to you.\nAfter the attack: A friendly hero in radius may swap their unresolved card with a card in their hand.",
+        "alternative": false
+    },
+    {
+        "id": "tak-blue-i-proven-warrior",
+        "name": "Proven Warrior",
+        "color": "blue",
+        "type": "skill",
+        "tier": "I",
+        "text": "Choose a card in the discard of a friendly hero in radius. An enemy hero in radius discards a card of the same color, if able.",
+        "alternative": false
+    },
+    {
+        "id": "tak-green-i-come-to-aid",
+        "name": "Come to Aid",
+        "color": "green",
+        "type": "skill - ranged",
+        "tier": "I",
+        "text": "A friendly hero in range may discard a card.\nIf that hero has a card in the discard, you may move up to 3 spaces.",
+        "alternative": false
+    },
+    {
+        "id": "tak-red-ii-lead-from-the-front",
+        "name": "Lead from the Front",
+        "color": "red",
+        "type": "attack",
+        "tier": "II",
+        "text": "Target a unit adjacent to you.\nAfter the attack: A friendly hero in radius may swap their unresolved card with a card in their hand.",
+        "alternative": false
+    },
+    {
+        "id": "tak-red-ii-spinning-blade",
+        "name": "Spinning Blade",
+        "color": "red",
+        "type": "attack",
+        "tier": "II",
+        "text": "Target a unit adjacent to you.\nAfter the attack: **This turn:** Empty spaces adjacent to you count as obstacles for enemy units.",
+        "alternative": true
+    },
+    {
+        "id": "tak-red-iii-hold-my-sake",
+        "name": "Hold my Sake",
+        "color": "red",
+        "type": "attack",
+        "tier": "III",
+        "text": "Target a unit adjacent to you.\nAfter the attack: A friendly hero in radius may swap their unresolved card with a card in their hand, or in their discard.",
+        "alternative": false
+    },
+    {
+        "id": "tak-red-iii-blade-helix",
+        "name": "Blade Helix",
+        "color": "red",
+        "type": "attack",
+        "tier": "III",
+        "text": "Target a unit adjacent to you.\nAfter the attack: **This turn:** Empty spaces in radius to you count as obstacles for enemy units.",
+        "alternative": true
+    },
+    {
+        "id": "tak-blue-ii-chosen-champion",
+        "name": "Chosen Champion",
+        "color": "blue",
+        "type": "skill",
+        "tier": "II",
+        "text": "Choose a card in the discard of a friendly hero in radius. An enemy hero in radius discards a card of the same color, if able.",
+        "alternative": false
+    },
+    {
+        "id": "tak-blue-ii-calculated-risk",
+        "name": "Calculated Risk",
+        "color": "blue",
+        "type": "skill",
+        "tier": "II",
+        "text": "A friendly hero in radius may discard an attack card. If that hero has a card in the discard, that hero may move up to 2 spaces.",
+        "alternative": true
+    },
+    {
+        "id": "tak-blue-iii-the-right-hand",
+        "name": "The Right Hand",
+        "color": "blue",
+        "type": "skill",
+        "tier": "III",
+        "text": "Choose a card in the discard of a friendly hero in radius. Up to two enemy heroes in radius discard a card of the same color, if able.",
+        "alternative": false
+    },
+    {
+        "id": "tak-blue-iii-tactical-gambit",
+        "name": "Tactical Gambit",
+        "color": "blue",
+        "type": "skill",
+        "tier": "III",
+        "text": "A friendly hero in radius may discard an attack card. If that hero has a card in the discard, that hero may move up to 2 spaces, ignoring obstacles.",
+        "alternative": true
+    },
+    {
+        "id": "tak-green-ii-bring-the-relief",
+        "name": "Bring the Relief",
+        "color": "green",
+        "type": "skill - ranged",
+        "tier": "II",
+        "text": "A friendly hero in range may discard a card.\nIf that hero has a card in the discard, you may move up to 4 spaces.",
+        "alternative": false
+    },
+    {
+        "id": "tak-green-ii-pledge-of-allegiance",
+        "name": "Pledge of Allegiance",
+        "color": "green",
+        "type": "skill - ranged",
+        "tier": "II",
+        "text": "A friendly hero in radius may discard a card.\nIf that hero has a card in the discard, both you and that hero gain 1 coin and you may retrieve a discarded card.",
+        "alternative": true
+    },
+    {
+        "id": "tak-green-iii-commit-reserves",
+        "name": "Commit Reserves",
+        "color": "green",
+        "type": "skill - ranged",
+        "tier": "III",
+        "text": "A friendly hero in range may discard a card.\nIf that hero has a card in the discard, you may move up to 4 spaces, ignoring obstacles.",
+        "alternative": false
+    },
+    {
+        "id": "tak-green-iii-loyal-retainer",
+        "name": "Loyal Retainer",
+        "color": "green",
+        "type": "skill - ranged",
+        "tier": "III",
+        "text": "A friendly hero in radius may discard a card.\nIf that hero has a card in the discard, both you and that hero gain 2 coins and you may retrieve a discarded card.",
+        "alternative": true
+    },
+    {
+        "id": "tak-purple-iv-ready-for-war",
+        "name": "Ready for War",
+        "color": "purple",
+        "type": "ultimate",
+        "tier": "IV",
+        "text": "Return your silver card to your deck and take two gold cards from your deck into your hand.\n_(You now have a total hand size of 6 cards.)_",
+        "alternative": false
+    }
+]

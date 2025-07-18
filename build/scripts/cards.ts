@@ -1,7 +1,7 @@
-import { toColor } from '@/types/Color';
+import { toColor } from '../../src/types/Color';
 import { readFileSync } from 'fs';
 import { __data } from './paths';
-import { toType } from '@/types/CardType';
+import { toType } from '../../src/types/CardType';
 
 interface CardRaw {
     id: string; // all lowercase: %color%-%tier%-%name_NonAlphaNumToDash%
@@ -26,6 +26,10 @@ function getFile(f: string): CardRaw[] {
     return cache[f];
 }
 
+interface TranslationMap {
+    [key: string]: string;
+}
+
 export function translationMap(file: string | string[] = []): TranslationMap {
     if (typeof file === 'string') {
         file = [file];
@@ -47,8 +51,12 @@ export function translationMap(file: string | string[] = []): TranslationMap {
         }
     }
 
+    console.log(Object.keys(icons).sort());
+
     return t;
 }
+
+export const icons: { [key: string]: boolean } = {};
 
 export function loadCards(file: string | string[], withTranslation = true): Card[] {
     if (typeof file === 'string') {
@@ -59,6 +67,11 @@ export function loadCards(file: string | string[], withTranslation = true): Card
 
     for (const f of file) {
         for (const card of getFile(f)) {
+            const matches = card.text.match(/::(\w+)::/g);
+            for (const icon in matches) {
+                icons[matches[icon].replaceAll('::', '')] = true;
+            }
+
             c.push({
                 id: card.id,
                 name: card.name,

@@ -1,0 +1,173 @@
+[
+    {
+        "id": "raz-gold-stunt-doubles",
+        "name": "Stunt Doubles",
+        "color": "gold",
+        "type": "basic attack",
+        "tier": null,
+        "text": "Target a unit adjacent to you.\nAfter the attack: Spawn up to 3 more of you in radius; each of you is the same hero, except when actions are performed. If defeated, remove all of you.",
+        "alternative": false
+    },
+    {
+        "id": "raz-gold-h-stunted-doubles",
+        "name": "Stunted Doubles",
+        "color": "gold",
+        "type": "basic attack",
+        "tier": "H",
+        "text": "Target a hero adjacent to you.\nAfter the attack: Spawn up to 3 more of you in radius; each of you is the same hero, except when actions are performed. If defeated, remove all of you.",
+        "alternative": false
+    },
+    {
+        "id": "raz-silver-crowd-control",
+        "name": "Crowd Control",
+        "color": "silver",
+        "type": "basic defense skill",
+        "tier": null,
+        "text": "When used as a defense action, +2 ::defense_silver::\nDefense for each other one of you in radius.\nWhen used as a skill action, remove all other you in play.",
+        "alternative": false
+    },
+    {
+        "id": "raz-red-i-phantom-strike",
+        "name": "Phantom Strike",
+        "color": "red",
+        "type": "attack",
+        "tier": "I",
+        "text": "Target a unit adjacent to you.\nAfter the attack: If there is more than one of you in play, you may remove one of you.",
+        "alternative": false
+    },
+    {
+        "id": "raz-green-i-tightrope",
+        "name": "Tightrope",
+        "color": "green",
+        "type": "movement",
+        "tier": "I",
+        "text": "After you move, you may move another one of you 1 space.",
+        "alternative": false
+    },
+    {
+        "id": "raz-blue-i-alleyoop",
+        "name": "Alleyoop",
+        "color": "blue",
+        "type": "skill - ranged",
+        "tier": "I",
+        "text": "Swap with a friendly hero in range.\nMove another one of you up to 1 space.",
+        "alternative": false
+    },
+    {
+        "id": "raz-red-ii-hit-and-gone",
+        "name": "Hit and Gone",
+        "color": "red",
+        "type": "attack",
+        "tier": "II",
+        "text": "Target a unit adjacent to you.\nAfter the attack: You may remove one or more of you in play, except the last one of you.",
+        "alternative": false
+    },
+    {
+        "id": "raz-red-ii-rummage",
+        "name": "Rummage",
+        "color": "red",
+        "type": "attack - ranged",
+        "tier": "II",
+        "text": "Target a unit adjacent to you.\nAfter the attack: If there is another one of you in radius, you may retrieve a discarded card.\n_(All of you share cards in hand, deck, and discard.)_",
+        "alternative": true
+    },
+    {
+        "id": "raz-green-ii-high-wire",
+        "name": "High Wire",
+        "color": "green",
+        "type": "movement",
+        "tier": "II",
+        "text": "After you move, move another one of you up to 2 spaces.",
+        "alternative": false
+    },
+    {
+        "id": "raz-green-ii-theatrics",
+        "name": "Theatrics",
+        "color": "green",
+        "type": "skill - ranged",
+        "tier": "II",
+        "text": "Swap with a minion in range.",
+        "alternative": true
+    },
+    {
+        "id": "raz-blue-ii-group-performance",
+        "name": "Group Performance",
+        "color": "blue",
+        "type": "skill - ranged",
+        "tier": "II",
+        "text": "Swap with a friendly hero in range.\nMove another one of you up to 2 spaces.",
+        "alternative": false
+    },
+    {
+        "id": "raz-blue-ii-magic-trick",
+        "name": "Magic Trick",
+        "color": "blue",
+        "type": "skill",
+        "tier": "II",
+        "text": "Push an unit adjacent to you up to 2 spaces;\nfor every space the target moved, move this one of you one space in the opposite direction.",
+        "alternative": true
+    },
+    {
+        "id": "raz-green-ii-wire-dancers",
+        "name": "Wire Dancers",
+        "color": "green",
+        "type": "movement",
+        "tier": "II",
+        "text": "After you move, move another one of you up to 3 spaces.",
+        "alternative": false
+    },
+    {
+        "id": "raz-green-ii-spectacle",
+        "name": "Spectacle",
+        "color": "green",
+        "type": "attack - ranged",
+        "tier": "II",
+        "text": "Swap with a minion in range.\nMay repeat once by another one of you, targeting a different minion.",
+        "alternative": true
+    },
+    {
+        "id": "raz-blue-iii-team-spirit",
+        "name": "Team Spirit",
+        "color": "blue",
+        "type": "skill - ranged",
+        "tier": "III",
+        "text": "Swap with a friendly hero in range.\nMove another one of you up to 3 spaces.",
+        "alternative": false
+    },
+    {
+        "id": "raz-blue-iii-aaaand-its-gone-",
+        "name": "Aaaand it's gone!",
+        "color": "blue",
+        "type": "skill",
+        "tier": "III",
+        "text": "Push an unit adjacent to you up to 3 spaces;\nfor every space the target moved, move this one of you one space in the opposite direction.",
+        "alternative": true
+    },
+    {
+        "id": "raz-red-iii-into-thin-air",
+        "name": "Into Thin Air",
+        "color": "red",
+        "type": "attack",
+        "tier": "III",
+        "text": "Target a unit adjacent to you.\nAfter the attack: You may remove one or more of you in play, including all of you.\n_(If all are removed, you are not defeated. Respawn as normal.)_",
+        "alternative": false
+    },
+    {
+        "id": "raz-red-iii-ransack",
+        "name": "Ransack",
+        "color": "red",
+        "type": "attack - ranged",
+        "tier": "III",
+        "text": "Target a unit adjacent to you.\nAfter the attack: For each other one of you in radius, you may retrieve a discarded card.",
+        "alternative": true
+    },
+    {
+        "id": "raz-purple-iv-twin-strike",
+        "name": "Twin Strike",
+        "color": "purple",
+        "type": "ultimate",
+        "tier": "IV",
+        "text": "After you perform a basic attack action, another one of you may repeat it once, targeting a different unit.",
+        "alternative": false
+    }
+]

@@ -1,0 +1,173 @@
+[
+    {
+        "id": "cut-gold-walk-the-plank",
+        "name": "Walk the Plank",
+        "color": "gold",
+        "type": "basic skill",
+        "tier": null,
+        "text": "**Choose one —**\n- Push an enemy hero adjacent to you up to 4 spaces; if that hero is pushed into another zone, that hero discards a card, or is defeated.\n- Defeat a minion adjacent to you.",
+        "alternative": false
+    },
+    {
+        "id": "cut-gold-h-few-more-steps",
+        "name": "Few More Steps",
+        "color": "gold",
+        "type": "basic skill",
+        "tier": "H",
+        "text": "Push an enemy hero adjacent to you up to 3 spaces; if that hero is pushed into another zone, that hero discards a card, or is defeated.",
+        "alternative": false
+    },
+    {
+        "id": "cut-silver-grappling-bolt",
+        "name": "Grappling Bolt",
+        "color": "silver",
+        "type": "basic skill - ranged",
+        "tier": null,
+        "text": "Target an obstacle in range and in a straight line, with no obstacles between you; ignore immunity. Move in a straight line towards that obstacle until you are adjacent to it.",
+        "alternative": false
+    },
+    {
+        "id": "cut-purple-iv-legend-of-the-skies",
+        "name": "Legend of the Skies",
+        "color": "purple",
+        "type": "ultimate",
+        "tier": "IV",
+        "text": "The first time each turn after you perform a primary action, you may perform the primary action of a card in the previous turn slot.",
+        "alternative": false
+    },
+    {
+        "id": "cut-blue-i-bombardment",
+        "name": "Bombardment",
+        "color": "blue",
+        "type": "skill",
+        "tier": "I",
+        "text": "A enemy hero in radius, adjacent to another enemy unit and not adjacent to you, discards a card, if able.",
+        "alternative": false
+    },
+    {
+        "id": "cut-red-i-daring-strike",
+        "name": "Daring Strike",
+        "color": "red",
+        "type": "attack",
+        "tier": "I",
+        "text": "**Choose one —**\n-  Before the attack: Move 1 space.\nTarget a unit adjacent to you in the direction of the move; +2 ::attack_red:: Attack.\n-  Target a unit adjacent to you.",
+        "alternative": false
+    },
+    {
+        "id": "cut-green-i-brace-for-impact",
+        "name": "Brace for Impact",
+        "color": "green",
+        "type": "skill",
+        "tier": "I",
+        "text": "Move 3 spaces in a straight line, ignoring obstacles, to a space adjacent to an enemy hero; that hero discards a card, if able.",
+        "alternative": false
+    },
+    {
+        "id": "cut-blue-i-barrage",
+        "name": "Barrage",
+        "color": "blue",
+        "type": "skill",
+        "tier": "I",
+        "text": "A enemy hero in radius, adjacent to another enemy unit and not adjacent to you, discards a card, if able.",
+        "alternative": false
+    },
+    {
+        "id": "cut-red-ii-bold-thrust",
+        "name": "Bold Thrust",
+        "color": "red",
+        "type": "attack",
+        "tier": "II",
+        "text": "**Choose one —**\n-  Before the attack: Move 1 or 2 spaces in a straight line. Target a unit adjacent to you in the direction of the move; +2 ::attack_red:: Attack.\n-  Target a unit adjacent to you.",
+        "alternative": false
+    },
+    {
+        "id": "cut-green-ii-ramming-speed",
+        "name": "Ramming Speed",
+        "color": "green",
+        "type": "skill",
+        "tier": "II",
+        "text": "Move 3 or 4 spaces in a straight line, ignoring obstacles, to a space adjacent to an enemy hero; that hero discards a card, if able.",
+        "alternative": false
+    },
+    {
+        "id": "cut-blue-ii-x-marks-the-spot",
+        "name": "X Marks the Spot",
+        "color": "blue",
+        "type": "skill",
+        "tier": "II",
+        "text": "An enemy hero in radius **chooses one —**\n-  You place that hero in a space in radius.\n-  You gain 2 coins.",
+        "alternative": true
+    },
+    {
+        "id": "cut-red-ii-evasive-shot",
+        "name": "Evasive Shot",
+        "color": "red",
+        "type": "attack - ranged",
+        "tier": "II",
+        "text": "Target a unit in range in a straight line.\nAfter the attack: Move up to 2 spaces in the opposite direction.",
+        "alternative": true
+    },
+    {
+        "id": "cut-green-ii-outmaneuver",
+        "name": "Outmaneuver",
+        "color": "green",
+        "type": "skill",
+        "tier": "II",
+        "text": "Swap with an enemy minion in radius;\nyou may move that minion up to 2 spaces.",
+        "alternative": true
+    },
+    {
+        "id": "cut-blue-iii-broadside",
+        "name": "Broadside",
+        "color": "blue",
+        "type": "skill",
+        "tier": "III",
+        "text": "A enemy hero in radius, adjacent to another enemy unit and not adjacent to you, discards a card, if able.\nMay repeat once on a different target.",
+        "alternative": false
+    },
+    {
+        "id": "cut-red-iii-fearless-lunge",
+        "name": "Fearless Lunge",
+        "color": "red",
+        "type": "attack",
+        "tier": "III",
+        "text": "**Choose one —**\n-  Before the attack: Move 1, 2 or 3 spaces in a straight line. Target a unit adjacent to you in the direction of the move; +2 ::attack_red:: Attack.\n-  Target a unit adjacent to you.",
+        "alternative": false
+    },
+    {
+        "id": "cut-green-iii-crashland",
+        "name": "Crashland",
+        "color": "green",
+        "type": "skill",
+        "tier": "III",
+        "text": "Move 3, 4 or 5 spaces in a straight line, ignoring obstacles, to a space adjacent to an enemy hero; that hero discards a card, if able.",
+        "alternative": false
+    },
+    {
+        "id": "cut-blue-iii-a-fistful-of-coins",
+        "name": "A Fistful of Coins",
+        "color": "blue",
+        "type": "skill",
+        "tier": "III",
+        "text": "An enemy hero in radius **chooses one —**\n-  You place that hero in a space in radius.\n-  You gain 3 coins. If you have 13 or more coins, you alone win the game.",
+        "alternative": true
+    },
+    {
+        "id": "cut-red-iii-tumble-shot",
+        "name": "Tumble Shot",
+        "color": "red",
+        "type": "attack - ranged",
+        "tier": "III",
+        "text": "Target a unit in range in a straight line.\nAfter the attack: Move up to 3 spaces in the opposite direction.",
+        "alternative": true
+    },
+    {
+        "id": "cut-green-iii-outsmart",
+        "name": "Outsmart",
+        "color": "green",
+        "type": "skill",
+        "tier": "III",
+        "text": "Swap with an enemy minion in radius;\nyou may move that minion up to 3 spaces.",
+        "alternative": true
+    }
+]

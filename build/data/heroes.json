@@ -124,7 +124,8 @@
             "defense": 7,
             "initiative": 4,
             "movement": [3, 5]
-        }
+        },
+        "cards": "cards/rowenna.json"
     },
     {
         "id": "gar",
@@ -139,7 +140,8 @@
             "defense": 7,
             "initiative": 3,
             "movement": [5, 6]
-        }
+        },
+        "cards": "cards/garrus.json"
     },
     {
         "id": "bai",
@@ -154,7 +156,8 @@
             "defense": [4, 6],
             "initiative": 4,
             "movement": [5, 6]
-        }
+        },
+        "cards": "cards/bain.json"
     },
     {
         "id": "whi",
@@ -233,7 +236,8 @@
             "defense": [3, 8],
             "initiative": 8,
             "movement": 6
-        }
+        },
+        "cards": "cards/min.json"
     },
     {
         "id": "mra",
@@ -248,7 +252,8 @@
             "defense": 8,
             "initiative": 1,
             "movement": [2, 4]
-        }
+        },
+        "cards": "cards/mrak.json"
     },
     {
         "id": "cut",
@@ -263,7 +268,8 @@
             "defense": 4,
             "initiative": 6,
             "movement": [4, 8]
-        }
+        },
+        "cards": "cards/cutter.json"
     },
     {
         "id": "tri",
@@ -278,7 +284,8 @@
             "defense": [2, 4],
             "initiative": 6,
             "movement": [7, 8]
-        }
+        },
+        "cards": "cards/trinkets.json"
     },
     {
         "id": "tal",
@@ -309,7 +316,8 @@
             "defense": 2,
             "initiative": 4,
             "movement": [3, 7]
-        }
+        },
+        "cards": "cards/swift.json"
     },
     {
         "id": "wuk",
@@ -324,7 +332,8 @@
             "defense": 8,
             "initiative": 1,
             "movement": [3, 4]
-        }
+        },
+        "cards": "cards/wuk.json"
     },
     {
         "id": "han",
@@ -339,7 +348,8 @@
             "defense": 1,
             "initiative": 8,
             "movement": [7, 8]
-        }
+        },
+        "cards": "cards/hanu.json"
     },
     {
         "id": "bry",
@@ -354,7 +364,8 @@
             "defense": 4,
             "initiative": 7,
             "movement": [5, 6]
-        }
+        },
+        "cards": "cards/brynn.json"
     },
     {
         "id": "mor",
@@ -369,7 +380,8 @@
             "defense": 7,
             "initiative": 2,
             "movement": 4
-        }
+        },
+        "cards": "cards/mortimer.json"
     },
     {
         "id": "wid",
@@ -384,7 +396,8 @@
             "defense": 4,
             "initiative": 4,
             "movement": [5, 6]
-        }
+        },
+        "cards": "cards/widget.json"
     },
     {
         "id": "sno",
@@ -399,7 +412,8 @@
             "defense": [5, 6],
             "initiative": 2,
             "movement": [4, 5]
-        }
+        },
+        "cards": "cards/snorri.json"
     },
     {
         "id": "raz",
@@ -414,7 +428,8 @@
             "defense": [1, 4],
             "initiative": 8,
             "movement": [6, 7]
-        }
+        },
+        "cards": "cards/razzle.json"
     },
     {
         "id": "gyd",
@@ -429,7 +444,8 @@
             "defense": [3, 5],
             "initiative": 3,
             "movement": [1, 4]
-        }
+        },
+        "cards": "cards/gydion.json"
     },
     {
         "id": "neb",
@@ -444,7 +460,8 @@
             "defense": [5, 6],
             "initiative": 1,
             "movement": [2, 5]
-        }
+        },
+        "cards": "cards/nebkher.json"
     },
     {
         "id": "ign",
@@ -459,7 +476,8 @@
             "defense": 6,
             "initiative": 2,
             "movement": [4, 5]
-        }
+        },
+        "cards": "cards/ignatia.json"
     },
     {
         "id": "tak",
@@ -474,7 +492,8 @@
             "defense": [4, 7],
             "initiative": [3, 5],
             "movement": [1, 5]
-        }
+        },
+        "cards": "cards/takahide.json"
     },
     {
         "id": "emm",
@@ -489,6 +508,7 @@
             "defense": 6,
             "initiative": 1,
             "movement": [2, 4]
-        }
+        },
+        "cards": "cards/emmitt.json"
     }
 ]

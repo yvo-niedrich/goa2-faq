@@ -1,0 +1,173 @@
+[
+    {
+        "id": "row-gold-code-of-chivalry",
+        "name": "Code of Chivalry",
+        "color": "gold",
+        "type": "basic attack",
+        "tier": null,
+        "text": "Target a unit adjacent to you.\nBefore the attack: If you target a hero, both you and the target may retrieve a discarded card.",
+        "alternative": false
+    },
+    {
+        "id": "row-gold-h-earn-the-spurs",
+        "name": "Earn the Spurs",
+        "color": "gold",
+        "type": "basic attack",
+        "tier": "H",
+        "text": "Target a hero adjacent to you.\nBefore the attack: Both you and the target may retrieve a discarded card.",
+        "alternative": false
+    },
+    {
+        "id": "row-silver-throw-the-gauntlet",
+        "name": "Throw the Gauntlet",
+        "color": "silver",
+        "type": "basic skill",
+        "tier": null,
+        "text": "Place yourself into a space in range adjacent to an enemy hero in range; that hero may move 1 space; if they do, gain 2 coins.",
+        "alternative": false
+    },
+    {
+        "id": "row-red-i-token-of-gratitude",
+        "name": "Token of Gratitude",
+        "color": "red",
+        "type": "attack",
+        "tier": "I",
+        "text": "Target a unit adjacent to you.\nAfter the attack: A friendly hero in radius gains 1 coin.",
+        "alternative": false
+    },
+    {
+        "id": "row-green-i-close-quarters",
+        "name": "Close Quarters",
+        "color": "green",
+        "type": "movement",
+        "tier": "I",
+        "text": "After movement, if yhou are adjacent to an enemy hero, you may **Choose one —**\n-  Place a friendly minion in radius into a space adjacent to that enemy hero.\n-  Place an enemy minion in radius into a space adjacent to you.",
+        "alternative": false
+    },
+    {
+        "id": "row-blue-i-stand-guard",
+        "name": "Stand Guard",
+        "color": "blue",
+        "type": "skill - ranged",
+        "tier": "I",
+        "text": "Swap with a friendly unit in range which is adjacent to an enemy hero, or who has a card in the disacrd.",
+        "alternative": false
+    },
+    {
+        "id": "row-red-ii-fair-share",
+        "name": "Fair Share",
+        "color": "red",
+        "type": "attack",
+        "tier": "II",
+        "text": "Target a unit adjacent to you.\nAfter the attack: A friendly hero in radius gains 1 coin.",
+        "alternative": false
+    },
+    {
+        "id": "row-red-ii-feat-of-bravery",
+        "name": "Feat of Bravery",
+        "color": "red",
+        "type": "attack",
+        "tier": "II",
+        "text": "Target a unit adjacent to you.\nAfter the attack: A friendly hero in radius may retrieve a discarded card.",
+        "alternative": true
+    },
+    {
+        "id": "row-green-ii-melee",
+        "name": "Melee",
+        "color": "green",
+        "type": "movement",
+        "tier": "II",
+        "text": "After movement, if you are adjacent to an enemy hero, you may **Choose one —**\n-  Place a friendly minion in radius into a space adjacent to that enemy hero.\n-  Place an enemy minion in radius into a space adjacent to you.",
+        "alternative": false
+    },
+    {
+        "id": "row-green-ii-opening-shots",
+        "name": "Opening Shots",
+        "color": "green",
+        "type": "skill",
+        "tier": "II",
+        "text": "If both you and an enemy hero in radius have no cards in the discard, that hero discards ac ard, if able.",
+        "alternative": true
+    },
+    {
+        "id": "row-blue-ii-protect-the-weak",
+        "name": "Protect the Weak",
+        "color": "blue",
+        "type": "skill - ranged",
+        "tier": "II",
+        "text": "Swap with a friendly unit in range which is adjacent to an enemy hero, or who has a card in the discard.",
+        "alternative": false
+    },
+    {
+        "id": "row-blue-ii-accept-surrender",
+        "name": "Accept Surrender",
+        "color": "blue",
+        "type": "skill",
+        "tier": "II",
+        "text": "Defeat an enemy hero adjacent to you with no cards in hand.",
+        "alternative": true
+    },
+    {
+        "id": "row-green-iii-grand-melee",
+        "name": "Grand Melee",
+        "color": "green",
+        "type": "movement",
+        "tier": "III",
+        "text": "After movement, if you are adjacent to an enemy hero, you may **Choose one —**\n-  Place a friendly minion in radius into a space adjacent to that enemy hero.\n-  Place an enemy minion in radius into a space adjacent to you.",
+        "alternative": false
+    },
+    {
+        "id": "row-green-iii-opening-volley",
+        "name": "Opening Volley",
+        "color": "green",
+        "type": "skill",
+        "tier": "III",
+        "text": "If both you and an enemy hero in radius have no cards in the discard, that hero discards a card, if able. May repeat once.",
+        "alternative": true
+    },
+    {
+        "id": "row-blue-iii-defend-the-innocent",
+        "name": "Defend the Innocent",
+        "color": "blue",
+        "type": "skill - ranged",
+        "tier": "III",
+        "text": "Swap with a friendly unit in range which is adjacent to an enemy hero, or who has a card in the discard.\nYou may retrieve a discarded card.",
+        "alternative": false
+    },
+    {
+        "id": "row-blue-iii-glorious-triumph",
+        "name": "Glorious Triumph",
+        "color": "blue",
+        "type": "skill",
+        "tier": "III",
+        "text": "Defeat an enemy hero adjacent to you with no cards in hand; your friendly heroes gain triple assist coins.",
+        "alternative": true
+    },
+    {
+        "id": "row-red-iii-paragon-of-grace",
+        "name": "Paragon of Grace",
+        "color": "red",
+        "type": "attack",
+        "tier": "III",
+        "text": "Target a unit adjacent to you.\nAfter the attack: A friendly hero in radius gains 1 coin.\nMay repeat once on a different target.",
+        "alternative": false
+    },
+    {
+        "id": "row-red-iii-paragon-of-valor",
+        "name": "Paragon of Valor",
+        "color": "red",
+        "type": "attack",
+        "tier": "III",
+        "text": "Target a unit adjacent to you.\nAfter the attack: A friendly hero in radius may retrieve a discarded card; if they do, you may repeat once on a different target.",
+        "alternative": true
+    },
+    {
+        "id": "row-purple-iv-fabled-lance",
+        "name": "Fabled Lance",
+        "color": "purple",
+        "type": "ultimate",
+        "tier": "IV",
+        "text": "All of your attack actions gain the “Ranged”\nsubtype, target a unit in range, and count as having a printed ::range_purple:: Range value of 2.",
+        "alternative": false
+    }
+]

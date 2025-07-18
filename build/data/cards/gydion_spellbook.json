@@ -1,0 +1,183 @@
+[
+    {
+        "name": "Magic Missile",
+        "text": "Target a unit in range and not adjacent to you.",
+        "color": "gold",
+        "school": "cantrip",
+        "type": "attack - ranged"
+    },
+    {
+        "name": "Shocking Grasp",
+        "text": "Target a unit adjacent to you.\nAfter the attack: Move the target up to 1 space.",
+        "color": "gold",
+        "school": "cantrip",
+        "type": "attack"
+    },
+    {
+        "name": "Expeditious Retreat",
+        "text": "Move only in a straight line.",
+        "color": "gold",
+        "school": "cantrip",
+        "type": "movement"
+    },
+    {
+        "name": "Burning Hands",
+        "text": "Target a unit adjacent to you.\nBefore the attack: Up to  enemy hero adjacent to the target discards a card, if able.",
+        "color": "red",
+        "tier": "I",
+        "school": "evocation",
+        "type": "attack"
+    },
+    {
+        "name": "Fireball",
+        "text": "Target a unit in range, not adjacent to you or to your friendly unit.",
+        "color": "red",
+        "tier": "II",
+        "school": "evocation",
+        "type": "attack - ranged"
+    },
+    {
+        "name": "Sunburst",
+        "text": "Target a unit at maximum range. +1 ::attack_red:: Attack and +1 ::range_red:: Range for each other spell card removed from the spellbook.",
+        "color": "red",
+        "tier": "III",
+        "school": "evocation",
+        "type": "attack - ranged"
+    },
+    {
+        "name": "Vampiric Touch",
+        "text": "Target a unit adjacent to you.\nAfter the attack: You may retrieve a discarded card.",
+        "color": "red",
+        "tier": "II",
+        "school": "necromancy",
+        "type": "attack"
+    },
+    {
+        "name": "Create Undead",
+        "text": "Respawn a friendly minion in an empty friendly spawn point in range in the battle zone.",
+        "color": "red",
+        "tier": "II",
+        "school": "necromancy",
+        "type": "skill - ranged"
+    },
+    {
+        "name": "Energy Drain",
+        "text": "An enemy hero in range discards a non-basic card, if able. Your team regains 1 spent ::life_counters:: Life counter.",
+        "color": "red",
+        "tier": "III",
+        "school": "necromancy",
+        "type": "skill - ranged"
+    },
+    {
+        "name": "Shield",
+        "text": "**This round:** You are immune to basic attacks.\n_(Cancelled if the spell is returned to she spellbook.)_",
+        "color": "green",
+        "tier": "I",
+        "school": "abjuration",
+        "type": "skill"
+    },
+    {
+        "name": "Shield",
+        "text": "**This round:** You are immune to basic attacks.\n_(Cancelled if the spell is returned to she spellbook.)_",
+        "color": "green",
+        "tier": "I",
+        "school": "abjuration",
+        "type": "skill"
+    },
+    {
+        "name": "Banishment",
+        "text": "Place a unit or a token adjacent to you into a space in radius.",
+        "color": "green",
+        "tier": "II",
+        "school": "abjuration",
+        "type": "skill"
+    },
+    {
+        "name": "Invulnerability",
+        "text": "**This Round:** You are immune to non-basic attacks.",
+        "color": "green",
+        "tier": "III",
+        "school": "abjuration",
+        "type": "skill"
+    },
+    {
+        "name": "Dimension Door",
+        "text": "Place yourself into a space at maximum radius. +1 ::area_green:: Radius for each other spell card removed from the spellbook.",
+        "color": "green",
+        "tier": "II",
+        "school": "conjuration",
+        "type": "skill"
+    },
+    {
+        "name": "Find Familiar",
+        "text": "Place a ::token_familiar:: Familiar token in radius.\nYou may remove up to three  other spell cards from the spellbook faceup.",
+        "color": "green",
+        "tier": "II",
+        "school": "conjuration",
+        "type": "skill"
+    },
+    {
+        "name": "Cloud Kill",
+        "text": "An enemy hero in radius discards a basic card, if able.",
+        "color": "green",
+        "tier": "III",
+        "school": "conjuration",
+        "type": "skill"
+    },
+    {
+        "name": "Suggestion",
+        "text": "If able, an enemy hero in radius moves 3 spaces in a straight line.",
+        "color": "blue",
+        "tier": "I",
+        "school": "enchantment",
+        "type": "skill"
+    },
+    {
+        "name": "Dominate Person",
+        "text": "Target an enemy hero in radius.\nDefeat an enemy minion in radius adjacent to the target.",
+        "color": "blue",
+        "tier": "II",
+        "school": "enchantment",
+        "type": "skill"
+    },
+    {
+        "name": "Power Word Kill",
+        "text": "Defeate an enemy hero in radius with no cards in hand.",
+        "color": "blue",
+        "tier": "III",
+        "school": "enchantment",
+        "type": "skill"
+    },
+    {
+        "name": "Midas' Touch",
+        "text": "Gain 1 coin for every two other spell cards removed from the spellbook.",
+        "color": "blue",
+        "tier": "II",
+        "school": "transmutation",
+        "type": "skill"
+    },
+    {
+        "name": "Disintegrate",
+        "text": "Remove a token or an enemy non-heavy minion adjacent to you.",
+        "color": "blue",
+        "tier": "II",
+        "school": "transmutation",
+        "type": "skill"
+    },
+    {
+        "name": "Polymorph",
+        "text": "Swap an enemy hero in radius with a token in radius or with an enemy minion in radius.",
+        "color": "blue",
+        "tier": "III",
+        "school": "transmutation",
+        "type": "skill"
+    },
+    {
+        "name": "Wish",
+        "text": "Cast any spell in the Spellbook.\nAfter you cast the “Wish” spell three times your team wins the game.",
+        "color": "purple",
+        "tier": "IV",
+        "school": "wish",
+        "type": "skill"
+    }
+]

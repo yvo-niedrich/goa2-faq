@@ -1,0 +1,173 @@
+[
+    {
+        "id": "sno-gold-rune-sigils",
+        "name": "Rune Sigils",
+        "color": "gold",
+        "type": "basic attack - ranged",
+        "tier": null,
+        "text": "Target a unit adjacent to you;\nif a rune is active:\n- ::rune_bird::: You may target a minion in range instead.\n- ::rune_axe::: +3 ::attack_gold:: Attack\n- ::rune_anvil::: If you target a hero, gain 3 coins.\n- ::rune_horn::: Repeat once on a different hero in range.",
+        "alternative": false
+    },
+    {
+        "id": "sno-gold-h-rune-shards",
+        "name": "Rune Shards",
+        "color": "gold",
+        "type": "basic attack - ranged",
+        "tier": "H",
+        "text": "Target a hero adjacent to you;\nif a rune is active:\n- ::rune_axe::: +3 ::attack_gold:: Attack\n- ::rune_anvil::: Gain 2 coins.\n- ::rune_horn::: Repeat once on a different hero in range.",
+        "alternative": false
+    },
+    {
+        "id": "sno-silver-inscribe-the-runes",
+        "name": "Inscribe the Runes",
+        "color": "silver",
+        "type": "basic skill",
+        "tier": null,
+        "text": "Give yourself 4 ::rune_axe::::rune_bird::::rune_anvil::::rune_horn:: Rune markers and place one below each of your turn slots.\nA rune is active as long as it is below the turn slot matching the current turn.\nRune markers are not removed at the end of round, nor if you are defeated.",
+        "alternative": false
+    },
+    {
+        "id": "sno-purple-iv-rune-mastery",
+        "name": "Rune Mastery",
+        "color": "purple",
+        "type": "ultimate",
+        "tier": "IV",
+        "text": "Each time you perform an action, choose one inactive rune; that rune counts as a second rune for this action.",
+        "alternative": false
+    },
+    {
+        "id": "sno-blue-i-safe-passage",
+        "name": "Safe Passage",
+        "color": "blue",
+        "type": "movement",
+        "tier": "I",
+        "text": "If the ::rune_bird:: rune is active,\n**This turn:** You may ignore obstacles.",
+        "alternative": false
+    },
+    {
+        "id": "sno-red-i-runic-dagger",
+        "name": "Runic Dagger",
+        "color": "red",
+        "type": "attack",
+        "tier": "I",
+        "text": "Target a unit adjacent to you.\nAfter the attack: If the ::rune_anvil:: rune is active, you may retrieve a discarded card.",
+        "alternative": false
+    },
+    {
+        "id": "sno-green-i-oath-of-endurance",
+        "name": "Oath of Endurance",
+        "color": "green",
+        "type": "skill",
+        "tier": "I",
+        "text": "If a rune is active:\n- ::rune_horn::: Block a basic attack.\n- ::rune_axe::: Block a non-ranged attack.\n**This Turn:** You are immune to enemy actions.",
+        "alternative": false
+    },
+    {
+        "id": "sno-blue-ii-hidden-passage",
+        "name": "Hidden Passage",
+        "color": "blue",
+        "type": "movement",
+        "tier": "II",
+        "text": "If a rune is active:\n- ::rune_bird::: **This turn:** You may ignore obstacles.\n- ::rune_anvil::: **This turn:** You are immune to enemy actions.",
+        "alternative": false
+    },
+    {
+        "id": "sno-blue-ii-ancestral-boon",
+        "name": "Ancestral Boon",
+        "color": "blue",
+        "type": "skill",
+        "tier": "II",
+        "text": "If a rune is active, a friendly hero in radius may:\n- ::rune_axe::: Swap a resolved card with a card in hand.\n- ::rune_anvil::: Retrieve all their discarded cards.",
+        "alternative": true
+    },
+    {
+        "id": "sno-red-ii-runic-hammer",
+        "name": "Runic Hammer",
+        "color": "red",
+        "type": "attack",
+        "tier": "II",
+        "text": "Before the atack: if the ::rune_horn:: rune is active, you may move 1 space.\nTarget a unit adjacent to you.\nAfter the attack: If the ::rune_anvil:: rune is active, you may retrieve a discarded card.",
+        "alternative": false
+    },
+    {
+        "id": "sno-red-ii-runecaster",
+        "name": "Runecaster",
+        "color": "red",
+        "type": "attack - ranged",
+        "tier": "II",
+        "text": "Target a unit at maximum range.\nAfter the attack: If a rune is active:\n- ::rune_horn::: Move up to 2 spaces.\n- ::rune_axe::: An enemy hero who was adjacent to the target discards a card, or is defeated.",
+        "alternative": true
+    },
+    {
+        "id": "sno-green-ii-oath-of-fortitude",
+        "name": "Oath of Fortitude",
+        "color": "green",
+        "type": "defense",
+        "tier": "II",
+        "text": "If a rune is active:\n- ::rune_horn::: Block a basic attack;\n- ::rune_axe::: Block a non-ranged attack;\n- ::rune_bird::: Block a ranged attack;\n**This Turn:** You are immune to enemy actions.",
+        "alternative": false
+    },
+    {
+        "id": "sno-green-ii-runetrap",
+        "name": "Runetrap",
+        "color": "green",
+        "type": "skill",
+        "tier": "II",
+        "text": "If a rune is active, an enemy hero in radius:\n- ::rune_horn::: Discards a green card, if able.\n- ::rune_axe::: Discards a silver card, if able.\n- ::rune_anvil::: Discards a blue card, if able.",
+        "alternative": true
+    },
+    {
+        "id": "sno-blue-iii-deep-passage",
+        "name": "Deep Passage",
+        "color": "blue",
+        "type": "movement",
+        "tier": "III",
+        "text": "If a rune is active:\n- ::rune_bird::: **This turn:** You may ignore obstacles.\n- ::rune_anvil::: **This turn:** You are immune to enemy actions.\n- ::rune_horn::: Gain +2 ::movement_blue:: Movement.",
+        "alternative": false
+    },
+    {
+        "id": "sno-blue-iii-ancestral-grace",
+        "name": "Ancestral Grace",
+        "color": "blue",
+        "type": "skill",
+        "tier": "III",
+        "text": "If a rune is active, a friendly hero in radius may:\n- ::rune_axe::: Swap a resolved card with a card in hand.\n- ::rune_anvil::: Retrieve all their discarded cards.\n- ::rune_bird::: Swap one of their items with an item on their card of the same tier and color.",
+        "alternative": true
+    },
+    {
+        "id": "sno-red-iii-runic-battleaxe",
+        "name": "Runic Battleaxe",
+        "color": "red",
+        "type": "attack",
+        "tier": "III",
+        "text": "Before the atack: if the ::rune_horn:: rune is active, you may move 1 space.\nTarget a unit adjacent to you.\nAfter the attack: If a rune is active:\n- ::rune_axe::: May repeat once on an enemy minion.\n- ::rune_anvil::: You may retrieve a discarded card.",
+        "alternative": false
+    },
+    {
+        "id": "sno-red-iii-runeblaster",
+        "name": "Runeblaster",
+        "color": "red",
+        "type": "attack - ranged",
+        "tier": "III",
+        "text": "If the ::rune_bird:: rune is active, target a unit in range, otherwise target a unit at maximum range.\nAfter the attack: If a rune is active:\n- ::rune_horn::: Move up to 2 spaces.\n- ::rune_axe::: An enemy hero who was adjacent to the target discards a card, or is defeated.",
+        "alternative": true
+    },
+    {
+        "id": "sno-green-iii-oath-of-perseverance",
+        "name": "Oath of Perseverance",
+        "color": "green",
+        "type": "defense",
+        "tier": "III",
+        "text": "Choose one active rune:\n- ::rune_horn::: Block a basic attack;\n- ::rune_axe::: Block a non-ranged attack;\n- ::rune_bird::: Block a ranged attack;\n- ::rune_anvil::: Block a non-basic attack;\n**This Turn:** You are immune to enemy actions.",
+        "alternative": false
+    },
+    {
+        "id": "sno-green-iii-runebomb",
+        "name": "Runebomb",
+        "color": "green",
+        "type": "skill",
+        "tier": "III",
+        "text": "Choose one active rune; depending on that rune, an enemy hero in radius:\n- ::rune_horn::: Discards a green card, if able.\n- ::rune_axe::: Discards a silver card, if able.\n- ::rune_anvil::: Discards a blue card, if able.\n- ::rune_bird::: Discards a gold card, if able.",
+        "alternative": true
+    }
+]
