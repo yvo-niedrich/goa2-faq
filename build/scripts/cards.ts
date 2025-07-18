@@ -51,12 +51,8 @@ export function translationMap(file: string | string[] = []): TranslationMap {
         }
     }
 
-    console.log(Object.keys(icons).sort());
-
     return t;
 }
-
-export const icons: { [key: string]: boolean } = {};
 
 export function loadCards(file: string | string[], withTranslation = true): Card[] {
     if (typeof file === 'string') {
@@ -67,11 +63,6 @@ export function loadCards(file: string | string[], withTranslation = true): Card
 
     for (const f of file) {
         for (const card of getFile(f)) {
-            const matches = card.text.match(/::(\w+)::/g);
-            for (const icon in matches) {
-                icons[matches[icon].replaceAll('::', '')] = true;
-            }
-
             c.push({
                 id: card.id,
                 name: card.name,
