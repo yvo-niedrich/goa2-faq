@@ -1,10 +1,10 @@
 export enum Expansion {
     Core = 'Core',
-    Arcane = 'Devoted',
+    Arcane = 'Arcane',
     Defiant = 'Defiant',
-    Devoted = 'Wayward',
+    Devoted = 'Devoted',
     Renowned = 'Renowned',
-    Wayward = 'Arcane',
+    Wayward = 'Wayward',
 }
 
 export const expansions = [
