@@ -9,27 +9,27 @@ export enum Expansion {
 
 export const expansions = [
     Expansion.Core,
-    Expansion.Arcane,
-    Expansion.Defiant,
     Expansion.Devoted,
-    Expansion.Renowned,
+    Expansion.Defiant,
     Expansion.Wayward,
+    Expansion.Renowned,
+    Expansion.Arcane,
 ];
 
 export function toExpansion(e: string): Expansion {
     switch (e.toLowerCase()) {
         case 'core':
             return Expansion.Core;
-        case 'arcane':
-            return Expansion.Arcane;
-        case 'defiant':
-            return Expansion.Defiant;
         case 'devoted':
             return Expansion.Devoted;
-        case 'renowned':
-            return Expansion.Renowned;
+        case 'defiant':
+            return Expansion.Defiant;
         case 'wayward':
             return Expansion.Wayward;
+        case 'renowned':
+            return Expansion.Renowned;
+        case 'arcane':
+            return Expansion.Arcane;
         default:
             throw new Error('Invalid Expansion: ' + e);
     }
