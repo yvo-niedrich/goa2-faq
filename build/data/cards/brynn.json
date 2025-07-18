@@ -12,7 +12,7 @@
         "id": "bry-gold-h-home-turf",
         "name": "Home Turf",
         "color": "gold",
-        "type": "basic attack - ranged",
+        "type": "basic skill - ranged",
         "tier": "H",
         "text": "**Choose one —**\n- Target a hero adjacent to you.\n- Target a hero in range who is adjacent to 3 or more obstacles.\n_(You, other heroes, minions, tokens, and terrain are obstacles.)_",
         "alternative": false
@@ -23,7 +23,7 @@
         "color": "silver",
         "type": "basic skill",
         "tier": null,
-        "text": "**Choose up to two times,**, on different targets —\n- Move an enemy minion in radius 1 space.\n- Move an enemy hero in radius who is adjacent to 3 or more obstacles 1 spaces.",
+        "text": "**Choose up to two times,** on different targets —\n- Move an enemy minion in radius 1 space.\n- Move an enemy hero in radius who is adjacent to 3 or more obstacles 1 spaces.",
         "alternative": false
     },
     {
@@ -104,7 +104,7 @@
         "color": "blue",
         "type": "skill",
         "tier": "II",
-        "text": "You may move a friendly unit, which is adjacent to you, up to 3 spaces. If an enemy hero in radius is adjacent to 3 or more obstacles, move a different friendly unit in radius up to 2 spaces.",
+        "text": "You may move a friendly unit, which is adjacent to you, up to 2 spaces. If an enemy hero in radius is adjacent to 3 or more obstacles, move a different friendly unit in radius up to 2 spaces.",
         "alternative": true
     },
     {
@@ -149,7 +149,7 @@
         "color": "red",
         "type": "attack",
         "tier": "III",
-        "text": "Target a unit adjacent to you.\nIf you target a hero adjacent to 3 or more obstacles, +2 ::attack_red:: attack and after the attack: You may retrieve this card.",
+        "text": "Target a unit adjacent to you.\nIf you target a hero adjacent to 3 or more obstacles, +2 ::attack_red:: attack and After the attack: You may retrieve this card.",
         "alternative": false
     },
     {
