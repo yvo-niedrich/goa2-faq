@@ -80,6 +80,18 @@ export function sortCardsByColor(a: Card, b: Card) {
 }
 
 export function sortCardsByTier(a: Card, b: Card) {
-    if (!a.color) return -1;
-    return a.tier > b.tier ? 1 : -1;
+    return sortCardTiers(a.tier, b.tier);
 }
+
+export function sortCardTiers(a: Card['tier'], b: Card['tier']) {
+    if (a === b) return 0;
+    return (tierRanking[a] ?? 0) > (tierRanking[b] ?? 0) ? 1 : -1;
+}
+
+const tierRanking = {
+    I: 1,
+    II: 2,
+    III: 3,
+    IV: 4,
+    H: 5,
+};
