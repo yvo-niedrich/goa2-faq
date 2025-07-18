@@ -1,0 +1,12 @@
+{
+    "faq-gar-XgL3MPkL": {
+        "q": "Does Garrus’s Silver (Chilling Howl) slow an enemy moving into radius from outside?",
+        "a": "No. Movement restrictions are checked at the beginning of movement, so a hero within Garrus’s radius is affected, but a hero moving into the radius will complete their full movement value.",
+        "ref": []
+    },
+    "faq-gar-RuXRiXjv": {
+        "q": "Can Garrus’s Alt Reds (Blunt Force) move away from one hero to another?",
+        "a": "If your attack against an opposing hero does not defeat them, they will still be adjacent to you. There are several valid options for movement: you could move to a different space adjacent to the hero you attacked, or if you are adjacent to a different enemy hero, you may move to another space adjacent to them. You may not move away from your initial target to a different enemy hero that was not originally adjacent to you, since the original target would have been the nearest enemy hero.",
+        "ref": []
+    }
+}

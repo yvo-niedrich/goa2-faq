@@ -1,0 +1,12 @@
+{
+    "faq-tri-Gy7gS7zz": {
+        "q": "What is the Turret?",
+        "a": "It’s an obstacle and counts as terrain. It’s not a unit, minion, or hero, and it doesn’t do anything other than as instructed by Trinkets’ cards. The Turret’s presence and counting as terrain are properties, not an active effect, so they don’t change if Trinkets’ cards change zones, between rounds, or if Trinkets dies. You’re limited to the single provided Turret, so placing a Turret while it’s already on the map will reposition it, not add a Turret. Several of Trinkets’ effects require a target in range of Trinkets and the Turret, measuring the range of both of these independently.",
+        "ref": []
+    },
+    "faq-tri-Q91NHrfO": {
+        "q": "How do Trinkets cards target?",
+        "a": "Several of Trinkets cards target based on the location of the Turret. While thematically the Turret is shooting them, Trinkets is still the one playing these cards, targeting enemies, etc.: the Turret only provides a targeting restriction. Therefore:\n- Arien’s Silver (Spell Break) could prevent a nearby Trinkets from using skills like Primary Blue (Disruptor Jolt) or Alt Green (Self-Destruct), even if the Turret is far away.\n- Min’s Silver (Smoke Bomb) can interrupt a Trinkets attack if the Smoke Bomb is between Trinkets and the taret, irrespective of the position of the Turret.",
+        "ref": []
+    }
+}

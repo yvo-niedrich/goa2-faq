@@ -70,7 +70,7 @@ for (const file of files) {
 
     if (fileUpdated) {
         console.log('FAQ file updated: ' + file);
-        writeFileSync(faqPath + '/' + file, JSON.stringify(fMap));
+        writeFileSync(faqPath + '/' + file, JSON.stringify(fMap, null, 4));
     }
 }
 

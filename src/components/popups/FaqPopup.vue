@@ -20,7 +20,9 @@ const records = computed(() => {
                 <button class="close-btn" @click="faqStore.close">×</button>
                 <div class="faq-scroll">
                     <div v-for="(record, id) in records" :key="id" class="faq-record">
-                        <h3 class="question">{{ $t(record.question) }}</h3>
+                        <h3 class="question">
+                            <Markdown :text="$t(record.question)" :inline="true" />
+                        </h3>
                         <div class="answer">
                             <Markdown :text="$t(record.answer)" />
                         </div>

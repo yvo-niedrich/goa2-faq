@@ -2,7 +2,7 @@
 import { marked } from 'marked';
 import { computed } from 'vue';
 
-const props = defineProps<{ text: string }>();
+const props = defineProps<{ text: string, inline?: boolean }>();
 
 const supported_icons = [
     'attack_gold', 'attack_red', 'attack_silver', 'defense_blue',
@@ -24,7 +24,9 @@ function replaceIcons(input: string) {
 }
 
 function toMarkdown(input: string) {
-    return marked(replaceIcons(input
+    const fn = props.inline ? marked.parseInline : marked.parse
+
+    return fn(replaceIcons(input
         .trim()
         .replace(/\n{1,}/g, "\n\n"))
     );

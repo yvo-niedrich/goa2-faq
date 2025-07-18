@@ -14,7 +14,7 @@
         "color": "gold",
         "type": "basic skill - ranged",
         "tier": "H",
-        "text": "Perform the action on the card in the previous turn slot of an enemy hero in range; if you would place any tokens this way, place ::token_illusion::\nIllusion tokens instead; do not use markers.",
+        "text": "Perform the action on the card in the previous turn slot of an enemy hero in range; if you would place any tokens this way, place ::token_illusion:: Illusion tokens instead; do not use markers.",
         "alternative": false
     },
     {
