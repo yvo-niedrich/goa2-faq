@@ -6,7 +6,7 @@ const props = defineProps<{ text: string }>();
 
 const supported_icons = [
     'attack_gold', 'attack_red', 'attack_silver', 'defense_blue',
-    'defense_silver', 'gold_attack', 'initiative', 'life_counters',
+    'defense_silver', 'initiative', 'life_counters',
     'marker_bounty', 'marker_poison', 'movement_blue', 'movement_green',
     'movement_silver', 'range_gold', 'range_purple', 'range_red',
     'rune_anvil', 'rune_axe', 'rune_bird', 'rune_horn',

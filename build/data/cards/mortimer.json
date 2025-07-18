@@ -5,7 +5,7 @@
         "color": "gold",
         "type": "basic attack",
         "tier": null,
-        "text": "Target a unit adjacent to you.\nBefore the attack: **Choose up to three times —**\n- Move a ::token_zombie:: Zombie token in radius 1 space.\n- Remove a Zombie token adjacent to the target; if you do, gain +1 ::gold_attack:: Attack.",
+        "text": "Target a unit adjacent to you.\nBefore the attack: **Choose up to three times —**\n- Move a ::token_zombie:: Zombie token in radius 1 space.\n- Remove a Zombie token adjacent to the target; if you do, gain +1 ::attack_gold:: Attack.",
         "alternative": false
     },
     {
@@ -14,7 +14,7 @@
         "color": "gold",
         "type": "basic attack",
         "tier": "H",
-        "text": "Target a hero adjacent to you.\nBefore the attack: **Choose up to two times —**\n- Move a ::token_zombie:: Zombie token in radius 1 space.\n- Remove a Zombie token adjacent to the target; if you do, gain +1 ::gold_attack:: Attack.",
+        "text": "Target a hero adjacent to you.\nBefore the attack: **Choose up to two times —**\n- Move a ::token_zombie:: Zombie token in radius 1 space.\n- Remove a Zombie token adjacent to the target; if you do, gain +1 ::attack_gold:: Attack.",
         "alternative": false
     },
     {
