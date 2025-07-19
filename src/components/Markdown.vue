@@ -13,35 +13,28 @@ const supported_icons = [
     'marker_poison',
     'movement',
     'range',
-    'rune_anvil',
-    'rune_axe',
-    'rune_bird',
-    'rune_horn',
+    'rune_anvil', // TODO: missing
+    'rune_axe', // TODO: missing
+    'rune_bird', // TODO: missing
+    'rune_horn', // TODO: missing
     'skill',
     'tiebreaker_blue',
     'tiebreaker_orange',
     'token_barrier',
     'token_blast',
     'token_dud',
-    'token_glitch',
+    'token_glitch', // TODO: missing
     'token_grenade',
     'token_ice',
     'token_illusion',
     'token_magma',
-    'token_rock',
+    'token_rock', // TODO: missing
     'token_smoke_bomb',
     'token_totem',
     'token_tree',
-    'token_zombie'
+    'token_zombie' // TODO: missing
 ];
 
-// Missing:
-// - token_glitch
-// - rune_anvil
-// - rune_axe
-// - rune_bird
-// - rune_horn
-//
 
 function replaceIcons(input: string) {
     return input.replace(
