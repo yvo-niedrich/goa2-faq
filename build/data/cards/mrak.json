@@ -32,7 +32,7 @@
         "color": "red",
         "type": "skill",
         "tier": "I",
-        "text": "An enemy hero in radius adjacent to terrain, or to a ::token_rock:: Rock token, discards a card, or is defeated.\n_(The ::attack_silver:: secondary Attack action is non-ranged.)_",
+        "text": "An enemy hero in radius adjacent to terrain, or to a ::token_rock:: Rock token, discards a card, or is defeated.\n_(The ::attack:: secondary Attack action is non-ranged.)_",
         "alternative": false
     },
     {

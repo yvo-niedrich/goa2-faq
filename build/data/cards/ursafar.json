@@ -95,7 +95,7 @@
         "color": "blue",
         "type": "movement",
         "tier": "II",
-        "text": "If enraged, gain +1 ::movement_blue:: Movement.\n**This round:** You are enraged.",
+        "text": "If enraged, gain +1 ::movement:: Movement.\n**This round:** You are enraged.",
         "alternative": true
     },
     {
@@ -149,7 +149,7 @@
         "color": "blue",
         "type": "movement",
         "tier": "III",
-        "text": "If enraged, gain +2 ::movement_blue:: Movement.\n**This round:** You are enraged.",
+        "text": "If enraged, gain +2 ::movement:: Movement.\n**This round:** You are enraged.",
         "alternative": true
     },
     {

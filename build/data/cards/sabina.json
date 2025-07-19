@@ -32,7 +32,7 @@
         "color": "purple",
         "type": "ultimate",
         "tier": "IV",
-        "text": "Your basic attack has +2 ::range_gold:: Range and +2 ::attack_gold:: Attack. If you push an enemy hero, that hero discards a card, or is defeated.",
+        "text": "Your basic attack has +2 ::range:: Range and +2 ::attack:: Attack. If you push an enemy hero, that hero discards a card, or is defeated.",
         "alternative": false
     },
     {
@@ -50,7 +50,7 @@
         "color": "red",
         "type": "attack - ranged",
         "tier": "I",
-        "text": "Target a unit in range. +3 ::attack_red:: Attack if the target played an attack card this turn.",
+        "text": "Target a unit in range. +3 ::attack:: Attack if the target played an attack card this turn.",
         "alternative": false
     },
     {
@@ -77,7 +77,7 @@
         "color": "red",
         "type": "attack - ranged",
         "tier": "II",
-        "text": "Target a unit in range. +3 ::attack_red:: Attack if the target played an attack card this turn.",
+        "text": "Target a unit in range. +3 ::attack:: Attack if the target played an attack card this turn.",
         "alternative": false
     },
     {
@@ -131,7 +131,7 @@
         "color": "red",
         "type": "attack - ranged",
         "tier": "III",
-        "text": "Target a unit in range. +4 ::attack_red:: Attack if the target played an attack card this turn.",
+        "text": "Target a unit in range. +4 ::attack:: Attack if the target played an attack card this turn.",
         "alternative": false
     },
     {

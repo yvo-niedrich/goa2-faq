@@ -113,7 +113,7 @@
         "color": "green",
         "type": "movement",
         "tier": "II",
-        "text": "Ignore obstacles. If a hero in play has a ::marker_bounty:: Bounty marker, +1 ::movement_green:: movement.",
+        "text": "Ignore obstacles. If a hero in play has a ::marker_bounty:: Bounty marker, +1 ::movement:: movement.",
         "alternative": true
     },
     {
@@ -167,7 +167,7 @@
         "color": "green",
         "type": "movement",
         "tier": "III",
-        "text": "Ignore obstacles. If a hero in play has a ::marker_bounty:: Bounty marker, +2 ::movement_green:: movement.",
+        "text": "Ignore obstacles. If a hero in play has a ::marker_bounty:: Bounty marker, +2 ::movement:: movement.",
         "alternative": true
     }
 ]

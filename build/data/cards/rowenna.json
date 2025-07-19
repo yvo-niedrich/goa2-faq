@@ -167,7 +167,7 @@
         "color": "purple",
         "type": "ultimate",
         "tier": "IV",
-        "text": "All of your attack actions gain the “Ranged”\nsubtype, target a unit in range, and count as having a printed ::range_purple:: Range value of 2.",
+        "text": "All of your attack actions gain the “Ranged”\nsubtype, target a unit in range, and count as having a printed ::range:: Range value of 2.",
         "alternative": false
     }
 ]

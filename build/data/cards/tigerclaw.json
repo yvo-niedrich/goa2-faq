@@ -104,7 +104,7 @@
         "color": "red",
         "type": "attack",
         "tier": "II",
-        "text": "Target a unit adjacent to you; if a friendly unit is adjacent to the target, +2 ::attack_red:: Attack.\n_(A “friendly unit” is another hero or a minion on your team.)_",
+        "text": "Target a unit adjacent to you; if a friendly unit is adjacent to the target, +2 ::attack:: Attack.\n_(A “friendly unit” is another hero or a minion on your team.)_",
         "alternative": true
     },
     {
@@ -113,7 +113,7 @@
         "color": "green",
         "type": "skill - ranged",
         "tier": "II",
-        "text": "Give a hero in range a ::marker_poison:: poison marker.\nThe hero with a poison marker has -1 ::initiative:: Initiative, -1 ::attack_silver:: Attack, and -1 ::defense_silver:: Defense.",
+        "text": "Give a hero in range a ::marker_poison:: poison marker.\nThe hero with a poison marker has -1 ::initiative:: Initiative, -1 ::attack:: Attack, and -1 ::defense:: Defense.",
         "alternative": true
     },
     {
@@ -158,7 +158,7 @@
         "color": "red",
         "type": "attack - ranged",
         "tier": "III",
-        "text": "Target a unit in range;\nif a friendly unit is adjacent to the target +2 ::attack_red:: Attack, and the target cannot perform a primary action to defend.",
+        "text": "Target a unit in range;\nif a friendly unit is adjacent to the target +2 ::attack:: Attack, and the target cannot perform a primary action to defend.",
         "alternative": true
     },
     {
@@ -167,7 +167,7 @@
         "color": "green",
         "type": "skill - ranged",
         "tier": "III",
-        "text": "Give a hero in range a ::marker_poison:: poison marker.\nThe hero with a poison marker has -2 ::initiative:: Initiative, -2 ::attack_silver:: Attack, and -2 ::defense_silver:: Defense.",
+        "text": "Give a hero in range a ::marker_poison:: poison marker.\nThe hero with a poison marker has -2 ::initiative:: Initiative, -2 ::attack:: Attack, and -2 ::defense:: Defense.",
         "alternative": true
     }
 ]

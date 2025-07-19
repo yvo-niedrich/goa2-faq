@@ -41,7 +41,7 @@
         "color": "blue",
         "type": "defense",
         "tier": "I",
-        "text": "+2 ::defense_blue:: Defense if there are 2 or more empty spawn points in radius in the battle zone.",
+        "text": "+2 ::defense:: Defense if there are 2 or more empty spawn points in radius in the battle zone.",
         "alternative": false
     },
     {
@@ -68,7 +68,7 @@
         "color": "blue",
         "type": "defense",
         "tier": "II",
-        "text": "+2 ::defense_blue:: Defense if there are 2 or more empty minion spawn points in radius in the battle zone.",
+        "text": "+2 ::defense:: Defense if there are 2 or more empty minion spawn points in radius in the battle zone.",
         "alternative": false
     },
     {
@@ -95,7 +95,7 @@
         "color": "blue",
         "type": "skill",
         "tier": "II",
-        "text": "**This turn:** Enemy heroes in radius have -4 ::attack_silver:: Attack.\n_(They can still attack, even with a negative attack value.)_",
+        "text": "**This turn:** Enemy heroes in radius have -4 ::attack:: Attack.\n_(They can still attack, even with a negative attack value.)_",
         "alternative": true
     },
     {
@@ -122,7 +122,7 @@
         "color": "blue",
         "type": "defense",
         "tier": "III",
-        "text": "+4 ::defense_blue:: if there are 2 or more empty spawn points in radius in a battle zone.",
+        "text": "+4 ::defense:: if there are 2 or more empty spawn points in radius in a battle zone.",
         "alternative": false
     },
     {
@@ -140,7 +140,7 @@
         "color": "green",
         "type": "skill",
         "tier": "III",
-        "text": "If there are 2 or more empty spawn points in radius in the battle zone, gain 2 coins.\nIf you have your Ultimate, gain an ::attack_silver:: Attack item.\n_(Use any spare card from the box with the corresponding icon.)_",
+        "text": "If there are 2 or more empty spawn points in radius in the battle zone, gain 2 coins.\nIf you have your Ultimate, gain an ::attack:: Attack item.\n_(Use any spare card from the box with the corresponding icon.)_",
         "alternative": false
     },
     {
@@ -149,7 +149,7 @@
         "color": "blue",
         "type": "skill",
         "tier": "III",
-        "text": "**This turn:** Enemy heroes in radius have -6 ::attack_silver:: Attack and cannot repeat actions.",
+        "text": "**This turn:** Enemy heroes in radius have -6 ::attack:: Attack and cannot repeat actions.",
         "alternative": true
     },
     {

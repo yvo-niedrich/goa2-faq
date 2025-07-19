@@ -5,7 +5,7 @@
         "color": "gold",
         "type": "basic attack",
         "tier": null,
-        "text": "Target a hero adjacent to you. +1 ::attack_gold:: Attack for every card in your discard.",
+        "text": "Target a hero adjacent to you. +1 ::attack:: Attack for every card in your discard.",
         "alternative": false
     },
     {
@@ -14,7 +14,7 @@
         "color": "gold",
         "type": "basic attack",
         "tier": "H",
-        "text": "Target a hero adjacent to you. +1 ::attack_gold:: Attack for every card in your discard.",
+        "text": "Target a hero adjacent to you. +1 ::attack:: Attack for every card in your discard.",
         "alternative": false
     },
     {

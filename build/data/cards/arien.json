@@ -23,7 +23,7 @@
         "color": "silver",
         "type": "basic skill",
         "tier": null,
-        "text": "**This turn:** Enemy heroes in radius cannot perform skill actions, except on gold cards.\n_(Skill ::skill_silver:: is an action type. Other action types are unaffected.)_",
+        "text": "**This turn:** Enemy heroes in radius cannot perform skill actions, except on gold cards.\n_(Skill ::skill:: is an action type. Other action types are unaffected.)_",
         "alternative": false
     },
     {

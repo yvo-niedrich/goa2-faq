@@ -50,7 +50,7 @@
         "color": "red",
         "type": "attack",
         "tier": "I",
-        "text": "**Choose one —**\n-  Before the attack: Move 1 space.\nTarget a unit adjacent to you in the direction of the move; +2 ::attack_red:: Attack.\n-  Target a unit adjacent to you.",
+        "text": "**Choose one —**\n-  Before the attack: Move 1 space.\nTarget a unit adjacent to you in the direction of the move; +2 ::attack:: Attack.\n-  Target a unit adjacent to you.",
         "alternative": false
     },
     {
@@ -77,7 +77,7 @@
         "color": "red",
         "type": "attack",
         "tier": "II",
-        "text": "**Choose one —**\n-  Before the attack: Move 1 or 2 spaces in a straight line. Target a unit adjacent to you in the direction of the move; +2 ::attack_red:: Attack.\n-  Target a unit adjacent to you.",
+        "text": "**Choose one —**\n-  Before the attack: Move 1 or 2 spaces in a straight line. Target a unit adjacent to you in the direction of the move; +2 ::attack:: Attack.\n-  Target a unit adjacent to you.",
         "alternative": false
     },
     {
@@ -131,7 +131,7 @@
         "color": "red",
         "type": "attack",
         "tier": "III",
-        "text": "**Choose one —**\n-  Before the attack: Move 1, 2 or 3 spaces in a straight line. Target a unit adjacent to you in the direction of the move; +2 ::attack_red:: Attack.\n-  Target a unit adjacent to you.",
+        "text": "**Choose one —**\n-  Before the attack: Move 1, 2 or 3 spaces in a straight line. Target a unit adjacent to you in the direction of the move; +2 ::attack:: Attack.\n-  Target a unit adjacent to you.",
         "alternative": false
     },
     {

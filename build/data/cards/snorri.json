@@ -5,7 +5,7 @@
         "color": "gold",
         "type": "basic attack - ranged",
         "tier": null,
-        "text": "Target a unit adjacent to you;\nif a rune is active:\n- ::rune_bird::: You may target a minion in range instead.\n- ::rune_axe::: +3 ::attack_gold:: Attack\n- ::rune_anvil::: If you target a hero, gain 3 coins.\n- ::rune_horn::: Repeat once on a different hero in range.",
+        "text": "Target a unit adjacent to you;\nif a rune is active:\n- ::rune_bird::: You may target a minion in range instead.\n- ::rune_axe::: +3 ::attack:: Attack\n- ::rune_anvil::: If you target a hero, gain 3 coins.\n- ::rune_horn::: Repeat once on a different hero in range.",
         "alternative": false
     },
     {
@@ -14,7 +14,7 @@
         "color": "gold",
         "type": "basic attack - ranged",
         "tier": "H",
-        "text": "Target a hero adjacent to you;\nif a rune is active:\n- ::rune_axe::: +3 ::attack_gold:: Attack\n- ::rune_anvil::: Gain 2 coins.\n- ::rune_horn::: Repeat once on a different hero in range.",
+        "text": "Target a hero adjacent to you;\nif a rune is active:\n- ::rune_axe::: +3 ::attack:: Attack\n- ::rune_anvil::: Gain 2 coins.\n- ::rune_horn::: Repeat once on a different hero in range.",
         "alternative": false
     },
     {
@@ -122,7 +122,7 @@
         "color": "blue",
         "type": "movement",
         "tier": "III",
-        "text": "If a rune is active:\n- ::rune_bird::: **This turn:** You may ignore obstacles.\n- ::rune_anvil::: **This turn:** You are immune to enemy actions.\n- ::rune_horn::: Gain +2 ::movement_blue:: Movement.",
+        "text": "If a rune is active:\n- ::rune_bird::: **This turn:** You may ignore obstacles.\n- ::rune_anvil::: **This turn:** You are immune to enemy actions.\n- ::rune_horn::: Gain +2 ::movement:: Movement.",
         "alternative": false
     },
     {

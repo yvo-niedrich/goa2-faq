@@ -50,7 +50,7 @@
         "color": "red",
         "type": "attack - ranged",
         "tier": "I",
-        "text": "Target a unit in range of both you and the Turret.\nAfter the attack: **Next turn:**\nGain +1 ::range_red:: Range if you target a hero.",
+        "text": "Target a unit in range of both you and the Turret.\nAfter the attack: **Next turn:**\nGain +1 ::range:: Range if you target a hero.",
         "alternative": false
     },
     {
@@ -77,7 +77,7 @@
         "color": "red",
         "type": "attack - ranged",
         "tier": "II",
-        "text": "Target a unit in range of both you and the Turret.\nAfter the attack: **Next turn:**\nGain +1 ::range_red:: Range; if you target a hero with no cards in their hand with your basic skill, defeat that hero, instead.",
+        "text": "Target a unit in range of both you and the Turret.\nAfter the attack: **Next turn:**\nGain +1 ::range:: Range; if you target a hero with no cards in their hand with your basic skill, defeat that hero, instead.",
         "alternative": false
     },
     {
@@ -95,7 +95,7 @@
         "color": "blue",
         "type": "skill",
         "tier": "II",
-        "text": "Place up to 2 ::token_barrier:: barrier tokens in radius of the Turret and adjacent to another barrier token, if able. You and friendly heroes gain +1 ::defense_silver:: Defense for each adjacent barrier token.",
+        "text": "Place up to 2 ::token_barrier:: barrier tokens in radius of the Turret and adjacent to another barrier token, if able. You and friendly heroes gain +1 ::defense:: Defense for each adjacent barrier token.",
         "alternative": true
     },
     {
@@ -131,7 +131,7 @@
         "color": "red",
         "type": "attack - ranged",
         "tier": "III",
-        "text": "Target a unit in range of both you and the Turret.\nAfter the attack: **Next turn:**\nGain +2 ::range_red:: Range; if you target a hero with no cards in their hand with your basic skill, defeat that hero, instead.",
+        "text": "Target a unit in range of both you and the Turret.\nAfter the attack: **Next turn:**\nGain +2 ::range:: Range; if you target a hero with no cards in their hand with your basic skill, defeat that hero, instead.",
         "alternative": false
     },
     {
@@ -149,7 +149,7 @@
         "color": "blue",
         "type": "skill",
         "tier": "III",
-        "text": "Place up to 3 ::token_barrier:: barrier tokens in radius of the Turret and adjacent to another barrier token, if able. You and friendly heroes gain +1 ::defense_silver:: Defense for each adjacent barrier token.",
+        "text": "Place up to 3 ::token_barrier:: barrier tokens in radius of the Turret and adjacent to another barrier token, if able. You and friendly heroes gain +1 ::defense:: Defense for each adjacent barrier token.",
         "alternative": true
     },
     {

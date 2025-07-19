@@ -32,7 +32,7 @@
         "color": "red",
         "type": "attack",
         "tier": "I",
-        "text": "Target a unit adjacent to you.\nIf you target a hero adjacent to 3 or more obstacles, +2 ::attack_red:: attack.",
+        "text": "Target a unit adjacent to you.\nIf you target a hero adjacent to 3 or more obstacles, +2 ::attack:: attack.",
         "alternative": false
     },
     {
@@ -59,7 +59,7 @@
         "color": "red",
         "type": "attack",
         "tier": "II",
-        "text": "Target a unit adjacent to you.\nIf you target a hero adjacent to 3 or more obstacles, +2 ::attack_red:: attack.",
+        "text": "Target a unit adjacent to you.\nIf you target a hero adjacent to 3 or more obstacles, +2 ::attack:: attack.",
         "alternative": false
     },
     {
@@ -149,7 +149,7 @@
         "color": "red",
         "type": "attack",
         "tier": "III",
-        "text": "Target a unit adjacent to you.\nIf you target a hero adjacent to 3 or more obstacles, +2 ::attack_red:: attack and After the attack: You may retrieve this card.",
+        "text": "Target a unit adjacent to you.\nIf you target a hero adjacent to 3 or more obstacles, +2 ::attack:: attack and After the attack: You may retrieve this card.",
         "alternative": false
     },
     {

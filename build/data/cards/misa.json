@@ -50,7 +50,7 @@
         "color": "red",
         "type": "attack",
         "tier": "I",
-        "text": "Target a unit adjacent to you.\nAfter the attack: **This turn:** Gain +2 ::defense_silver:: Defense.",
+        "text": "Target a unit adjacent to you.\nAfter the attack: **This turn:** Gain +2 ::defense:: Defense.",
         "alternative": false
     },
     {
@@ -77,7 +77,7 @@
         "color": "red",
         "type": "attack",
         "tier": "II",
-        "text": "Target a unit adjacent to you.\nAfter the attack: **This turn:** Gain +3 ::defense_silver:: Defense.",
+        "text": "Target a unit adjacent to you.\nAfter the attack: **This turn:** Gain +3 ::defense:: Defense.",
         "alternative": false
     },
     {
@@ -131,7 +131,7 @@
         "color": "red",
         "type": "attack",
         "tier": "III",
-        "text": "Target a unit adjacent to you.\nAfter the attack: **This turn:** Gain +5 ::defense_silver:: Defense.",
+        "text": "Target a unit adjacent to you.\nAfter the attack: **This turn:** Gain +5 ::defense:: Defense.",
         "alternative": false
     },
     {

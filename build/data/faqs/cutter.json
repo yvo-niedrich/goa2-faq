@@ -2,6 +2,6 @@
     "faq-cut-J96IkUe0": {
         "q": "What can Cutter’s Silver (Grappling Bolt) target?",
         "a": "Any obstacle (units, tokens, terrain, or other miniatures) can be targeted by Grappling Bolt. This includes immune units as well as the terrain spaces around the edge of the map (she can grapple onto the water).",
-        "ref": []
+        "ref": ["cut-silver-grappling-bolt"]
     }
 }

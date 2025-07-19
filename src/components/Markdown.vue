@@ -5,16 +5,43 @@ import { computed } from 'vue';
 const props = defineProps<{ text: string, inline?: boolean }>();
 
 const supported_icons = [
-    'attack_gold', 'attack_red', 'attack_silver', 'defense_blue',
-    'defense_silver', 'initiative', 'life_counters',
-    'marker_bounty', 'marker_poison', 'movement_blue', 'movement_green',
-    'movement_silver', 'range_gold', 'range_purple', 'range_red',
-    'rune_anvil', 'rune_axe', 'rune_bird', 'rune_horn',
-    'skill_silver', 'tiebreaker_blue', 'tiebreaker_orange', 'token_barrier',
-    'token_blast', 'token_dud', 'token_glitch', 'token_grenade',
-    'token_ice', 'token_illusion', 'token_magma', 'token_rock',
-    'token_smoke_bomb', 'token_totem', 'token_tree', 'token_zombie'
-]
+    'attack',
+    'defense',
+    'initiative',
+    'life_counters',
+    'marker_bounty',
+    'marker_poison',
+    'movement',
+    'range',
+    'rune_anvil',
+    'rune_axe',
+    'rune_bird',
+    'rune_horn',
+    'skill',
+    'tiebreaker_blue',
+    'tiebreaker_orange',
+    'token_barrier',
+    'token_blast',
+    'token_dud',
+    'token_glitch',
+    'token_grenade',
+    'token_ice',
+    'token_illusion',
+    'token_magma',
+    'token_rock',
+    'token_smoke_bomb',
+    'token_totem',
+    'token_tree',
+    'token_zombie'
+];
+
+// Missing:
+// - token_glitch
+// - rune_anvil
+// - rune_axe
+// - rune_bird
+// - rune_horn
+//
 
 function replaceIcons(input: string) {
     return input.replace(

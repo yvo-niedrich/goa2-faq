@@ -50,7 +50,7 @@
         "color": "red",
         "type": "attack",
         "tier": "I",
-        "text": "Target a unit adjacent to you; when defending, the enemy hero must use the ::initiative:: Initiative value of their card and items instead of the ::defense_silver:: Defense value of their card and items.\n_(Minion defense modifiers are applied as normal.)_",
+        "text": "Target a unit adjacent to you; when defending, the enemy hero must use the ::initiative:: Initiative value of their card and items instead of the ::defense:: Defense value of their card and items.\n_(Minion defense modifiers are applied as normal.)_",
         "alternative": false
     },
     {
@@ -86,7 +86,7 @@
         "color": "red",
         "type": "attack",
         "tier": "II",
-        "text": "Target a unit adjacent to you; when defending, the enemy hero must use the ::initiative:: Initiative value of their card and items instead of the ::defense_silver:: Defense value of their card and items.",
+        "text": "Target a unit adjacent to you; when defending, the enemy hero must use the ::initiative:: Initiative value of their card and items instead of the ::defense:: Defense value of their card and items.",
         "alternative": false
     },
     {
@@ -140,7 +140,7 @@
         "color": "red",
         "type": "attack",
         "tier": "III",
-        "text": "Target a unit adjacent to you; when defending, the enemy hero must use the ::initiative:: Initiative value of their card and items instead of the ::defense_silver:: Defense value of their card and items.",
+        "text": "Target a unit adjacent to you; when defending, the enemy hero must use the ::initiative:: Initiative value of their card and items instead of the ::defense:: Defense value of their card and items.",
         "alternative": false
     },
     {

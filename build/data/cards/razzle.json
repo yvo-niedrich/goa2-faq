@@ -23,7 +23,7 @@
         "color": "silver",
         "type": "basic defense skill",
         "tier": null,
-        "text": "When used as a defense action, +2 ::defense_silver::\nDefense for each other one of you in radius.\nWhen used as a skill action, remove all other you in play.",
+        "text": "When used as a defense action, +2 ::defense::\nDefense for each other one of you in radius.\nWhen used as a skill action, remove all other you in play.",
         "alternative": false
     },
     {

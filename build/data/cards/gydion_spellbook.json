@@ -38,7 +38,7 @@
     },
     {
         "name": "Sunburst",
-        "text": "Target a unit at maximum range. +1 ::attack_red:: Attack and +1 ::range_red:: Range for each other spell card removed from the spellbook.",
+        "text": "Target a unit at maximum range. +1 ::attack:: Attack and +1 ::range:: Range for each other spell card removed from the spellbook.",
         "color": "red",
         "tier": "III",
         "school": "evocation",
