@@ -29,6 +29,8 @@ export function load(filterFn: (h: HeroBuild) => boolean = () => true, withCards
             hero.class = `${hero.id}.class`;
 
             h.push(hero);
+        } else {
+            console.log(`Hero Skipped: ${hero.name} / ${hero.id}`)
         }
     }
 

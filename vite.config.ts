@@ -37,23 +37,23 @@ export default defineConfig({
                 theme_color: '#689db4',
                 icons: [
                     {
-                        src: 'icons/icon-192x192.png',
+                        src: 'favicon/icon-192x192.png',
                         sizes: '192x192',
                         type: 'image/png',
                     },
                     {
-                        src: 'icons/icon-256x256.png',
+                        src: 'favicon/icon-256x256.png',
                         sizes: '256x256',
                         type: 'image/png',
                     },
                     {
-                        src: 'icons/icon-256x256.png',
+                        src: 'favicon/icon-256x256.png',
                         sizes: '256x256',
                         type: 'image/png',
                         purpose: 'any',
                     },
                     {
-                        src: 'icons/icon-256x256.png',
+                        src: 'favicon/icon-256x256.png',
                         sizes: '256x256',
                         type: 'image/png',
                         purpose: 'maskable',

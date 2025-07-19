@@ -1,0 +1,173 @@
+[
+    {
+        "id": "han-gold-fight-and-flight",
+        "name": "Fight and Flight",
+        "color": "gold",
+        "type": "basic attack",
+        "tier": null,
+        "text": "Target a unit adjacent to you.\nIf the target is not defeated, After the attack:  If able, move 3 spaces in a straight line.",
+        "alternative": false
+    },
+    {
+        "id": "han-gold-h-fight-or-flight",
+        "name": "Fight or Flight",
+        "color": "gold",
+        "type": "basic attack",
+        "tier": "H",
+        "text": "Target a hero adjacent to you.\nIf the target is not defeated, After the attack:  If able, move 3 spaces in a straight line.",
+        "alternative": false
+    },
+    {
+        "id": "han-silver-hurry-up-",
+        "name": "Hurry up!",
+        "color": "silver",
+        "type": "basic skill - ranged",
+        "tier": null,
+        "text": "Set the printed ::initiative:: Initiative value of an unresolved card of a hero in range to 11, until it is resolved, or otherwise changes state.\n_(This may change the initiative order and tie breakers.)_",
+        "alternative": false
+    },
+    {
+        "id": "han-purple-iv-the-ultimate-trick",
+        "name": "The Ultimate Trick",
+        "color": "purple",
+        "type": "ultimate",
+        "tier": "IV",
+        "text": "You choose the next action, and how it is performed, for a hero you target with the “Hurry Up!”.",
+        "alternative": false
+    },
+    {
+        "id": "han-blue-i-unexpected-journey",
+        "name": "Unexpected Journey",
+        "color": "blue",
+        "type": "skill",
+        "tier": "I",
+        "text": "Swap with an enemy hero in radius.\n**This turn:** That hero is immune.\n**End of turn:** Swap with that hero, regardless of radius and immunity.",
+        "alternative": false
+    },
+    {
+        "id": "han-red-i-helping-hand",
+        "name": "Helping Hand",
+        "color": "red",
+        "type": "attack - ranged",
+        "tier": "I",
+        "text": "**Choose one —**\n- Target a unit adjacent to you.\n- Target a hero in range, adjacent to your friendly hero.",
+        "alternative": false
+    },
+    {
+        "id": "han-green-i-monkey-trick",
+        "name": "Monkey Trick",
+        "color": "green",
+        "type": "skill",
+        "tier": "I",
+        "text": "Swap two friendly units in radius.",
+        "alternative": false
+    },
+    {
+        "id": "han-blue-ii-there-and-back-again",
+        "name": "There and Back Again",
+        "color": "blue",
+        "type": "skill",
+        "tier": "II",
+        "text": "Swap with an enemy hero in radius.\n**This turn:** That hero is immune.\n**End of turn:** Swap with that hero, regardless of radius and immunity.",
+        "alternative": false
+    },
+    {
+        "id": "han-red-ii-even-the-odds",
+        "name": "Even the Odds",
+        "color": "red",
+        "type": "attack - ranged",
+        "tier": "II",
+        "text": "**Choose one —**\n- Target a unit adjacent to you.\n- Target a hero in range, adjacent to your friendly hero.",
+        "alternative": false
+    },
+    {
+        "id": "han-green-ii-monkey-twist",
+        "name": "Monkey Twist",
+        "color": "green",
+        "type": "skill",
+        "tier": "II",
+        "text": "Swap two friendly heroes in radius.",
+        "alternative": false
+    },
+    {
+        "id": "han-blue-ii-this-way-",
+        "name": "This Way!",
+        "color": "blue",
+        "type": "skill",
+        "tier": "II",
+        "text": "A friendly hero in radius chooses a distance of 1 or 2; move both of you that number of spaces in the same direction of your choice.",
+        "alternative": true
+    },
+    {
+        "id": "han-red-ii-outnumber",
+        "name": "Outnumber",
+        "color": "red",
+        "type": "attack - ranged",
+        "tier": "II",
+        "text": "**Choose one —**\n- Target a unit adjacent to you.\n- Target a minion in range, adjacent to your friendly hero.",
+        "alternative": true
+    },
+    {
+        "id": "han-green-ii-hear-nothing",
+        "name": "Hear Nothing",
+        "color": "green",
+        "type": "skill",
+        "tier": "II",
+        "text": "Swap with an enemy hero in radius.",
+        "alternative": true
+    },
+    {
+        "id": "han-blue-iii-safe-travels",
+        "name": "Safe Travels",
+        "color": "blue",
+        "type": "skill",
+        "tier": "III",
+        "text": "Swap with an enemy hero in radius.\n**This turn:** That hero is immune.\n**End of turn:** Swap with that hero, regardless of radius and immunity. You may move 1 space.",
+        "alternative": false
+    },
+    {
+        "id": "han-red-iii-trusted-sidekick",
+        "name": "Trusted Sidekick",
+        "color": "red",
+        "type": "attack - ranged",
+        "tier": "III",
+        "text": "**Choose one, or both,** in any order —\n- Target a unit adjacent to you.\n- Target a hero in range, adjacent to your friendly hero and not adjacent to you.",
+        "alternative": false
+    },
+    {
+        "id": "han-green-iii-monkey-business",
+        "name": "Monkey Business",
+        "color": "green",
+        "type": "skill",
+        "tier": "III",
+        "text": "Swap two friendly units in radius.\nYou may move 1 space.",
+        "alternative": false
+    },
+    {
+        "id": "han-blue-iii-that-way-",
+        "name": "That Way!",
+        "color": "blue",
+        "type": "skill",
+        "tier": "III",
+        "text": "A friendly hero in radius chooses a distance of 1, 2, or 3; move both of you that number of spaces in the same direction of your choice.",
+        "alternative": true
+    },
+    {
+        "id": "han-red-iii-pile-on",
+        "name": "Pile On",
+        "color": "red",
+        "type": "attack - ranged",
+        "tier": "III",
+        "text": "**Choose one, or both,** in any order —\n- Target a unit adjacent to you.\n- Target a minion in range, adjacent to your friendly.",
+        "alternative": true
+    },
+    {
+        "id": "han-green-iii-see-nothing",
+        "name": "See Nothing",
+        "color": "green",
+        "type": "skill",
+        "tier": "III",
+        "text": "Swap with an enemy hero in radius.\nYou may move 1 space.",
+        "alternative": true
+    }
+]

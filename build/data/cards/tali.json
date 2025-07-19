@@ -3,152 +3,171 @@
         "id": "tal-gold-ice-blast",
         "name": "Ice Blast",
         "color": "gold",
-        "type": "Basic Attack",
+        "type": "basic attack",
         "tier": null,
-        "text": "Target a unit adjacent to you. If the target discards a card to defend, After the attack: Another enemy hero in radius discards a card of the same color, if able."
-    },
-    {
-        "id": "tal-silver-h-commune-with-spirits",
-        "name": "Commune with Spirits",
-        "color": "silver",
-        "type": "Basic Skill",
-        "tier": null,
-        "text": "A friendly hero in play names a color; you may discard a card of that color. Perform the primary action on a card of that color in your discard."
-    },
-    {
-        "id": "tal-red-i-winter-dagger",
-        "name": "Winter Dagger",
-        "color": "red",
-        "type": "Attack",
-        "tier": "I",
-        "text": "Target a unit adjacent to you.\n+3 🗡️ Attack if this card is not in the discard."
-    },
-    {
-        "id": "tal-red-ii-winter-spear",
-        "name": "Winter Spear",
-        "color": "red",
-        "type": "Attack",
-        "tier": "II",
-        "text": "Target a unit adjacent to you.\n+3 🗡️ Attack if this card is not in the discard."
-    },
-    {
-        "id": "tal-red-ii-spirit-wolf",
-        "name": "Spirit Wolf",
-        "color": "red",
-        "type": "Attack - Ranged",
-        "tier": "II",
-        "text": "**Choose one —**\n- If this card is not in the discard, target a unit in range.\n- Target a hero adjacent to you."
-    },
-    {
-        "id": "tal-red-iii-winter-scepter",
-        "name": "Winter Scepter",
-        "color": "red",
-        "type": "Attack",
-        "tier": "III",
-        "text": "Target a unit adjacent to you.\n+3 🗡️ Attack if this card is not in the discard."
-    },
-    {
-        "id": "tal-red-iii-spirit-bear",
-        "name": "Spirit Bear",
-        "color": "red",
-        "type": "Attack - Ranged",
-        "tier": "III",
-        "text": "**Choose one, or both, on different targets —**\n- If this card is not in the discard, target a unit in range.\n- Target a hero adjacent to you."
-    },
-    {
-        "id": "tal-blue-iii-warrior-spirit",
-        "name": "Warrior Spirit",
-        "color": "blue",
-        "type": "Skill",
-        "tier": "III",
-        "text": "Up to 1 friendly hero in radius may retrieve a discarded card. If “Warrior Spirit” is in the discard, you may retrieve a discarded card."
-    },
-    {
-        "id": "tal-blue-i-cold-snap",
-        "name": "Cold Snap",
-        "color": "blue",
-        "type": "Skill",
-        "tier": "I",
-        "text": "Choose a direction. Move each enemy unit in radius 1 space in that direction, if able."
-    },
-    {
-        "id": "tal-blue-ii-snowstorm",
-        "name": "Snowstorm",
-        "color": "blue",
-        "type": "Skill",
-        "tier": "II",
-        "text": "Choose a direction. Move each enemy unit in radius 1 space in that direction, if able."
-    },
-    {
-        "id": "tal-blue-iii-blizzard",
-        "name": "Blizzard",
-        "color": "blue",
-        "type": "Skill",
-        "tier": "III",
-        "text": "Choose a direction. Move each enemy unit in radius 1 space in that direction, if able.\nIf this card is in the discard, *End of turn:* May repeat once."
-    },
-    {
-        "id": "tal-blue-ii-guardian-spirit",
-        "name": "Guardian Spirit",
-        "color": "blue",
-        "type": "Skill",
-        "tier": "II",
-        "text": "Up to 1 friendly hero in radius may retrieve a discarded card.\nIf “Guardian Spirit” is in the discard, retrieve it."
-    },
-    {
-        "id": "tal-green-i-glacial-barrier",
-        "name": "Glacial Barrier",
-        "color": "green",
-        "type": "Skill",
-        "tier": "I",
-        "text": "Place an 🧊 Ice token in radius. Enemy heroes have -1 ⚡ Initiative for every Ice token they are adjacent to."
-    },
-    {
-        "id": "tal-green-ii-wall-of-frost",
-        "name": "Wall of Frost",
-        "color": "green",
-        "type": "Skill",
-        "tier": "II",
-        "text": "Place up to 2 🧊 Ice tokens in radius. Enemy heroes have -1 ⚡ Initiative for every Ice token they are adjacent to."
-    },
-    {
-        "id": "tal-green-ii-ancestral-totem",
-        "name": "Ancestral Totem",
-        "color": "green",
-        "type": "Skill - Ranged",
-        "tier": "II",
-        "text": "Place a 🟤 Totem token in range. If a friendly melee minion adjacent to a Totem would be defeated, remove the Totem instead."
-    },
-    {
-        "id": "tal-green-iii-pack-ice",
-        "name": "Pack Ice",
-        "color": "green",
-        "type": "Skill",
-        "tier": "III",
-        "text": "Place up to 3 🧊 Ice tokens in radius. Enemy heroes have -1 ⚡ Initiative for every Ice token they are adjacent to."
-    },
-    {
-        "id": "tal-green-iii-venerated-totem",
-        "name": "Venerated Totem",
-        "color": "green",
-        "type": "Skill - Ranged",
-        "tier": "III",
-        "text": "Place a 🟤 Totem token in range. If a friendly minion adjacent to a Totem would be defeated, remove the Totem instead. Totem tokens are immune to enemy actions."
-    },
-    {
-        "id": "tal-ultimate-iv-reign-of-winter",
-        "name": "Reign of Winter",
-        "color": "purple",
-        "type": "Ultimate",
-        "tier": "IV",
-        "text": "Each time after you defeat a minion with your basic attack, an enemy hero in radius discards a card of the color of your choice, if able."
+        "text": "Target a unit adjacent to you.\nIf the target discards a card to defend, After the attack:  Another enemy hero in radius discards a card of the same color, if able.",
+        "alternative": false
     },
     {
         "id": "tal-gold-h-ice-shard",
         "name": "Ice Shard",
         "color": "gold",
-        "type": "Basic Attack",
+        "type": "basic attack",
         "tier": "H",
-        "text": "Target a hero adjacent to you. If the target discards a card to defend, After the attack: Another enemy hero in radius discards a card of the same color, if able."
+        "text": "Target a hero adjacent to you. If the target discards a card to defend, After the attack:  Another enemy hero in radius discards a card of the same color, if able.",
+        "alternative": false
+    },
+    {
+        "id": "tal-silver-commune-with-spirits",
+        "name": "Commune with Spirits",
+        "color": "silver",
+        "type": "basic skill",
+        "tier": null,
+        "text": "A friendly hero in play names a color;\nyou may discard a card of that color.\nPerform the primary aciton on a card of that color in your discard.",
+        "alternative": false
+    },
+    {
+        "id": "tal-purple-iv-reign-of-winter",
+        "name": "Reign of Winter",
+        "color": "purple",
+        "type": "ultimate",
+        "tier": "IV",
+        "text": "Each time after you defeat a minion with your basic attack, an enemy hero in radius discards a card of the color of your choice, if able.",
+        "alternative": false
+    },
+    {
+        "id": "tal-blue-i-cold-snap",
+        "name": "Cold Snap",
+        "color": "blue",
+        "type": "skill",
+        "tier": "I",
+        "text": "Choose a direction. Move each enemy unit in radius 1 space in that direction, if able.",
+        "alternative": false
+    },
+    {
+        "id": "tal-red-i-winter-dagger",
+        "name": "Winter Dagger",
+        "color": "red",
+        "type": "attack",
+        "tier": "I",
+        "text": "Target a unit adjacent to you.\n+3 ::attack:: Attack if this card is not in the discard.",
+        "alternative": false
+    },
+    {
+        "id": "tal-green-i-glacial-barrier",
+        "name": "Glacial Barrier",
+        "color": "green",
+        "type": "skill",
+        "tier": "I",
+        "text": "Place an ::token_ice:: ice token in radius.\nEnemy heroes have -1 ::initiative:: Initiative for every Ice token they are adjacent to.",
+        "alternative": false
+    },
+    {
+        "id": "tal-blue-ii-snowstorm",
+        "name": "Snowstorm",
+        "color": "blue",
+        "type": "skill",
+        "tier": "II",
+        "text": "Choose a direction. Move each enemy unit in radius 1 space in that direciton, if able.",
+        "alternative": false
+    },
+    {
+        "id": "tal-red-ii-winter-spear",
+        "name": "Winter Spear",
+        "color": "red",
+        "type": "attack",
+        "tier": "II",
+        "text": "Target a unit adjacent to you.\n+3 ::attack:: Attack if this card is not in the discard.",
+        "alternative": false
+    },
+    {
+        "id": "tal-green-ii-wall-of-frost",
+        "name": "Wall of Frost",
+        "color": "green",
+        "type": "skill",
+        "tier": "II",
+        "text": "Place up to 2 ::token_ice:: ice tokens in radius.\nEnemy heroes have -1 ::initiative:: Initiative for every Ice token they are adjacent to.",
+        "alternative": false
+    },
+    {
+        "id": "tal-blue-ii-guardian-spirit",
+        "name": "Guardian Spirit",
+        "color": "blue",
+        "type": "skill",
+        "tier": "II",
+        "text": "Up to 1 friendly hero in radius may retrieve a discarded card.\nIf “Guardian Spirit” is in the discard, retrieve it.",
+        "alternative": true
+    },
+    {
+        "id": "tal-red-ii-spirit-wolf",
+        "name": "Spirit Wolf",
+        "color": "red",
+        "type": "attack - ranged",
+        "tier": "II",
+        "text": "**Choose one —**\n- If this card is not in the discard, target a unit in range.\n- Target a hero adjacent to you.",
+        "alternative": true
+    },
+    {
+        "id": "tal-green-ii-ancestral-totem",
+        "name": "Ancestral Totem",
+        "color": "green",
+        "type": "skill - ranged",
+        "tier": "II",
+        "text": "Place a ::token_totem:: in range.\nIf a friendly melee minion adjacent to a Totem would be defeated, remove the totem instead.",
+        "alternative": true
+    },
+    {
+        "id": "tal-blue-iii-blizzard",
+        "name": "Blizzard",
+        "color": "blue",
+        "type": "skill",
+        "tier": "III",
+        "text": "Choose a direction. Move each enemy unit in radius 1 space in that direction, if able.\nIf this card is in the discard, **End of turn:**\nMay repeat once.",
+        "alternative": false
+    },
+    {
+        "id": "tal-red-iii-winter-scepter",
+        "name": "Winter Scepter",
+        "color": "red",
+        "type": "attack",
+        "tier": "III",
+        "text": "Target a unit adjacent to you.\n+3 ::attack:: Attack if this card is not in the discard.",
+        "alternative": false
+    },
+    {
+        "id": "tal-green-iii-pack-ice",
+        "name": "Pack Ice",
+        "color": "green",
+        "type": "skill",
+        "tier": "III",
+        "text": "Place up to 3 ::token_ice:: ice tokens in radius.\nEnemy heroes have -1 ::initiative:: Initiative for every Ice token they are adjacent to.",
+        "alternative": false
+    },
+    {
+        "id": "tal-blue-iii-warrior-spirit",
+        "name": "Warrior Spirit",
+        "color": "blue",
+        "type": "skill",
+        "tier": "III",
+        "text": "Up to 1 friendly hero in radius may retrieve a discarded card. If “Warrior Spirit” is in the discard, you may retrieve a discarded card.",
+        "alternative": true
+    },
+    {
+        "id": "tal-red-iii-spirit-bear",
+        "name": "Spirit Bear",
+        "color": "red",
+        "type": "attack - ranged",
+        "tier": "III",
+        "text": "**Choose one, or both,** on different targets —\n- If this card is not in the discard, target a unit in range.\n- Target a hero adjacent to you.",
+        "alternative": true
+    },
+    {
+        "id": "tal-green-iii-venerated-totem",
+        "name": "Venerated Totem",
+        "color": "green",
+        "type": "skill - ranged",
+        "tier": "III",
+        "text": "Place a ::token_totem:: in range.\nIf a friendly minion adjacent to a totem would be defeated, remove the totem instead.\nTotem tokens are immune to enemy actions.",
+        "alternative": true
     }
 ]

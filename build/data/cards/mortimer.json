@@ -1,0 +1,173 @@
+[
+    {
+        "id": "mor-gold-knife-of-the-living-dead",
+        "name": "Knife of the Living Dead",
+        "color": "gold",
+        "type": "basic attack",
+        "tier": null,
+        "text": "Target a unit adjacent to you.\nBefore the attack: **Choose up to three times —**\n- Move a ::token_zombie:: Zombie token in radius 1 space.\n- Remove a Zombie token adjacent to the target; if you do, gain +1 ::attack:: Attack.",
+        "alternative": false
+    },
+    {
+        "id": "mor-gold-h-shallow-graves",
+        "name": "Shallow Graves",
+        "color": "gold",
+        "type": "basic attack",
+        "tier": "H",
+        "text": "Target a hero adjacent to you.\nBefore the attack: **Choose up to two times —**\n- Move a ::token_zombie:: Zombie token in radius 1 space.\n- Remove a Zombie token adjacent to the target; if you do, gain +1 ::attack:: Attack.",
+        "alternative": false
+    },
+    {
+        "id": "mor-silver-awaken-",
+        "name": "Awaken!",
+        "color": "silver",
+        "type": "basic defense skill",
+        "tier": null,
+        "text": "Place up to 4 ::token_zombie:: Zombie tokens into spaces adjacent to you, or into spawn points in radius. Zombie tokens are not removed at the end of round.",
+        "alternative": false
+    },
+    {
+        "id": "mor-red-i-crawling-dead",
+        "name": "Crawling Dead",
+        "color": "red",
+        "type": "attack",
+        "tier": "I",
+        "text": "Target a unit adjacent to you.\nAfter the attack: **Choose one —**\n- Move a ::token_zombie:: Zombie token in radius 1 space.\n- Another enemy hero in radius, adjacent to a Zombie token, discards a card, if able.",
+        "alternative": false
+    },
+    {
+        "id": "mor-blue-i-corpse-slam",
+        "name": "Corpse Slam",
+        "color": "blue",
+        "type": "skill - ranged",
+        "tier": "I",
+        "text": "**Choose one —**\n- Move a ::token_zombie:: Zombie token in range up to 1 space; that Zombie token may push a unit or token adjacent to it 1 space.\n- Move 1 space.",
+        "alternative": false
+    },
+    {
+        "id": "mor-green-i-stage-dive",
+        "name": "Stage Dive",
+        "color": "green",
+        "type": "skill - ranged",
+        "tier": "I",
+        "text": "**Choose one —**\n- Move a ::token_zombie:: Zombie token in range 1 space.\n- Swap with a Zombie token in range.",
+        "alternative": false
+    },
+    {
+        "id": "mor-red-ii-walking-dead",
+        "name": "Walking Dead",
+        "color": "red",
+        "type": "attack",
+        "tier": "II",
+        "text": "Target a unit adjacent to you.\nAfter the attack: **Choose up to two times —**\n- Move a ::token_zombie:: Zombie token in radius 1 space.\n- Another enemy hero in radius, adjacent to a Zombie token, discards a card, if able; each enemy hero can only be targeted once.",
+        "alternative": false
+    },
+    {
+        "id": "mor-red-ii-braains-",
+        "name": "Braains...!",
+        "color": "red",
+        "type": "attack",
+        "tier": "II",
+        "text": "Target a unit adjacent to you.\nBefore the attack: **Choose up to two times —**\n- Move a ::token_zombie:: Zombie token in radius 1 space.\n- If an enemy hero in radius is adjacent to a Zombie token, retrieve a discarded card.",
+        "alternative": true
+    },
+    {
+        "id": "mor-red-iii-racing-dead",
+        "name": "Racing Dead",
+        "color": "red",
+        "type": "attack",
+        "tier": "III",
+        "text": "Target a unit adjacent to you.\nAfter the attack: **Choose up to three times —**\n- Move a ::token_zombie:: Zombie token in radius 1 space.\n- Another enemy hero in radius, adjacent to a Zombie token, discards a card, if able; each enemy hero can only be targeted once.",
+        "alternative": false
+    },
+    {
+        "id": "mor-red-iii-braaaaaaaains-",
+        "name": "Braaaaaaaains...!",
+        "color": "red",
+        "type": "attack",
+        "tier": "III",
+        "text": "Target a unit adjacent to you.\nBefore the attack: **Choose up to three times —**\n- Move a ::token_zombie:: Zombie token in radius 1 space.\n- If an enemy hero in radius is adjacent to a Zombie token, retrieve a discarded card.",
+        "alternative": true
+    },
+    {
+        "id": "mor-blue-ii-morbid-mosh",
+        "name": "Morbid Mosh",
+        "color": "blue",
+        "type": "skill - ranged",
+        "tier": "II",
+        "text": "**Choose up to two times —**\n- Move a ::token_zombie:: Zombie token in range up to 1 space; that Zombie token may push a unit or token adjacent to it 1 space.\n- Move 1 space.",
+        "alternative": false
+    },
+    {
+        "id": "mor-blue-ii-robbing-zombies",
+        "name": "Robbing Zombies",
+        "color": "blue",
+        "type": "skill - ranged",
+        "tier": "II",
+        "text": "**Choose up to two times —**\n- Move a ::token_zombie:: Zombie token in range up to 1 space. Gain 1 coin.\n- Move 1 space.",
+        "alternative": true
+    },
+    {
+        "id": "mor-blue-iii-macabre-mayhem",
+        "name": "Macabre Mayhem",
+        "color": "blue",
+        "type": "skill - ranged",
+        "tier": "III",
+        "text": "**Choose up to three times —**\n- Move a ::token_zombie:: Zombie token in range up to 1 space; that Zombie token may push a unit or token adjacent to it 1 space.\n- Move 1 space.",
+        "alternative": false
+    },
+    {
+        "id": "mor-blue-iii-stalking-scalpers",
+        "name": "Stalking Scalpers",
+        "color": "blue",
+        "type": "skill - ranged",
+        "tier": "III",
+        "text": "**Choose up to three times —**\n- Move a ::token_zombie:: Zombie token in range up to 1 space. Gain 1 coin.\n- Move 1 space.",
+        "alternative": true
+    },
+    {
+        "id": "mor-green-ii-crowd-drift",
+        "name": "Crowd Drift",
+        "color": "green",
+        "type": "skill - ranged",
+        "tier": "II",
+        "text": "**Choose up to two times —**\n- Move a ::token_zombie:: Zombie token in range 1 space.\n- Swap with a Zombie token in range.",
+        "alternative": false
+    },
+    {
+        "id": "mor-green-ii-gathering-horde",
+        "name": "Gathering Horde",
+        "color": "green",
+        "type": "skill - ranged",
+        "tier": "II",
+        "text": "**Choose up to two times —**\n- Move a ::token_zombie:: Zombie token in range 1 space.\n- Once per turn: Replace an enemy minion in range adjacent to two or more Zombie tokens with a Zombie token.",
+        "alternative": true
+    },
+    {
+        "id": "mor-green-iii-crowd-surf",
+        "name": "Crowd Surf",
+        "color": "green",
+        "type": "skill - ranged",
+        "tier": "III",
+        "text": "**Choose up to three times —**\n- Move a ::token_zombie:: Zombie token in range 1 space.\n- Swap with a Zombie token in range.",
+        "alternative": false
+    },
+    {
+        "id": "mor-green-iii-army-of-darkness",
+        "name": "Army of Darkness",
+        "color": "green",
+        "type": "skill - ranged",
+        "tier": "III",
+        "text": "**Choose up to three times —**\n- Move a ::token_zombie:: Zombie token in range 1 space.\n- Once per turn: Replace an enemy minion in range adjacent to two or more Zombie tokens with a Zombie token.",
+        "alternative": true
+    },
+    {
+        "id": "mor-purple-iv-master-of-puppets",
+        "name": "Master of Puppets",
+        "color": "purple",
+        "type": "ultimate",
+        "tier": "IV",
+        "text": "Whenever you would choose up to three times, you may choose up to five times instead.",
+        "alternative": false
+    }
+]

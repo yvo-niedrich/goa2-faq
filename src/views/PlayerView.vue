@@ -9,9 +9,8 @@ import { useViewport } from '@/viewport';
 import HeroCard from '@/components/HeroCard.vue';
 import HeroPortrait from '@/components/HeroPortrait.vue';
 import CardSelectPopup from '@/components/popups/CardSelectPopup.vue';
-import { get, sortCardsByTier } from '@/data/heroes';
+import { get, sortCardsByTier, sortCardTiers } from '@/data/heroes';
 import { useCompanionStore } from '@/stores/companion';
-import { sortTier } from '@/types/CardType';
 
 type CardFn = (c: Card) => boolean | void;
 
@@ -35,15 +34,14 @@ function arrayUnique<T>(value: T, index: number, array: T[]): boolean {
 }
 
 function getUpgrades(list: Card[], card: Card) {
-    const options = list.map(c => c.tier).filter(t => sortTier(t, card.tier) > 0).filter(arrayUnique).sort(sortTier);
+    const options = list.map(c => c.tier).filter(t => sortCardTiers(t, card.tier) > 0).filter(arrayUnique).sort(sortCardTiers);
     return list.filter(c => options.length && c.tier === options[0]);
 }
 
 function getDowngrades(list: Card[], card: Card) {
-    const options = list.map(c => c.tier).filter(t => sortTier(t, card.tier) < 0).filter(arrayUnique).sort(sortTier);
+    const options = list.map(c => c.tier).filter(t => sortCardTiers(t, card.tier) < 0).filter(arrayUnique).sort(sortCardTiers);
     return list.filter(c => options.length && c.tier === options[options.length - 1]);
 }
-
 
 function getCard(color: Card['color'], id?: string | null, modifyFn?: CardFn) {
     const card = id ? hCards.value[color].find(c => c.id === id) : hCards.value[color][0];

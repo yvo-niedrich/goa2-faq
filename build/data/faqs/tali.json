@@ -2,12 +2,12 @@
     "faq-tal-bgAzAr8M": {
         "q": "What communication is legal for Tali’s Silver (Commune With Spirits)?",
         "a": "All Table Talk and Communication is fully open - to teammates and opponents (p. 4). A Tali player can give teammates instructions like “Say Blue” or “Say Red if Sabina plays Gold, otherwise say Green,” as long as the opponents can hear (and understand) these instructions. The Tali player may not secretly indicate their desire to their teammates by whispering, gestures, showing cards, a private code, etc.",
-        "ref": ["tal-silver-h-commune-with-spirits"]
+        "ref": ["tal-silver-commune-with-spirits"]
     },
     "faq-tal-e2Ja6hsd": {
         "q": "If Tali tries to resolve her Silver (Commune with the Spirits) and her whole team is dead or immune, what happens?",
         "a": "No friendly hero can be chosen and the card does nothing.",
-        "ref": ["tal-silver-h-commune-with-spirits"]
+        "ref": ["tal-silver-commune-with-spirits"]
     },
     "faq-tal-5K1OWmD6": {
         "q": "Tali’s Alternate Green (Ancestral Totem) makes a Totem that can protect a minion. If the Totem is removed, does the Hero gain coins?",

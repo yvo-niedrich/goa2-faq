@@ -70,7 +70,7 @@ for (const file of files) {
 
     if (fileUpdated) {
         console.log('FAQ file updated: ' + file);
-        writeFileSync(faqPath + '/' + file, JSON.stringify(fMap));
+        writeFileSync(faqPath + '/' + file, JSON.stringify(fMap, null, 4));
     }
 }
 
@@ -106,6 +106,10 @@ export function cardIndex(filter: string[] = [], warn = true): CardIdToFAQIds {
     }
 
     return idx;
+}
+
+interface TranslationMap {
+    [key: string]: string;
 }
 
 export function translationMap(filter: string[] = []): TranslationMap {

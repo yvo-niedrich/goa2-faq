@@ -3,152 +3,171 @@
         "id": "whi-gold-swift-justice",
         "name": "Swift Justice",
         "color": "gold",
-        "type": "Basic Attack - Ranged",
+        "type": "basic attack - ranged",
         "tier": null,
-        "text": "**Choose one —**\n- Target a hero in range with an empty discard. After the attack: If able, that hero performs a movement action on the card they defended with, moving full distance in a straight line.\n- Target a unit adjacent to you."
-    },
-    {
-        "id": "whi-silver-death-seeker",
-        "name": "Death Seeker",
-        "color": "silver",
-        "type": "Basic Skill",
-        "tier": null,
-        "text": "If an enemy hero in radius has a card in the discard, **choose one —**\n- **This turn:** You are immune to enemy actions.\n- You may retrieve a discarded card."
-    },
-    {
-        "id": "whi-red-i-crimson-trail",
-        "name": "Crimson Trail",
-        "color": "red",
-        "type": "Attack",
-        "tier": "I",
-        "text": "Before the attack: You may move up to 1 space if there is an empty minion spawn point in radius in the battle zone. Target a unit adjacent to you."
-    },
-    {
-        "id": "whi-red-ii-sanguine-path",
-        "name": "Sanguine Path",
-        "color": "red",
-        "type": "Attack",
-        "tier": "II",
-        "text": "Before the attack: You may move up to 1 space for every empty minion spawn point in radius in the battle zone, up to a maximum of 2 spaces. Target a unit adjacent to you."
-    },
-    {
-        "id": "whi-red-ii-blood-fury",
-        "name": "Blood Fury",
-        "color": "red",
-        "type": "Attack",
-        "tier": "II",
-        "text": "Target a unit adjacent to you. After the attack: If an enemy hero in radius has a card in the discard, may repeat once on a different target."
-    },
-    {
-        "id": "whi-red-iii-blood-pilgrimage",
-        "name": "Blood Pilgrimage",
-        "color": "red",
-        "type": "Attack",
-        "tier": "III",
-        "text": "Before the attack: You may move up to 1 space for every empty minion spawn point in radius in the battle zone, up to a maximum of 3 spaces. Target a unit adjacent to you."
-    },
-    {
-        "id": "whi-red-iii-blood-frenzy",
-        "name": "Blood Frenzy",
-        "color": "red",
-        "type": "Attack",
-        "tier": "III",
-        "text": "Target a unit adjacent to you.\nAfter the attack: If an enemy hero in radius has a card in the discard, repeat up to five times on different targets."
-    },
-    {
-        "id": "whi-blue-i-seeds-of-fear",
-        "name": "Seeds of Fear",
-        "color": "blue",
-        "type": "Skill",
-        "tier": "I",
-        "text": "Target an enemy unit in radius occupying a spawn point. Move that unit 1 space."
-    },
-    {
-        "id": "whi-blue-ii-sprouts-of-panic",
-        "name": "Sprouts of Panic",
-        "color": "blue",
-        "type": "Skill",
-        "tier": "II",
-        "text": "Target an enemy unit in radius occupying a spawn point. Move that unit up to 2 spaces."
-    },
-    {
-        "id": "whi-blue-ii-lesser-evil",
-        "name": "Lesser Evil",
-        "color": "blue",
-        "type": "Skill - Ranged",
-        "tier": "II",
-        "text": "An enemy hero in range **chooses one —**\n- That hero discards a card, if able.\n- You may defeat a minion adjacent to you.\n\n_(Any option can be chosen, even if it would have no effect.)_"
-    },
-    {
-        "id": "whi-blue-iii-blooming-nightmare",
-        "name": "Blooming Nightmare",
-        "color": "blue",
-        "type": "Skill",
-        "tier": "III",
-        "text": "Target an enemy unit in radius occupying a spawn point. Move that unit up to 3 spaces."
-    },
-    {
-        "id": "whi-blue-iii-greater-good",
-        "name": "Greater Good",
-        "color": "blue",
-        "type": "Skill - Ranged",
-        "tier": "III",
-        "text": "An enemy hero in range **chooses one —**\n- That hero discards a card, or is defeated.\n- You defeat up to 3 minions adjacent to you."
-    },
-    {
-        "id": "whi-green-i-shadow-step",
-        "name": "Shadow Step",
-        "color": "green",
-        "type": "Skill - Ranged",
-        "tier": "I",
-        "text": "Place yourself into an empty minion spawn point in range in the battle zone."
-    },
-    {
-        "id": "whi-green-ii-shadow-walk",
-        "name": "Shadow Walk",
-        "color": "green",
-        "type": "Skill - Ranged",
-        "tier": "II",
-        "text": "Place yourself into an empty minion spawn point in range in the battle zone."
-    },
-    {
-        "id": "whi-green-iii-creeping-shadow",
-        "name": "Creeping Shadow",
-        "color": "green",
-        "type": "Skill - Ranged",
-        "tier": "III",
-        "text": "Place yourself into an empty minion spawn point in range in the battle zone, or into a space in range adjacent to such a spawn point."
+        "text": "**Choose one —**\n- Target a hero in range with an empty discard.\nAfter the attack: If able, that hero performs a movement action on the card they defended with, moving full distance in a straight line.\n- Target a unit adjacent to you.",
+        "alternative": false
     },
     {
         "id": "whi-gold-h-vile-accusation",
         "name": "Vile Accusation",
         "color": "gold",
-        "type": "Basic Attack - Ranged",
+        "type": "basic attack - ranged",
         "tier": "H",
-        "text": "**Choose one —**\n- Target a hero in range with an empty discard. After the attack: If able, that hero performs a movement action on the card they defended with, moving full distance in a straight line.\n- Target a hero adjacent to you."
+        "text": "**Choose one —**\n- Target a hero in range with an empty discard.\nAfter the attack: If able, that hero performs a movement action on the card they defended with, moving full distance in a straight line.\n- Target a hero adjacent to you.",
+        "alternative": false
+    },
+    {
+        "id": "whi-silver-death-seeker",
+        "name": "Death Seeker",
+        "color": "silver",
+        "type": "basic skill",
+        "tier": null,
+        "text": "If an enemy hero in radius has a card in the discard, **choose one —**\n- **This turn:** You are immune to enemy actions.\n- You may retrieve a discarded card.",
+        "alternative": false
+    },
+    {
+        "id": "whi-purple-iv-grim-reaper",
+        "name": "Grim Reaper",
+        "color": "purple",
+        "type": "ultimate",
+        "tier": "IV",
+        "text": "When performing basic actions, you may choose one, or both.",
+        "alternative": false
+    },
+    {
+        "id": "whi-blue-i-seeds-of-fear",
+        "name": "Seeds of Fear",
+        "color": "blue",
+        "type": "skill",
+        "tier": "I",
+        "text": "Target an enemy unit in radius occupying a spawn point. Move that unit 1 space.",
+        "alternative": false
+    },
+    {
+        "id": "whi-red-i-crimson-trail",
+        "name": "Crimson Trail",
+        "color": "red",
+        "type": "attack",
+        "tier": "I",
+        "text": "Before the attack: You may move up to 1 space if there is an empty minion spawn point in radius in the battle zone.\nTarget a unit adjacent to you.",
+        "alternative": false
+    },
+    {
+        "id": "whi-green-i-shadow-step",
+        "name": "Shadow Step",
+        "color": "green",
+        "type": "skill - ranged",
+        "tier": "I",
+        "text": "Place yourself into an empty minion spawn point in range in the battle zone.",
+        "alternative": false
+    },
+    {
+        "id": "whi-blue-ii-sprouts-of-panic",
+        "name": "Sprouts of Panic",
+        "color": "blue",
+        "type": "skill",
+        "tier": "II",
+        "text": "Target an enemy unit in radius occupying a spawn point. Move that unit up to 2 spaces.",
+        "alternative": false
+    },
+    {
+        "id": "whi-red-ii-sanguine-path",
+        "name": "Sanguine Path",
+        "color": "red",
+        "type": "attack",
+        "tier": "II",
+        "text": "Before the attack: You may move up to 1 space for every empty minion spawn point in radius in the battle zone, up to a maximum of 2 spaces. Target a unit adjacent to you.",
+        "alternative": false
+    },
+    {
+        "id": "whi-green-ii-shadow-walk",
+        "name": "Shadow Walk",
+        "color": "green",
+        "type": "skill - ranged",
+        "tier": "II",
+        "text": "Place yourself into an empty minion spawn point in range in the battle zone.",
+        "alternative": false
+    },
+    {
+        "id": "whi-blue-ii-lesser-evil",
+        "name": "Lesser Evil",
+        "color": "blue",
+        "type": "skill - ranged",
+        "tier": "II",
+        "text": "An enemy hero in range **chooses one —**\n- That hero discards a card, if able.\n- You may defeat a minion adjacent to you.\n_(Any option can be chosen, even if it would have no effect.)_",
+        "alternative": true
+    },
+    {
+        "id": "whi-red-ii-blood-fury",
+        "name": "Blood Fury",
+        "color": "red",
+        "type": "attack",
+        "tier": "II",
+        "text": "Target a unit adjacent to you.\nAfter the attack: If an enemy hero in radius has a card in the discard, may repeat once on a different target.",
+        "alternative": true
     },
     {
         "id": "whi-green-ii-cruel-twist",
         "name": "Cruel Twist",
         "color": "green",
-        "type": "Skill - Ranged",
+        "type": "skill - ranged",
         "tier": "II",
-        "text": "Swap with a unit adjacent to you, or with an enemy hero in range with a card in the discard. Move up to 2 spaces."
+        "text": "Swap with a unit adjacent to you, or with an enemy hero in range with a card in the discard. Move up to 2 spaces.",
+        "alternative": true
+    },
+    {
+        "id": "whi-blue-iii-blooming-nightmare",
+        "name": "Blooming Nightmare",
+        "color": "blue",
+        "type": "skill",
+        "tier": "III",
+        "text": "Target an enemy unit in radius occupying a spawn point. Move that unit up to 3 spaces.",
+        "alternative": false
+    },
+    {
+        "id": "whi-red-iii-blood-pilgrimage",
+        "name": "Blood Pilgrimage",
+        "color": "red",
+        "type": "attack",
+        "tier": "III",
+        "text": "Before the attack: You may move to 1 space for every empty minion spawn point in radius in the battle zone, up to a maximum of 3 spaces. Target a unit adjacent to you.",
+        "alternative": false
+    },
+    {
+        "id": "whi-green-iii-creeping-shadow",
+        "name": "Creeping Shadow",
+        "color": "green",
+        "type": "skill - ranged",
+        "tier": "III",
+        "text": "Place yourself into an empty minion spawn point in range in the battle zone, or into a space in range adjacent to such a spawn point.",
+        "alternative": false
+    },
+    {
+        "id": "whi-blue-iii-greater-good",
+        "name": "Greater Good",
+        "color": "blue",
+        "type": "skill - ranged",
+        "tier": "III",
+        "text": "An enemy hero in range **chooses one —**\n- That hero discards a card, or is defeated.\n- You may defeat up to 3 minions adjacent to you.",
+        "alternative": true
+    },
+    {
+        "id": "whi-red-iii-blood-frenzy",
+        "name": "Blood Frenzy",
+        "color": "red",
+        "type": "attack",
+        "tier": "III",
+        "text": "Target a unit adjacent to you.\nAfter the attack: If an enemy hero in radius has a card in the discard, repeat up to five times on different targets.",
+        "alternative": true
     },
     {
         "id": "whi-green-iii-sealed-fate",
         "name": "Sealed Fate",
         "color": "green",
-        "type": "Skill - Ranged",
+        "type": "skill - ranged",
         "tier": "III",
-        "text": "Swap with a unit adjacent to you, or with an enemy hero in range with a card in the discard. Move up to 3 spaces."
-    },
-    {
-        "id": "whi-ultimate-iv-grim-reaper",
-        "name": "Grim Reaper",
-        "color": "purple",
-        "type": "Ultimate",
-        "tier": "IV",
-        "text": "When performing basic actions, you may choose one, or both."
+        "text": "Swap with a unit adjacent to you, or with an enemy hero in range with a card in the discard. Move up to 3 spaces.",
+        "alternative": true
     }
 ]

@@ -3,154 +3,171 @@
         "id": "mis-gold-watch-how-i-soar",
         "name": "Watch How I Soar",
         "color": "gold",
-        "type": "Basic Skill - Ranged",
+        "type": "basic skill - ranged",
         "tier": null,
-        "text": "**Choose one —**\n- Place yourself into a space at maximum range.\n- Defeat a minion adjacent to you."
-    },
-    {
-        "id": "mis-silver-swoop-in",
-        "name": "Swoop In",
-        "color": "silver",
-        "type": "Basic Skill",
-        "tier": null,
-        "text": "Place yourself into a space in radius adjacent to two or more enemy units; if you do, you may retrieve a discarded card."
-    },
-    {
-        "id": "mis-red-i-challenge-accepted",
-        "name": "Challenge Accepted",
-        "color": "red",
-        "type": "Attack",
-        "tier": "I",
-        "text": "Target a unit adjacent to you. After the attack:\n**This turn:** Gain +2 🛡️ Defense."
-    },
-    {
-        "id": "mis-red-ii-matter-of-honor",
-        "name": "Matter of Honor",
-        "color": "red",
-        "type": "Attack",
-        "tier": "II",
-        "text": "Target a unit adjacent to you. After the attack:\n**This turn:** Gain +3 🛡️ Defense."
-    },
-    {
-        "id": "mis-red-ii-power-shot",
-        "name": "Power Shot",
-        "color": "red",
-        "type": "Attack - Ranged",
-        "tier": "II",
-        "text": "Target a unit in range. After the attack: If the target was at maximum range, you may move it 1 space, to a space farther away from you."
-    },
-    {
-        "id": "mis-red-iii-thunder-shot",
-        "name": "Thunder Shot",
-        "color": "red",
-        "type": "Attack - Ranged",
-        "tier": "III",
-        "text": "Target a unit in range. After the attack: If the target is not adjacent to you, you may move it 1 space, to a space farther away from you."
-    },
-    {
-        "id": "mis-red-iii-worthy-opponent",
-        "name": "Worthy Opponent",
-        "color": "red",
-        "type": "Attack",
-        "tier": "III",
-        "text": "Target a unit adjacent to you. After the attack:\n**This turn:** Gain +5 🛡️ Defense."
-    },
-    {
-        "id": "mis-blue-i-sudden-breeze",
-        "name": "Sudden Breeze",
-        "color": "blue",
-        "type": "Skill",
-        "tier": "I",
-        "text": "Move up to 3 spaces in a straight line, ignoring obstacles; you may place an enemy unit you moved through into a space adjacent to you."
-    },
-    {
-        "id": "mis-blue-ii-gust-of-wind",
-        "name": "Gust of Wind",
-        "color": "blue",
-        "type": "Skill",
-        "tier": "II",
-        "text": "Move up to 4 spaces in a straight line, ignoring obstacles; you may place an enemy unit you moved through into a space adjacent to you."
-    },
-    {
-        "id": "mis-blue-iii-crushing-squall",
-        "name": "Crushing Squall",
-        "color": "blue",
-        "type": "Skill",
-        "tier": "III",
-        "text": "Move up to 5 spaces in a straight line, ignoring obstacles; you may place an enemy unit you moved through into a space adjacent to you."
-    },
-    {
-        "id": "mis-blue-iii-death-from-above",
-        "name": "Death from Above",
-        "color": "blue",
-        "type": "Skill",
-        "tier": "III",
-        "text": "Move up to 5 spaces in a straight line, ignoring obstacles; an enemy hero you moved through discards a card, if able."
-    },
-    {
-        "id": "mis-green-i-focus",
-        "name": "Focus",
-        "color": "green",
-        "type": "Skill",
-        "tier": "I",
-        "text": "**Next turn:** Before you perform a primary action, you may move 1 space."
-    },
-    {
-        "id": "mis-blue-ii-dash-and-slash",
-        "name": "Dash and Slash",
-        "color": "blue",
-        "type": "Skill",
-        "tier": "II",
-        "text": "Move up to 4 spaces in a straight line, ignoring obstacles; an enemy hero you moved through discards a card, if able."
-    },
-    {
-        "id": "mis-green-ii-discipline",
-        "name": "Discipline",
-        "color": "green",
-        "type": "Skill",
-        "tier": "II",
-        "text": "**Next turn:** Before you perform a primary action, move up to 2 spaces."
-    },
-    {
-        "id": "mis-green-ii-living-tornado",
-        "name": "Living Tornado",
-        "color": "green",
-        "type": "Skill",
-        "tier": "II",
-        "text": "Swap two units at maximum radius."
-    },
-    {
-        "id": "mis-green-iii-mastery",
-        "name": "Mastery",
-        "color": "green",
-        "type": "Skill",
-        "tier": "III",
-        "text": "**Next turn:** Before you perform a primary action, move up to 3 spaces."
-    },
-    {
-        "id": "mis-green-iii-storm-spirit",
-        "name": "Storm Spirit",
-        "color": "green",
-        "type": "Skill",
-        "tier": "III",
-        "text": "Swap two units in radius and at equal distance from you."
-    },
-    {
-        "id": "mis-ultimate-iv-power-overwhelming",
-        "name": "Power Overwhelming",
-        "color": "purple",
-        "type": "Ultimate",
-        "tier": "IV",
-        "text": "Whenever you choose one, you may choose two different options instead, in any order. Each time after you place yourself, an enemy hero adjacent to you discards a card, if able."
+        "text": "**Choose one —**\n- Place yourself into a space at maximum range.\n- Defeat a minion adjacent to you.",
+        "alternative": false
     },
     {
         "id": "mis-gold-h-leaf-on-the-wind",
         "name": "Leaf on the Wind",
         "color": "gold",
-        "type": "Basic Skill - Ranged",
+        "type": "basic skill - ranged",
         "tier": "H",
-        "text": "Place yourself into a space at maximum range."
+        "text": "Place yourself into a space at maximum range.",
+        "alternative": false
+    },
+    {
+        "id": "mis-silver-swoop-in",
+        "name": "Swoop In",
+        "color": "silver",
+        "type": "basic skill",
+        "tier": null,
+        "text": "Place yourself into a space in radius adjacent to two or more enemy units; if you do, you may retrieve a discarded card.",
+        "alternative": false
+    },
+    {
+        "id": "mis-purple-iv-power-overwhelming",
+        "name": "Power Overwhelming",
+        "color": "purple",
+        "type": "ultimate",
+        "tier": "IV",
+        "text": "Whenever you choose one, you may choose two different options instead, in any order.\nEach time after you place yourself, an enemy hero adjacent to you discards a card, if able.",
+        "alternative": false
+    },
+    {
+        "id": "mis-blue-i-sudden-breeze",
+        "name": "Sudden Breeze",
+        "color": "blue",
+        "type": "skill",
+        "tier": "I",
+        "text": "Move up to 3 spaces in a straight line, ignoring obstacles; you may place an enemy unit you moved through into a space adjacent to you.",
+        "alternative": false
+    },
+    {
+        "id": "mis-red-i-challenge-accepted",
+        "name": "Challenge Accepted",
+        "color": "red",
+        "type": "attack",
+        "tier": "I",
+        "text": "Target a unit adjacent to you.\nAfter the attack: **This turn:** Gain +2 ::defense:: Defense.",
+        "alternative": false
+    },
+    {
+        "id": "mis-green-i-focus",
+        "name": "Focus",
+        "color": "green",
+        "type": "skill",
+        "tier": "I",
+        "text": "**Next turn:** Before you perform a primary action, you may move 1 space.",
+        "alternative": false
+    },
+    {
+        "id": "mis-blue-ii-gust-of-wind",
+        "name": "Gust of Wind",
+        "color": "blue",
+        "type": "skill",
+        "tier": "II",
+        "text": "Move up to 4 spaces in a straight line ignoring obstacles; you may place an enemy unit you moved through into a space adjacent to you.",
+        "alternative": false
+    },
+    {
+        "id": "mis-red-ii-matter-of-honor",
+        "name": "Matter of Honor",
+        "color": "red",
+        "type": "attack",
+        "tier": "II",
+        "text": "Target a unit adjacent to you.\nAfter the attack: **This turn:** Gain +3 ::defense:: Defense.",
+        "alternative": false
+    },
+    {
+        "id": "mis-green-ii-discipline",
+        "name": "Discipline",
+        "color": "green",
+        "type": "skill",
+        "tier": "II",
+        "text": "**Next turn:** Before you perform a primary action, move up to 2 spaces.",
+        "alternative": false
+    },
+    {
+        "id": "mis-green-ii-living-tornado",
+        "name": "Living Tornado",
+        "color": "green",
+        "type": "skill",
+        "tier": "II",
+        "text": "Swap two units at maximum radius.",
+        "alternative": true
+    },
+    {
+        "id": "mis-red-ii-power-shot",
+        "name": "Power Shot",
+        "color": "red",
+        "type": "attack - ranged",
+        "tier": "II",
+        "text": "Target a unit in range.\nAfter the attack: If the target was at maximum range, you may move it 1 space, to a space farther away from you.",
+        "alternative": true
+    },
+    {
+        "id": "mis-blue-ii-dash-and-slash",
+        "name": "Dash and Slash",
+        "color": "blue",
+        "type": "skill",
+        "tier": "II",
+        "text": "Move up to 4 spaces in a straight line, ignoring obstacles. An enemy hero you moved through discards a card, if able.",
+        "alternative": true
+    },
+    {
+        "id": "mis-blue-iii-crushing-squall",
+        "name": "Crushing Squall",
+        "color": "blue",
+        "type": "skill",
+        "tier": "III",
+        "text": "Move up to 4 spaces in a straight line, ignoring obstacles. You may place an enemy unit you moved through into a space adjacent to you.",
+        "alternative": false
+    },
+    {
+        "id": "mis-red-iii-worthy-opponent",
+        "name": "Worthy Opponent",
+        "color": "red",
+        "type": "attack",
+        "tier": "III",
+        "text": "Target a unit adjacent to you.\nAfter the attack: **This turn:** Gain +5 ::defense:: Defense.",
+        "alternative": false
+    },
+    {
+        "id": "mis-green-iii-mastery",
+        "name": "Mastery",
+        "color": "green",
+        "type": "skill",
+        "tier": "III",
+        "text": "**Next turn:** Before you perform a primary action, you may move up to 3 spaces.",
+        "alternative": false
+    },
+    {
+        "id": "mis-green-iii-storm-spirit",
+        "name": "Storm Spirit",
+        "color": "green",
+        "type": "skill",
+        "tier": "III",
+        "text": "Swap two units in radius and at equal distance from you.",
+        "alternative": true
+    },
+    {
+        "id": "mis-red-iii-thunder-shot",
+        "name": "Thunder Shot",
+        "color": "red",
+        "type": "attack - ranged",
+        "tier": "III",
+        "text": "Target a unit in range.\nAfter the attack: If the target is not adjacent to you, you may move it 1 space, to a space farther away from you.",
+        "alternative": true
+    },
+    {
+        "id": "mis-blue-iii-death-from-above",
+        "name": "Death from Above",
+        "color": "blue",
+        "type": "skill",
+        "tier": "III",
+        "text": "Move up to 5 spaces in a straight line, ignoring obstacles; an enemy hero you moved through discards a card, if able.",
+        "alternative": true
     }
 ]
-
-

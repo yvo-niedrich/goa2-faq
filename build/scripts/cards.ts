@@ -1,7 +1,7 @@
-import { toColor } from '@/types/Color';
+import { toColor } from '../../src/types/Color';
 import { readFileSync } from 'fs';
 import { __data } from './paths';
-import { toType } from '@/types/CardType';
+import { toType } from '../../src/types/CardType';
 
 interface CardRaw {
     id: string; // all lowercase: %color%-%tier%-%name_NonAlphaNumToDash%
@@ -24,6 +24,10 @@ function getFile(f: string): CardRaw[] {
         }
     }
     return cache[f];
+}
+
+interface TranslationMap {
+    [key: string]: string;
 }
 
 export function translationMap(file: string | string[] = []): TranslationMap {

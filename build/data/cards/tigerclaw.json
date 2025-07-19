@@ -3,152 +3,171 @@
         "id": "tig-gold-blink-strike",
         "name": "Blink Strike",
         "color": "gold",
-        "type": "Basic Attack",
+        "type": "basic attack",
         "tier": null,
-        "text": "Before the attack: Move 2 spaces in a straight line through an enemy unit; target that unit.\n_(If you cannot make this move, you cannot attack.)_"
-    },
-    {
-        "id": "tig-silver-blend-into-shadows",
-        "name": "Blend Into Shadows",
-        "color": "silver",
-        "type": "Basic Skill",
-        "tier": null,
-        "text": "If you are adjacent to terrain, place yourself into a space in radius; if you do, **Next turn:** You are immune to enemy attack actions."
-    },
-    {
-        "id": "tig-red-i-hit-and-run",
-        "name": "Hit and Run",
-        "color": "red",
-        "type": "Attack",
-        "tier": "I",
-        "text": "Target a unit adjacent to you.\nAfter the attack: You may move 1 space."
-    },
-    {
-        "id": "tig-red-ii-combat-reflexes",
-        "name": "Combat Reflexes",
-        "color": "red",
-        "type": "Attack",
-        "tier": "II",
-        "text": "Before the attack: You may move 1 space.\nTarget a unit adjacent to you.\nAfter the attack: If you did not move before the attack, you may move 1 space."
-    },
-    {
-        "id": "tig-red-ii-backstab",
-        "name": "Backstab",
-        "color": "red",
-        "type": "Attack",
-        "tier": "II",
-        "text": "Target a unit adjacent to you; if a friendly unit is adjacent to the target, +2 🗡️ Attack.\n*(A “friendly unit” is another hero or a minion on your team.)*"
-    },
-    {
-        "id": "tig-red-iii-leaping-strike",
-        "name": "Leaping Strike",
-        "color": "red",
-        "type": "Attack",
-        "tier": "III",
-        "text": "Before the attack: You may move 1 space.\nTarget a unit adjacent to you.\nAfter the attack: You may move 1 space."
-    },
-    {
-        "id": "tig-red-iii-backstab-with-a-ballista",
-        "name": "Backstab with a Ballista",
-        "color": "red",
-        "type": "Attack - Ranged",
-        "tier": "III",
-        "text": "Target a unit in range; if a friendly unit is adjacent to the target +2 🗡️ Attack, and the target cannot perform a primary action to defend."
-    },
-    {
-        "id": "tig-blue-i-dodge",
-        "name": "Dodge",
-        "color": "blue",
-        "type": "Defense",
-        "tier": "I",
-        "text": "Block a ranged attack."
-    },
-    {
-        "id": "tig-blue-ii-sidestep",
-        "name": "Sidestep",
-        "color": "blue",
-        "type": "Defense",
-        "tier": "II",
-        "text": "Block a ranged attack.\nYou may move 1 space."
-    },
-    {
-        "id": "tig-blue-ii-parry",
-        "name": "Parry",
-        "color": "blue",
-        "type": "Defense",
-        "tier": "II",
-        "text": "Block a non-ranged attack.\nThe attacker discards a card, if able."
-    },
-    {
-        "id": "tig-blue-iii-riposte",
-        "name": "Riposte",
-        "color": "blue",
-        "type": "Defense",
-        "tier": "III",
-        "text": "Block a non-ranged attack.\nThe attacker discards a card, or is defeated."
-    },
-    {
-        "id": "tig-blue-iii-evade",
-        "name": "Evade",
-        "color": "blue",
-        "type": "Defense",
-        "tier": "III",
-        "text": "Block a ranged attack.\nYou may move 1 space. You may retrieve your resolved or discarded basic skill card."
-    },
-    {
-        "id": "tig-green-i-light-fingered",
-        "name": "Light-Fingered",
-        "color": "green",
-        "type": "Skill",
-        "tier": "I",
-        "text": "You may move 1 space.\nTake 1 coin from an enemy hero adjacent to you; if you do, you may move 1 space."
-    },
-    {
-        "id": "tig-green-ii-pick-pocket",
-        "name": "Pick Pocket",
-        "color": "green",
-        "type": "Skill",
-        "tier": "II",
-        "text": "Move up to 2 spaces.\nTake 1 coin from an enemy hero adjacent to you; if you do, you may move 1 space."
-    },
-    {
-        "id": "tig-green-ii-poisoned-dagger",
-        "name": "Poisoned Dagger",
-        "color": "green",
-        "type": "Skill - Ranged",
-        "tier": "II",
-        "text": "Give a hero in range a 🐍 Poison marker.\nThe hero with a poison marker has -1 ⚡ Initiative, -1 🗡️ Attack and -1 🛡️ Defense."
-    },
-    {
-        "id": "tig-green-iii-master-thief",
-        "name": "Master Thief",
-        "color": "green",
-        "type": "Skill",
-        "tier": "III",
-        "text": "Move up to 2 spaces. Take 1 or 2 coins from an enemy hero adjacent to you; if you do, you may move up to 2 spaces."
-    },
-    {
-        "id": "tig-green-iii-poisoned-dart",
-        "name": "Poisoned Dart",
-        "color": "green",
-        "type": "Skill - Ranged",
-        "tier": "III",
-        "text": "Give a hero in range a 🐍 Poison marker.\nThe hero with a poison marker has -2 ⚡ Initiative, -2 🗡️ Attack and -2 🛡️ Defense."
+        "text": "Before the attack: Move 2 spaces in a straight line through an enemy unit; target that unit.\n_(If you cannot make this move, you cannot attack)_.",
+        "alternative": false
     },
     {
         "id": "tig-gold-h-nimble-strike",
         "name": "Nimble Strike",
         "color": "gold",
-        "type": "Basic Attack",
+        "type": "basic attack",
         "tier": "H",
-        "text": "Before the attack: Move 2 spaces in a straight line through an enemy hero; target that hero."
+        "text": "Before the attack: Move 2 spaces in a straight line through an enemy hero; target that hero.",
+        "alternative": false
     },
     {
-        "id": "tig-ult-iv-cloak-and-daggers",
+        "id": "tig-silver-blend-into-shadows",
+        "name": "Blend Into Shadows",
+        "color": "silver",
+        "type": "basic skill",
+        "tier": null,
+        "text": "If you are adjacent to terrain, place yourself into a space in radius; if you do, **Next turn:**\nYou are immune to enemy attack actions.",
+        "alternative": false
+    },
+    {
+        "id": "tig-purple-iv-cloak-and-daggers",
         "name": "Cloak and Daggers",
-        "color": "black",
-        "type": "Ultimate",
+        "color": "purple",
+        "type": "ultimate",
         "tier": "IV",
-        "text": "After you perform a basic action, you may repeat it once; if you repeat an attack action, you cannot target the same unit."
+        "text": "After you perform a basic action, you may repeat it once; if you repeat an attack action, you cannot target the same unit.",
+        "alternative": false
+    },
+    {
+        "id": "tig-blue-i-dodge",
+        "name": "Dodge",
+        "color": "blue",
+        "type": "defense",
+        "tier": "I",
+        "text": "Block a ranged attack.",
+        "alternative": false
+    },
+    {
+        "id": "tig-red-i-hit-and-run",
+        "name": "Hit and Run",
+        "color": "red",
+        "type": "attack",
+        "tier": "I",
+        "text": "Target a unit adjacent to you.\nAfter the attack: You may move 1 space.",
+        "alternative": false
+    },
+    {
+        "id": "tig-green-i-light-fingered",
+        "name": "Light-Fingered",
+        "color": "green",
+        "type": "skill",
+        "tier": "I",
+        "text": "You may move 1 space.\nTake 1 coin from an enemy hero adjacent to you; if you do, you may move 1 space.",
+        "alternative": false
+    },
+    {
+        "id": "tig-blue-ii-sidestep",
+        "name": "Sidestep",
+        "color": "blue",
+        "type": "defense",
+        "tier": "II",
+        "text": "Block a ranged attack.\nYou may move 1 space.",
+        "alternative": false
+    },
+    {
+        "id": "tig-red-ii-combat-reflexes",
+        "name": "Combat Reflexes",
+        "color": "red",
+        "type": "attack",
+        "tier": "II",
+        "text": "Before the attack: You may move 1 space.\nTarget a unit adjacent to you.\nAfter the attack: If you did not move before the attack, you may move 1 space.",
+        "alternative": false
+    },
+    {
+        "id": "tig-green-ii-pick-pocket",
+        "name": "Pick Pocket",
+        "color": "green",
+        "type": "skill",
+        "tier": "II",
+        "text": "Move up to 2 spaces.\nTake 1 coin from an enemy hero adjacent to you; if you do, you may move 1 space.",
+        "alternative": false
+    },
+    {
+        "id": "tig-blue-ii-parry",
+        "name": "Parry",
+        "color": "blue",
+        "type": "defense",
+        "tier": "II",
+        "text": "Block a non-ranged attack.\nThe attacker discards a card, if able.",
+        "alternative": true
+    },
+    {
+        "id": "tig-red-ii-backstab",
+        "name": "Backstab",
+        "color": "red",
+        "type": "attack",
+        "tier": "II",
+        "text": "Target a unit adjacent to you; if a friendly unit is adjacent to the target, +2 ::attack:: Attack.\n_(A “friendly unit” is another hero or a minion on your team.)_",
+        "alternative": true
+    },
+    {
+        "id": "tig-green-ii-poisoned-dagger",
+        "name": "Poisoned Dagger",
+        "color": "green",
+        "type": "skill - ranged",
+        "tier": "II",
+        "text": "Give a hero in range a ::marker_poison:: poison marker.\nThe hero with a poison marker has -1 ::initiative:: Initiative, -1 ::attack:: Attack, and -1 ::defense:: Defense.",
+        "alternative": true
+    },
+    {
+        "id": "tig-blue-iii-evade",
+        "name": "Evade",
+        "color": "blue",
+        "type": "defense",
+        "tier": "III",
+        "text": "Block a ranged attack.\nYou may move 1 space. You may retrieve your resolved or discarded basic skill card.",
+        "alternative": false
+    },
+    {
+        "id": "tig-red-iii-leaping-strike",
+        "name": "Leaping Strike",
+        "color": "red",
+        "type": "attack",
+        "tier": "III",
+        "text": "Before the attack: You may move 1 space.\nTarget a unit adjacent to you.\nAfter the attack: You may move 1 space.",
+        "alternative": false
+    },
+    {
+        "id": "tig-green-iii-master-thief",
+        "name": "Master Thief",
+        "color": "green",
+        "type": "skill",
+        "tier": "III",
+        "text": "Move up to 2 spaces.  Take 1 or 2 coins from an enemy hero adjacent to you;\nif you do, you may move up to 2 spaces.",
+        "alternative": false
+    },
+    {
+        "id": "tig-blue-iii-riposte",
+        "name": "Riposte",
+        "color": "blue",
+        "type": "defense",
+        "tier": "III",
+        "text": "Block a non-ranged attack. The attacker discards a card, or is defeated.",
+        "alternative": true
+    },
+    {
+        "id": "tig-red-iii-backstab-with-a-ballista",
+        "name": "Backstab with a Ballista",
+        "color": "red",
+        "type": "attack - ranged",
+        "tier": "III",
+        "text": "Target a unit in range;\nif a friendly unit is adjacent to the target +2 ::attack:: Attack, and the target cannot perform a primary action to defend.",
+        "alternative": true
+    },
+    {
+        "id": "tig-green-iii-poisoned-dart",
+        "name": "Poisoned Dart",
+        "color": "green",
+        "type": "skill - ranged",
+        "tier": "III",
+        "text": "Give a hero in range a ::marker_poison:: poison marker.\nThe hero with a poison marker has -2 ::initiative:: Initiative, -2 ::attack:: Attack, and -2 ::defense:: Defense.",
+        "alternative": true
     }
 ]
