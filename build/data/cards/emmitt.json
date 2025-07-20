@@ -14,7 +14,7 @@
         "color": "gold",
         "type": "basic attack",
         "tier": "H",
-        "text": "Target a unit adjacent to you.\nAfter the attack: **Next turn:** Heroes with lower initiative act before heroes with higher initiative. This effect ignores immunity.",
+        "text": "Target a hero adjacent to you.\nAfter the attack: **Next turn:** Heroes with lower initiative act before heroes with higher initiative. This effect ignores immunity.",
         "alternative": false
     },
     {
