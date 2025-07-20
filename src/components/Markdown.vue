@@ -57,12 +57,16 @@ const renderedHtml = computed(() => toMarkdown(props.text));
 </script>
 
 <template>
-    <span class="markdown-container" v-html="renderedHtml" />
+    <span class="markdown-container" :class="{ 'contain': !inline }" v-html="renderedHtml" />
 </template>
 
 <style lang="scss">
 .markdown-container {
     line-height: 1.275rem;
+
+    &.contain {
+        display: inline-block;
+    }
 
     ul {
         list-style: disc;

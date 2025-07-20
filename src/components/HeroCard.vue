@@ -33,14 +33,13 @@ function processCardType(type: Card['type']) {
 </script>
 
 <template>
-    <div class="hero-card-details" :class="{ [`hero-card-color-${card.color}`]: true, 'has-faq': hasFaq }"
-        @click="showFAQs()">
-        <h2 class="hero-card-name">{{ card.name }}</h2>
+    <div class="hero-card" :class="{ [`hero-card-color-${card.color}`]: true, 'has-faq': hasFaq }" @click="showFAQs()">
+        <div class="hero-card-name">{{ card.name }}</div>
         <div v-if="card.tier" class="hero-card-tier">{{ card.tier }}</div>
-        <div class="hero-card-effect-type">
+        <div class="hero-card-type">
             {{ processCardType(card.type) }}
         </div>
-        <div class="hero-card-effect-text">
+        <div class="hero-card-text">
             <Markdown :text="$t(card.text)" />
         </div>
     </div>
@@ -48,23 +47,79 @@ function processCardType(type: Card['type']) {
 
 
 <style lang="scss">
-.hero-card-details {
-    flex: auto;
-    flex-direction: column;
+.hero-card {
+    &.hero-card-color-y {
+        --card-background-primary: var(--color-card-y-primary);
+        --card-background-secondary: var(--color-card-y-secondary);
+    }
 
-    max-width: 50vw;
-    min-width: 275px;
+    &.hero-card-color-s {
+        --card-background-primary: var(--color-card-s-primary);
+        --card-background-secondary: var(--color-card-s-secondary);
+    }
+
+    &.hero-card-color-r {
+        --card-background-primary: var(--color-card-r-primary);
+        --card-background-secondary: var(--color-card-r-secondary);
+    }
+
+    &.hero-card-color-g {
+        --card-background-primary: var(--color-card-g-primary);
+        --card-background-secondary: var(--color-card-g-secondary);
+    }
+
+    &.hero-card-color-b {
+        --card-background-primary: var(--color-card-b-primary);
+        --card-background-secondary: var(--color-card-b-secondary);
+    }
+
+    &.hero-card-color-u {
+        --card-background-primary: var(--color-card-u-primary);
+        --card-background-secondary: var(--color-card-u-secondary);
+    }
 
     position: relative;
-
+    flex: auto;
+    flex-direction: column;
     transition: .2s ease;
 
-    margin: 0.75em;
-    padding: 1em;
-    border: 1px solid #000;
-    border-radius: 1em;
+    max-width: 75vw;
+    min-width: 275px;
 
-    color: var(--color-text-dark);
+    border: 1px solid #000;
+
+    border-radius: 1em;
+    // background: var(--color-background);
+
+    --card-bg-spacing: 2em;
+    --card-gb-dark: #2f2e31;
+    --card-gb-light: var(--color-background-mute);
+    --card-gb-separator: #ddd;
+    background-image: linear-gradient(to bottom,
+        var(--card-gb-dark) 0,
+        var(--card-gb-dark) var(--card-bg-spacing),
+        var(--card-gb-separator) var(--card-bg-spacing),
+        var(--card-gb-separator) calc(var(--card-bg-spacing) + 1.3px),
+        var(--card-gb-light) calc(var(--card-bg-spacing) + 1.3px),
+        var(--card-gb-light) calc(100% - var(--card-bg-spacing) - 1.3px),
+        var(--card-gb-separator) calc(100% - var(--card-bg-spacing) - 1.3px),
+        var(--card-gb-separator) calc(100% - var(--card-bg-spacing)),
+        var(--card-gb-dark) calc(100% - var(--card-bg-spacing)),
+        var(--card-gb-dark) 100%);
+
+    color: var(--card-text-color);
+
+    padding: 1em .75em;
+    margin: 0.75em 0.5em;
+
+    @media (max-width: 1280px) {
+        padding: 0.75em 1em;
+        margin: 0.75em 0.25em;
+    }
+
+    @media (max-width: 480px) {
+        margin: 0.75em 0.25em;
+    }
 
     &.has-faq {
         cursor: pointer;
@@ -75,15 +130,13 @@ function processCardType(type: Card['type']) {
             top: -0.5em;
             left: -0.5em;
 
-            /* Orange badge */
-            // border: 1px solid rgba(0, 0, 0, .6);
-            background-color: rgba(243, 156, 18, .75);
+            background-color: rgba(255, 169, 31, 0.75);
             color: var(--color-text);
-            text-shadow: 0 0 1px rgb(119, 73, 0);
+            text-shadow: 0 0 1px rgb(95, 59, 0);
 
             font-weight: bold;
-            font-size: .85em;
-            padding: 0.3em 0.5em;
+            font-size: 1em;
+            padding: 0.25em 0.4em 0.3em 0.4em;
             border-radius: 50%;
             box-shadow: 0 0 2px rgba(0, 0, 0, 0.75);
             z-index: 1;
@@ -96,114 +149,97 @@ function processCardType(type: Card['type']) {
         }
     }
 
-    @media (max-width: 1280px) {
-        padding: 0.75em;
-        margin: 0.75em 0.5em;
-    }
-
-    &.hero-card-color-y {
-        background: #e3c100;
-        background: linear-gradient(180deg, rgb(223, 189, 0) 0%, rgb(255, 228, 75) 75%);
-    }
-
-    &.hero-card-color-s {
-        background: #b0b0b0;
-        background: linear-gradient(180deg, rgb(158, 158, 158) 0%, rgb(209, 209, 209) 75%);
-    }
-
-    &.hero-card-color-r {
-        background: #cc2f2f;
-        background: linear-gradient(180deg, rgb(204, 47, 47) 0%, rgba(255, 89, 89, 1) 75%);
-    }
-
-    &.hero-card-color-g {
-        background: #1dab1d;
-        background: linear-gradient(180deg, rgb(29, 171, 29) 0%, rgba(67, 217, 67, 1) 75%);
-    }
-
-    &.hero-card-color-b {
-        background: #283db5;
-        background: linear-gradient(180deg, rgb(57, 81, 212) 0%, rgb(102, 124, 247) 75%);
-    }
-
-    &.hero-card-color-u {
-        background: #1c0333;
-        background: linear-gradient(180deg, rgb(33, 3, 61) 0%, rgb(104, 73, 119) 38%, rgb(140, 107, 156) 65%);
-
-        .hero-card-name {
-            color: white;
-        }
-    }
-
-    .hero-card-attribute-value {
-        margin: .25em 0;
-        width: 1.65em;
-        text-align: center;
-        font-size: 1.5em;
-        font-weight: bold;
-        border: 1px solid #000;
-        border-radius: .5rem;
-
-        background-color: rgba(255, 255, 255, 0.75);
-    }
-
-    .hero-card-attribute-value.attribute-initiative {
-        margin-top: 0;
-        margin-bottom: 1.25em;
-    }
-
     .hero-card-name {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 1.8em;
+
         position: relative;
+        font-family: 'ModestoPoster', serif;
+        font-size: 1.6em;
 
-        text-align: center;
-        font-weight: 600;
-        font-size: 1.75em;
-        line-height: 1.25em;
+        color: var(--color-text-dark);
+        text-shadow: 0 0 3px #FFFFFF;
+        background: #cfccc2;
+        background: linear-gradient(180deg, #dbdad5 0%, #b7b4ae 45%, #b7b4ae 55%, #dbdad5 100%);
 
-        color: var(--color-heading-dark);
+        border: 2px solid #2b2b2b;
+        border-radius: 1em;
+        box-shadow:
+            inset 0 0 4px #00000066,
+            0 4px 8px #00000033;
+        margin-bottom: .5em;
 
-        top: -5px;
-        left: -5px;
-        padding-left: 5px;
-        padding-top: .3em;
-
-        border-top-left-radius: .25em;
-        border-bottom-left-radius: .25em;
+        white-space: pre;
+        padding: 0 .15em;
     }
 
     .hero-card-tier {
         position: absolute;
-        top: .25em;
-        right: .25em;
 
-        width: 1.75em;
-        height: 1.5em;
+        top: -0.2em;
+        right: -0.2em;
 
-        line-height: 1.4em;
+        width: 2em;
+        height: 1.75em;
+
+        line-height: 1.6em;
         font-weight: bold;
         text-align: center;
 
         border-radius: .6em;
-        box-shadow: 0 0 3px #e0e0b8;
+        box-shadow: 0 0 3px rgba(255, 255, 255, .5);
 
         background-color: var(--color-background);
         color: var(--color-text);
 
     }
 
-    .hero-card-effect-type {
+    .hero-card-type {
+        --r: 1em;
+
+        line-height: 1.6em;
+        padding-inline: .5em;
+        border-inline: var(--r) solid #0000;
+        border-radius: calc(2*var(--r)) calc(2*var(--r)) 0 0/var(--r);
+        mask:
+            radial-gradient(var(--r) at var(--r) 0, #0000 98%, #000 101%) calc(-1*var(--r)) 100%/100% var(--r) repeat-x,
+            conic-gradient(#000 0 0) padding-box;
+        background: var(--card-background-primary) border-box;
+
+        width: fit-content;
+        min-width: 60%;
         text-align: center;
-        margin-bottom: .25em;
-
-        border-top: 1px solid rgba(0, 0, 0, .75);
-        border-bottom: 1px solid rgba(0, 0, 0, .75);
-
-        background: radial-gradient(circle, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 95%);
+        padding: 0 1.5em;
+        font-family: 'ModestoPoster';
+        font-size: 1.15em;
+        color: #FFFFFF;
+        text-shadow: 0 0 8px #000000;
+        margin: 0 auto -1px auto;
+        z-index: 1;
     }
 
-    .hero-card-effect-text {
-        // ...
-    }
+    .hero-card-text {
+        color: #000;
+        text-align: center;
+        padding: .75em .4em;
 
+        border-top: 1px solid #000;
+        box-shadow: 1px 0 2px 1px #FFF;
+
+        background: radial-gradient(circle, var(--card-background-secondary) 20%, rgb(223, 220, 215) 97%);
+
+        border-radius: .75em;
+        border: 1px solid #000;
+        box-shadow:
+            inset 3px 3px 2px var(--card-background-primary),
+            inset -3px 3px 2px var(--card-background-primary),
+            1px 4px 3px rgba(0, 0, 0, .5);
+
+        ul {
+            text-align: left;
+        }
+    }
 }
 </style>

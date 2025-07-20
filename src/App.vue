@@ -63,7 +63,7 @@ onMounted(async () => {
             </RouterLink>
 
 
-            <div style="position: absolute; top: 3px; right: 5px;">
+            <div style="position: absolute; top: 2px; right: 8px;">
                 <LanguageSwitcher />
             </div>
 
@@ -89,115 +89,115 @@ header {
     text-align: center;
 
     width: 100%;
-        position: sticky;
-        top: 0;
-        background: rgba(var(--color-background-soft-rgb), .8);
+    position: sticky;
+    top: 0;
+    background: rgba(var(--color-background-soft-rgb), .8);
 
-        z-index: 10;
-        border-bottom: 1px solid black;
-        box-shadow: 0 1px 0 rgba(180, 180, 180, .5);
+    z-index: 10;
+    border-bottom: 1px solid black;
+    box-shadow: 0 1px 0 rgba(180, 180, 180, .5);
 
-        .wrapper {
-            display: flex;
-            place-items: flex-start;
-            flex-wrap: wrap;
+    .wrapper {
+        display: flex;
+        place-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        display: inline-block;
+    }
+
+    nav {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        background: radial-gradient(circle, rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 95%);
+
+        @media (max-width: 500px) {
+            text-align: left;
+            padding-left: 1em;
         }
 
-        .logo {
+        a {
             display: inline-block;
-        }
+            height: 100%;
+            line-height: 2rem;
+            padding: 0 .75rem;
+            border-left: 1px solid var(--color-border);
+            vertical-align: top;
 
-            nav {
-                width: 100%;
-                height: 100%;
-                text-align: center;
-                background: radial-gradient(circle, rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 95%);
+            &.disabled {
+                opacity: 0.5;
+                pointer-events: none;
+            }
 
-                @media (max-width: 500px) {
-                    text-align: left;
-                    padding-left: 1em;
-                }
+            &.multi-line {
+                padding-top: .15em;
+                line-height: 1rem;
+            }
 
-                a {
-                    display: inline-block;
-                    height: 100%;
-                    line-height: 2rem;
-                    padding: 0 .75rem;
-                    border-left: 1px solid var(--color-border);
-                    vertical-align: top;
+            &.router-link-exact-active {
+                color: var(--color-text);
+            }
 
-                    &.disabled {
-                        opacity: 0.5;
-                        pointer-events: none;
-                    }
+            &.router-link-exact-active:hover {
+                background-color: transparent;
+            }
 
-                    &.multi-line {
-                        padding-top: .15em;
-                        line-height: 1rem;
-                    }
+            &:first-of-type {
+                border: 0;
+            }
 
-                    &.router-link-exact-active {
-                        color: var(--color-text);
-                    }
+            .selected-hero-name {
+                font-size: .75em;
 
-                    &.router-link-exact-active:hover {
-                        background-color: transparent;
-                    }
-
-                    &:first-of-type {
-                        border: 0;
-                    }
-
-                    .selected-hero-name {
-                        font-size: .75em;
-
-                    }
             }
         }
     }
+}
 
-    .content {
-        position: relative;
-        transition: 0.2s ease;
-        padding: 1rem 2rem 2rem 2rem;
+.content {
+    position: relative;
+    transition: 0.2s ease;
+    padding: 1rem 1rem 2rem 1rem;
 
-        @media (max-width: 1280px) {
-            padding: 1rem 1rem 1.5rem;
-        }
-
-        @media (max-width: 900px) {
-            padding: 1rem .5rem 1.5rem;
-        }
-
-        @media (max-width: 600px) {
-            padding: 1rem .25rem 1.5rem;
-        }
-
-        @media (max-width: 480px) {
-            padding: .5rem .175rem 1.5rem;
-        }
-
-        .footer {
-            position: absolute;
-            bottom: 3px;
-            right: 1.25em;
-            font-size: .6rem;
-            color: var(--color-border);
-        }
+    @media (max-width: 1280px) {
+        padding: 1rem 1rem 1.5rem;
     }
 
-    .debug {
-        position: fixed;
-        top: 5px;
-        right: 5px;
-        z-index: 20;
-
-        opacity: .75;
-
-        background: var(--color-background);
-        border: 1px solid var(--color-border);
-        padding: 4px 6px;
-        border-radius: 1em;
-        font-size: 12px;
+    @media (max-width: 900px) {
+        padding: 1rem .5rem 1.5rem;
     }
+
+    @media (max-width: 600px) {
+        padding: 1rem .25rem 1.5rem;
+    }
+
+    @media (max-width: 480px) {
+        padding: .5rem .175rem 1.5rem;
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 3px;
+        right: 1.25em;
+        font-size: .6rem;
+        color: var(--color-border);
+    }
+}
+
+.debug {
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    z-index: 20;
+
+    opacity: .75;
+
+    background: var(--color-background);
+    border: 1px solid var(--color-border);
+    padding: 4px 6px;
+    border-radius: 1em;
+    font-size: 12px;
+}
 </style>

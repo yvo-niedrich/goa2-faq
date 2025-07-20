@@ -1,35 +1,35 @@
 <script lang="ts" setup>
-    import { ref, onMounted, onBeforeUnmount } from 'vue';
-    import { useLanguageStore, locales } from '@/stores/language'
-    import { useViewport } from '@/viewport';
+import { ref, onMounted, onBeforeUnmount } from 'vue';
+import { useLanguageStore, locales } from '@/stores/language'
+import { useViewport } from '@/viewport';
 
-    const store = useLanguageStore();
-    const open = ref(false);
-    const dropdownRef = ref(null);
-    const { isMobile } = useViewport();
+const store = useLanguageStore();
+const open = ref(false);
+const dropdownRef = ref(null);
+const { isMobile } = useViewport();
 
-    function toggle() {
-        open.value = !open.value;
-    }
+function toggle() {
+    open.value = !open.value;
+}
 
-    function select(code: string) {
-        store.language = code;
+function select(code: string) {
+    store.language = code;
+    open.value = false;
+}
+
+function handleClickOutside(event) {
+    if (dropdownRef.value && !dropdownRef.value.contains(event.target)) {
         open.value = false;
     }
+}
 
-    function handleClickOutside(event) {
-        if (dropdownRef.value && !dropdownRef.value.contains(event.target)) {
-            open.value = false;
-        }
-    }
+onMounted(() => {
+    document.addEventListener('click', handleClickOutside);
+});
 
-    onMounted(() => {
-        document.addEventListener('click', handleClickOutside);
-    });
-
-    onBeforeUnmount(() => {
-        document.removeEventListener('click', handleClickOutside);
-    });
+onBeforeUnmount(() => {
+    document.removeEventListener('click', handleClickOutside);
+});
 </script>
 
 <template>
@@ -55,7 +55,8 @@
     position: relative;
     display: inline-block;
     font-family: sans-serif;
-button {
+
+    button {
         line-height: 1.15rem;
     }
 }
@@ -64,7 +65,7 @@ button {
     display: flex;
     align-items: center;
     gap: 0.5em;
-    padding: 0.4em 0.8em;
+    padding: 0.5em 0.8em;
     background-color: var(--color-background-mute);
     border: 1px solid var(--color-border);
     border-radius: 4px;
@@ -86,6 +87,7 @@ button {
     border: 1px solid var(--color-border);
     border-radius: 4px;
     margin-top: 0.2em;
+    padding-bottom: .15em;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
     z-index: 1000;
 }
@@ -94,7 +96,7 @@ button {
     display: flex;
     align-items: center;
     gap: 0.5em;
-    padding: 0.4em 0.8em;
+    padding: 0.5em 0.8em;
     width: 100%;
     border: none;
     background: none;
@@ -118,14 +120,16 @@ button {
 }
 
 .flag {
-    font-size: 1.2em;
-@media (max-width: 768px) {
-        font-size: 1.5em;
+    font-size: 1.4em;
+
+    @media (max-width: 768px) {
+        font-size: 1.8em;
+        padding: 0 .25em 0 .1em;
     }
 }
 
 .label {
-    font-size: 0.9em;
+    font-size: 1em;
 }
 
 .chevron {

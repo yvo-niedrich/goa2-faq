@@ -1,8 +1,8 @@
 <script setup lang="ts">
-    import { useViewport } from '@/viewport';
-    import { computed } from 'vue';
-    import HeroStat from './HeroStat.vue';
-    import HeroIcon from './icons/HeroIcon.vue';
+import { useViewport } from '@/viewport';
+import { computed } from 'vue';
+import HeroStat from './HeroStat.vue';
+import HeroIcon from './icons/HeroIcon.vue';
 
 const props = defineProps<{ hero: Hero; portraitMin?: number; level?: number }>();
 const { isTablet, isDesktop, isMobileHorizontal, isMobileVertical } = useViewport();
@@ -55,102 +55,102 @@ const portraitHeight = computed(() => Math.max(props.portraitMin ?? 0, (() => {
     padding: 1em;
 
     display: grid;
-        grid-template-columns: auto 1fr;
+    grid-template-columns: auto 1fr;
+
+    @media (max-width: 720px) {
+        font-size: .85em;
+    }
+
+    @media (max-width: 500px) {
+        padding: 0.6em .75em;
+    }
+
+    h2 {
+        position: relative;
+        border-bottom: 1px solid gray;
 
         @media (max-width: 720px) {
-            font-size: .85em;
+            margin-top: -.2em;
         }
 
-        @media (max-width: 500px) {
-            padding: 0.6em .75em;
+        .hero-class {
+            color: var(--color-text-highlight);
+            font-style: italic;
+            font-weight: 200;
+            padding-left: .75em;
         }
 
-        h2 {
-            position: relative;
-            border-bottom: 1px solid gray;
+        .hero-level {
+            padding-left: 1em;
+            font-weight: bold;
+            font-size: .6em;
 
-            @media (max-width: 720px) {
-                margin-top: -.2em;
+            text-align: right;
+
+            @media (max-width: 500px) {
+                padding-left: .5em;
             }
 
-            .hero-class {
-                color: var(--color-text-highlight);
-                font-style: italic;
-                font-weight: 200;
-                padding-left: .75em;
+            &::before {
+                content: '(LVL ';
             }
 
-                        .hero-level {
-                            padding-left: 1em;
-                            font-weight: bold;
-                            font-size: .6em;
-            
-                            text-align: right;
-            
-                            @media (max-width: 500px) {
-                                padding-left: .5em;
-                            }
-            
-                            &::before {
-                                content: '(LVL ';
-                            }
-            
-                            &::after {
-                                content: ')';
-                            }
-                        }
-            
-                        .hero-expansion {
-                            position: absolute;
-                            right: 0;
-                            font-size: .65em;
-                            color: var(--color-text-muted);
-                            opacity: .5;
-                        }
-
-            .hero-complexity {
-                position: absolute;
-                top: 0em;
-                right: .5em;
-
-
-                color: yellow;
-                text-shadow: 0 0 2px #000;
-                font-size: 1.25em;
-                line-height: 1em;
-
-                @media (max-width: 500px) {
-                    right: 0;
-                    font-size: 1.1em;
-                }
+            &::after {
+                content: ')';
             }
-
-
         }
 
-        .hero-stats {
-            transition: .5 ease-out;
-            margin: 1em 2em;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            column-gap: 10%;
-
-            @media (max-width: 1180px) {
-                margin: .75em 1.5em;
-                column-gap: 7.5%;
-            }
-
-
-            @media (max-width: 920px) {
-                margin: .75em .5em;
-                column-gap: 3%;
-            }
-
-            @media (max-width: 720px) {
-                grid-template-columns: 1fr;
-                margin: .5em .25em;
-            }
-
+        .hero-expansion {
+            position: absolute;
+            right: 0;
+            font-size: .65em;
+            color: var(--color-text-muted);
+            opacity: .5;
         }
+
+        .hero-complexity {
+            position: absolute;
+            top: 0em;
+            right: .5em;
+
+
+            color: yellow;
+            text-shadow: 0 0 2px #000;
+            font-size: 1.25em;
+            line-height: 1em;
+
+            @media (max-width: 500px) {
+                right: 0;
+                font-size: 1.1em;
+            }
+        }
+
+
     }
+
+    .hero-stats {
+        transition: .5 ease-out;
+        margin: 1em 2em;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 10%;
+
+        @media (max-width: 1180px) {
+            margin: .75em 1.5em;
+            column-gap: 7.5%;
+        }
+
+
+        @media (max-width: 920px) {
+            margin: .75em .5em;
+            column-gap: 3%;
+        }
+
+        @media (max-width: 720px) {
+            grid-template-columns: 1fr;
+            margin: .5em .25em;
+        }
+
+    }
+}
 </style>
