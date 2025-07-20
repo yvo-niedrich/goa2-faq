@@ -13,6 +13,7 @@ const supported_icons = [
     'marker_poison',
     'movement',
     'range',
+    'radius',
     'rune_anvil', // TODO: missing
     'rune_axe', // TODO: missing
     'rune_bird', // TODO: missing
