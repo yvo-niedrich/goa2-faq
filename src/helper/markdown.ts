@@ -34,7 +34,7 @@ renderer.image = ({ href, title, text }) => {
             tabindex="0"
             role="button"
             style="--icon-url: url('${href}')"
-            onclick="this.classList.toggle('show-preview')">
+            onclick="event.stopPropagation(); this.classList.toggle('show-preview')">
             <img src="${href}" alt="${text}" class="inline-icon"${titleAttr} />
         </span>`
         : `<img src="${href}" alt="${text}"${titleAttr} />`;
