@@ -1,0 +1,173 @@
+[
+    {
+        "id": "bai-gold-dead-or-alive",
+        "name": "Dead or Alive",
+        "color": "gold",
+        "type": "basic attack",
+        "tier": null,
+        "text": "Target a unit adjacent to you.\nAfter the attack: You may give an enemy hero in radius the ::marker_bounty:: Bounty marker.\nA hero with the Bounty marker spends 1 additional ::life_counters:: life counter when defeated.",
+        "alternative": false
+    },
+    {
+        "id": "bai-gold-h-side-quest",
+        "name": "Side Quest",
+        "color": "gold",
+        "type": "basic skill",
+        "tier": "H",
+        "text": "If you are adjacent to an enemy unit, give a hero in radius a ::marker_bounty:: Bounty marker.\nA hero with the Bounty marker spends 1 additional ::life_counters:: life counter when defeated.",
+        "alternative": false
+    },
+    {
+        "id": "bai-silver-get-over-here-",
+        "name": "Get over here!",
+        "color": "silver",
+        "type": "basic skill - ranged",
+        "tier": null,
+        "text": "Target a unit or a token in range and in a straight line, with no obstacles between you and the target. Move that target towards you in a straight line, until you are adjacent.",
+        "alternative": false
+    },
+    {
+        "id": "bai-purple-iv-a-complicated-profession",
+        "name": "A Complicated Profession",
+        "color": "purple",
+        "type": "ultimate",
+        "tier": "IV",
+        "text": "After you give a hero the ::marker_bounty:: Bounty marker, that hero discards a card.",
+        "alternative": false
+    },
+    {
+        "id": "bai-blue-i-a-game-of-chance",
+        "name": "A Game of Chance",
+        "color": "blue",
+        "type": "skill",
+        "tier": "I",
+        "text": "An enemy hero in radius with two or more cards in hand chooses one of those cards.\nGuess that card's color, then reveal it.\nIf you guessed correctly, discard that card;\notherwise you gain 1 coin.\n_(You can only guess colors that could be in that player's hand.)_",
+        "alternative": false
+    },
+    {
+        "id": "bai-red-i-light-crossbow",
+        "name": "Light Crossbow",
+        "color": "red",
+        "type": "attack - ranged",
+        "tier": "I",
+        "text": "Target a unit in range and in a straight line with no other units or terrain between you.",
+        "alternative": false
+    },
+    {
+        "id": "bai-green-i-close-call",
+        "name": "Close Call",
+        "color": "green",
+        "type": "defense",
+        "tier": "I",
+        "text": "If the hero in play has a ::marker_bounty:: Bounty marker, block the attack and that hero gives the marker to you.\n_(The marker's effect is applied to you.)_",
+        "alternative": false
+    },
+    {
+        "id": "bai-blue-ii-dead-mans-hand",
+        "name": "Dead Man's Hand",
+        "color": "blue",
+        "type": "skill",
+        "tier": "II",
+        "text": "An enemy hero in radius with two or more cards in hand chooses one of those cards.\nGuess that card's color, then reveal it.\nIf you guessed correctly, discard that card;\notherwise you gain 2 coins.",
+        "alternative": false
+    },
+    {
+        "id": "bai-red-ii-heavy-crossbow",
+        "name": "Heavy Crossbow",
+        "color": "red",
+        "type": "attack - ranged",
+        "tier": "II",
+        "text": "Target a unit in range and in a straight line with no units or terrain between you.",
+        "alternative": false
+    },
+    {
+        "id": "bai-green-ii-narrow-escape",
+        "name": "Narrow Escape",
+        "color": "green",
+        "type": "defense",
+        "tier": "II",
+        "text": "If the hero in play has a ::marker_bounty:: Bounty marker, block the attack and retrieve the marker.",
+        "alternative": false
+    },
+    {
+        "id": "bai-blue-ii-drinking-buddies",
+        "name": "Drinking Buddies",
+        "color": "blue",
+        "type": "skill",
+        "tier": "II",
+        "text": "You may have a hero in radius retrieve a discarded card. If they do, you may also retrieve a discarded card.",
+        "alternative": true
+    },
+    {
+        "id": "bai-red-ii-hand-crossbow",
+        "name": "Hand Crossbow",
+        "color": "red",
+        "type": "attack - ranged",
+        "tier": "II",
+        "text": "**Choose one —**\n- Target a hero in range with a ::marker_bounty:: Bounty marker.\n- Target a unit adjacent to you.",
+        "alternative": true
+    },
+    {
+        "id": "bai-green-ii-vantage-point",
+        "name": "Vantage Point",
+        "color": "green",
+        "type": "movement",
+        "tier": "II",
+        "text": "Ignore obstacles. If a hero in play has a ::marker_bounty:: Bounty marker, +1 ::movement:: movement.",
+        "alternative": true
+    },
+    {
+        "id": "bai-blue-iii-were-not-done-yet-",
+        "name": "We're Not Done Yet!",
+        "color": "blue",
+        "type": "skill",
+        "tier": "III",
+        "text": "An enemy hero in radius with two or more cards in hand chooses one of those cards.\nGuess that card's color, then reveal it.\nIf you guessed correctly, discard that card;\notherwise may repeat once or gain 2 coins.",
+        "alternative": false
+    },
+    {
+        "id": "bai-red-iii-arbalest",
+        "name": "Arbalest",
+        "color": "red",
+        "type": "attack - ranged",
+        "tier": "III",
+        "text": "Target a unit in range and in a straight line with no units or terrain between you.",
+        "alternative": false
+    },
+    {
+        "id": "bai-green-iii-perfect-getaway",
+        "name": "Perfect Getaway",
+        "color": "green",
+        "type": "defense",
+        "tier": "III",
+        "text": "If the hero in play has a ::marker_bounty:: Bounty marker, block the attack.",
+        "alternative": false
+    },
+    {
+        "id": "bai-blue-iii-another-one-",
+        "name": "Another One!",
+        "color": "blue",
+        "type": "skill",
+        "tier": "III",
+        "text": "You may have a hero in radius retrieve a discarded card. If they do, you may also retrieve a discarded card.\n**End of turn:** May repeat once.",
+        "alternative": true
+    },
+    {
+        "id": "bai-red-iii-hunter-seeker",
+        "name": "Hunter-Seeker",
+        "color": "red",
+        "type": "attack - ranged",
+        "tier": "III",
+        "text": "**Choose one, or both,** on different targets —\n- Target a hero in range with a ::marker_bounty:: Bounty marker.\n- Target a unit adjacent to you.",
+        "alternative": true
+    },
+    {
+        "id": "bai-green-iii-high-ground",
+        "name": "High Ground",
+        "color": "green",
+        "type": "movement",
+        "tier": "III",
+        "text": "Ignore obstacles. If a hero in play has a ::marker_bounty:: Bounty marker, +2 ::movement:: movement.",
+        "alternative": true
+    }
+]

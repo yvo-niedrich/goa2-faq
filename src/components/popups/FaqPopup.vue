@@ -18,11 +18,15 @@ const records = computed(() => {
         <div v-if="records.length > 0" class="faq-overlay" @click.self="faqStore.close">
             <div class="faq-popup">
                 <button class="close-btn" @click="faqStore.close">×</button>
-                <div class="faq-scroll">
-                    <div v-for="(record, id) in records" :key="id" class="faq-record">
-                        <h3 class="question">{{ $t(record.question) }}</h3>
-                        <div class="answer">
-                            <Markdown :text="$t(record.answer)" />
+                <div class="scroll-container">
+                    <div class="faq-scroll">
+                        <div v-for="(record, id) in records" :key="id" class="faq-record">
+                            <h3 class="question">
+                                <Markdown :text="$t(record.question)" :inline="true" />
+                            </h3>
+                            <div class="answer">
+                                <Markdown :text="$t(record.answer)" />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -43,34 +47,86 @@ const records = computed(() => {
 }
 
 .faq-popup {
-    background: #202d33;
-    border: 1px solid #FFF;
+    background: var(--color-background);
+    border: 1px solid var(--color-border-hover);
     box-shadow: 0 0 10px 4px #000;
 
-    border-radius: 0.75rem;
-    padding: 1.5rem;
+    border-radius: 0.5rem;
+    padding: 1.25rem;
     max-width: 600px;
     width: 90%;
     max-height: 90vh;
     min-height: 15vh;
-    overflow: hidden;
     position: relative;
     display: flex;
     flex-direction: column;
 
+    .close-btn {
+        position: absolute;
+        top: -0.65em;
+        right: -0.65em;
+
+        transition: .5s ease-out;
+        cursor: pointer;
+
+        /* Orange badge */
+        outline: 0;
+        border: 1px solid var(--color-border-hover);
+        background-color: var(--color-background-soft);
+        color: var(--color-text-muted);
+        text-shadow: 0 0 1px #000000;
+
+        font-weight: bold;
+        vertical-align: top;
+        font-size: 1.8em;
+        padding: 0.1em 0.225em 0.2em 0.225em;
+        border-radius: 40%;
+        box-shadow: 0 0 8px #000000;
+        z-index: 1;
+        line-height: 1em;
+
+
+        &:hover {
+            color: var(--color-text);
+            background-color: var(--color-background-mute);
+            border: 1px solid var(--color-border-highlight);
+            box-shadow: 0 0 5px #000000;
+        }
+    }
+
+    .scroll-container {
+        flex: 1;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
 
     .faq-record {
         padding: 1em 0;
-        border-bottom: 1px dashed #999;
 
         &:first-of-type {
             padding-top: 0;
         }
 
-
         &:last-of-type {
             padding-bottom: 0;
-            border: none;
+        }
+
+        &:not(:last-of-type) {
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                /* or use top: 100% if you want it below the div */
+                left: 2.5%;
+                /* to match 95% width with centered alignment */
+                width: 95%;
+                height: 1px;
+                background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.75), rgba(0, 0, 0, 0));
+            }
         }
     }
 
@@ -95,29 +151,5 @@ const records = computed(() => {
     overflow-y: auto;
     flex: 1;
     padding-right: 0.5rem;
-}
-
-.close-btn {
-    top: .05rem;
-    right: .15rem;
-
-    margin: 0;
-    padding: .2em;
-    line-height: .75em;
-
-    position: absolute;
-    background: transparent;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: var(--color-text);
-
-    opacity: .5;
-    transition: 1s ease-out;
-
-    &:hover {
-        opacity: 1;
-        text-shadow: 1px 1px 3px #999;
-    }
 }
 </style>

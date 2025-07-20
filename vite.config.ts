@@ -9,7 +9,7 @@ import { VitePWA } from 'vite-plugin-pwa';
 
 const hash = (Math.random() + 1).toString(36).substring(2);
 
-// https://vite.dev/config/
+/* eslint-disable @typescript-eslint/no-require-imports */
 export default defineConfig({
     base: '/goa2-faq/',
 
@@ -37,26 +37,14 @@ export default defineConfig({
                 theme_color: '#689db4',
                 icons: [
                     {
-                        src: 'icons/icon-192x192.png',
+                        src: 'android-chrome-192x192.png',
                         sizes: '192x192',
                         type: 'image/png',
                     },
                     {
-                        src: 'icons/icon-256x256.png',
-                        sizes: '256x256',
+                        src: 'android-chrome-512x512.png',
+                        sizes: '512x512',
                         type: 'image/png',
-                    },
-                    {
-                        src: 'icons/icon-256x256.png',
-                        sizes: '256x256',
-                        type: 'image/png',
-                        purpose: 'any',
-                    },
-                    {
-                        src: 'icons/icon-256x256.png',
-                        sizes: '256x256',
-                        type: 'image/png',
-                        purpose: 'maskable',
                     },
                 ],
             },

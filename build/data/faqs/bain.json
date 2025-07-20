@@ -1,0 +1,10 @@
+{
+    "faq-bai-g0LnJfSb": {
+        "q": "What does a ::marker_bounty:: Bounty Marker from Bain’s Gold (Dead or Alive) do?",
+        "a": "A Bounty Marker doesn’t do anything by itself. If Bain’s enemy is defeated that round, they spend an additional life counter (and return the Marker). At the end of the round, the Bounty Marker is returned. If Bain is defeated, the Marker is not returned.",
+        "ref": [
+            "bai-gold-dead-or-alive",
+            "bai-gold-h-side-quest"
+        ]
+    }
+}

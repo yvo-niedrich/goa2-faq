@@ -1,0 +1,173 @@
+[
+    {
+        "id": "mra-gold-fissure",
+        "name": "Fissure",
+        "color": "gold",
+        "type": "basic attack",
+        "tier": null,
+        "text": "Target a unit adjacent to you.\nAfter the attack: Place a ::token_rock:: Rock token in each of the first three empty spaces in the straight line from you in the direction of the attack.",
+        "alternative": false
+    },
+    {
+        "id": "mra-gold-h-lesser-fissure",
+        "name": "Lesser Fissure",
+        "color": "gold",
+        "type": "basic attack",
+        "tier": "H",
+        "text": "Target a hero adjacent to you.\nAfter the attack: Place a ::token_rock:: Rock token in each of the first three empty spaces in the straight line from you in the direction of the attack.",
+        "alternative": false
+    },
+    {
+        "id": "mra-silver-stone-grip",
+        "name": "Stone Grip",
+        "color": "silver",
+        "type": "basic skill - ranged",
+        "tier": null,
+        "text": "Place exactly 3 ::token_rock:: Rock tokens into empty spaces adjacent to an enemy hero in range, and as far away from you as possible.",
+        "alternative": false
+    },
+    {
+        "id": "mra-red-i-seismic-slam",
+        "name": "Seismic Slam",
+        "color": "red",
+        "type": "skill",
+        "tier": "I",
+        "text": "An enemy hero in radius adjacent to terrain, or to a ::token_rock:: Rock token, discards a card, or is defeated.\n_(The ::attack:: secondary Attack action is non-ranged.)_",
+        "alternative": false
+    },
+    {
+        "id": "mra-blue-i-boulder-rush",
+        "name": "Boulder Rush",
+        "color": "blue",
+        "type": "skill",
+        "tier": "I",
+        "text": "Push a token, or an enemy unit, adjacent to you 1 or 2 spaces, ignoring obstacles;\nyou may move up to 2 spaces in the direction of the push, ignoring obstacles.",
+        "alternative": false
+    },
+    {
+        "id": "mra-green-i-treacherous-ground",
+        "name": "Treacherous Ground",
+        "color": "green",
+        "type": "skill - ranged",
+        "tier": "I",
+        "text": "You may move a unit in range 1 space to a space adjacent to terrain, or a ::token_rock:: Rock token.",
+        "alternative": false
+    },
+    {
+        "id": "mra-red-ii-seismic-assault",
+        "name": "Seismic Assault",
+        "color": "red",
+        "type": "skill",
+        "tier": "II",
+        "text": "An enemy hero in radius adjacent to terrain, or to a ::token_rock:: Rock token, discards a card, or is defeated.",
+        "alternative": false
+    },
+    {
+        "id": "mra-red-ii-stone-carapace",
+        "name": "Stone Carapace",
+        "color": "red",
+        "type": "movement",
+        "tier": "II",
+        "text": "**This round:** if you would discard a card from your hand, you may discard this card instead;\nyou may discard this card to perform its defense action, as if it was in your hand.",
+        "alternative": true
+    },
+    {
+        "id": "mra-green-ii-rockslide",
+        "name": "Rockslide",
+        "color": "green",
+        "type": "skill - ranged",
+        "tier": "II",
+        "text": "You may move a unit in range 1 space to a space adjacent to terrain, or a ::token_rock:: Rock token.",
+        "alternative": false
+    },
+    {
+        "id": "mra-green-ii-rolling-stone",
+        "name": "Rolling Stone",
+        "color": "green",
+        "type": "skill",
+        "tier": "II",
+        "text": "Move any number of spaces in a straight line, ignoring obstacles, without moving through more than one empty space.\n_(The starting space and the destination space do not count.)_",
+        "alternative": true
+    },
+    {
+        "id": "mra-blue-ii-boulder-blitz",
+        "name": "Boulder Blitz",
+        "color": "blue",
+        "type": "skill",
+        "tier": "II",
+        "text": "Push a token, or an enemy unit, adjacent to you 1, 2 or 3 spaces, ignoring obstacles;\nyou may move up to 3 spaces in the direction of the push, ignoring obstacles.",
+        "alternative": false
+    },
+    {
+        "id": "mra-blue-ii-stomping-step",
+        "name": "Stomping Step",
+        "color": "blue",
+        "type": "skill",
+        "tier": "II",
+        "text": "Move a unit in radius which is adjacent to terrain, or to a ::token_rock:: Rock token, 1 space.\nPlace a Rock token in the space it occupied.",
+        "alternative": true
+    },
+    {
+        "id": "mra-green-iii-avalanche",
+        "name": "Avalanche",
+        "color": "green",
+        "type": "skill - ranged",
+        "tier": "III",
+        "text": "You may move a unit in range 1 space to a space adjacent to terrain, or a ::token_rock:: Rock token.\nMay repeat once.",
+        "alternative": false
+    },
+    {
+        "id": "mra-green-iii-strolling-stone",
+        "name": "Strolling Stone",
+        "color": "green",
+        "type": "skill",
+        "tier": "III",
+        "text": "Move any number of spaces in a straight line, ignoring obstacles, without moving through more than two empty space.",
+        "alternative": true
+    },
+    {
+        "id": "mra-blue-iii-boulderdozer",
+        "name": "Boulderdozer",
+        "color": "blue",
+        "type": "skill",
+        "tier": "III",
+        "text": "Push a token, or an enemy unit, adjacent to you 1, 2, 3 or 4 spaces, ignoring obstacles;\nyou may move up to 4 spaces in the direction of the push, ignoring obstacles.",
+        "alternative": false
+    },
+    {
+        "id": "mra-blue-iii-ground-shaker",
+        "name": "Ground Shaker",
+        "color": "blue",
+        "type": "skill",
+        "tier": "III",
+        "text": "Move a unit in radius which is adjacent to terrain, or to a ::token_rock:: Rock token, 1 space.\nPlace a Rock token in the space it occupied.\nMay repeat once on a different target.",
+        "alternative": true
+    },
+    {
+        "id": "mra-red-iii-epicenter",
+        "name": "Epicenter",
+        "color": "red",
+        "type": "skill",
+        "tier": "III",
+        "text": "An enemy hero in radius adjacent to terrain, or to a ::token_rock:: Rock token, discards a card, or is defeated. May repeat once on a different target.",
+        "alternative": false
+    },
+    {
+        "id": "mra-red-iii-rock-solid",
+        "name": "Rock Solid",
+        "color": "red",
+        "type": "movement",
+        "tier": "III",
+        "text": "You may retrieve a discarded card.\n**This round:** if you would discard a card from your hand, you may discard this card instead;\nyou may discard this card to perform its defense action, as if it was in your hand.",
+        "alternative": true
+    },
+    {
+        "id": "mra-purple-iv-rock-and-a-hard-place",
+        "name": "Rock and a Hard Place",
+        "color": "purple",
+        "type": "ultimate",
+        "tier": "IV",
+        "text": "Once per turn, after you place one or more ::token_rock:: Rock tokens into one or more spaces adjacent to one or more enemy heroes, each of those heroes discards a card, if able.",
+        "alternative": false
+    }
+]

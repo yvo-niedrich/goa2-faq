@@ -1,8 +1,22 @@
 import { Expansion, expansions as allExpansions } from '@/types/Expansion';
 import { default as inferredHeroes } from './heroes.generated.json';
 
-/* eslint-disable  @typescript-eslint/no-explicit-any */
-export const heroes: { [id: string]: Hero } = inferredHeroes as any as { [id: string]: Hero };
+function filterHeroes(h: { [id: string]: Hero }): { [id: string]: Hero } {
+    // if (import.meta.env.DEV) return h;
+    const validatedExpansions = [
+        Expansion.Core,
+        Expansion.Devoted,
+        Expansion.Defiant,
+        Expansion.Wayward,
+    ];
+    return Object.fromEntries(
+        Object.entries(h).filter(([, value]) =>
+            validatedExpansions.includes(value.expansion as Expansion),
+        ),
+    );
+}
+
+export const heroes: { [id: string]: Hero } = filterHeroes(inferredHeroes as any);
 export const heroIds = Object.keys(heroes);
 
 const baseUrl = import.meta.env.BASE_URL;
@@ -80,6 +94,18 @@ export function sortCardsByColor(a: Card, b: Card) {
 }
 
 export function sortCardsByTier(a: Card, b: Card) {
-    if (!a.color) return -1;
-    return a.tier > b.tier ? 1 : -1;
+    return sortCardTiers(a.tier, b.tier);
 }
+
+export function sortCardTiers(a: Card['tier'], b: Card['tier']) {
+    if (a === b) return 0;
+    return (tierRanking[a] ?? 0) > (tierRanking[b] ?? 0) ? 1 : -1;
+}
+
+const tierRanking = {
+    I: 1,
+    II: 2,
+    III: 3,
+    IV: 4,
+    H: 5,
+};

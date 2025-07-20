@@ -8,11 +8,12 @@
     --color-background-soft: rgb(48, 68, 77);
     --color-background-mute: rgb(34, 49, 55);
     --color-background-highlight: rgb(82, 133, 155);
-    --color-background-hyperlink: rgba(0, 168, 109, .25);
+    --color-background-hyperlink: rgba(0, 168, 109, 0.25);
 
     --color-border: rgb(91, 120, 133);
     --color-border-shadow: rgb(48, 68, 77);
     --color-border-hover: rgb(100, 135, 151);
+    --color-border-highlight: rgb(161, 193, 207);
 
     --color-heading-bright-rgb: 175, 202, 255;
 

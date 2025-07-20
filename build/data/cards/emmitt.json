@@ -1,0 +1,173 @@
+[
+    {
+        "id": "emm-gold-reverse-time",
+        "name": "Reverse Time",
+        "color": "gold",
+        "type": "basic attack",
+        "tier": null,
+        "text": "Target a unit adjacent to you.\nAfter the attack: **Next turn:** Heroes with lower initiative act before heroes with higher initiative; this effect ignores immunity.\n_(Resolve ties as normal.)_",
+        "alternative": false
+    },
+    {
+        "id": "emm-gold-h-tear-in-time",
+        "name": "Tear in Time",
+        "color": "gold",
+        "type": "basic attack",
+        "tier": "H",
+        "text": "Target a hero adjacent to you.\nAfter the attack: **Next turn:** Heroes with lower initiative act before heroes with higher initiative. This effect ignores immunity.",
+        "alternative": false
+    },
+    {
+        "id": "emm-silver-unstable-timeline",
+        "name": "Unstable Timeline",
+        "color": "silver",
+        "type": "basic defense skill",
+        "tier": null,
+        "text": "Place 2 ::token_glitch:: Glitch tokens in radius, with at least two spaces between each token;\nif used as a defense, place 3 tokens instead.\nAn enemy hero in play chooses one of the Glitch tokens; you swap with that token.\n**End of turn:** Remove all Glitch tokens.",
+        "alternative": false
+    },
+    {
+        "id": "emm-purple-iv-alternative-timelines",
+        "name": "Alternative Timelines",
+        "color": "purple",
+        "type": "ultimate",
+        "tier": "IV",
+        "text": "You may play two cards each turn;\nif you do, after the cards are revealed, retrieve one of your unresolved cards.",
+        "alternative": false
+    },
+    {
+        "id": "emm-blue-i-time-snare",
+        "name": "Time Snare",
+        "color": "blue",
+        "type": "skill - ranged",
+        "tier": "I",
+        "text": "An enemy hero in range who has already resolved a card this turn discards a card, if able.",
+        "alternative": false
+    },
+    {
+        "id": "emm-red-i-temporal-punch",
+        "name": "Temporal Punch",
+        "color": "red",
+        "type": "attack",
+        "tier": "I",
+        "text": "Target a unit adjacent to you; when defending, the enemy hero must use the ::initiative:: Initiative value of their card and items instead of the ::defense:: Defense value of their card and items.\n_(Minion defense modifiers are applied as normal.)_",
+        "alternative": false
+    },
+    {
+        "id": "emm-green-i-time-walk",
+        "name": "Time Walk",
+        "color": "green",
+        "type": "skill - ranged",
+        "tier": "I",
+        "text": "Move an enemy hero in range, who remained in the same space since the last turn, 2 spaces in a straight line.",
+        "alternative": false
+    },
+    {
+        "id": "emm-blue-ii-time-trap",
+        "name": "Time Trap",
+        "color": "blue",
+        "type": "skill - ranged",
+        "tier": "II",
+        "text": "An enemy hero in range who has already resolved a card this turn discards a card, if able.",
+        "alternative": false
+    },
+    {
+        "id": "emm-blue-ii-time-loop",
+        "name": "Time Loop",
+        "color": "blue",
+        "type": "skill - ranged",
+        "tier": "II",
+        "text": "Swap with an enemy hero in range who has already resolved a card this turn.",
+        "alternative": true
+    },
+    {
+        "id": "emm-red-ii-temporal-slam",
+        "name": "Temporal Slam",
+        "color": "red",
+        "type": "attack",
+        "tier": "II",
+        "text": "Target a unit adjacent to you; when defending, the enemy hero must use the ::initiative:: Initiative value of their card and items instead of the ::defense:: Defense value of their card and items.",
+        "alternative": false
+    },
+    {
+        "id": "emm-red-ii-flashback",
+        "name": "Flashback",
+        "color": "red",
+        "type": "attack",
+        "tier": "II",
+        "text": "Target a unit adjacent to you.\nAfter the attack: You may place 3 ::token_glitch:: Glitch tokens in radius, with at least two spaces between each token;\nif you do, up to 1 enemy hero in radius swaps with a Glitch token of their choice.\n**End of turn:** Remove all Glitch tokens.",
+        "alternative": true
+    },
+    {
+        "id": "emm-green-ii-fast-forward",
+        "name": "Fast Forward",
+        "color": "green",
+        "type": "skill - ranged",
+        "tier": "II",
+        "text": "Move an enemy hero in range, who remained in the same space since the last turn, 2 spaces in a straight line.",
+        "alternative": false
+    },
+    {
+        "id": "emm-green-ii-time-capsule",
+        "name": "Time Capsule",
+        "color": "green",
+        "type": "skill",
+        "tier": "II",
+        "text": "You, and friendly heroes in radius, may retrieve all cards discarded this turn.",
+        "alternative": true
+    },
+    {
+        "id": "emm-blue-iii-time-bomb",
+        "name": "Time Bomb",
+        "color": "blue",
+        "type": "skill - ranged",
+        "tier": "III",
+        "text": "An enemy hero in range who has already resolved a card this turn discards a card, or is defeated.",
+        "alternative": false
+    },
+    {
+        "id": "emm-blue-iii-time-warp",
+        "name": "Time Warp",
+        "color": "blue",
+        "type": "skill - ranged",
+        "tier": "III",
+        "text": "**Choose one —**\n- Swap with an enemy hero in range who has already resolved a card this turn.\n- An enemy hero in range swaps their unresolved card with one of their resolved cards of their choice.",
+        "alternative": true
+    },
+    {
+        "id": "emm-red-iii-temporal-judgement",
+        "name": "Temporal Judgement",
+        "color": "red",
+        "type": "attack",
+        "tier": "III",
+        "text": "Target a unit adjacent to you; when defending, the enemy hero must use the ::initiative:: Initiative value of their card and items instead of the ::defense:: Defense value of their card and items.",
+        "alternative": false
+    },
+    {
+        "id": "emm-red-iii-deja-vu",
+        "name": "Deja Vu",
+        "color": "red",
+        "type": "attack",
+        "tier": "III",
+        "text": "Target a unit adjacent to you.\nAfter the attack: You may place 2 ::token_glitch:: Glitch tokens in radius, with at least two spaces between each token; if you do, up to 1 enemy hero in radius swaps with a Glitch token of their choice.\n**End of turn:** Remove all Glitch tokens.",
+        "alternative": true
+    },
+    {
+        "id": "emm-green-iii-back-to-the-future",
+        "name": "Back to the Future",
+        "color": "green",
+        "type": "skill - ranged",
+        "tier": "III",
+        "text": "**Choose one —**\n- Place a unit in range into the space where that unit was at the start of this turn.\n- Move an enemy hero in range, who remained in the same space since the last turn, 2 spaces in a straight line.",
+        "alternative": false
+    },
+    {
+        "id": "emm-green-iii-future-proof",
+        "name": "Future Proof",
+        "color": "green",
+        "type": "skill",
+        "tier": "III",
+        "text": "**Choose one —**\n- You, and friendly heroes in radius, may retrieve all cards discarded this turn.\n- **This turn:** Friendly heroes in radius are immune to enemy actions.",
+        "alternative": true
+    }
+]

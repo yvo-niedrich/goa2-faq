@@ -3,150 +3,171 @@
         "id": "xar-gold-cleave",
         "name": "Cleave",
         "color": "gold",
-        "type": "Basic Attack",
-        "text": "Target a unit adjacent to you.\nAfter the attack: May repeat once on a different enemy hero.\n(You may repeat even if the original target was a minion.)"
+        "type": "basic attack",
+        "tier": null,
+        "text": "Target a unit adjacent to you.\nAfter the attack: May repeat once on a different enemy hero.\n_(You may repeat even if the original target was a minion.)_",
+        "alternative": false
     },
     {
         "id": "xar-gold-h-desperate-cleave",
         "name": "Desperate Cleave",
         "color": "gold",
+        "type": "basic attack",
         "tier": "H",
-        "type": "Basic Attack",
-        "text": "Target a hero adjacent to you.\nAfter the attack: May repeat once on a different enemy hero."
+        "text": "Target a hero adjacent to you.\nAfter the attack: May repeat once on a different enemy hero.",
+        "alternative": false
     },
     {
         "id": "xar-silver-sirens-call",
         "name": "Siren's Call",
         "color": "silver",
-        "type": "Basic Skill - Ranged",
-        "text": "Target an enemy unit not adjacent to you and in range; if able, move the target up to 3 spaces to a space adjacent to you."
+        "type": "basic skill - ranged",
+        "tier": null,
+        "text": "Target an enemy unit not adjacent to you and in range; if able, move that unit up to 3 spaces to a space adjacent to you.",
+        "alternative": false
     },
     {
-        "id": "xar-ult-iv-metamorphosis",
+        "id": "xar-purple-iv-metamorphosis",
         "name": "Metamorphosis",
-        "color": "ultimate",
+        "color": "purple",
+        "type": "ultimate",
         "tier": "IV",
-        "type": "Ultimate",
-        "text": "Gain +1 Movement and +1 Initiative for each enemy unit adjacent to you. You may move through obstacles."
-    },
-    {
-        "id": "xar-green-i-charm",
-        "name": "Charm",
-        "color": "green",
-        "tier": "I",
-        "type": "Movement",
-        "text": "Before or after movement, you may move an enemy ranged minion in radius up to 2 spaces."
-    },
-    {
-        "id": "xar-green-ii-constrict",
-        "name": "Constrict",
-        "color": "green",
-        "tier": "II",
-        "type": "Skill",
-        "text": "**End of round:** Defeat an enemy melee minion adjacent to you.\n(Before the end of round minion battle.)"
-    },
-    {
-        "id": "xar-green-ii-control",
-        "name": "Control",
-        "color": "green",
-        "tier": "II",
-        "type": "Movement",
-        "text": "Before or after movement, you may move an enemy ranged or melee minion in radius up to 2 spaces."
-    },
-    {
-        "id": "xar-green-iii-final-embrace",
-        "name": "Final Embrace",
-        "color": "green",
-        "tier": "III",
-        "type": "Skill",
-        "text": "**End of round:** Defeat an enemy melee or ranged minion adjacent to you."
-    },
-    {
-        "id": "xar-green-iii-dominate",
-        "name": "Dominate",
-        "color": "green",
-        "tier": "III",
-        "type": "Movement",
-        "text": "Before or after movement, you may move an enemy minion in radius up to 2 spaces; ignore heavy minion immunity."
+        "text": "Gain +1 ::movement:: Movement and +1 ::initiative:: Initiative for each enemy unit adjacent to you.\nYou may move through obstacles.",
+        "alternative": false
     },
     {
         "id": "xar-blue-i-stone-gaze",
         "name": "Stone Gaze",
         "color": "blue",
+        "type": "skill",
         "tier": "I",
-        "type": "Skill",
-        "text": "**Next turn:** Enemy heroes in radius count as both heroes and terrain, and cannot perform movement actions. (If you move, the radius \"moves\" with you.)"
+        "text": "**Next turn:** Enemy heroes in radius count as both heroes and terrain, and cannot perform movement actions.\n_(If you move, the radius “moves” with you)_",
+        "alternative": false
+    },
+    {
+        "id": "xar-red-i-threatening-slash",
+        "name": "Threatening Slash",
+        "color": "red",
+        "type": "attack",
+        "tier": "I",
+        "text": "Target a unit adjacent to you.\n+1 ::attack:: Attack for each other enemy unit adjacent to you.\n_(Do not count the target when calculating the attack bonus.)_",
+        "alternative": false
+    },
+    {
+        "id": "xar-green-i-charm",
+        "name": "Charm",
+        "color": "green",
+        "type": "movement",
+        "tier": "I",
+        "text": "Before or after movement, you may move an enemy ranged minion in radius up to 2 spaces.",
+        "alternative": false
     },
     {
         "id": "xar-blue-ii-petrifying-stare",
         "name": "Petrifying Stare",
         "color": "blue",
+        "type": "skill",
         "tier": "II",
-        "type": "Skill",
-        "text": "**Next turn:** Enemy heroes in radius count as both heroes and terrain, and cannot perform movement actions."
+        "text": "**Next turn:** Enemy heroes in radius count as both heroes and terrain, and cannot perform movement actions.",
+        "alternative": false
+    },
+    {
+        "id": "xar-red-ii-deadly-swipe",
+        "name": "Deadly Swipe",
+        "color": "red",
+        "type": "attack",
+        "tier": "II",
+        "text": "Target a unit adjacent to you.\n+2 ::attack:: Attack for each other enemy unit adjacent to you.",
+        "alternative": false
+    },
+    {
+        "id": "xar-green-ii-control",
+        "name": "Control",
+        "color": "green",
+        "type": "movement",
+        "tier": "II",
+        "text": "Before or after movement, you may move an enemy ranged or melee minion in radius up to 2 spaces.",
+        "alternative": false
     },
     {
         "id": "xar-blue-ii-fresh-converts",
         "name": "Fresh Converts",
         "color": "blue",
+        "type": "skill",
         "tier": "II",
-        "type": "Skill",
-        "text": "If you are adjacent to an enemy minion, you may retrieve a discarded card."
+        "text": "If you are adjacent to an enemy minion, you may retrieve a discarded card.",
+        "alternative": true
+    },
+    {
+        "id": "xar-red-ii-long-thrust",
+        "name": "Long Thrust",
+        "color": "red",
+        "type": "attack - ranged",
+        "tier": "II",
+        "text": "Target a unit in range. +1 ::range:: Range for each enemy unit adjacent to you.",
+        "alternative": true
+    },
+    {
+        "id": "xar-green-ii-constrict",
+        "name": "Constrict",
+        "color": "green",
+        "type": "skill",
+        "tier": "II",
+        "text": "**End of round:** Defeat an enemy melee minion adjacent to you.\n_(Before the end of round minion battle.)_",
+        "alternative": true
     },
     {
         "id": "xar-blue-iii-turn-into-statues",
         "name": "Turn into Statues",
         "color": "blue",
+        "type": "skill",
         "tier": "III",
-        "type": "Skill",
-        "text": "**Next turn:** Enemy heroes in radius count as both heroes and terrain, and cannot perform movement actions."
+        "text": "**Next turn:** Enemy heroes in radius count as both heroes and terrain, and cannot perform movement actions.",
+        "alternative": false
+    },
+    {
+        "id": "xar-red-iii-lethal-spin",
+        "name": "Lethal Spin",
+        "color": "red",
+        "type": "attack",
+        "tier": "III",
+        "text": "Target a unit adjacent to you.\n+3 ::attack:: Attack for each other enemy unit adjacent to you.",
+        "alternative": false
+    },
+    {
+        "id": "xar-green-iii-dominate",
+        "name": "Dominate",
+        "color": "green",
+        "type": "movement",
+        "tier": "III",
+        "text": "Before or after movement, you may move an enemy minion in radius up to 2 spaces;\nignore heavy minion immunity.",
+        "alternative": false
     },
     {
         "id": "xar-blue-iii-devoted-followers",
         "name": "Devoted Followers",
         "color": "blue",
+        "type": "skill",
         "tier": "III",
-        "type": "Skill",
-        "text": "If you are adjacent to an enemy unit, you may retrieve a discarded card."
-    },
-    {
-        "id": "xar-red-i-threatening-slash",
-        "name": "Threatening Slash",
-        "color": "R",
-        "tier": "I",
-        "type": "Attack",
-        "text": "Target a unit adjacent to you. +1 Attack for each other enemy unit adjacent to you.\n(Do not count the target when calculating the attack bonus.)"
-    },
-    {
-        "id": "xar-red-ii-deadly-swipe",
-        "name": "Deadly Swipe",
-        "color": "R",
-        "tier": "II",
-        "type": "Attack",
-        "text": "Target a unit adjacent to you. +2 Attack for each other enemy unit adjacent to you."
-    },
-    {
-        "id": "xar-red-ii-long-thrust",
-        "name": "Long Thrust",
-        "color": "R",
-        "tier": "II",
-        "type": "Attack - Ranged",
-        "text": "Target a unit in range. +1 Range for each enemy unit adjacent to you."
+        "text": "If you are adjacent to an enemy unit, you may retrieve a discarded card.",
+        "alternative": true
     },
     {
         "id": "xar-red-iii-rapid-thrusts",
         "name": "Rapid Thrusts",
-        "color": "R",
+        "color": "red",
+        "type": "attack - ranged",
         "tier": "III",
-        "type": "Attack - Ranged",
-        "text": "Target a unit in range. +1 Range for each enemy unit adjacent to you. May repeat once on a different enemy hero."
+        "text": "Target a unit in range. +1 ::range:: Range for each enemy unit adjacent to you.\nMay repeat once on a different enemy hero.",
+        "alternative": true
     },
     {
-        "id": "xar-red-iii-lethal-spin",
-        "name": "Lethal Spin",
-        "color": "R",
+        "id": "xar-green-iii-final-embrace",
+        "name": "Final Embrace",
+        "color": "green",
+        "type": "skill",
         "tier": "III",
-        "type": "Attack",
-        "text": "Target a unit adjacent to you. +3 Attack for each other enemy unit adjacent to you."
+        "text": "**End of round:** Defeat an enemy melee or ranged minion adjacent to you.",
+        "alternative": true
     }
 ]

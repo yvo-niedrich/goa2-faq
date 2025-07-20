@@ -1,0 +1,173 @@
+[
+    {
+        "id": "gar-gold-angry-strike",
+        "name": "Angry Strike",
+        "color": "gold",
+        "type": "basic attack",
+        "tier": null,
+        "text": "Target a unit adjacent to you. +1 ::attack:: Attack for every card in your discard.",
+        "alternative": false
+    },
+    {
+        "id": "gar-gold-h-angry-swipe",
+        "name": "Angry Swipe",
+        "color": "gold",
+        "type": "basic attack",
+        "tier": "H",
+        "text": "Target a hero adjacent to you. +1 ::attack:: Attack for every card in your discard.",
+        "alternative": false
+    },
+    {
+        "id": "gar-silver-chilling-howl",
+        "name": "Chilling Howl",
+        "color": "silver",
+        "type": "basic skill",
+        "tier": null,
+        "text": "You may discard one of your resolved cards.\n**This round:** Enemy heroes in radius cannot fast travel, or move more than 2 spaces with a movement action.",
+        "alternative": false
+    },
+    {
+        "id": "gar-purple-iv-battle-fury",
+        "name": "Battle Fury",
+        "color": "purple",
+        "type": "ultimate",
+        "tier": "IV",
+        "text": "Each time after one of your resolved cards is discarded, you may perform its primary action.",
+        "alternative": false
+    },
+    {
+        "id": "gar-blue-i-menace",
+        "name": "Menace",
+        "color": "blue",
+        "type": "skill - ranged",
+        "tier": "I",
+        "text": "Move an enemy unit in range 1 space to a space farther away from you.",
+        "alternative": false
+    },
+    {
+        "id": "gar-red-i-trace",
+        "name": "Trace",
+        "color": "red",
+        "type": "attack",
+        "tier": "I",
+        "text": "**Choose one —**\n-  Before the attack: If you have one or more cards in the discard, you may move 1 space. Target a hero adjacent to you.\n- Target a unit adjacent to you.",
+        "alternative": false
+    },
+    {
+        "id": "gar-green-i-hold-ground",
+        "name": "Hold Ground",
+        "color": "green",
+        "type": "skill",
+        "tier": "I",
+        "text": "If there at least two enemy heroes in radius, you may retrieve a discarded card.",
+        "alternative": false
+    },
+    {
+        "id": "gar-blue-ii-threaten",
+        "name": "Threaten",
+        "color": "blue",
+        "type": "skill - ranged",
+        "tier": "II",
+        "text": "Move an enemy unit in range 1 space to a space farther away from you.\nMay repeat once.",
+        "alternative": false
+    },
+    {
+        "id": "gar-red-ii-chase",
+        "name": "Chase",
+        "color": "red",
+        "type": "attack",
+        "tier": "II",
+        "text": "**Choose one —**\n-  Before the attack: If you have one or more cards in the discard, move up to 2 spaces. Target a hero adjacent to you.\n- Target a unit adjacent to you.",
+        "alternative": false
+    },
+    {
+        "id": "gar-green-ii-make-a-stand",
+        "name": "Make a Stand",
+        "color": "green",
+        "type": "skill",
+        "tier": "II",
+        "text": "If there are at least two enemy heroes in radius, you may retrieve a discarded card.",
+        "alternative": false
+    },
+    {
+        "id": "gar-blue-ii-form-up-",
+        "name": "Form Up!",
+        "color": "blue",
+        "type": "skill - ranged",
+        "tier": "II",
+        "text": "Move a friendly unit in range 1 space to a space closer to you.\nMay repeat once.",
+        "alternative": true
+    },
+    {
+        "id": "gar-red-ii-blunt-force",
+        "name": "Blunt Force",
+        "color": "red",
+        "type": "attack",
+        "tier": "II",
+        "text": "Target a unit adjacent to you.\nAfter the attack: You may move 1 space to a space adjacent to an enemy hero; if you do, push that hero 3 spaces, ignoring obstacles.",
+        "alternative": true
+    },
+    {
+        "id": "gar-green-ii-light-pilum",
+        "name": "Light Pilum",
+        "color": "green",
+        "type": "skill - ranged",
+        "tier": "II",
+        "text": "An enemy hero in range discards a card, if able. You may move 1 space.",
+        "alternative": true
+    },
+    {
+        "id": "gar-blue-iii-terrify",
+        "name": "Terrify",
+        "color": "blue",
+        "type": "skill - ranged",
+        "tier": "III",
+        "text": "Move an enemy unit in range 1 space to a space farther away from you.\nMay repeat up to two times.",
+        "alternative": false
+    },
+    {
+        "id": "gar-red-iii-hunt-down",
+        "name": "Hunt Down",
+        "color": "red",
+        "type": "attack",
+        "tier": "III",
+        "text": "**Choose one —**\n-  Before the attack: If you have one or more cards in the discard, move up to 3 spaces. Target a hero adjacent to you.\n- Target a unit adjacent to you.",
+        "alternative": false
+    },
+    {
+        "id": "gar-green-iii-battle-ready",
+        "name": "Battle Ready",
+        "color": "green",
+        "type": "skill",
+        "tier": "III",
+        "text": "If there are at least two enemy heroes in radius, you may retrieve up to two discarded cards.",
+        "alternative": false
+    },
+    {
+        "id": "gar-blue-iii-testudo-",
+        "name": "Testudo!",
+        "color": "blue",
+        "type": "skill - ranged",
+        "tier": "III",
+        "text": "Move a friendly unit in range 1 space to a space closer to you.\nMay repeat up to two times.",
+        "alternative": true
+    },
+    {
+        "id": "gar-red-iii-send-flying",
+        "name": "Send Flying",
+        "color": "red",
+        "type": "attack",
+        "tier": "III",
+        "text": "Target a unit adjacent to you.\nAfter the attack: You may move up to 2 spaces to a space adjacent to an enemy hero; if you do, push that hero 3 spaces, ignoring obstacles.",
+        "alternative": true
+    },
+    {
+        "id": "gar-green-iii-heavy-pilum",
+        "name": "Heavy Pilum",
+        "color": "green",
+        "type": "skill - ranged",
+        "tier": "III",
+        "text": "An enemy hero in range discards a card, or is defeated. You may move up to 2 spaces.",
+        "alternative": true
+    }
+]

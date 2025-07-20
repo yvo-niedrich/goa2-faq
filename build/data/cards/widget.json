@@ -1,0 +1,173 @@
+[
+    {
+        "id": "wid-gold-fight-as-one",
+        "name": "Fight as One",
+        "color": "gold",
+        "type": "basic attack",
+        "tier": null,
+        "text": "Target a unit adjacent to you.\nAfter the attack: You may perform the primary action on one of your resolved skill cards, targeting a different unit.",
+        "alternative": false
+    },
+    {
+        "id": "wid-gold-h-follow-along",
+        "name": "Follow Along",
+        "color": "gold",
+        "type": "basic attack",
+        "tier": "H",
+        "text": "Target a hero adjacent to you.\nAfter the attack: You may perform the primary action on one of your resolved skill cards, targeting a different unit.",
+        "alternative": false
+    },
+    {
+        "id": "wid-silver-dragon-bond",
+        "name": "Dragon Bond",
+        "color": "silver",
+        "type": "basic skill",
+        "tier": null,
+        "text": "**Choose one —**\n- Place Pyro into a space in radius. Pyro counts as a token, but is not removed at the end of round.\n- If Pyro is in play, move both yourself and Pyro up to 2 spaces, in any order.",
+        "alternative": false
+    },
+    {
+        "id": "wid-red-i-diversionary-strike",
+        "name": "Diversionary Strike",
+        "color": "red",
+        "type": "attack",
+        "tier": "I",
+        "text": "Target a unit adjacent to you.\nAfter the attack: Move Pyro up to 2 spaces.",
+        "alternative": false
+    },
+    {
+        "id": "wid-blue-i-all-aboard",
+        "name": "All Aboard",
+        "color": "blue",
+        "type": "skill - ranged",
+        "tier": "I",
+        "text": "Swap Pyro in range with yourself or with a friendly hero in range.",
+        "alternative": false
+    },
+    {
+        "id": "wid-green-i-fiery-breath",
+        "name": "Fiery Breath",
+        "color": "green",
+        "type": "skill - ranged",
+        "tier": "I",
+        "text": "An enemy hero in range of Pyro and in a straight line from Pyro discards a card, if able.",
+        "alternative": false
+    },
+    {
+        "id": "wid-red-ii-diversionary-attack",
+        "name": "Diversionary Attack",
+        "color": "red",
+        "type": "attack",
+        "tier": "II",
+        "text": "Target a unit adjacent to you.\nAfter the attack: Move Pyro up to 3 spaces.",
+        "alternative": false
+    },
+    {
+        "id": "wid-red-ii-airborne-attack",
+        "name": "Airborne Attack",
+        "color": "red",
+        "type": "attack",
+        "tier": "II",
+        "text": "Before the attack: You may swap with Pyro in radius. Target a unit adjacent to you.",
+        "alternative": true
+    },
+    {
+        "id": "wid-red-iii-diversionary-assault",
+        "name": "Diversionary Assault",
+        "color": "red",
+        "type": "attack",
+        "tier": "III",
+        "text": "Target a unit adjacent to you.\nAfter the attack: Move Pyro up to 4 spaces.",
+        "alternative": false
+    },
+    {
+        "id": "wid-red-iii-airborne-assault",
+        "name": "Airborne Assault",
+        "color": "red",
+        "type": "attack",
+        "tier": "III",
+        "text": "Before the attack: You may swap with Pyro in radius. Target a unit adjacent to you.\nAfter the attack: You may swap with Pyro in radius.",
+        "alternative": true
+    },
+    {
+        "id": "wid-blue-ii-take-off",
+        "name": "Take-Off",
+        "color": "blue",
+        "type": "skill - ranged",
+        "tier": "II",
+        "text": "Swap Pyro in range with yourself or with a friendly hero in range.",
+        "alternative": false
+    },
+    {
+        "id": "wid-blue-ii-drag-off",
+        "name": "Drag Off",
+        "color": "blue",
+        "type": "skill",
+        "tier": "II",
+        "text": "Move both Pyro, and an enemy unit adjacent to Pyro, either 2 or 3 spaces each, in the same direction.",
+        "alternative": true
+    },
+    {
+        "id": "wid-blue-iii-safe-landing",
+        "name": "Safe Landing",
+        "color": "blue",
+        "type": "skill - ranged",
+        "tier": "III",
+        "text": "You may move Pyro in range 1 space.\nSwap Pyro in range with yourself or with a friendly hero in range.",
+        "alternative": false
+    },
+    {
+        "id": "wid-blue-iii-carry-away",
+        "name": "Carry Away",
+        "color": "blue",
+        "type": "skill",
+        "tier": "III",
+        "text": "Move both Pyro, and an enemy unit adjacent to Pyro, either 2 or 3 spaces each, in the same direction, ignoring obstacles.",
+        "alternative": true
+    },
+    {
+        "id": "wid-green-ii-flaming-breath",
+        "name": "Flaming Breath",
+        "color": "green",
+        "type": "skill - ranged",
+        "tier": "II",
+        "text": "An enemy hero in range of Pyro and in a straight line from Pyro discards a card, if able.",
+        "alternative": false
+    },
+    {
+        "id": "wid-green-ii-nibble",
+        "name": "Nibble",
+        "color": "green",
+        "type": "skill - ranged",
+        "tier": "II",
+        "text": "Remove an enemy minion in range adjacent to Pyro.\nRemove Pyro.",
+        "alternative": true
+    },
+    {
+        "id": "wid-green-iii-scorching-breath",
+        "name": "Scorching Breath",
+        "color": "green",
+        "type": "skill - ranged",
+        "tier": "III",
+        "text": "An enemy hero in range of Pyro and in a straight line from Pyro discards a card, or is defeated.",
+        "alternative": false
+    },
+    {
+        "id": "wid-green-iii-gnaw",
+        "name": "Gnaw",
+        "color": "green",
+        "type": "skill - ranged",
+        "tier": "III",
+        "text": "Defeat a minion in range adjacent to Pyro.\nRemove Pyro.",
+        "alternative": true
+    },
+    {
+        "id": "wid-purple-iv-dragon-knight",
+        "name": "Dragon Knight",
+        "color": "purple",
+        "type": "ultimate",
+        "tier": "IV",
+        "text": "Each time after you perform a movement action, you may perform the primary action on one of your faceup skill cards.",
+        "alternative": false
+    }
+]

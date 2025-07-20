@@ -1,7 +1,8 @@
 <script setup lang="ts">
+import { computed } from 'vue';
+import { useI18n } from 'vue-i18n'
 import { count as countFaq } from '@/data/faq'
 import { useFaqStore } from '@/stores/faq'
-import { computed } from 'vue';
 import Markdown from './Markdown.vue';
 
 const props = defineProps<{ card: Card; }>();
@@ -13,6 +14,22 @@ function showFAQs() {
     }
 }
 
+const { t: $translate } = useI18n();
+
+function processCardType(type: Card['type']) {
+    let tt = $translate('app.card-type.' + (type.basic ? 'basic.' : '') + type.type[0]);
+
+    for (let i = 1; i < type.type.length; i++) {
+        tt += ' / ' + $translate('app.card-type.' + type.type[i]);
+    }
+
+    if (type.ranged) {
+        tt += ' \u2014 ' + $translate('app.card-type.ranged')
+    }
+
+    return tt;
+}
+
 </script>
 
 <template>
@@ -21,9 +38,7 @@ function showFAQs() {
         <h2 class="hero-card-name">{{ card.name }}</h2>
         <div v-if="card.tier" class="hero-card-tier">{{ card.tier }}</div>
         <div class="hero-card-effect-type">
-            {{ card.type.basic ? $t('app.card-type.basic') : '' }}
-            {{ card.type.type ? $t('app.card-type.' + card.type.type) : '????' }}
-            {{ card.type.ranged ? ' - ' + $t('app.card-type.ranged') : '' }}
+            {{ processCardType(card.type) }}
         </div>
         <div class="hero-card-effect-text">
             <Markdown :text="$t(card.text)" />
@@ -52,29 +67,32 @@ function showFAQs() {
     color: var(--color-text-dark);
 
     &.has-faq {
-        padding-bottom: 1.75em;
         cursor: pointer;
 
-        &::after {
-            transition: .5s ease-out;
-            content: '?!';
-            font-weight: 600;
-
+        &::before {
+            content: "?!";
             position: absolute;
-            bottom: .5em;
-            right: .5em;
+            top: -0.5em;
+            left: -0.5em;
 
-            background: #ffffff80;
-            box-shadow: 0 0 3px 1px #FFFFFF60;
+            /* Orange badge */
+            // border: 1px solid rgba(0, 0, 0, .6);
+            background-color: rgba(243, 156, 18, .75);
+            color: var(--color-text);
+            text-shadow: 0 0 1px rgb(119, 73, 0);
 
-            border: 1px solid black;
-            padding: 0 .35em;
-            border-radius: .5em;
+            font-weight: bold;
+            font-size: .85em;
+            padding: 0.3em 0.5em;
+            border-radius: 50%;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.75);
+            z-index: 1;
+            line-height: 1;
         }
 
-        &:hover::after {
-            background: var(--color-heading-bright);
-            box-shadow: none;
+        &:hover::before {
+            background-color: rgba(243, 156, 18, 1);
+            box-shadow: 0 0 2px rgba(0, 0, 0, 1);
         }
     }
 
@@ -95,12 +113,12 @@ function showFAQs() {
 
     &.hero-card-color-r {
         background: #cc2f2f;
-        background: linear-gradient(180deg, rgba(204, 47, 47, 1) 0%, rgba(255, 89, 89, 1) 75%);
+        background: linear-gradient(180deg, rgb(204, 47, 47) 0%, rgba(255, 89, 89, 1) 75%);
     }
 
     &.hero-card-color-g {
         background: #1dab1d;
-        background: linear-gradient(180deg, rgba(29, 171, 29, 1) 0%, rgba(67, 217, 67, 1) 75%);
+        background: linear-gradient(180deg, rgb(29, 171, 29) 0%, rgba(67, 217, 67, 1) 75%);
     }
 
     &.hero-card-color-b {
@@ -135,16 +153,19 @@ function showFAQs() {
     }
 
     .hero-card-name {
+        position: relative;
+
+        text-align: center;
         font-weight: 600;
         font-size: 1.75em;
+        line-height: 1.25em;
 
         color: var(--color-heading-dark);
-        position: relative;
 
         top: -5px;
         left: -5px;
         padding-left: 5px;
-
+        padding-top: .3em;
 
         border-top-left-radius: .25em;
         border-bottom-left-radius: .25em;
@@ -152,20 +173,22 @@ function showFAQs() {
 
     .hero-card-tier {
         position: absolute;
-        top: .3em;
-        right: .3em;
+        top: .25em;
+        right: .25em;
 
-        width: 1.8em;
-        height: 1.8em;
-        line-height: 1.5em;
-        padding-top: 2px;
+        width: 1.75em;
+        height: 1.5em;
 
-        background-color: #000;
-        border-radius: .95em;
-        color: #FFF;
+        line-height: 1.4em;
         font-weight: bold;
         text-align: center;
-        box-shadow: 0 0 3px #BBB;
+
+        border-radius: .6em;
+        box-shadow: 0 0 3px #e0e0b8;
+
+        background-color: var(--color-background);
+        color: var(--color-text);
+
     }
 
     .hero-card-effect-type {

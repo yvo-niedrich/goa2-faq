@@ -1,0 +1,173 @@
+[
+    {
+        "id": "wuk-gold-tree-slam",
+        "name": "Tree Slam",
+        "color": "gold",
+        "type": "basic attack - ranged",
+        "tier": null,
+        "text": "If you are adjacent to a tree token, target a unit in range, otherwise, target a minion adjacent to you.\nAfter the attack: If the target was adjacent to you, move it 1 space to a space adjacent to you, if able.",
+        "alternative": false
+    },
+    {
+        "id": "wuk-gold-h-makeshift-weapon",
+        "name": "Makeshift Weapon",
+        "color": "gold",
+        "type": "basic attack - ranged",
+        "tier": "H",
+        "text": "**Choose one —**\n- Target a hero adjacent to you.\n- Remove a ::token_tree:: Tree token adjacent to you. Target a hero in range.",
+        "alternative": false
+    },
+    {
+        "id": "wuk-silver-mystic-saplings",
+        "name": "Mystic Saplings",
+        "color": "silver",
+        "type": "basic skill",
+        "tier": null,
+        "text": "Place up to 3 ::token_tree:: tree tokens in radius, not adjacent to a tree token. Heroes may move through a space with a tree token. Do not remove the tree tokens at the end of round.",
+        "alternative": false
+    },
+    {
+        "id": "wuk-purple-iv-march-of-nature",
+        "name": "March of Nature",
+        "color": "purple",
+        "type": "ultimate",
+        "tier": "IV",
+        "text": "Adjacent Tree tokens in a battle zone count as melee minions immune to ranged attacks.",
+        "alternative": false
+    },
+    {
+        "id": "wuk-blue-i-gifts-of-nature",
+        "name": "Gifts of Nature",
+        "color": "blue",
+        "type": "skill",
+        "tier": "I",
+        "text": "If you are adjacent to a tree, you may retrieve a discarded card.",
+        "alternative": false
+    },
+    {
+        "id": "wuk-red-i-natures-protector",
+        "name": "Nature's Protector",
+        "color": "red",
+        "type": "attack - ranged",
+        "tier": "I",
+        "text": "Target a unit in range, adjacent to a tree token.",
+        "alternative": false
+    },
+    {
+        "id": "wuk-green-i-toss-away",
+        "name": "Toss Away",
+        "color": "green",
+        "type": "skill - ranged",
+        "tier": "I",
+        "text": "Move up to 1 space. Push an adjacent token up to 3 spaces. If the token is pushed 2 or more spaces, an enemy hero adjacent to that token discards a card, if able.",
+        "alternative": false
+    },
+    {
+        "id": "wuk-blue-ii-tree-of-plenty",
+        "name": "Tree of Plenty",
+        "color": "blue",
+        "type": "skill",
+        "tier": "II",
+        "text": "Either you, or a hero in radius, may retrieve a discarded card if either of you are adjacent to a tree.",
+        "alternative": false
+    },
+    {
+        "id": "wuk-red-ii-natures-guardian",
+        "name": "Nature's Guardian",
+        "color": "red",
+        "type": "attack - ranged",
+        "tier": "II",
+        "text": "Target a unit in range, adjacent to a tree token.",
+        "alternative": false
+    },
+    {
+        "id": "wuk-green-ii-mighty-throw",
+        "name": "Mighty Throw",
+        "color": "green",
+        "type": "skill",
+        "tier": "II",
+        "text": "Move up to 1 space. Push an adjacent token or a minion up to 4 spaces. If it is pushed 2 or more spaces, an enemy hero adjacent to that token or a minion discards a card, if able.",
+        "alternative": false
+    },
+    {
+        "id": "wuk-blue-ii-claim-dominance",
+        "name": "Claim Dominance",
+        "color": "blue",
+        "type": "skill",
+        "tier": "II",
+        "text": "**This round:** Up to 1 adjacent non-immune enemy minion does not count towards the minion total during minion battle.",
+        "alternative": true
+    },
+    {
+        "id": "wuk-red-ii-trample",
+        "name": "Trample",
+        "color": "red",
+        "type": "movement",
+        "tier": "II",
+        "text": "If you move in a straight line: You may ignore units; if you moved through an enemy hero, that hero discards a card, or is defeated;\ndefeat up to 1 minion you moved through.",
+        "alternative": true
+    },
+    {
+        "id": "wuk-green-ii-into-the-canopy",
+        "name": "Into the Canopy",
+        "color": "green",
+        "type": "skill",
+        "tier": "II",
+        "text": "Swap places with a tree token in radius.\nYou may then place a minion adjacent to that tree token into a space adjacent to you.",
+        "alternative": true
+    },
+    {
+        "id": "wuk-blue-iii-abundance",
+        "name": "Abundance",
+        "color": "blue",
+        "type": "skill",
+        "tier": "III",
+        "text": "Both you and a friendly hero in radius may retrieve a discarded card if either of you are adjacent to a tree.",
+        "alternative": false
+    },
+    {
+        "id": "wuk-red-iii-natures-champion",
+        "name": "Nature's Champion",
+        "color": "red",
+        "type": "attack - ranged",
+        "tier": "III",
+        "text": "Target a unit in range, adjacent to a tree token.\nMay repeat once, targeting a different hero.",
+        "alternative": false
+    },
+    {
+        "id": "wuk-green-iii-monstrous-throw",
+        "name": "Monstrous Throw",
+        "color": "green",
+        "type": "skill",
+        "tier": "III",
+        "text": "Move up to 1 space. Push an adjacent unit or a token up to 5 spaces. If it is pushed 2 or more spaces, an enemy hero adjacent to that unit or token discards a card, if able.",
+        "alternative": false
+    },
+    {
+        "id": "wuk-blue-iii-assert-dominance",
+        "name": "Assert Dominance",
+        "color": "blue",
+        "type": "skill",
+        "tier": "III",
+        "text": "**This round:** Up to 2 adjacent enemy minion do not count towards the minion total during minion battle, regardless of immunity.",
+        "alternative": true
+    },
+    {
+        "id": "wuk-red-iii-angry-stampede",
+        "name": "Angry Stampede",
+        "color": "red",
+        "type": "movement",
+        "tier": "III",
+        "text": "If you move in a straight line: You may ignore units; if you moved through an enemy hero, that hero discards a card, or is defeated;\ndefeat up to 2 minion you moved through.",
+        "alternative": true
+    },
+    {
+        "id": "wuk-green-iii-treetop-ride",
+        "name": "Treetop Ride",
+        "color": "green",
+        "type": "defense skill",
+        "tier": "III",
+        "text": "Swap places with a tree token in radius.\nYou may then place a minion adjacent to that tree token into a space adjacent to you.",
+        "alternative": true
+    }
+]

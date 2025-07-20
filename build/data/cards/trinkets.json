@@ -1,0 +1,173 @@
+[
+    {
+        "id": "tri-gold-rapid-deployment",
+        "name": "Rapid Deployment",
+        "color": "gold",
+        "type": "basic skill",
+        "tier": null,
+        "text": "**Choose one —**\n- Move up to 3 spaces and place the Turret into a space adjacent to you; it counts as an obstacle.\n- Defeat a minion adjacent to you.\n_(The Turret is not a token and remains in play between rounds.)_",
+        "alternative": false
+    },
+    {
+        "id": "tri-gold-h-ramshackle-turret",
+        "name": "Ramshackle Turret",
+        "color": "gold",
+        "type": "basic skill",
+        "tier": "H",
+        "text": "Move up to 3 spaces and place the Turret into a space adjacent to you; it counts as an obstacle.\n_(The Turret is not a token and remains in play between rounds.)_",
+        "alternative": false
+    },
+    {
+        "id": "tri-silver-salvage-parts",
+        "name": "Salvage Parts",
+        "color": "silver",
+        "type": "basic skill",
+        "tier": null,
+        "text": "**Choose one —**\n- Place the Turret into an adjacent space. It counts as an obstacle.\n- Remove the Turret; move up to 3 spaces.\n- Remove the Turret; you may retrieve a discarded card.",
+        "alternative": false
+    },
+    {
+        "id": "tri-purple-iv-unlimited-firepower",
+        "name": "Unlimited Firepower",
+        "color": "purple",
+        "type": "ultimate",
+        "tier": "IV",
+        "text": "Gain +1 ::range:: Range and +1 ::radius:: Radius.",
+        "alternative": false
+    },
+    {
+        "id": "tri-blue-i-disruptor-jolt",
+        "name": "Disruptor Jolt",
+        "color": "blue",
+        "type": "skill",
+        "tier": "I",
+        "text": "**This turn:** Before any enemy hero in radius of the Turret performs a primary action, that hero discards a card, if able; if they discard a card, deactivate this effect.",
+        "alternative": false
+    },
+    {
+        "id": "tri-red-i-makeshift-minigun",
+        "name": "Makeshift Minigun",
+        "color": "red",
+        "type": "attack - ranged",
+        "tier": "I",
+        "text": "Target a unit in range of both you and the Turret. If the target is in a straight line from you, and in a straight line from the Turret, gain +2 ::attack:: Attack.",
+        "alternative": false
+    },
+    {
+        "id": "tri-green-i-early-prototype",
+        "name": "Early Prototype",
+        "color": "green",
+        "type": "skill",
+        "tier": "I",
+        "text": "If you are in radius of the Turret, swap with a unit or a token in radius of the Turret, then remove the Turret",
+        "alternative": false
+    },
+    {
+        "id": "tri-blue-ii-disruptor-pulse",
+        "name": "Disruptor Pulse",
+        "color": "blue",
+        "type": "skill",
+        "tier": "II",
+        "text": "**This turn:** Before any enemy hero in radius of the Turret performs a primary action, that hero discards a card, if able; if they discard a card, deactivate this effect.",
+        "alternative": false
+    },
+    {
+        "id": "tri-red-ii-gatling-gun",
+        "name": "Gatling Gun",
+        "color": "red",
+        "type": "attack - ranged",
+        "tier": "II",
+        "text": "Target a unit in range of both you and the Turret. If the target is in a straight line from you, and in a straight line from the Turret, gain +2 ::attack:: Attack.",
+        "alternative": false
+    },
+    {
+        "id": "tri-green-ii-updated-design",
+        "name": "Updated Design",
+        "color": "green",
+        "type": "skill",
+        "tier": "II",
+        "text": "If you are in radius of the Turret, swap with a unit or a token in radius of the Turret.",
+        "alternative": false
+    },
+    {
+        "id": "tri-blue-ii-deployable-barrier",
+        "name": "Deployable Barrier",
+        "color": "blue",
+        "type": "skill",
+        "tier": "II",
+        "text": "Place up to 2 ::token_barrier:: barrier tokens in radius, with at least one of them adjacent to the Turret.\nYou and friendly heroes gain +1 ::defense:: Defense for each Barrier token they are adjacent to.",
+        "alternative": true
+    },
+    {
+        "id": "tri-red-ii-steam-discharge",
+        "name": "Steam Discharge",
+        "color": "red",
+        "type": "attack - ranged",
+        "tier": "II",
+        "text": "Target a unit in range adjacent to the Turret.\nMay repeat once on a different enemy unit.",
+        "alternative": true
+    },
+    {
+        "id": "tri-green-ii-self-destruct",
+        "name": "Self-Destruct",
+        "color": "green",
+        "type": "skill",
+        "tier": "II",
+        "text": "Up to two enemy heroes in radius of the Turret discard a card, if able. Remove the Turret.",
+        "alternative": true
+    },
+    {
+        "id": "tri-blue-iii-disruptor-grid",
+        "name": "Disruptor Grid",
+        "color": "blue",
+        "type": "skill",
+        "tier": "III",
+        "text": "**This turn:** Before any enemy hero in radius of the Turret performs a primary action, that hero discards a card, or is defeated; if they discard a card, deactivate this effect.",
+        "alternative": false
+    },
+    {
+        "id": "tri-red-iii-supercharged-cannon",
+        "name": "Supercharged Cannon",
+        "color": "red",
+        "type": "attack - ranged",
+        "tier": "III",
+        "text": "Target a unit in range of both you and the Turret. If the target is in a straight line from you, and in a straight line from the Turret, gain +3 ::attack:: Attack.",
+        "alternative": false
+    },
+    {
+        "id": "tri-green-iii-perfected-design",
+        "name": "Perfected Design",
+        "color": "green",
+        "type": "skill",
+        "tier": "III",
+        "text": "If you are in radius of the Turret,\n**Choose one —**\n- Swap with a unit or a token in radius of the Turret.\n- Place yourself into a space in radius of the Turret.",
+        "alternative": false
+    },
+    {
+        "id": "tri-blue-iii-deployable-bastion",
+        "name": "Deployable Bastion",
+        "color": "blue",
+        "type": "skill",
+        "tier": "III",
+        "text": "Place up to 3 ::token_barrier:: barrier tokens in radius, with at least one of them adjacent to the Turret.\nYou and friendly heroes gain +1 ::defense:: Defense for each Barrier token they are adjacent to.",
+        "alternative": true
+    },
+    {
+        "id": "tri-red-iii-flame-belcher",
+        "name": "Flame Belcher",
+        "color": "red",
+        "type": "attack - ranged",
+        "tier": "III",
+        "text": "Target a unit in range adjacent to the Turret.\nMay repeat up to two times on different enemy units.",
+        "alternative": true
+    },
+    {
+        "id": "tri-green-iii-emergency-protocol",
+        "name": "Emergency Protocol",
+        "color": "green",
+        "type": "skill",
+        "tier": "III",
+        "text": "Up to two enemy heroes heroes in radius of the Turret discard a card, or are defeated. Remove the Turret.",
+        "alternative": true
+    }
+]
