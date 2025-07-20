@@ -16,7 +16,7 @@ function filterHeroes(h: { [id: string]: Hero }): { [id: string]: Hero } {
     );
 }
 
-export const heroes: { [id: string]: Hero } = filterHeroes(inferredHeroes as any);
+export const heroes: { [id: string]: Hero } = filterHeroes(inferredHeroes as never);
 export const heroIds = Object.keys(heroes);
 
 const baseUrl = import.meta.env.BASE_URL;
