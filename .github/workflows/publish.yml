@@ -15,6 +15,21 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Determine source branch of release tag
+        id: get_branch
+        run: |
+          TAG_NAME="${GITHUB_REF##*/}"
+          COMMIT_SHA=$(git rev-list -n 1 "$TAG_NAME")
+          BRANCH_NAME=$(git branch -r --contains "$COMMIT_SHA" | grep -v 'HEAD' | grep 'origin/' | head -n1 | sed 's|origin/||')
+          echo "commit: $COMMIT_SHA"
+          echo "branch: $BRANCH_NAME"
+          echo "branch=$BRANCH_NAME" >> $GITHUB_OUTPUT
+
+      - name: Checkout source branch
+        run: git checkout ${{ steps.get_branch.outputs.branch }}
 
       - name: Update package.json version
         run: |
@@ -23,7 +38,7 @@ jobs:
           jq ".version = \"$VERSION\"" package.json > package.json.tmp && mv package.json.tmp package.json
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git commit -m "update version: $VERSION [no ci]"
+          git commit -am "update version: $VERSION [no ci]"
           git push
 
       - name: Build and publish to GitHub Pages
