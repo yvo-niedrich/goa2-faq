@@ -20,10 +20,12 @@
         "ref": [
             "xar-blue-i-stone-gaze",
             "xar-blue-ii-petrifying-stare",
-            "xar-blue-iii-turn-into-statues"
+            "xar-blue-iii-turn-into-statues",
+            "neb-blue-ii-time-to-reconsider",
+            "neb-blue-iii-an-illusion-of-choice"
         ]
     },
-    "faq-common-Xe16hzf0": {
+    "faq-common-Xe16hz1a": {
         "q": "What are Obstacles?",
         "a": "Obstacles are basically anything on the map: Units (Heroes and Minions), terrain shown on the map, tokens, and any other miniatures. There can only be one Obstacle on each space, and Obstacles generally can’t move through each other. If an ability does allow Obstacles to pass through each other (“you can move through Obstacles”, “Heroes may move through a space with a tree token”), they still may not end movement on such a space.",
         "ref": ["sil-silver-trailblazer"]

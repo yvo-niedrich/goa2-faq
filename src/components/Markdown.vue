@@ -62,6 +62,8 @@ const renderedHtml = computed(() => toMarkdown(props.text));
 
 <style lang="scss">
 .markdown-container {
+    line-height: 1.275rem;
+
     ul {
         list-style: disc;
     }
@@ -72,12 +74,12 @@ const renderedHtml = computed(() => toMarkdown(props.text));
 
     ol,
     ul {
-        padding-left: 2em;
+        padding-left: 1.75em;
         margin-left: 0;
     }
 
     li {
-        margin: .25em 0;
+        margin: .35em 0;
     }
 
     strong {
@@ -89,7 +91,7 @@ const renderedHtml = computed(() => toMarkdown(props.text));
     }
 
     p {
-        margin: .25em 0;
+        margin: .35em 0;
     }
 
     hr {

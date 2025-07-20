@@ -109,7 +109,7 @@ export function toType(value: string): CardType {
     return { ranged, basic, type: type.sort(primaryActionsFirst) };
 }
 
-const primaryActions: ActionType[] = ['skill', 'attack'];
+const primaryActions: ActionType[] = ['skill', 'attack', 'defense', 'movement'];
 function primaryActionsFirst(a: ActionType, b: ActionType) {
     const aIndex = primaryActions.indexOf(a);
     const bIndex = primaryActions.indexOf(b);

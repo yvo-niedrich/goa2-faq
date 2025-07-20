@@ -18,6 +18,8 @@ export function applicationTranslations(): TranslationMap {
         'app.card.downgrade': 'Downgrade',
         'app.card-type.basic': 'Basic',
         'app.card-type.basic.attack': 'Basic Attack',
+        'app.card-type.basic.defense': 'Basic Defense',
+        'app.card-type.basic.movement': 'Basic Movement',
         'app.card-type.basic.skill': 'Basis Skill',
         'app.card-type.ranged': 'Ranged',
         'app.card-type.attack': 'Attack',

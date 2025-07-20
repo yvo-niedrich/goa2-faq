@@ -66,9 +66,9 @@ async function loadLocale(locale: string, setLang: boolean = false) {
     if (!i18n) return;
     if (!loadedLanguages.value.includes(locale) && Object.keys(locales).includes(locale)) {
         try {
-            const messages = await fetch(`${import.meta.env.BASE_URL}locales/${locale}.json`).then(
-                (res) => res.json(),
-            );
+            const messages = await fetch(
+                `${import.meta.env.BASE_URL}locales/${locale}.json?v=${__APP_BUILD_HASH__}`,
+            ).then((res) => res.json());
             i18n.global.setLocaleMessage(locale, messages);
             loadedLanguages.value.push(locale);
         } catch (err) {
@@ -80,5 +80,3 @@ async function loadLocale(locale: string, setLang: boolean = false) {
         (i18n.global.locale as { value: string }).value = locale;
     }
 }
-
-

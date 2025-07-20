@@ -23,7 +23,7 @@
         "color": "silver",
         "type": "basic skill",
         "tier": null,
-        "text": "Laugh diabolically;\nif you do, **choose up to three times —**\n- Swap with an ::token_illusion:: Illusion token in radius.\n- Place an Illusion token in an adjacent space.\n- Swap two resolved cards of an enemy hero in radius, without canceling active effects.",
+        "text": "Laugh diabolically; if you do, **choose up to three times —**\n- Swap with an ::token_illusion:: Illusion token in radius.\n- Place an Illusion token in an adjacent space.\n- Swap two resolved cards of an enemy hero in radius, without canceling active effects.",
         "alternative": false
     },
     {

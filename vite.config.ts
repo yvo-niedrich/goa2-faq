@@ -9,7 +9,7 @@ import { VitePWA } from 'vite-plugin-pwa';
 
 const hash = (Math.random() + 1).toString(36).substring(2);
 
-// https://vite.dev/config/
+/* eslint-disable @typescript-eslint/no-require-imports */
 export default defineConfig({
     base: '/goa2-faq/',
 

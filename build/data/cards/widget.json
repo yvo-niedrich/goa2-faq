@@ -140,7 +140,7 @@
         "color": "green",
         "type": "skill - ranged",
         "tier": "II",
-        "text": "Remove an enemy minion in range adjacent to Pyro. Remove Pyro.",
+        "text": "Remove an enemy minion in range adjacent to Pyro.\nRemove Pyro.",
         "alternative": true
     },
     {

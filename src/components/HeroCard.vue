@@ -153,16 +153,19 @@ function processCardType(type: Card['type']) {
     }
 
     .hero-card-name {
+        position: relative;
+
+        text-align: center;
         font-weight: 600;
         font-size: 1.75em;
+        line-height: 1.25em;
 
         color: var(--color-heading-dark);
-        position: relative;
 
         top: -5px;
         left: -5px;
         padding-left: 5px;
-
+        padding-top: .3em;
 
         border-top-left-radius: .25em;
         border-bottom-left-radius: .25em;
@@ -170,20 +173,22 @@ function processCardType(type: Card['type']) {
 
     .hero-card-tier {
         position: absolute;
-        top: .3em;
-        right: .3em;
+        top: .25em;
+        right: .25em;
 
-        width: 1.8em;
-        height: 1.8em;
-        line-height: 1.5em;
-        padding-top: 2px;
+        width: 1.75em;
+        height: 1.5em;
 
-        background-color: #000;
-        border-radius: .95em;
-        color: #FFF;
+        line-height: 1.4em;
         font-weight: bold;
         text-align: center;
-        box-shadow: 0 0 3px #BBB;
+
+        border-radius: .6em;
+        box-shadow: 0 0 3px #e0e0b8;
+
+        background-color: var(--color-background);
+        color: var(--color-text);
+
     }
 
     .hero-card-effect-type {

@@ -5,7 +5,7 @@
         "color": "gold",
         "type": "basic skill",
         "tier": null,
-        "text": "**Choose one —**\n- Move up to 3 spaces and place the Turret into a space adjacent to you; it counts as an obstacle.\n- Defeat a minion adjacent to you.",
+        "text": "**Choose one —**\n- Move up to 3 spaces and place the Turret into a space adjacent to you; it counts as an obstacle.\n- Defeat a minion adjacent to you.\n_(The Turret is not a token and remains in play between rounds.)_",
         "alternative": false
     },
     {
@@ -14,7 +14,7 @@
         "color": "gold",
         "type": "basic skill",
         "tier": "H",
-        "text": "Move up to 3 spaces and place the Turret into a space adjacent to you;\nit counts as an obstacle.\n_(The Turret is not a token and remains in play between rounds.)_",
+        "text": "Move up to 3 spaces and place the Turret into a space adjacent to you; it counts as an obstacle.\n_(The Turret is not a token and remains in play between rounds.)_",
         "alternative": false
     },
     {

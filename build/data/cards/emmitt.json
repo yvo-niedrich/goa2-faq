@@ -5,7 +5,7 @@
         "color": "gold",
         "type": "basic attack",
         "tier": null,
-        "text": "Target a unit adjacent to you.\nAfter the attack: **Next turn:** Heroes with lower initiative act before heroes with higher initiative;\nthis effect ignores immunity.\n_(Resolve ties as normal.)_",
+        "text": "Target a unit adjacent to you.\nAfter the attack: **Next turn:** Heroes with lower initiative act before heroes with higher initiative; this effect ignores immunity.\n_(Resolve ties as normal.)_",
         "alternative": false
     },
     {
@@ -149,7 +149,7 @@
         "color": "red",
         "type": "attack",
         "tier": "III",
-        "text": "Target a unit adjacent to you.\nAfter the attack: You may place 2 ::token_glitch:: Glitch tokens in radius, with at least two spaces between each token;\nif you do, up to 1 enemy hero in radius swaps with a Glitch token of their choice.\n**End of turn:** Remove all Glitch tokens.",
+        "text": "Target a unit adjacent to you.\nAfter the attack: You may place 2 ::token_glitch:: Glitch tokens in radius, with at least two spaces between each token; if you do, up to 1 enemy hero in radius swaps with a Glitch token of their choice.\n**End of turn:** Remove all Glitch tokens.",
         "alternative": true
     },
     {
