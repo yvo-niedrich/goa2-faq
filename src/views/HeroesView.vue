@@ -57,7 +57,6 @@ const selectedHero = computed(() => {
     --animation-transition-time: .5s;
 
     position: relative;
-    overflow: hidden;
 
     &>* {
         width: 100%;

@@ -59,7 +59,7 @@ function unsetFavorite() {
     grid-template-columns: repeat(4, 1fr);
     column-gap: 1.5em;
     row-gap: 3em;
-    margin: 0 .35em;
+    margin: 0 .15em;
 
     .hero-card {
         margin: 1.5em auto;

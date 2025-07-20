@@ -79,6 +79,7 @@ function processCardType(type: Card['type']) {
     }
 
     position: relative;
+    display: flex;
     flex: auto;
     flex-direction: column;
     transition: .2s ease;
@@ -86,28 +87,16 @@ function processCardType(type: Card['type']) {
     max-width: 75vw;
     min-width: 275px;
 
+    border-radius: 1em;
     border: 1px solid #000;
 
-    border-radius: 1em;
-    // background: var(--color-background);
-
-    --card-bg-spacing: 2em;
-    --card-gb-dark: #2f2e31;
-    --card-gb-light: var(--color-background-mute);
-    --card-gb-separator: #ddd;
-    background-image: linear-gradient(to bottom,
-        var(--card-gb-dark) 0,
-        var(--card-gb-dark) var(--card-bg-spacing),
-        var(--card-gb-separator) var(--card-bg-spacing),
-        var(--card-gb-separator) calc(var(--card-bg-spacing) + 1.3px),
-        var(--card-gb-light) calc(var(--card-bg-spacing) + 1.3px),
-        var(--card-gb-light) calc(100% - var(--card-bg-spacing) - 1.3px),
-        var(--card-gb-separator) calc(100% - var(--card-bg-spacing) - 1.3px),
-        var(--card-gb-separator) calc(100% - var(--card-bg-spacing)),
-        var(--card-gb-dark) calc(100% - var(--card-bg-spacing)),
-        var(--card-gb-dark) 100%);
-
-    color: var(--card-text-color);
+    background-color: rgb(27, 39, 44);
+    background-image: url("data:image/svg+xml;utf8,<svg width='10' height='35' xmlns='http://www.w3.org/2000/svg'><rect height='35' width='20' y='-1' x='-5' stroke='%23ffffff' fill='%23313131'/></svg>"),
+    url("data:image/svg+xml;utf8,<svg width='10' height='35' xmlns='http://www.w3.org/2000/svg'><rect height='35' width='20' y='1' x='-5' stroke='%23ffffff' fill='%23313131'/></svg>");
+    background-repeat: repeat-x,
+    repeat-x;
+    background-position: top,
+    bottom;
 
     padding: 1em .75em;
     margin: 0.75em 0.5em;
@@ -161,6 +150,8 @@ function processCardType(type: Card['type']) {
 
         color: var(--color-text-dark);
         text-shadow: 0 0 3px #FFFFFF;
+
+        text-shadow: -1px -1px 2px #f3f3f0, 1px -1px 2px #f3f3f0, -1px 1px 2px #f3f3f0, 1px 1px 2px #f3f3f0;
         background: #cfccc2;
         background: linear-gradient(180deg, #dbdad5 0%, #b7b4ae 45%, #b7b4ae 55%, #dbdad5 100%);
 
@@ -209,24 +200,27 @@ function processCardType(type: Card['type']) {
         background: var(--card-background-primary) border-box;
 
         width: fit-content;
-        min-width: 60%;
+        min-width: 75%;
         text-align: center;
-        padding: 0 1.5em;
+        padding: 0 .6em;
         font-family: 'ModestoPoster';
         font-size: 1.15em;
+        white-space: pre;
         color: #FFFFFF;
         text-shadow: 0 0 8px #000000;
+        text-shadow: -1px -1px 1px #000, 1px -1px 1px #000, -1px 1px 1px #000, 1px 1px 1px #000;
         margin: 0 auto -1px auto;
         z-index: 1;
     }
 
     .hero-card-text {
+        flex-grow: 1;
+        width: 100%;
+
         color: #000;
         text-align: center;
         padding: .75em .4em;
-
-        border-top: 1px solid #000;
-        box-shadow: 1px 0 2px 1px #FFF;
+        vertical-align: middle;
 
         background: radial-gradient(circle, var(--card-background-secondary) 20%, rgb(223, 220, 215) 97%);
 
@@ -236,6 +230,10 @@ function processCardType(type: Card['type']) {
             inset 3px 3px 2px var(--card-background-primary),
             inset -3px 3px 2px var(--card-background-primary),
             1px 4px 3px rgba(0, 0, 0, .5);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         ul {
             text-align: left;
