@@ -1,7 +1,8 @@
 <script setup lang="ts">
+import { computed } from 'vue';
+import { useI18n } from 'vue-i18n'
 import { count as countFaq } from '@/data/faq'
 import { useFaqStore } from '@/stores/faq'
-import { computed } from 'vue';
 import Markdown from './Markdown.vue';
 
 const props = defineProps<{ card: Card; }>();
@@ -13,6 +14,22 @@ function showFAQs() {
     }
 }
 
+const { t: $translate } = useI18n();
+
+function processCardType(type: Card['type']) {
+    let tt = $translate('app.card-type.' + (type.basic ? 'basic.' : '') + type.type[0]);
+
+    for (let i = 1; i < type.type.length; i++) {
+        tt += ' / ' + $translate('app.card-type.' + type.type[i]);
+    }
+
+    if (type.ranged) {
+        tt += ' \u2014 ' + $translate('app.card-type.ranged')
+    }
+
+    return tt;
+}
+
 </script>
 
 <template>
@@ -21,9 +38,7 @@ function showFAQs() {
         <h2 class="hero-card-name">{{ card.name }}</h2>
         <div v-if="card.tier" class="hero-card-tier">{{ card.tier }}</div>
         <div class="hero-card-effect-type">
-            {{ card.type.basic ? $t('app.card-type.basic') : '' }}
-            {{ card.type.type ? $t('app.card-type.' + card.type.type) : '????' }}
-            {{ card.type.ranged ? ' - ' + $t('app.card-type.ranged') : '' }}
+            {{ processCardType(card.type) }}
         </div>
         <div class="hero-card-effect-text">
             <Markdown :text="$t(card.text)" />
