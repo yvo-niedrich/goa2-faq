@@ -1,25 +1,17 @@
 {
     "faq-neb-QxJOvtUS": {
-        "q": "Gold (Mind Grip)?",
-        "a": "This card has lots of weird interactions:\n- Mind Grip is only played as a skill action on your turn. You could not use Mind Grip’s copy ability to copy a card while defending.\n- Active effects he copies will work normally, as though Neb’s Gold was an exact copy of the card. The effect remains, even if the originally copied card changes state or the hero is defeated.\n- When NebKher copies effects that place tokens, he places Illusion tokens instead. They will not take on the properties of the copied tokens.\n- If NebKher copies cards that specifically refer to tokens, NebKher uses those tokens as those heroes would (such as Min’s mines or smoke bombs, or Wuk’s trees).\n- NebKher can copy Trinkets’ cards to remove and/or place the Turret.\n- If NebKher copies an action that says “this card”, it means the card with the printed ability, not Neb’s. He cannot copy Brogan’s Silver (Bullwark), for example, then retrieve his Gold.\n- Although it can copy attacks, Mind Grip is a skill card, so some card resolutions may happen differently. Examples:\n     - If NebKher copies a non-ranged attack, he is performing a non-ranged attack (even though his Gold card is a ranged skill). A non-ranged attack he is using could not be blocked by Tigerclaw’s Primary Blue (Dodge) or Wasp’s Primary Green(Stop Projectiles), both of which only block ranged attacks.\n     - If NebKher copies Trinkets’ Primary Red (Makeshift Minigun), he will get a range bonus on the next turn. If he is subsequently hit by Wasp’s Gold (Dazzling Dagger), the active +range bonus copied from Trinkets is canceled).\n- If NebKher copies Igantia’s Silver (Moment of Equilibrium), he will re-set the coin to a side of his choice. (Ignatia only prevents ties from changing it.)\n- NebKher cannot copy the card of an immune hero.",
-        "ref": [
-            "neb-gold-mind-grip",
-            "neb-gold-h-mind-probe"
-        ]
+        "q": "Interactions with NebKher’s Gold (Mind Grip)?",
+        "a": "This card has lots of weird interactions:\n- Mind Grip is only played as a skill action on your turn. You could not use Mind Grip’s copy ability to copy a card while defending.\n- Active effects he copies will work normally, as though NebKher’s Gold was an exact copy of the card. The effect remains, even if the originally copied card changes state or the hero is defeated.\n- When NebKher copies effects that place tokens, he places Illusion tokens instead. They will not take on the properties of the copied tokens.\n- If NebKher copies cards that specifically refer to tokens, NebKher uses those tokens as those heroes would (such as Min’s mines or smoke bombs, or Wuk’s trees).\n- NebKher can copy Trinkets’ cards to remove and/or place the Turret.\n- If NebKher copies an action that says “this card”, it means the card with the printed ability, not Neb’s. He cannot copy Brogan’s Silver (Bullwark), for example, then retrieve his Gold.\n- Although it can copy attacks, Mind Grip is a skill card, so some card resolutions may happen differently. Examples:\n     - If NebKher copies a non-ranged attack, he is performing a non-ranged attack (even though his Gold card is a ranged skill). A non-ranged attack he is using could not be blocked by Tigerclaw’s Primary Blue (Dodge) or Wasp’s Primary Green (Stop Projectiles), both of which only block ranged attacks.\n- If NebKher copies Igantia’s Silver (Moment of Equilibrium), he will re-set the coin to a side of his choice. (Ignatia only prevents ties from changing it.)\n- NebKher cannot copy the card of an immune hero.",
+        "ref": ["neb-gold-mind-grip", "neb-gold-h-mind-probe"]
     },
     "faq-neb-lR0UngYk": {
         "q": "NebKher’s Silver (Diabolical Laughter) says you need to laugh diabolically. Do you really need to laugh diabolically?",
         "a": "Of course not: there are 21 other heroes to play.",
-        "ref": [
-            "neb-silver-diabolical-laughter"
-        ]
+        "ref": ["neb-silver-diabolical-laughter"]
     },
     "faq-neb-nRunMRdC": {
         "q": "What about units on the line drawn by NebKher’s Alt Blue (Crack in Reality)?",
         "a": "Units on the line can affect and be affected by units on both sides.",
-        "ref": [
-            "neb-blue-ii-crack-in-reality",
-            "neb-blue-iii-shift-reality"
-        ]
+        "ref": ["neb-blue-ii-crack-in-reality", "neb-blue-iii-shift-reality"]
     }
 }
