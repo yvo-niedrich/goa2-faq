@@ -2,7 +2,7 @@ import { Expansion, expansions as allExpansions } from '@/types/Expansion';
 import { default as inferredHeroes } from './heroes.generated.json';
 
 function filterHeroes(h: { [id: string]: Hero }): { [id: string]: Hero } {
-    // if (import.meta.env.DEV) return h;
+    if (import.meta.env.DEV) return h;
     const validatedExpansions = [
         Expansion.Core,
         Expansion.Devoted,
