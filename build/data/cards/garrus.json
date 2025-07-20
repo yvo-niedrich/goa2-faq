@@ -5,7 +5,7 @@
         "color": "gold",
         "type": "basic attack",
         "tier": null,
-        "text": "Target a hero adjacent to you. +1 ::attack:: Attack for every card in your discard.",
+        "text": "Target a unit adjacent to you. +1 ::attack:: Attack for every card in your discard.",
         "alternative": false
     },
     {
@@ -50,7 +50,7 @@
         "color": "red",
         "type": "attack",
         "tier": "I",
-        "text": "**Choose one —**\n-  Before the attack: If you have one or more cards in the discard, you may move 1 space. Target a hero adjacent to you.\n- Target a hero adjacent to you.",
+        "text": "**Choose one —**\n-  Before the attack: If you have one or more cards in the discard, you may move 1 space. Target a hero adjacent to you.\n- Target a unit adjacent to you.",
         "alternative": false
     },
     {
@@ -77,14 +77,14 @@
         "color": "red",
         "type": "attack",
         "tier": "II",
-        "text": "**Choose one —**\n-  Before the attack: If you have one or more cards in the discard, move up to 2 spaces. Target a hero adjacent to you.\n- Target a hero adjacent to you.",
+        "text": "**Choose one —**\n-  Before the attack: If you have one or more cards in the discard, move up to 2 spaces. Target a hero adjacent to you.\n- Target a unit adjacent to you.",
         "alternative": false
     },
     {
         "id": "gar-green-ii-make-a-stand",
         "name": "Make a Stand",
         "color": "green",
-        "type": "skill - ranged",
+        "type": "skill",
         "tier": "II",
         "text": "If there are at least two enemy heroes in radius, you may retrieve a discarded card.",
         "alternative": false
@@ -131,14 +131,14 @@
         "color": "red",
         "type": "attack",
         "tier": "III",
-        "text": "**Choose one —**\n-  Before the attack: If you have one or more cards in the discard, move up to 3 spaces. Target a hero adjacent to you.\n- Target a hero adjacent to you.",
+        "text": "**Choose one —**\n-  Before the attack: If you have one or more cards in the discard, move up to 3 spaces. Target a hero adjacent to you.\n- Target a unit adjacent to you.",
         "alternative": false
     },
     {
         "id": "gar-green-iii-battle-ready",
         "name": "Battle Ready",
         "color": "green",
-        "type": "skill - ranged",
+        "type": "skill",
         "tier": "III",
         "text": "If there are at least two enemy heroes in radius, you may retrieve up to two discarded cards.",
         "alternative": false
@@ -158,7 +158,7 @@
         "color": "red",
         "type": "attack",
         "tier": "III",
-        "text": "Target a unit adjacent to you.\nAfter the attack: you may move up to 2 spaces to a space adjacent to an enemy hero; if you do, push that hero 3 spaces, ignoring obstacles.",
+        "text": "Target a unit adjacent to you.\nAfter the attack: You may move up to 2 spaces to a space adjacent to an enemy hero; if you do, push that hero 3 spaces, ignoring obstacles.",
         "alternative": true
     },
     {
