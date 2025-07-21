@@ -1,24 +1,7 @@
 import { Expansion, expansions as allExpansions } from '@/types/Expansion';
 import { default as inferredHeroes } from './heroes.generated.json';
 
-function filterHeroes(h: { [id: string]: Hero }): { [id: string]: Hero } {
-    if (import.meta.env.DEV) return h;
-    const validatedExpansions = [
-        Expansion.Core,
-        Expansion.Devoted,
-        Expansion.Defiant,
-        Expansion.Renowned,
-        Expansion.Wayward,
-        Expansion.Arcane
-    ];
-    return Object.fromEntries(
-        Object.entries(h).filter(([, value]) =>
-            validatedExpansions.includes(value.expansion as Expansion),
-        ),
-    );
-}
-
-export const heroes: { [id: string]: Hero } = filterHeroes(inferredHeroes as never);
+export const heroes: { [id: string]: Hero } = inferredHeroes as never;
 export const heroIds = Object.keys(heroes);
 
 const baseUrl = import.meta.env.BASE_URL;

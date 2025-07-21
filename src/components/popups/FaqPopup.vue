@@ -156,9 +156,6 @@ const records = computed(() => {
             content: '\00BB\00A0 ';
         }
     }
-
-    .answer {}
-
 }
 
 
