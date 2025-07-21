@@ -104,7 +104,7 @@
         "color": "red",
         "type": "attack",
         "tier": "II",
-        "text": "Target a unit adjacent to you.\nAfter the attack: If enraged, gain 1 coin.\n**This round:** you are enraged.",
+        "text": "Target a unit adjacent to you.\nAfter the attack: If enraged, gain 1 coin.\n**This round:** You are enraged.",
         "alternative": true
     },
     {
@@ -158,7 +158,7 @@
         "color": "red",
         "type": "attack",
         "tier": "III",
-        "text": "Target a unit adjacent to you.\nAfter the attack: If enraged, gain 2 coins.;\nif you defeated a hero, that hero spends 1 additional ::life_counters:: Life counter.\n**This round:** you are enraged.",
+        "text": "Target a unit adjacent to you.\nAfter the attack: If enraged, gain 2 coins.;\nif you defeated a hero, that hero spends 1 additional ::life_counters:: Life counter.\n**This round:** You are enraged.",
         "alternative": true
     },
     {

@@ -77,7 +77,7 @@
         "color": "red",
         "type": "attack",
         "tier": "II",
-        "text": "Before the attack: You may move up to 1 space for every empty minion spawn point in radius in the battle zone, up to a maximum of 2 spaces. Target a unit adjacent to you.",
+        "text": "Before the attack: You may move up to 1 space for every empty minion spawn point in radius in the battle zone, up to a maximum of 2 spaces.\nTarget a unit adjacent to you.",
         "alternative": false
     },
     {
@@ -131,7 +131,7 @@
         "color": "red",
         "type": "attack",
         "tier": "III",
-        "text": "Before the attack: You may move to 1 space for every empty minion spawn point in radius in the battle zone, up to a maximum of 3 spaces. Target a unit adjacent to you.",
+        "text": "Before the attack: You may move to 1 space for every empty minion spawn point in radius in the battle zone, up to a maximum of 3 spaces.\nTarget a unit adjacent to you.",
         "alternative": false
     },
     {
@@ -149,7 +149,7 @@
         "color": "blue",
         "type": "skill - ranged",
         "tier": "III",
-        "text": "An enemy hero in range **chooses one —**\n- That hero discards a card, or is defeated.\n- You may defeat up to 3 minions adjacent to you.",
+        "text": "An enemy hero in range **chooses one —**\n- That hero discards a card, or is defeated.\n- You defeat up to 3 minions adjacent to you.",
         "alternative": true
     },
     {
