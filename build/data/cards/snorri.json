@@ -57,7 +57,7 @@
         "id": "sno-green-i-oath-of-endurance",
         "name": "Oath of Endurance",
         "color": "green",
-        "type": "skill",
+        "type": "defense",
         "tier": "I",
         "text": "If a rune is active:\n- ::rune_horn::: Block a basic attack.\n- ::rune_axe::: Block a non-ranged attack.\n**This Turn:** You are immune to enemy actions.",
         "alternative": false

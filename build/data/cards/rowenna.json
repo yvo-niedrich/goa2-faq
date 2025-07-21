@@ -21,7 +21,7 @@
         "id": "row-silver-throw-the-gauntlet",
         "name": "Throw the Gauntlet",
         "color": "silver",
-        "type": "basic skill",
+        "type": "basic skill - ranged",
         "tier": null,
         "text": "Place yourself into a space in range adjacent to an enemy hero in range; that hero may move 1 space; if they do, gain 2 coins.",
         "alternative": false
@@ -41,7 +41,7 @@
         "color": "green",
         "type": "movement",
         "tier": "I",
-        "text": "After movement, if yhou are adjacent to an enemy hero, you may **Choose one —**\n-  Place a friendly minion in radius into a space adjacent to that enemy hero.\n-  Place an enemy minion in radius into a space adjacent to you.",
+        "text": "After movement, if you are adjacent to an enemy hero, you may **Choose one —**\n-  Place a friendly minion in radius into a space adjacent to that enemy hero.\n-  Place an enemy minion in radius into a space adjacent to you.",
         "alternative": false
     },
     {
@@ -86,7 +86,7 @@
         "color": "green",
         "type": "skill",
         "tier": "II",
-        "text": "If both you and an enemy hero in radius have no cards in the discard, that hero discards ac ard, if able.",
+        "text": "If both you and an enemy hero in radius have no cards in the discard, that hero discards a card, if able.",
         "alternative": true
     },
     {
@@ -113,7 +113,7 @@
         "color": "green",
         "type": "movement",
         "tier": "III",
-        "text": "After movement, if you are adjacent to an enemy hero, you may **Choose one —**\n-  Place a friendly minion in radius into a space adjacent to that enemy hero.\n-  Place an enemy minion in radius into a space adjacent to you.",
+        "text": "After movement, if you are adjacent to an enemy hero, you may **Choose up to two times —**\n-  Place a friendly minion in radius into a space adjacent to that enemy hero.\n-  Place an enemy minion in radius into a space adjacent to you.",
         "alternative": false
     },
     {
@@ -167,7 +167,7 @@
         "color": "purple",
         "type": "ultimate",
         "tier": "IV",
-        "text": "All of your attack actions gain the “Ranged”\nsubtype, target a unit in range, and count as having a printed ::range:: Range value of 2.",
+        "text": "All of your attack actions gain the “Ranged” subtype, target a unit in range, and count as having a printed ::range:: Range value of 2.",
         "alternative": false
     }
 ]

@@ -9,6 +9,7 @@ function filterHeroes(h: { [id: string]: Hero }): { [id: string]: Hero } {
         Expansion.Defiant,
         Expansion.Renowned,
         Expansion.Wayward,
+        Expansion.Arcane
     ];
     return Object.fromEntries(
         Object.entries(h).filter(([, value]) =>

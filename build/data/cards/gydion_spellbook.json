@@ -4,25 +4,25 @@
         "text": "Target a unit in range and not adjacent to you.",
         "color": "gold",
         "school": "cantrip",
-        "type": "attack - ranged"
+        "type": "basic attack - ranged"
     },
     {
         "name": "Shocking Grasp",
         "text": "Target a unit adjacent to you.\nAfter the attack: Move the target up to 1 space.",
         "color": "gold",
         "school": "cantrip",
-        "type": "attack"
+        "type": "basic attack"
     },
     {
         "name": "Expeditious Retreat",
         "text": "Move only in a straight line.",
         "color": "gold",
         "school": "cantrip",
-        "type": "movement"
+        "type": "basic movement"
     },
     {
         "name": "Burning Hands",
-        "text": "Target a unit adjacent to you.\nBefore the attack: Up to  enemy hero adjacent to the target discards a card, if able.",
+        "text": "Target a unit adjacent to you.\nBefore the attack: Up to 1 enemy hero adjacent to the target discards a card, if able.",
         "color": "red",
         "tier": "I",
         "school": "evocation",
@@ -110,7 +110,7 @@
     },
     {
         "name": "Find Familiar",
-        "text": "Place a ::token_familiar:: Familiar token in radius.\nYou may remove up to three  other spell cards from the spellbook faceup.",
+        "text": "Place a ::token_familiar:: Familiar token in radius.\nYou may remove up to three other spell cards from the spellbook faceup.",
         "color": "green",
         "tier": "II",
         "school": "conjuration",
