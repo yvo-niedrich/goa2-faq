@@ -47,17 +47,9 @@ const records = computed(() => {
 }
 
 .faq-popup {
-    // background: var(--color-background);
-    // border: 1px solid var(--color-border-hover);
-    // box-shadow: 0 0 10px 4px #000;
-
-    // border-radius: 0.5rem;
-    // padding: 1.25rem;
-
-
     transition: .25s ease-out;
     background: linear-gradient(0deg, var(--color-background-mute) 30%, var(--color-background) 90%);
-    margin: 2px;
+    margin: 0 1.5em 0 1.15em;
     border-radius: 1em;
     border: 1px solid var(--color-border-hover);
 

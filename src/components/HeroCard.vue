@@ -132,6 +132,7 @@ function processCardType(type: Card['type']) {
             line-height: 1;
         }
 
+        &:active::before,
         &:hover::before {
             background-color: rgba(243, 156, 18, 1);
             box-shadow: 0 0 2px rgba(0, 0, 0, 1);
