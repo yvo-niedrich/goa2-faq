@@ -107,10 +107,10 @@ function setNewCard(cards: Card[], select: CardFn) {
             <Carousel :items-to-show="visibleCount" :model-value="store.focus"
                 @update:modelValue="val => store.focus = Math.min(val, navigableSlides)" :wrap-around="false"
                 snap-align="center-even" :breakpoints="{
-    0: { itemsToShow: 1, snapAlign: 'center' },
-    [viewport.mobileBoundary]: { itemsToShow: getVisibleCount(viewport.mobileBoundary), snapAlign: 'center-even' },
-    [viewport.desktopBoundary]: { itemsToShow: getVisibleCount(viewport.desktopBoundary), snapAlign: 'center-even' },
-}" class="carousel">
+                    0: { itemsToShow: 1, snapAlign: 'center' },
+                    [viewport.mobileBoundary]: { itemsToShow: getVisibleCount(viewport.mobileBoundary), snapAlign: 'center-even' },
+                    [viewport.desktopBoundary]: { itemsToShow: getVisibleCount(viewport.desktopBoundary), snapAlign: 'center-even' },
+                }" class="carousel">
 
                 <template #addons>
                     <Navigation>
@@ -144,7 +144,7 @@ function setNewCard(cards: Card[], select: CardFn) {
                     <div class="slide-card-container">
 
                         <div class="card-modification upgrade" :class="{ 'disabled': card.upgrades.length === 0 }"
-                            title="{{ $t('app.card.upgrade') }}" @click="() => setNewCard(card.upgrades, card.modify)">
+                            :title="$t('app.card.upgrade')" @click="() => setNewCard(card.upgrades, card.modify)">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="5 5 12 12"
                                 fill="none">
                                 <path d="M6 16L12 10L18 16" stroke="currentColor" stroke-width="2"
@@ -156,8 +156,7 @@ function setNewCard(cards: Card[], select: CardFn) {
 
                         </div>
                         <div class="card-modification downgrade" :class="{ 'disabled': card.downgrades.length === 0 }"
-                            title="{{ $t('app.card.downgrade') }}"
-                            @click="() => setNewCard(card.downgrades, card.modify)">
+                            :title="$t('app.card.downgrade')" @click="() => setNewCard(card.downgrades, card.modify)">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="5 7 12 12"
                                 fill="none">
                                 <path d="M6 8L12 14L18 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -177,284 +176,284 @@ function setNewCard(cards: Card[], select: CardFn) {
 </template>
 
 <style scoped lang="scss">
-    .carousel-wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-        position: relative;
-        width: 100%;
-        min-width: 320px;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 2rem;
+.carousel-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+    width: 100%;
+    min-width: 320px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
 
-        @media (max-width: 480px) {
-            // padding: 0 1rem;
-        }
+    @media (max-width: 480px) {
+        // padding: 0 1rem;
+    }
+}
+
+.carousel {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem 0 0 0;
+
+
+    @media (max-width: 750px) {
+        padding-top: 1rem;
     }
 
-    .carousel {
-        width: 100%;
-        margin: 0 auto;
-        padding: 1rem 0 0 0;
+    @media (max-width: 480px) {
+        padding-top: .5rem;
+    }
+}
 
+.slide {
+    padding: 0.5rem;
+    transition: transform 0.5s ease-out;
 
-        @media (max-width: 750px) {
-            padding-top: 1rem;
-        }
-
-        @media (max-width: 480px) {
-            padding-top: .5rem;
-        }
+    &.is-left {
+        transform: perspective(500px) rotateY(25deg) translateX(2em);
     }
 
-    .slide {
-        padding: 0.5rem;
-        transition: transform 0.5s ease-out;
-
-        &.is-left {
-            transform: perspective(500px) rotateY(25deg) translateX(2em);
-        }
-
-        &.is-right {
-            transform: perspective(500px) rotateY(-25deg) translateX(-2em);
-        }
-
-        &.is-muted {
-            opacity: 0.3;
-        }
+    &.is-right {
+        transform: perspective(500px) rotateY(-25deg) translateX(-2em);
     }
 
-    .carousel-mask {
-        opacity: 1;
-        transition: .5s ease-out;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        width: 7em;
-        z-index: 2;
-        pointer-events: none;
+    &.is-muted {
+        opacity: 0.3;
+    }
+}
 
-        @media (max-width: 750px) {
-            width: 3.5em;
-        }
+.carousel-mask {
+    opacity: 1;
+    transition: .5s ease-out;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 7em;
+    z-index: 2;
+    pointer-events: none;
+
+    @media (max-width: 750px) {
+        width: 3.5em;
+    }
+
+    @media (max-width: 480px) {
+        width: 2em;
+    }
+
+    &.left {
+        left: 0;
+        background: linear-gradient(to right, rgba(var(--color-background-soft-rgb), 0.9), transparent);
 
         @media (max-width: 480px) {
-            width: 2em;
-        }
-
-        &.left {
-            left: 0;
-            background: linear-gradient(to right, rgba(var(--color-background-soft-rgb), 0.9), transparent);
-
-            @media (max-width: 480px) {
-                opacity: 0;
-            }
-        }
-
-        &.right {
-            right: 0;
-            background: linear-gradient(to left, rgba(var(--color-background-soft-rgb), 0.9), transparent);
-
-            @media (max-width: 480px) {
-                opacity: 0;
-            }
-        }
-
-        &.hidden {
             opacity: 0;
         }
     }
 
-    .nav-button {
-        transition: .5s ease-out;
-
-        position: absolute;
-        top: 40%;
-        transform: translateY(-50%) scaleY(2);
-        background: none;
-        border: none;
-        font-size: 2rem;
-        font-weight: 800;
-        cursor: pointer;
-        color: var(--color-text-dark);
-        text-shadow: 0 0 1px #666;
-        z-index: 10;
-        border-radius: .4rem;
-        padding: 2.25rem .25rem;
-
-
-        &.prev {
-            left: -2.15rem;
-            background: linear-gradient(to right, rgba(var(--color-heading-bright-rgb), .4), transparent);
-            background-position: -1em;
-            background-repeat: no-repeat;
-        }
-
-        &.next {
-            right: -2.15rem;
-            background: linear-gradient(to left, rgba(var(--color-heading-bright-rgb), .4), transparent);
-            background-position: 1em;
-            background-repeat: no-repeat;
-        }
-
-        &.prev:hover,
-        &.next:hover {
-            background-position: 0;
-        }
-
-        &.disabled {
-            opacity: 0.3;
-            pointer-events: none;
-        }
-    }
-
-
-    .custom-pagination {
-        display: flex;
-        justify-content: center;
-        gap: 0.5rem;
-        margin: 1.25rem 2.5rem;
-
-
-        @media (max-width: 750px) {
-            margin: 1.15rem 1.5rem;
-        }
-
+    &.right {
+        right: 0;
+        background: linear-gradient(to left, rgba(var(--color-background-soft-rgb), 0.9), transparent);
 
         @media (max-width: 480px) {
-            margin: 1rem;
-        }
-
-        .pagination-bullet {
-            height: 1.5em;
-
-            width: 18%;
-
-            max-width: 10em;
-            border-radius: .35em;
-            opacity: 0.6;
-            cursor: pointer;
-            border: 1px solid var(--color-border);
-            transition: all 0.2s ease-in-out;
-
-            &.active {
-                opacity: 1;
-                border: 1px solid var(--color-border-dark);
-                box-shadow: 0 0 3px #000;
-            }
-
-            &.color-y {
-                background-color: gold;
-            }
-
-            &.color-s {
-                background-color: silver;
-            }
-
-            &.color-r {
-                background-color: red;
-            }
-
-            &.color-g {
-                background-color: green;
-            }
-
-            &.color-b {
-                background-color: blue;
-            }
-
-            &.color-u {
-                background-color: rgb(90, 0, 90);
-            }
+            opacity: 0;
         }
     }
 
-    .slide-card-container {
-        height: 100%;
-        position: relative;
-        padding: 2rem 0;
+    &.hidden {
+        opacity: 0;
+    }
+}
 
-        .card-modification {
-            transition: .5s ease-out;
-            text-align: center;
-            position: absolute;
+.nav-button {
+    transition: .5s ease-out;
+
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%) scaleY(2);
+    background: none;
+    border: none;
+    font-size: 2rem;
+    font-weight: 800;
+    cursor: pointer;
+    color: var(--color-text-dark);
+    text-shadow: 0 0 1px #666;
+    z-index: 10;
+    border-radius: .4rem;
+    padding: 2.25rem .25rem;
+
+
+    &.prev {
+        left: -2.15rem;
+        background: linear-gradient(to right, rgba(var(--color-heading-bright-rgb), .4), transparent);
+        background-position: -1em;
+        background-repeat: no-repeat;
+    }
+
+    &.next {
+        right: -2.15rem;
+        background: linear-gradient(to left, rgba(var(--color-heading-bright-rgb), .4), transparent);
+        background-position: 1em;
+        background-repeat: no-repeat;
+    }
+
+    &.prev:hover,
+    &.next:hover {
+        background-position: 0;
+    }
+
+    &.disabled {
+        opacity: 0.3;
+        pointer-events: none;
+    }
+}
+
+
+.custom-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1.25rem 2.5rem;
+
+
+    @media (max-width: 750px) {
+        margin: 1.15rem 1.5rem;
+    }
+
+
+    @media (max-width: 480px) {
+        margin: 1rem;
+    }
+
+    .pagination-bullet {
+        height: 1.5em;
+
+        width: 18%;
+
+        max-width: 10em;
+        border-radius: .35em;
+        opacity: 0.9;
+        cursor: pointer;
+        border: 1px solid var(--color-border);
+        transition: all 0.2s ease-in-out;
+
+        &.active {
+            opacity: 1;
+            border: 1px solid var(--color-border-dark);
+            box-shadow: 0 0 3px #000;
+        }
+
+        &.color-y {
+            background-color: var(--color-card-y-primary);
+        }
+
+        &.color-s {
+            background-color: var(--color-card-s-primary);
+        }
+
+        &.color-r {
+            background-color: var(--color-card-r-primary);
+        }
+
+        &.color-g {
+            background-color: var(--color-card-g-primary);
+        }
+
+        &.color-b {
+            background-color: var(--color-card-b-primary);
+        }
+
+        &.color-u {
+            background-color: var(--color-card-u-primary);
+        }
+    }
+}
+
+.slide-card-container {
+    height: 100%;
+    position: relative;
+    padding: 2rem 0;
+
+    .card-modification {
+        transition: .5s ease-out;
+        text-align: center;
+        position: absolute;
+        vertical-align: text-bottom;
+        width: 45%;
+        margin: 0 auto;
+        left: 50%;
+        transform: translate(-50%, 0);
+        cursor: pointer;
+        height: 2rem;
+
+        opacity: .5;
+
+        &>* {
             vertical-align: text-bottom;
-            width: 45%;
-            margin: 0 auto;
-            left: 50%;
-            transform: translate(-50%, 0);
-            cursor: pointer;
-            height: 2rem;
+        }
 
-            opacity: .5;
+        &:hover {
+            opacity: 1;
+        }
 
-            &>* {
-                vertical-align: text-bottom;
-            }
+        &.downgrade {
+            bottom: 0;
 
-            &:hover {
-                opacity: 1;
-            }
+            border-bottom: 1px solid var(--color-background);
+            border-left: 1px solid var(--color-background);
+            border-right: 1px solid var(--color-background);
+            border-bottom-right-radius: 1em;
+            border-bottom-left-radius: 1em;
 
-            &.downgrade {
-                bottom: 0;
-
-                border-bottom: 1px solid var(--color-background);
-                border-left: 1px solid var(--color-background);
-                border-right: 1px solid var(--color-background);
-                border-bottom-right-radius: 1em;
-                border-bottom-left-radius: 1em;
-
-                background: linear-gradient(to top, rgba(var(--color-background-highlight-rgb), 0.5), transparent);
+            background: linear-gradient(to top, rgba(var(--color-background-highlight-rgb), 0.5), transparent);
 
 
-                &:hover svg {
-                    transform: translateY(7px);
-                }
-            }
-
-            &.upgrade {
-                top: 0;
-
-                border-top: 1px solid var(--color-background);
-                border-left: 1px solid var(--color-background);
-                border-right: 1px solid var(--color-background);
-                border-top-right-radius: 1em;
-                border-top-left-radius: 1em;
-
-
-                background: linear-gradient(to bottom, rgba(var(--color-background-highlight-rgb), 0.5), transparent);
-
-                &:hover svg {
-                    transform: translateY(-7px);
-                }
-            }
-
-            &.downgrade.disabled,
-            &.upgrade.disabled {
-                opacity: 0;
-                background: none;
-                border: none;
-                cursor: default;
-            }
-
-            svg {
-                transition: 0.5s ease-out;
+            &:hover svg {
+                transform: translateY(7px);
             }
         }
+
+        &.upgrade {
+            top: 0;
+
+            border-top: 1px solid var(--color-background);
+            border-left: 1px solid var(--color-background);
+            border-right: 1px solid var(--color-background);
+            border-top-right-radius: 1em;
+            border-top-left-radius: 1em;
+
+
+            background: linear-gradient(to bottom, rgba(var(--color-background-highlight-rgb), 0.5), transparent);
+
+            &:hover svg {
+                transform: translateY(-7px);
+            }
+        }
+
+        &.downgrade.disabled,
+        &.upgrade.disabled {
+            opacity: 0;
+            background: none;
+            border: none;
+            cursor: default;
+        }
+
+        svg {
+            transition: 0.5s ease-out;
+        }
     }
+}
 
-    .card {
-        margin: 0;
-        user-select: none;
-        touch-action: pan-y;
+.card {
+    margin: 0;
+    user-select: none;
+    touch-action: pan-y;
 
-        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
-        height: 100%;
-        align-items: center;
-        justify-content: center;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.65);
+    height: 100%;
+    align-items: center;
+    justify-content: center;
 
-    }
+}
 </style>

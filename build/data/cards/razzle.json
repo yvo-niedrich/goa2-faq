@@ -120,7 +120,7 @@
         "id": "raz-green-ii-spectacle",
         "name": "Spectacle",
         "color": "green",
-        "type": "attack - ranged",
+        "type": "skill - ranged",
         "tier": "II",
         "text": "Swap with a minion in range.\nMay repeat once by another one of you, targeting a different minion.",
         "alternative": true

@@ -51,8 +51,13 @@ function choice(c: Card) {
     transition: .5s ease-out;
     background: var(--color-background);
     border: 1px solid var(--color-border-hover);
-    box-shadow: 0 0 10px 4px #000;
-    box-shadow: 0 0 10px 4px #000;
+
+    box-shadow:
+        inset 2px 2px 5px #000,
+        inset -2px -2px 5px #000,
+        2px 2px 10px 1px #000,
+        -2px -2px 10px 1px #000;
+
 
     border-radius: 0.75rem;
     padding: 1rem;
@@ -123,8 +128,8 @@ function choice(c: Card) {
 
     .card-select-record:not(:last-of-type) {
         position: relative;
-        padding-bottom: 1em;
-        margin-bottom: 1em;
+        padding-bottom: 1.25em;
+        margin-bottom: 1.25em;
 
         &::after {
             content: "";
@@ -139,27 +144,33 @@ function choice(c: Card) {
         }
     }
 
-    .hero-card-details {
+    .hero-card {
         margin: .5em auto;
-        max-width: 95%;
     }
 
     input[type="button"] {
-        background-color: var(--color-background-highlight);
+        --btn-color-top: var(--color-border-highlight);
+        --btn-color-middle: var(--color-border-highlight);
+        --btn-color-bottom: var(--color-background-highlight);
+
+        transition: 0.5s ease;
+        background: linear-gradient(to bottom, var(--btn-color-top), var(--btn-color-middle), var(--btn-color-bottom));
+        background-position-y: 0;
+        background-repeat: no-repeat no-repeat;
+
         color: var(--color-text-dark);
         border: 1px solid #000;
         margin: 0 auto;
-        padding: 0.65em 15%;
+        padding: 0.6em 15%;
         font-size: 1rem;
         border-radius: 1em;
         cursor: pointer;
-        transition: 0.4s ease;
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 
         &:hover {
-
+            --btn-color-middle: var(--color-background-highlight);
+            --btn-color-bottom: var(--color-background-mute);
             box-shadow: 0 1px 2px rgba(60, 60, 60, 0.5);
-            background-color: var(--color-background-soft);
             color: #000;
         }
 

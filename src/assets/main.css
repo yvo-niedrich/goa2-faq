@@ -17,7 +17,7 @@
 
     --color-heading-bright-rgb: 175, 202, 255;
 
-    --color-heading: rgb(129, 171, 255);
+    --color-heading: rgb(154, 188, 255);
     --color-heading-strong: rgb(65, 141, 255);
     --color-heading-bright: rgb(175, 202, 255);
     --color-text: rgb(255, 255, 255);
@@ -25,6 +25,19 @@
     --color-text-muted: rgb(163, 163, 163);
     --color-heading-dark: rgb(15, 22, 29);
     --color-text-dark: rgb(19, 27, 34);
+
+    --color-card-y-primary: rgb(203, 145, 28);
+    --color-card-y-secondary: rgb(255, 239, 149);
+    --color-card-s-primary: rgb(125, 125, 125);
+    --color-card-s-secondary: rgb(170, 170, 170);
+    --color-card-r-primary: rgb(192, 25, 22);
+    --color-card-r-secondary: rgb(248, 143, 143);
+    --color-card-g-primary: rgb(29, 171, 29);
+    --color-card-g-secondary: rgb(140, 250, 140);
+    --color-card-b-primary: rgb(45, 86, 153);
+    --color-card-b-secondary: rgb(142, 158, 248);
+    --color-card-u-primary: rgb(33, 3, 61);
+    --color-card-u-secondary: rgb(196, 157, 233);
 }
 
 *,
@@ -33,6 +46,16 @@
     box-sizing: border-box;
     margin: 0;
     font-weight: normal;
+}
+
+@font-face {
+    font-family: 'ModestoPoster';
+    src:
+        url('/fonts/modesto_poster.woff2') format('woff2'),
+        url('/fonts/modesto_poster.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 h1,

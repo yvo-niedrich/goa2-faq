@@ -28,7 +28,17 @@ export default defineConfig({
         nightwatchPlugin(),
         VitePWA({
             registerType: 'autoUpdate',
-            includeAssets: ['favicon.ico', 'locales/*.json', 'hero/*.png'],
+            workbox: {
+                skipWaiting: true,
+                clientsClaim: true,
+            },
+            includeAssets: [
+                'favicon.ico',
+                'locales/*.json',
+                'hero/*.png',
+                'icons/*.png',
+                'fonts/*',
+            ],
             manifest: {
                 name: 'Guards of Atlantis 2 :: FAQ',
                 short_name: 'GoA2 :: FAQ',

@@ -68,7 +68,7 @@
         "color": "red",
         "type": "movement",
         "tier": "II",
-        "text": "**This round:** if you would discard a card from your hand, you may discard this card instead;\nyou may discard this card to perform its defense action, as if it was in your hand.",
+        "text": "**This round:** If you would discard a card from your hand, you may discard this card instead; you may discard this card to perform its defense action, as if it was in your hand.",
         "alternative": true
     },
     {
@@ -122,7 +122,7 @@
         "color": "green",
         "type": "skill",
         "tier": "III",
-        "text": "Move any number of spaces in a straight line, ignoring obstacles, without moving through more than two empty space.",
+        "text": "Move any number of spaces in a straight line, ignoring obstacles, without moving through more than two empty spaces.",
         "alternative": true
     },
     {
@@ -158,7 +158,7 @@
         "color": "red",
         "type": "movement",
         "tier": "III",
-        "text": "You may retrieve a discarded card.\n**This round:** if you would discard a card from your hand, you may discard this card instead;\nyou may discard this card to perform its defense action, as if it was in your hand.",
+        "text": "You may retrieve a discarded card.\n**This round:** If you would discard a card from your hand, you may discard this card instead; you may discard this card to perform its defense action, as if it was in your hand.",
         "alternative": true
     },
     {

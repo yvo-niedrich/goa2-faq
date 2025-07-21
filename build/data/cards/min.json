@@ -23,7 +23,7 @@
         "color": "silver",
         "type": "basic skill",
         "tier": null,
-        "text": "Place a ::token_smoke_bomb:: smoke bomb token in radius;\nenemy heroes cannot target another you or another unit if there is the Smoke Bomb on a straight line between that enemy hero and their target.",
+        "text": "Place the ::token_smoke_bomb:: smoke bomb token in radius;\nenemy heroes cannot target another you or another unit if the Smoke bomb token is on a straight line between that enemy hero and their target.",
         "alternative": false
     },
     {
@@ -57,7 +57,7 @@
         "id": "min-green-i-poof-",
         "name": "Poof!",
         "color": "green",
-        "type": "skill - ranged",
+        "type": "defense - ranged",
         "tier": "I",
         "text": "Swap with a ::token_smoke_bomb:: Smoke bomb in range;\nif you do, block the attack.",
         "alternative": false
@@ -84,7 +84,7 @@
         "id": "min-green-ii-vanish",
         "name": "Vanish",
         "color": "green",
-        "type": "skill - ranged",
+        "type": "defense - ranged",
         "tier": "II",
         "text": "Swap with a ::token_smoke_bomb:: Smoke bomb in range;\nif you do, block the attack.",
         "alternative": false
@@ -122,7 +122,7 @@
         "color": "blue",
         "type": "skill",
         "tier": "III",
-        "text": "Place 3 mine tokens, 2 ::token_blast:: blasts and 1 ::token_dud::\ndud, facedown in radius; units may move through them; remove mien tokens after an enemy hero moves through them; for every blast removed, that hero discards a card, if able.",
+        "text": "Place 3 mine tokens, 2 ::token_blast:: blasts and 1 ::token_dud::\ndud, facedown in radius; units may move through them; remove mine tokens after an enemy hero moves through them; for every blast removed, that hero discards a card, if able.",
         "alternative": false
     },
     {
@@ -138,7 +138,7 @@
         "id": "min-green-iii-ruse",
         "name": "Ruse",
         "color": "green",
-        "type": "skill - ranged",
+        "type": "defense - ranged",
         "tier": "III",
         "text": "Swap with a ::token_smoke_bomb:: Smoke bomb in range;\nif you do, block the attack. You may place the Smoke bomb into a space in range.",
         "alternative": false

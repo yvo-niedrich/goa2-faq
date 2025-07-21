@@ -5,7 +5,7 @@
         "color": "gold",
         "type": "basic attack - ranged",
         "tier": null,
-        "text": "::tiebreaker_blue::: Target a minion adjacent to you.\n--- \n::tiebreaker_orange:: Target a hero in range.",
+        "text": "::tiebreaker_blue::: Target a minion adjacent to you.\n--- \n::tiebreaker_orange:: Target a hero in range.\n_(Apply the text matching the symbol on the Tie Breaker coin.)_",
         "alternative": false
     },
     {
@@ -32,7 +32,7 @@
         "color": "purple",
         "type": "ultimate",
         "tier": "IV",
-        "text": "The first time each turn after youy perform a primary actionm you may flip the Tie Breaker coin; if you do, you may perform that action again, choosing different targets.",
+        "text": "The first time each turn after you perform a primary action, you may flip the Tie Breaker coin; if you do, you may perform that action again, choosing different targets.",
         "alternative": false
     },
     {

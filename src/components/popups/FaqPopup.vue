@@ -47,14 +47,31 @@ const records = computed(() => {
 }
 
 .faq-popup {
-    background: var(--color-background);
-    border: 1px solid var(--color-border-hover);
-    box-shadow: 0 0 10px 4px #000;
+    // background: var(--color-background);
+    // border: 1px solid var(--color-border-hover);
+    // box-shadow: 0 0 10px 4px #000;
 
-    border-radius: 0.5rem;
-    padding: 1.25rem;
-    max-width: 600px;
-    width: 90%;
+    // border-radius: 0.5rem;
+    // padding: 1.25rem;
+
+
+    transition: .25s ease-out;
+    background: linear-gradient(0deg, var(--color-background-mute) 30%, var(--color-background) 90%);
+    margin: 2px;
+    border-radius: 1em;
+    border: 1px solid var(--color-border-hover);
+
+    box-shadow:
+        inset 2px 2px 5px #000,
+        inset -2px -2px 5px #000,
+        2px 2px 10px 1px #000,
+        -2px -2px 10px 1px #000;
+
+    padding: 1em 1.25em;
+
+
+    max-width: 650px;
+    width: 92%;
     max-height: 90vh;
     min-height: 15vh;
     position: relative;
@@ -90,7 +107,6 @@ const records = computed(() => {
             color: var(--color-text);
             background-color: var(--color-background-mute);
             border: 1px solid var(--color-border-highlight);
-            box-shadow: 0 0 5px #000000;
         }
     }
 
@@ -134,16 +150,12 @@ const records = computed(() => {
         font-style: italic;
         font-weight: 400;
         padding-left: .75em;
+        font-size: 1.2em;
 
         &::before {
             content: '\00BB\00A0 ';
         }
     }
-
-    .answer {
-        font-size: .9em;
-    }
-
 }
 
 

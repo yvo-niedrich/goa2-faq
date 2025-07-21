@@ -5,7 +5,7 @@
         "color": "gold",
         "type": "basic attack - ranged",
         "tier": null,
-        "text": "If you are adjacent to a tree token, target a unit in range, otherwise, target a minion adjacent to you.\nAfter the attack: If the target was adjacent to you, move it 1 space to a space adjacent to you, if able.",
+        "text": "**Choose one —**\n- Target a minion adjacent to you.\n- Remove a ::token_tree:: Tree token adjacent to you. Target a unit in range.",
         "alternative": false
     },
     {
@@ -23,7 +23,7 @@
         "color": "silver",
         "type": "basic skill",
         "tier": null,
-        "text": "Place up to 3 ::token_tree:: tree tokens in radius, not adjacent to a tree token. Heroes may move through a space with a tree token. Do not remove the tree tokens at the end of round.",
+        "text": "Place up to 3 ::token_tree:: Tree tokens in radius; Tree tokens are not removed at the end of the round.",
         "alternative": false
     },
     {
@@ -32,7 +32,7 @@
         "color": "purple",
         "type": "ultimate",
         "tier": "IV",
-        "text": "Adjacent Tree tokens in a battle zone count as melee minions immune to ranged attacks.",
+        "text": "Each time after you resolve a card, you may place a ::token_tree:: Tree token in radius.",
         "alternative": false
     },
     {
@@ -41,7 +41,7 @@
         "color": "blue",
         "type": "skill",
         "tier": "I",
-        "text": "If you are adjacent to a tree, you may retrieve a discarded card.",
+        "text": "Remove a ::token_tree:: Tree token in radius.\nYou may retrieve a discarded card.",
         "alternative": false
     },
     {
@@ -50,7 +50,7 @@
         "color": "red",
         "type": "attack - ranged",
         "tier": "I",
-        "text": "Target a unit in range, adjacent to a tree token.",
+        "text": "**Choose one —**\n- Target a hero adjacent to you.\n- Target a unit in range adjacent to a ::token_tree:: Tree token.",
         "alternative": false
     },
     {
@@ -59,7 +59,7 @@
         "color": "green",
         "type": "skill - ranged",
         "tier": "I",
-        "text": "Move up to 1 space. Push an adjacent token up to 3 spaces. If the token is pushed 2 or more spaces, an enemy hero adjacent to that token discards a card, if able.",
+        "text": "Place a token, or an enemy unit, adjacent to you into a space in range.",
         "alternative": false
     },
     {
@@ -68,7 +68,7 @@
         "color": "blue",
         "type": "skill",
         "tier": "II",
-        "text": "Either you, or a hero in radius, may retrieve a discarded card if either of you are adjacent to a tree.",
+        "text": "Remove a ::token_tree:: Tree token in radius.\n**Choose one —**\n- You may retrieve a discarded card.\n- A friendly hero in radius may retrieve a discarded card.",
         "alternative": false
     },
     {
@@ -77,16 +77,16 @@
         "color": "red",
         "type": "attack - ranged",
         "tier": "II",
-        "text": "Target a unit in range, adjacent to a tree token.",
+        "text": "**Choose one —**\n- Target a hero adjacent to you.\n- Target a unit in range adjacent to a ::token_tree:: Tree token.",
         "alternative": false
     },
     {
         "id": "wuk-green-ii-mighty-throw",
         "name": "Mighty Throw",
         "color": "green",
-        "type": "skill",
+        "type": "skill - ranged",
         "tier": "II",
-        "text": "Move up to 1 space. Push an adjacent token or a minion up to 4 spaces. If it is pushed 2 or more spaces, an enemy hero adjacent to that token or a minion discards a card, if able.",
+        "text": "Place a token, or an enemy unit, adjacent to you into a space in range.",
         "alternative": false
     },
     {
@@ -95,7 +95,7 @@
         "color": "blue",
         "type": "skill",
         "tier": "II",
-        "text": "**This round:** Up to 1 adjacent non-immune enemy minion does not count towards the minion total during minion battle.",
+        "text": "**This round:** Up to 1 enemy minion adjacent to you do not count towards the minion total during minion battle, regardless of immunity.",
         "alternative": true
     },
     {
@@ -104,7 +104,7 @@
         "color": "red",
         "type": "movement",
         "tier": "II",
-        "text": "If you move in a straight line: You may ignore units; if you moved through an enemy hero, that hero discards a card, or is defeated;\ndefeat up to 1 minion you moved through.",
+        "text": "If you move in a straight line: You may ignore obstacles; each enemy hero you moved through discards a card, or is defeated;\ndefeat up to one minion you moved through.",
         "alternative": true
     },
     {
@@ -113,7 +113,7 @@
         "color": "green",
         "type": "skill",
         "tier": "II",
-        "text": "Swap places with a tree token in radius.\nYou may then place a minion adjacent to that tree token into a space adjacent to you.",
+        "text": "**Choose one —**\n- Swap with a ::token_tree:: Tree token in radius.\n- Swap a friendly unit in radius with a Tree token in radius.",
         "alternative": true
     },
     {
@@ -122,7 +122,7 @@
         "color": "blue",
         "type": "skill",
         "tier": "III",
-        "text": "Both you and a friendly hero in radius may retrieve a discarded card if either of you are adjacent to a tree.",
+        "text": "Remove a ::token_tree:: Tree token in radius.\n**Choose one or both —**\n- You may retrieve a discarded card.\n- A friendly hero in radius may retrieve a discarded card.",
         "alternative": false
     },
     {
@@ -131,16 +131,16 @@
         "color": "red",
         "type": "attack - ranged",
         "tier": "III",
-        "text": "Target a unit in range, adjacent to a tree token.\nMay repeat once, targeting a different hero.",
+        "text": "**Choose one, or both**, on different targets **—**\n- Target a hero adjacent to you.\n- Target a unit in range adjacent to a ::token_tree:: Tree token.",
         "alternative": false
     },
     {
         "id": "wuk-green-iii-monstrous-throw",
         "name": "Monstrous Throw",
         "color": "green",
-        "type": "skill",
+        "type": "skill - ranged",
         "tier": "III",
-        "text": "Move up to 1 space. Push an adjacent unit or a token up to 5 spaces. If it is pushed 2 or more spaces, an enemy hero adjacent to that unit or token discards a card, if able.",
+        "text": "Place a token, or an enemy unit, adjacent to you into a space in range. May repeat once.",
         "alternative": false
     },
     {
@@ -149,7 +149,7 @@
         "color": "blue",
         "type": "skill",
         "tier": "III",
-        "text": "**This round:** Up to 2 adjacent enemy minion do not count towards the minion total during minion battle, regardless of immunity.",
+        "text": "**This round:** Up to 2 enemy minions adjacent to you do not count towards the minion total during minion battle, regardless of immunity.",
         "alternative": true
     },
     {
@@ -158,16 +158,16 @@
         "color": "red",
         "type": "movement",
         "tier": "III",
-        "text": "If you move in a straight line: You may ignore units; if you moved through an enemy hero, that hero discards a card, or is defeated;\ndefeat up to 2 minion you moved through.",
+        "text": "If you move in a straight line: You may ignore obstacles; each enemy hero you moved through discards a card, or is defeated;\ndefeat up to two minions you moved through.",
         "alternative": true
     },
     {
         "id": "wuk-green-iii-treetop-ride",
         "name": "Treetop Ride",
         "color": "green",
-        "type": "defense skill",
+        "type": "skill",
         "tier": "III",
-        "text": "Swap places with a tree token in radius.\nYou may then place a minion adjacent to that tree token into a space adjacent to you.",
+        "text": "**Choose up to two times —**\n- Swap with a ::token_tree:: Tree token in radius.\n- Swap a friendly unit in radius with a Tree token in radius.",
         "alternative": true
     }
 ]
