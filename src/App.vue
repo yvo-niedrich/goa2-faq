@@ -166,15 +166,15 @@ header {
     }
 
     @media (max-width: 900px) {
-        padding: 1rem .5rem 1.5rem;
+        padding: 1rem .6rem 1.5rem;
     }
 
     @media (max-width: 600px) {
-        padding: 1rem .25rem 1.5rem;
+        padding: 1rem .4rem 1.5rem;
     }
 
     @media (max-width: 480px) {
-        padding: .5rem .175rem 1.5rem;
+        padding: .5rem .3rem 1.5rem;
     }
 
     .footer {

@@ -88,12 +88,13 @@ function handleClick() {
         position: absolute;
         top: 0;
         right: 4%;
+        opacity: .75;
 
         line-height: 1em;
-        color: var(--color-text);
+        color: gold;
         text-shadow: 1px 1px 6px #000;
-        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-        font-size: 1.1em;
+        text-shadow: -1px -1px 0 #333, 1px -1px 0 #333, -1px 1px 0 #333, 1px 1px 0 #333, 2px 2px 6px #000;
+        font-size: .9em;
     }
 
     .name-overlay {

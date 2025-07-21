@@ -51,6 +51,7 @@ function choice(c: Card) {
     transition: .5s ease-out;
     background: var(--color-background);
     border: 1px solid var(--color-border-hover);
+    margin: 0 1.5em 0 1.15em;
 
     box-shadow:
         inset 2px 2px 5px #000,
@@ -71,7 +72,7 @@ function choice(c: Card) {
 
     @media (max-width: 520px) {
         font-size: .9em;
-        padding: 1rem .5rem;
+        padding: 1rem .4rem;
         width: 95%;
     }
 
@@ -123,7 +124,6 @@ function choice(c: Card) {
         position: relative;
         overflow-y: auto;
         flex: 1;
-        padding-right: 0.5rem;
     }
 
     .card-select-record:not(:last-of-type) {
