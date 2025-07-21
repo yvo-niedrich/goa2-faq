@@ -7,6 +7,7 @@ function filterHeroes(h: { [id: string]: Hero }): { [id: string]: Hero } {
         Expansion.Core,
         Expansion.Devoted,
         Expansion.Defiant,
+        Expansion.Renowned,
         Expansion.Wayward,
     ];
     return Object.fromEntries(
