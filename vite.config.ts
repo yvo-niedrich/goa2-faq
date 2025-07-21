@@ -32,7 +32,13 @@ export default defineConfig({
                 skipWaiting: true,
                 clientsClaim: true,
             },
-            includeAssets: ['favicon.ico', 'locales/*.json', 'hero/*.png', 'icons/*.png'],
+            includeAssets: [
+                'favicon.ico',
+                'locales/*.json',
+                'hero/*.png',
+                'icons/*.png',
+                'fonts/*',
+            ],
             manifest: {
                 name: 'Guards of Atlantis 2 :: FAQ',
                 short_name: 'GoA2 :: FAQ',

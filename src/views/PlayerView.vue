@@ -144,7 +144,7 @@ function setNewCard(cards: Card[], select: CardFn) {
                     <div class="slide-card-container">
 
                         <div class="card-modification upgrade" :class="{ 'disabled': card.upgrades.length === 0 }"
-                            title="{{ $t('app.card.upgrade') }}" @click="() => setNewCard(card.upgrades, card.modify)">
+                            :title="$t('app.card.upgrade')" @click="() => setNewCard(card.upgrades, card.modify)">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="5 5 12 12"
                                 fill="none">
                                 <path d="M6 16L12 10L18 16" stroke="currentColor" stroke-width="2"
@@ -156,8 +156,7 @@ function setNewCard(cards: Card[], select: CardFn) {
 
                         </div>
                         <div class="card-modification downgrade" :class="{ 'disabled': card.downgrades.length === 0 }"
-                            title="{{ $t('app.card.downgrade') }}"
-                            @click="() => setNewCard(card.downgrades, card.modify)">
+                            :title="$t('app.card.downgrade')" @click="() => setNewCard(card.downgrades, card.modify)">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="5 7 12 12"
                                 fill="none">
                                 <path d="M6 8L12 14L18 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"
