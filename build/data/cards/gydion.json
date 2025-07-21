@@ -5,7 +5,7 @@
         "color": "gold",
         "type": "basic skill",
         "tier": null,
-        "text": "**Choose and cast one** spell in the spellbook **—**\n-  “Shocking Grasp” _(To repel a foe!)_\n-  “Magic Missile” _(To blast at range!)_\n-  “Expeditious Retreat” _(To dart a great distance!)_",
+        "text": "**Choose and cast one** spell in the spellbook \u2014\n- “Shocking Grasp” _(To repel a foe!)_\n- “Magic Missile” _(To blast at range!)_\n- “Expeditious Retreat” _(To dart a great distance!)_",
         "alternative": false
     },
     {
@@ -14,7 +14,7 @@
         "color": "gold",
         "type": "basic skill",
         "tier": "H",
-        "text": "Cast the “Expeditious Retreat”\nspell in the spellbook.\n_(To dart a great distance!)_",
+        "text": "Cast the “Expeditious Retreat” spell in the spellbook.\n_(To dart a great distance!)_",
         "alternative": false
     },
     {
@@ -59,7 +59,7 @@
         "color": "red",
         "type": "skill",
         "tier": "II",
-        "text": "**Choose and cast one** spell in the spellbook **—**\n-  “Burning Hands”\n-  “Fireball”\n_(Wait for your allies to clear the area before hurling a fireball!)_",
+        "text": "**Choose and cast one** spell in the spellbook \u2014\n- “Burning Hands”\n- “Fireball”\n_(Wait for your allies to clear the area before hurling a fireball!)_",
         "alternative": false
     },
     {
@@ -68,7 +68,7 @@
         "color": "red",
         "type": "skill",
         "tier": "II",
-        "text": "**Choose and cast one** spell in the spellbook **—**\n-  “Vampiric Touch”\n-  “Create Undead”\n_(Harm your foe to heal yourself. Raise an undead servant.)_",
+        "text": "**Choose and cast one** spell in the spellbook \u2014\n- “Vampiric Touch”\n- “Create Undead”\n_(Harm your foe to heal yourself. Raise an undead servant.)_",
         "alternative": true
     },
     {
@@ -77,7 +77,7 @@
         "color": "red",
         "type": "skill",
         "tier": "III",
-        "text": "**Choose and cast one** spell in the spellbook **—**\n-  “Burning Hands”\n-  “Fireball”\n-  “Sunburst”\n_(Sunburst's reach and power grows with every cast spell.)_",
+        "text": "**Choose and cast one** spell in the spellbook \u2014\n- “Burning Hands”\n- “Fireball”\n- “Sunburst”\n_(Sunburst's reach and power grows with every cast spell.)_",
         "alternative": false
     },
     {
@@ -86,7 +86,7 @@
         "color": "red",
         "type": "skill",
         "tier": "III",
-        "text": "**Choose and cast one** spell in the spellbook **—**\n-  “Vampiric Touch”\n-  “Create Undead”\n-  “Energy Drain”\n_(Drain energy from a foe in sight to restore your vitality.)_",
+        "text": "**Choose and cast one** spell in the spellbook \u2014\n- “Vampiric Touch”\n- “Create Undead”\n- “Energy Drain”\n_(Drain energy from a foe in sight to restore your vitality.)_",
         "alternative": true
     },
     {
@@ -95,7 +95,7 @@
         "color": "blue",
         "type": "skill",
         "tier": "II",
-        "text": "**Choose and cast one** spell in the spellbook **—**\n-  “Suggestion”\n-  “Dominate Person”\n_(Turn the dominated person against their own troops.)_",
+        "text": "**Choose and cast one** spell in the spellbook \u2014\n- “Suggestion”\n- “Dominate Person”\n_(Turn the dominated person against their own troops.)_",
         "alternative": false
     },
     {
@@ -104,7 +104,7 @@
         "color": "blue",
         "type": "skill",
         "tier": "II",
-        "text": "**Choose and cast one** spell in the spellbook **—**\n-  “Midas Touch”\n-  “Disintegrate”\n_(Create gold. Turn objects and lesser creatures into dust.)_",
+        "text": "**Choose and cast one** spell in the spellbook \u2014\n- “Midas Touch”\n- “Disintegrate”\n_(Create gold. Turn objects and lesser creatures into dust.)_",
         "alternative": true
     },
     {
@@ -113,7 +113,7 @@
         "color": "blue",
         "type": "skill",
         "tier": "III",
-        "text": "**Choose and cast one** spell in the spellbook **—**\n-  “Suggestion”\n-  “Dominate Person”\n-  “Power Word Kill”\n_(Command a weakened foe within earshot to perish instantly.)_",
+        "text": "**Choose and cast one** spell in the spellbook \u2014\n- “Suggestion”\n- “Dominate Person”\n- “Power Word Kill”\n_(Command a weakened foe within earshot to perish instantly.)_",
         "alternative": false
     },
     {
@@ -122,7 +122,7 @@
         "color": "blue",
         "type": "skill",
         "tier": "III",
-        "text": "**Choose and cast one** spell in the spellbook **—**\n-  “Midas Touch”\n-  “Disintegrate”\n-  “Polymorph”\n_(Polymorph enemies into creatures or objects and vice versa.)_",
+        "text": "**Choose and cast one** spell in the spellbook \u2014\n- “Midas Touch”\n- “Disintegrate”\n- “Polymorph”\n_(Polymorph enemies into creatures or objects and vice versa.)_",
         "alternative": true
     },
     {
@@ -131,7 +131,7 @@
         "color": "green",
         "type": "skill",
         "tier": "II",
-        "text": "**Choose and cast one** spell in the spellbook **—**\n-  “Shield”\n-  “Banishment”\n_(Touch anything to have it banished where you please.)_",
+        "text": "**Choose and cast one** spell in the spellbook \u2014\n- “Shield”\n- “Banishment”\n_(Touch anything to have it banished where you please.)_",
         "alternative": false
     },
     {
@@ -140,7 +140,7 @@
         "color": "green",
         "type": "skill",
         "tier": "II",
-        "text": "**Choose and cast one** spell in the spellbook **—**\n-  “Find Familiar”\n-  “Dimension Door”\n_(Summon a familiar to assist you. Travel to a faraway place.)_",
+        "text": "**Choose and cast one** spell in the spellbook \u2014\n- “Find Familiar”\n- “Dimension Door”\n_(Summon a familiar to assist you. Travel to a faraway place.)_",
         "alternative": true
     },
     {
@@ -149,7 +149,7 @@
         "color": "green",
         "type": "skill",
         "tier": "III",
-        "text": "**Choose and cast one** spell in the spellbook **—**\n-  “Shield”\n-  “Banishment”\n-  “Invulnerability”\n_(Invulnerability makes you impervious to deadly perils.)_",
+        "text": "**Choose and cast one** spell in the spellbook \u2014\n- “Shield”\n- “Banishment”\n- “Invulnerability”\n_(Invulnerability makes you impervious to deadly perils.)_",
         "alternative": false
     },
     {
@@ -158,7 +158,7 @@
         "color": "green",
         "type": "skill",
         "tier": "III",
-        "text": "**Choose and cast one** spell in the spellbook **—**\n-  “Find Familiar”\n-  “Dimension Door”\n-  “Cloud Kill”\n_(Create a deadly cloud within distance to weaken your foe.)_",
+        "text": "**Choose and cast one** spell in the spellbook \u2014\n- “Find Familiar”\n- “Dimension Door”\n- “Cloud Kill”\n_(Create a deadly cloud within distance to weaken your foe.)_",
         "alternative": true
     },
     {

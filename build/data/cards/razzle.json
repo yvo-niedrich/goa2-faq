@@ -112,7 +112,7 @@
         "name": "Wire Dancers",
         "color": "green",
         "type": "movement",
-        "tier": "II",
+        "tier": "III",
         "text": "After you move, move another one of you up to 3 spaces.",
         "alternative": false
     },
@@ -121,7 +121,7 @@
         "name": "Spectacle",
         "color": "green",
         "type": "skill - ranged",
-        "tier": "II",
+        "tier": "III",
         "text": "Swap with a minion in range.\nMay repeat once by another one of you, targeting a different minion.",
         "alternative": true
     },

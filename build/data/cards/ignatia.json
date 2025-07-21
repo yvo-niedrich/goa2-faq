@@ -158,7 +158,7 @@
         "color": "green",
         "type": "skill",
         "tier": "III",
-        "text": "::tiebreaker_blue::: Move up to 4 spaces in a straight line.\nPlace a ::token_magma:: magma token in each empty space you moved through, or out of.\n--- \n::tiebreaker_orange:: Place up to 4 magma tokens in radius.",
+        "text": "::tiebreaker_blue::: Move up to 4 spaces in a straight line.\nPlace a ::token_magma:: magma token in each empty space you moved through, or out of.\n--- \n::tiebreaker_orange:: Place up to 4 ::token_magma:: magma tokens in radius.",
         "alternative": false
     },
     {
