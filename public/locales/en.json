@@ -162,7 +162,7 @@
     "xar-green-ii-constrict.text": "**End of round:** Defeat an enemy melee minion adjacent to you.\n_(Before the end of round minion battle.)_",
     "xar-blue-iii-turn-into-statues.text": "**Next turn:** Enemy heroes in radius count as both heroes and terrain, and cannot perform movement actions.",
     "xar-red-iii-lethal-spin.text": "Target a unit adjacent to you.\n+3 ::attack:: Attack for each other enemy unit adjacent to you.",
-    "xar-green-iii-dominate.text": "Before or after movement, you may move an enemy minion in radius up to 2 spaces;\nignore heavy minion immunity.",
+    "xar-green-iii-dominate.text": "Before or after movement, you may move an enemy minion in radius up to 2 spaces; ignore heavy minion immunity.",
     "xar-blue-iii-devoted-followers.text": "If you are adjacent to an enemy unit, you may retrieve a discarded card.",
     "xar-red-iii-rapid-thrusts.text": "Target a unit in range. +1 ::range:: Range for each enemy unit adjacent to you.\nMay repeat once on a different enemy hero.",
     "xar-green-iii-final-embrace.text": "**End of round:** Defeat an enemy melee or ranged minion adjacent to you.",

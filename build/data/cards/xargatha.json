@@ -140,7 +140,7 @@
         "color": "green",
         "type": "movement",
         "tier": "III",
-        "text": "Before or after movement, you may move an enemy minion in radius up to 2 spaces;\nignore heavy minion immunity.",
+        "text": "Before or after movement, you may move an enemy minion in radius up to 2 spaces; ignore heavy minion immunity.",
         "alternative": false
     },
     {
