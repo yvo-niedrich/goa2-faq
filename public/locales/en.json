@@ -53,7 +53,7 @@
     "tak.class": "The Warlord",
     "emm.class": "The Traveller",
     "ari-gold-noble-blade.text": "Target a unit adjacent to you.\nBefore the attack: You may move another unit adjacent to the target 1 space.\n_(“Another unit” never includes you.)_",
-    "ari-gold-h-ceremonial-blade.text": "Target a hero adjacent to you.\nBefore the attack: You may move a minion adjacent to the target 1 space.",
+    "ari-gold-h-ceremonial-blade.text": "Target a hero adjacent to you.\nBefore the attack: You may move a minion that is adjacent to the target 1 space.",
     "ari-silver-spell-break.text": "**This turn:** Enemy heroes in radius cannot perform skill actions, except on gold cards.\n_(Skill ::skill:: is an action type. Other action types are unaffected.)_",
     "ari-purple-iv-living-tsunami.text": "Once per turn, before performing an Attack action, you may move 1 space.",
     "ari-blue-i-aspiring-duelist.text": "Ignore all minion defense modifiers.\n_(This includes your minions, as well as the enemy minions.)_",

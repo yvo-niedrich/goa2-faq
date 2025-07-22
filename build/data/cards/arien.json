@@ -14,7 +14,7 @@
         "color": "gold",
         "type": "basic attack",
         "tier": "H",
-        "text": "Target a hero adjacent to you.\nBefore the attack: You may move a minion adjacent to the target 1 space.",
+        "text": "Target a hero adjacent to you.\nBefore the attack: You may move a minion that is adjacent to the target 1 space.",
         "alternative": false
     },
     {
