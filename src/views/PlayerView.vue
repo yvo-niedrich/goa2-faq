@@ -236,11 +236,7 @@ function setNewCard(cards: Card[], select: CardFn) {
     pointer-events: none;
 
     @media (max-width: 750px) {
-        width: 3.5em;
-    }
-
-    @media (max-width: 480px) {
-        width: 2em;
+        display: none;
     }
 
     &.left {
@@ -373,7 +369,11 @@ function setNewCard(cards: Card[], select: CardFn) {
 .slide-card-container {
     height: 100%;
     position: relative;
-    padding: 2rem 0;
+    padding: 2rem 0.15rem;
+
+    @media (max-width: 768px) {
+        padding: 2rem 1rem;
+    }
 
     .card-modification {
         transition: .5s ease-out;

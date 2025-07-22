@@ -61,7 +61,7 @@ function choice(c: Card) {
 
 
     border-radius: 0.75rem;
-    padding: 1rem;
+    padding: 1em 0;
     max-width: 800px;
     width: 90%;
     max-height: 90vh;
@@ -72,7 +72,6 @@ function choice(c: Card) {
 
     @media (max-width: 520px) {
         font-size: .9em;
-        padding: 1rem .4rem;
         width: 95%;
     }
 
@@ -124,6 +123,7 @@ function choice(c: Card) {
         position: relative;
         overflow-y: auto;
         flex: 1;
+        padding: 0 .75em .5em;
     }
 
     .card-select-record:not(:last-of-type) {

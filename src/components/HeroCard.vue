@@ -84,7 +84,7 @@ function processCardType(type: Card['type']) {
     flex-direction: column;
     transition: .2s ease;
 
-    max-width: 600px;
+    max-width: 480px;
     min-width: 275px;
 
     border-radius: 1em;
