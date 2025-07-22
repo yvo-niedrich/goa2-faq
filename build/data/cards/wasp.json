@@ -41,7 +41,7 @@
         "color": "blue",
         "type": "skill",
         "tier": "I",
-        "text": "Move a unit, or a token, in radius 1 space, without moving it away from you or closer to you. May repeat once on the same target.",
+        "text": "Move a unit, or a token, in radius 1 space, without moving it away from you or closer to you.\nMay repeat once on the same target.",
         "alternative": false
     },
     {
@@ -57,7 +57,7 @@
         "id": "was-green-i-stop-projectiles",
         "name": "Stop Projectiles",
         "color": "green",
-        "type": "defense",
+        "type": "defense - ranged",
         "tier": "I",
         "text": "Block a ranged attack.",
         "alternative": false
@@ -68,7 +68,7 @@
         "color": "blue",
         "type": "skill",
         "tier": "II",
-        "text": "Move a unit, or a token, in radius 1 space, without moving it away from you, or closer to \nyou. May repeat once on the same target.",
+        "text": "Move a unit, or a token, in radius 1 space, without moving it away from you or closer to you.\nMay repeat once on the same target.",
         "alternative": false
     },
     {
@@ -84,7 +84,7 @@
         "id": "was-green-ii-deflect-projectiles",
         "name": "Deflect Projectiles",
         "color": "green",
-        "type": "skill - ranged",
+        "type": "defense - ranged",
         "tier": "II",
         "text": "Block a ranged attack; if you do, an enemy hero in range, other than the attacker, discards a card, if able.",
         "alternative": false
@@ -102,7 +102,7 @@
         "id": "was-red-ii-charged-boomerang",
         "name": "Charged Boomerang",
         "color": "red",
-        "type": "skill - ranged",
+        "type": "attack - ranged",
         "tier": "II",
         "text": "Target a unit in range and not in a straight line.\n_(Units adjacent to you are in a straight line from you.)_",
         "alternative": true
@@ -122,7 +122,7 @@
         "color": "blue",
         "type": "skill",
         "tier": "III",
-        "text": "Move a unit, or a token, in radius 1 space, without moving it away from you, or closer to you. May repeat up to two times on the same target.",
+        "text": "Move a unit, or a token, in radius 1 space, without moving it away from you or closer to you.\nMay repeat up to two times on the same target.",
         "alternative": false
     },
     {
@@ -138,7 +138,7 @@
         "id": "was-green-iii-reflect-projectiles",
         "name": "Reflect Projectiles",
         "color": "green",
-        "type": "skill - ranged",
+        "type": "defense - ranged",
         "tier": "III",
         "text": "Block a ranged attack; if you do, an enemy hero in range discards a card, if able.",
         "alternative": false
@@ -167,7 +167,7 @@
         "color": "green",
         "type": "skill - ranged",
         "tier": "III",
-        "text": "Place a unit or a token in range, which is not in a straight line, into a space adjacent to you. May repeat once.",
+        "text": "Place a unit or a token in range, which is not in a straight line, into a space adjacent to you.\nMay repeat once.",
         "alternative": true
     }
 ]
