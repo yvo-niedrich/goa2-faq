@@ -90,9 +90,9 @@ function processCardType(type: Card['type']) {
     border-radius: 1em;
     border: 1px solid #000;
 
-    background-color: rgb(27, 39, 44);
-    background-image: url("data:image/svg+xml;utf8,<svg width='10' height='35' xmlns='http://www.w3.org/2000/svg'><rect height='35' width='20' y='-1' x='-5' stroke='%23ffffff' fill='%23313131'/></svg>"),
-    url("data:image/svg+xml;utf8,<svg width='10' height='35' xmlns='http://www.w3.org/2000/svg'><rect height='35' width='20' y='1' x='-5' stroke='%23ffffff' fill='%23313131'/></svg>");
+    background-color: rgb(30, 44, 49);
+    background-image: url("data:image/svg+xml;utf8,<svg width='10' height='35' xmlns='http://www.w3.org/2000/svg'><rect height='35' width='20' y='-1' x='-5' stroke='%23ffffff' fill='%23373633'/></svg>"),
+    url("data:image/svg+xml;utf8,<svg width='10' height='35' xmlns='http://www.w3.org/2000/svg'><rect height='35' width='20' y='1' x='-5' stroke='%23ffffff' fill='%23373633'/></svg>");
     background-repeat: repeat-x,
     repeat-x;
     background-position: top,
