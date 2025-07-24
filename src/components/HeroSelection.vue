@@ -38,12 +38,11 @@ const layouts: {
     },
 };
 
-const { filteredExpansions: filterExp } = storeToRefs(useAppStore());
+const { filteredExpansions: filterExp, selectionLayout: layout } = storeToRefs(useAppStore());
 
 const { isTablet, isDesktop } = useViewport();
 const portraitHeight = computed(() => isDesktop.value ? 250 : isTablet.value ? 200 : 150);
 const filterName = ref<string>('');
-const layout = ref<'box' | 'complexity' | 'name'>('box');
 
 function sortBy<T>(compareFns: SortFn<T>[]): SortFn<T> {
     return (a, b) => compareFns.reduce((acc, fn) => acc || fn(a, b), 0);
@@ -131,6 +130,7 @@ const list = computed(() => {
 
 .groups {
     .group {
+        position: relative;
         border: 1px solid var(--color-border);
         transition: .25s ease-out;
         background: linear-gradient(0deg, var(--color-background-mute) 30%, var(--color-background) 90%);
@@ -142,22 +142,22 @@ const list = computed(() => {
         padding: 0;
 
         h2 {
-            position: relative;
-            float: left;
-            padding: 0 .25em 0 .5em;
+            position: absolute;
+            z-index: 1;
+            top: -.75em;
+            left: .5em;
+            background: linear-gradient(0deg, var(--color-background-mute) 20%, transparent);
+            border-radius: .3em;
+            padding: 0 .4em 0 .4em;
             text-shadow: 1px 1px 3px #000, -1px -1px 3px #000;
-
-            // border: 1px solid;
-            // border-image-slice: 1;
-            // border-width: 0 0 1px 0;
-            // border-image-source: linear-gradient(to right, var(--color-border-hover), rgba(0, 0, 0, 0));
+            line-height: 1.3em;
 
             &::after {
                 content: "";
                 position: absolute;
-                bottom: 0;
+                bottom: -1px;
                 left: 2.5%;
-                width: 98%;
+                width: 95%;
                 height: 1px;
                 background-image: linear-gradient(to right, rgba(0, 0, 0, 0), var(--color-border-hover), rgba(0, 0, 0, 0));
             }

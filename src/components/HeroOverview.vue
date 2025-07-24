@@ -101,7 +101,7 @@ function unsetFavorite() {
     border: 3px solid #000;
     color: black;
     font-weight: bold;
-    word-wrap: pre;
+    white-space: pre;
 
     box-shadow:
         4px 4px 1px #f6c033,
@@ -113,7 +113,7 @@ function unsetFavorite() {
     margin: 2em auto;
     padding: .25em 5em;
     min-width: 250px;
-    width: 30%;
+    width: 45%;
 
     text-align: center;
 
