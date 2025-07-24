@@ -15,6 +15,14 @@ export const expansions = allExpansions.filter(
     (e) => !!Object.values(heroes).find((h) => h.expansion === e),
 );
 
+function getExpansionIndex(v: string | Expansion): number {
+    return expansions.indexOf(v as Expansion);
+}
+
+export function sortExpansion(a: string | Expansion, b: string | Expansion): number {
+    return getExpansionIndex(a) - getExpansionIndex(b);
+}
+
 export const get = (id: string): Hero => {
     let h;
     if ((h = heroes[id])) {
@@ -42,25 +50,20 @@ export const filterHeroesByExpansions = (
 };
 
 export function sortByExpansion(a: Hero, b: Hero) {
-    if (a.expansion === b.expansion) {
-        if (a.complexity === b.complexity) {
-            return a.name > b.name ? 1 : -1;
-        } else {
-            return a.complexity > b.complexity ? 1 : -1;
-        }
-    }
+    return sortExpansion(a.expansion, b.expansion);
+}
 
-    return expansions.indexOf(a.expansion as unknown as Expansion) >
-        expansions.indexOf(b.expansion as unknown as Expansion)
-        ? 1
-        : -1;
+export function sortByComplexity(a: Hero, b: Hero) {
+    if (a.complexity === b.complexity) return 0;
+    return a.complexity > b.complexity ? 1 : -1;
 }
 
 export function sortByName(a: Hero, b: Hero) {
+    if (a.name === b.name) return 0;
     return a.name > b.name ? 1 : -1;
 }
 
-const cardColorValue = {
+const colorRanking = {
     y: 0,
     s: 0.1,
     u: 0.2,
@@ -70,21 +73,12 @@ const cardColorValue = {
 };
 
 export function cardColumn(c: Card) {
-    return Math.trunc(cardColorValue[c.color]);
+    return Math.trunc(colorRanking[c.color]);
 }
 
 export function sortCardsByColor(a: Card, b: Card) {
     if (a.color === b.color) return 0;
-    return cardColorValue[a.color] > cardColorValue[b.color] ? 1 : -1;
-}
-
-export function sortCardsByTier(a: Card, b: Card) {
-    return sortCardTiers(a.tier, b.tier);
-}
-
-export function sortCardTiers(a: Card['tier'], b: Card['tier']) {
-    if (a === b) return 0;
-    return (tierRanking[a] ?? 0) > (tierRanking[b] ?? 0) ? 1 : -1;
+    return colorRanking[a.color] > colorRanking[b.color] ? 1 : -1;
 }
 
 const tierRanking = {
@@ -94,3 +88,12 @@ const tierRanking = {
     IV: 4,
     H: 5,
 };
+
+export function sortCardsByTier(a: Card, b: Card) {
+    return sortCardTiers(a.tier, b.tier);
+}
+
+export function sortCardTiers(a: Card['tier'], b: Card['tier']) {
+    if (a === b) return 0;
+    return (tierRanking[a] ?? 0) > (tierRanking[b] ?? 0) ? 1 : -1;
+}
