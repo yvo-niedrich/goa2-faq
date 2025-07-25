@@ -1,23 +1,23 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import { useFaqStore } from '@/stores/faq'
+import { useAppStore } from '@/stores/app'
 import { get as getFAQs } from '@/data/faq'
 import Markdown from '../Markdown.vue';
 
-const faqStore = useFaqStore()
+const appStore = useAppStore()
 
 const records = computed(() => {
-    if (!faqStore.currentCardId) return [];
-    return getFAQs(faqStore.currentCardId);
+    if (!appStore.currentFaqCardId) return [];
+    return getFAQs(appStore.currentFaqCardId);
 });
 
 </script>
 
 <template>
     <Teleport to="body">
-        <div v-if="records.length > 0" class="faq-overlay" @click.self="faqStore.close">
+        <div v-if="records.length > 0" class="faq-overlay" @click.self="appStore.$closeFaq">
             <div class="faq-popup">
-                <button class="close-btn" @click="faqStore.close">×</button>
+                <button class="close-btn" @click="appStore.$closeFaq">×</button>
                 <div class="scroll-container">
                     <div class="faq-scroll">
                         <div v-for="(record, id) in records" :key="id" class="faq-record">

@@ -8,6 +8,7 @@ import { get } from './data/heroes';
 import TimeIndicator from './components/TimeIndicator.vue';
 import { useAppStore } from './stores/app';
 import { expansions } from './types/Expansion';
+import UpdateNotification from './components/UpdateNotification.vue';
 
 const store = useCompanionStore();
 const selectedHeroName = computed(() => store.id ? get(store.id)?.name : null);
@@ -80,6 +81,8 @@ onMounted(async () => {
             <TimeIndicator :date="build_date" />
         </div>
     </div>
+
+    <UpdateNotification />
 </template>
 
 <style scoped lang="scss">
@@ -122,7 +125,7 @@ header {
             display: inline-block;
             height: 100%;
             line-height: 2rem;
-            padding: 0 .75rem;
+            padding: 0 1rem;
             border-left: 1px solid var(--color-border);
             vertical-align: top;
 

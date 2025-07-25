@@ -9,7 +9,8 @@ import { useViewport } from '@/viewport';
 import HeroCard from '@/components/HeroCard.vue';
 import HeroPortrait from '@/components/HeroPortrait.vue';
 import CardSelectPopup from '@/components/popups/CardSelectPopup.vue';
-import { get, sortCardsByTier, sortCardTiers } from '@/data/heroes';
+import { get } from '@/data/heroes';
+import { sortCardsByTier, sortCardTiers } from '@/helper/cards';
 import { useCompanionStore } from '@/stores/companion';
 
 type CardFn = (c: Card) => boolean | void;

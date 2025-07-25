@@ -1,8 +1,8 @@
-
-
 <script lang="ts" setup>
 import { ref, computed } from 'vue';
-import { sortByName, heroes } from '@/data/heroes';
+import { sortByName, heroes, get } from '@/data/heroes';
+import { useFaqStore } from '@/stores/faq';
+import { storeToRefs } from 'pinia';
 
 function generateId(length = 8) {
     let result = '';
@@ -14,11 +14,14 @@ function generateId(length = 8) {
     return result;
 }
 
-const selectedHero = ref<null|Hero>();
-const selectedCards = ref<Card[]>([]);
+
+const { hero, cards } = storeToRefs(useFaqStore());
+const selectedHero = computed(() => hero.value ? get(hero.value) : null);
+const selectedCards = computed<Card[]>(() => cards.value?.length && selectedHero.value ? selectedHero.value.cards.filter(c => cards.value.includes(c.id)) : []);
 const faqQuestion = ref('');
 const faqAnswer = ref('');
 const faqId = ref(generateId());
+
 
 const cardsForHero = computed(() => {
     if (!selectedHero.value) return [];
@@ -44,14 +47,16 @@ ${faqAnswer.value.trim() || '_No answer provided_'}
 
 \`\`\`json
 ${JSON.stringify(
-    {[faqId.value]: {
-        q: faqQuestion.value.trim(),
-        a: faqAnswer.value.trim() || null,
-        ref: selectedCards.value.map(c => c.id),
-    }},
-    null,
-    4,
-)}
+        {
+            [faqId.value]: {
+                q: faqQuestion.value.trim(),
+                a: faqAnswer.value.trim() || null,
+                ref: selectedCards.value.map(c => c.id),
+            }
+        },
+        null,
+        4,
+    )}
 \`\`\`
     `.trim();
 
@@ -72,9 +77,9 @@ ${JSON.stringify(
         <!-- Hero Selection -->
         <div>
             <label for="hero" class="block font-medium mb-1">Select Hero</label>
-            <select id="hero" v-model="selectedHero" class="w-full p-2 border rounded">
+            <select id="hero" v-model="hero" class="w-full p-2 border rounded">
                 <option disabled value="">-- Choose a hero --</option>
-                <option v-for="hero in Object.values(heroes).sort(sortByName)" :key="hero.id" :value="hero">
+                <option v-for="hero in Object.values(heroes).sort(sortByName)" :key="hero.id" :value="hero.id">
                     {{ hero.name }}
                 </option>
             </select>
@@ -82,16 +87,16 @@ ${JSON.stringify(
 
         <!-- Card Selection -->
         <div v-if="cardsForHero.length > 0">
-            <label class="block font-medium mb-1">Related Cards</label>
-            <div class="space-y-1 max-h-40 overflow-y-auto border p-2 rounded">
+            <label>Related Cards</label>
+            <div class="hero-cards">
                 <div v-for="card in cardsForHero" :key="card.id" class="flex items-center gap-2">
-                    <input
-                        type="checkbox"
-                        :id="card.id"
-                        :value="card"
-                        v-model="selectedCards"
-                    />
-                    <label :for="card.id">{{ card.name }}</label>
+
+                    <label :for="card.id"
+                        :class="{ [`hero-card-color-${card.color}`]: true, 'hero-card-alternative': card.alternative }">
+                        <input type="checkbox" :id="card.id" :value="card.id" v-model="cards" />
+                        <span class="card-tier"> {{ card.tier }} </span>
+                        <span class="card-name"> {{ card.name }} </span>
+                    </label>
                 </div>
             </div>
         </div>
@@ -99,32 +104,50 @@ ${JSON.stringify(
         <!-- FAQ Question -->
         <div>
             <label for="faqQuestion" class="block font-medium mb-1">Question</label>
-            <input
-                type="text"
-                id="faqQuestion"
-                v-model="faqQuestion"
-                placeholder="How does this ability interact with ...?"
-            />
+            <input type="text" id="faqQuestion" v-model="faqQuestion"
+                placeholder="How does this ability interact with ...?" />
         </div>
 
         <!-- FAQ Answer (optional) -->
         <div>
             <label for="faqAnswer" class="block font-medium mb-1">Answer (optional)</label>
-            <textarea
-                id="faqAnswer"
-                v-model="faqAnswer"
-                rows="3"
-                class="w-full p-2 border rounded"
-                placeholder="e.g. Yes, because..."
-            ></textarea>
+            <textarea id="faqAnswer" v-model="faqAnswer" rows="3" class="w-full p-2 border rounded"
+                placeholder="e.g. Yes, because..."></textarea>
         </div>
 
         <!-- GitHub Submit Button -->
-        <button
-            @click="submitToGithub"
-            class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded"
-        >
+        <button @click="submitToGithub" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">
             Submit as GitHub Issue
         </button>
     </div>
 </template>
+
+<style lang="scss">
+.hero-cards {
+    label {
+        height: 2em;
+    }
+}
+
+.card-tier {
+    height: 1.25em;
+    width: 1.25em;
+
+    margin: 0 .5em;
+
+    vertical-align: middle;
+    text-align: center;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+    color: #000;
+    text-shadow: 1px 0 0 #FFF, -1px 0 0 #FFF, 0 1px 0 #FFF, 0 -1px 0 #FFF;
+
+    border-radius: 50%;
+    background-color: var(--card-background-primary);
+    box-shadow: 0 0 2px #000;
+}
+</style>

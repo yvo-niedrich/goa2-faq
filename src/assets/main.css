@@ -40,6 +40,36 @@
     --color-card-u-secondary: rgb(191, 151, 228);
 }
 
+.hero-card-color-y {
+    --card-background-primary: var(--color-card-y-primary);
+    --card-background-secondary: var(--color-card-y-secondary);
+}
+
+.hero-card-color-s {
+    --card-background-primary: var(--color-card-s-primary);
+    --card-background-secondary: var(--color-card-s-secondary);
+}
+
+.hero-card-color-r {
+    --card-background-primary: var(--color-card-r-primary);
+    --card-background-secondary: var(--color-card-r-secondary);
+}
+
+.hero-card-color-g {
+    --card-background-primary: var(--color-card-g-primary);
+    --card-background-secondary: var(--color-card-g-secondary);
+}
+
+.hero-card-color-b {
+    --card-background-primary: var(--color-card-b-primary);
+    --card-background-secondary: var(--color-card-b-secondary);
+}
+
+.hero-card-color-u {
+    --card-background-primary: var(--color-card-u-primary);
+    --card-background-secondary: var(--color-card-u-secondary);
+}
+
 *,
 *::before,
 *::after {

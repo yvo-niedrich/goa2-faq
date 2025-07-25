@@ -2,7 +2,7 @@
 import { computed } from 'vue';
 import { useI18n } from 'vue-i18n'
 import { count as countFaq } from '@/data/faq'
-import { useFaqStore } from '@/stores/faq'
+import { useAppStore } from '@/stores/app'
 import Markdown from './Markdown.vue';
 
 const props = defineProps<{ card: Card; }>();
@@ -10,7 +10,7 @@ const hasFaq = computed(() => countFaq(props.card.id) > 0)
 
 function showFAQs() {
     if (hasFaq.value) {
-        useFaqStore().show(props.card.id)
+        useAppStore().$showFaq(props.card.id)
     }
 }
 
@@ -48,35 +48,6 @@ function processCardType(type: Card['type']) {
 
 <style lang="scss">
 .hero-card {
-    &.hero-card-color-y {
-        --card-background-primary: var(--color-card-y-primary);
-        --card-background-secondary: var(--color-card-y-secondary);
-    }
-
-    &.hero-card-color-s {
-        --card-background-primary: var(--color-card-s-primary);
-        --card-background-secondary: var(--color-card-s-secondary);
-    }
-
-    &.hero-card-color-r {
-        --card-background-primary: var(--color-card-r-primary);
-        --card-background-secondary: var(--color-card-r-secondary);
-    }
-
-    &.hero-card-color-g {
-        --card-background-primary: var(--color-card-g-primary);
-        --card-background-secondary: var(--color-card-g-secondary);
-    }
-
-    &.hero-card-color-b {
-        --card-background-primary: var(--color-card-b-primary);
-        --card-background-secondary: var(--color-card-b-secondary);
-    }
-
-    &.hero-card-color-u {
-        --card-background-primary: var(--color-card-u-primary);
-        --card-background-secondary: var(--color-card-u-secondary);
-    }
 
     position: relative;
     display: flex;
@@ -92,11 +63,11 @@ function processCardType(type: Card['type']) {
 
     background-color: rgb(30, 44, 49);
     background-image: url("data:image/svg+xml;utf8,<svg width='10' height='35' xmlns='http://www.w3.org/2000/svg'><rect height='35' width='20' y='-1' x='-5' stroke='%23ffffff' fill='%23373633'/></svg>"),
-    url("data:image/svg+xml;utf8,<svg width='10' height='35' xmlns='http://www.w3.org/2000/svg'><rect height='35' width='20' y='1' x='-5' stroke='%23ffffff' fill='%23373633'/></svg>");
+        url("data:image/svg+xml;utf8,<svg width='10' height='35' xmlns='http://www.w3.org/2000/svg'><rect height='35' width='20' y='1' x='-5' stroke='%23ffffff' fill='%23373633'/></svg>");
     background-repeat: repeat-x,
-    repeat-x;
+        repeat-x;
     background-position: top,
-    bottom;
+        bottom;
 
     padding: 1em .75em;
     margin: 0.75em 0.5em;
