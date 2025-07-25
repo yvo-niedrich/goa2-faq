@@ -44,8 +44,8 @@ watch([viewport.width, selectedExpansions], debounce(function () {
 
 <template>
     <div>
-        <h2>{{ $t('QR Code') }}</h2>
-        <div class="expansion-filter">
+        <h2 class="no-print">{{ $t('QR Code') }}</h2>
+        <div class="expansion-filter no-print">
             <ul>
                 <li v-for="option in expansions" :key="option">
                     <label>
@@ -57,7 +57,8 @@ watch([viewport.width, selectedExpansions], debounce(function () {
         </div>
 
         <div class="qr-container" v-if="qrCodeUrl">
-            <div class="qr-raw">{{ getLink(selectedExpansions) }}</div>
+            <div class="qr-raw no-print">{{ getLink(selectedExpansions) }}</div>
+            <div class="qr-raw print-only">{{ getLink() }}</div>
 
             <div class="qr-wrapper">
                 <img :src="qrCodeUrl" />
@@ -126,6 +127,11 @@ watch([viewport.width, selectedExpansions], debounce(function () {
         white-space: pre;
         font-weight: bold;
         margin: .5em 0;
+
+        &.print-only {
+            font-size: 2.5em;
+            line-height: 2em;
+        }
     }
 
     .qr-wrapper {
@@ -136,6 +142,12 @@ watch([viewport.width, selectedExpansions], debounce(function () {
         border-radius: .5em;
         display: inline-block;
         box-shadow: 0 0 10px #000000;
+
+        @media print {
+            box-shadow: none;
+            border: none;
+            padding: 1.5em;
+        }
     }
 }
 </style>

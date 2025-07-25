@@ -78,6 +78,27 @@
     font-weight: normal;
 }
 
+@media print {
+    .no-print {
+        display: none;
+    }
+
+    body,
+    #app,
+    .content {
+        background-color: #fff !important;
+        box-shadow: none !important;
+        border: none !important;
+        color: black !important;
+    }
+}
+
+@media screen {
+    .print-only {
+        display: none;
+    }
+}
+
 @font-face {
     font-family: 'ModestoPoster';
     src:

@@ -10,7 +10,9 @@ const IS_DEV = import.meta.env.DEV;
 <template>
 
     <div v-if="setting">
-        <RouterLink class="settings-back" to="/settings"><img src="@/assets/back-arrow.svg" width="20" /></RouterLink>
+        <RouterLink class="settings-back no-print" to="/settings">
+            <img src="@/assets/back-arrow.svg" width="20" />
+        </RouterLink>
         <ProposeFAQ v-if="setting === 'faq'" />
         <QrCode v-else-if="setting === 'qr'" />
     </div>

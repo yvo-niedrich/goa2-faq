@@ -52,7 +52,7 @@ onMounted(async () => {
 </script>
 
 <template>
-    <header>
+    <header class="no-print">
         <nav>
             <RouterLink to="/hero">{{ $t('app.header.overview') }}</RouterLink>
             <RouterLink to="/me" :class="{ disabled: !selectedHeroName, 'multi-line': !!selectedHeroName }">
@@ -75,7 +75,7 @@ onMounted(async () => {
         <RouterView />
         <FaqPopup />
 
-        <div class="footer">
+        <div class="footer no-print">
             v{{ version_number }} &raquo;
             {{ $t('app.last-update') }}
             <TimeIndicator :date="build_date" />
