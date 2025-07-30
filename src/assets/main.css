@@ -6,6 +6,7 @@
 
     --color-background: rgb(18, 24, 27);
     --color-background-soft: rgb(35, 50, 60);
+    --color-background-softer: rgb(47, 66, 78);
     --color-background-mute: rgb(25, 34, 40);
     --color-background-highlight: rgb(82, 133, 155);
     --color-background-hyperlink: rgba(0, 168, 109, 0.25);
@@ -183,7 +184,7 @@ a {
 
 @media (hover: hover) {
     a:hover {
-        color: var(--color-text);
+        color: var(--color-text-hyperlink-highlight);
         background-color: var(--color-background-hyperlink);
     }
 }

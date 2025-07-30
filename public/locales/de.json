@@ -3,6 +3,8 @@
     "app.header.dashboard": "Mein Profil",
     "app.button.search": "Suchen...",
     "app.last-update": "Letztes update",
+    "app.settings.generate-qr": "QR Code",
+    "app.settings.propose-FAQ": "Eine neue Frage stellen",
     "app.sortby.box": "Erweiterung",
     "app.sortby.complexity": "Komplexität",
     "app.sortby.name": "Name",

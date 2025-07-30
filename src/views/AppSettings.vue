@@ -19,10 +19,10 @@ const IS_DEV = import.meta.env.DEV;
     <div v-else>
         <div class="app-settings">
             <div v-if="IS_DEV">
-                <RouterLink to="/settings/faq">Propose FAQ</RouterLink>
+                <RouterLink to="/settings/faq">{{ $t('app.settings.propose-FAQ') }}</RouterLink>
             </div>
             <div>
-                <RouterLink to="/settings/qr">Generate QR Code</RouterLink>
+                <RouterLink to="/settings/qr">{{ $t('app.settings.generate-qr') }}</RouterLink>
             </div>
         </div>
     </div>

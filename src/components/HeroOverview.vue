@@ -72,7 +72,7 @@ function unsetFavorite() {
     row-gap: 3em;
     margin: 0 .15em;
 
-    .hero-card {
+    .hero-card-wrapper {
         margin: 1.5em auto;
     }
 
@@ -88,7 +88,7 @@ function unsetFavorite() {
     @media (max-width: 580px) {
         grid-template-columns: 1fr;
 
-        .hero-card {
+        .hero-card-wrapper {
             margin: 1em auto;
         }
     }

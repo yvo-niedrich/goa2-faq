@@ -44,7 +44,7 @@ watch([viewport.width, selectedExpansions], debounce(function () {
 
 <template>
     <div>
-        <h2 class="no-print">{{ $t('QR Code') }}</h2>
+        <h2 class="no-print">{{ $t('app.settings.generate-qr') }}</h2>
         <div class="expansion-filter no-print">
             <ul>
                 <li v-for="option in expansions" :key="option">

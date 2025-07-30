@@ -33,7 +33,8 @@ function processCardType(type: Card['type']) {
 </script>
 
 <template>
-    <div class="hero-card" :class="{ [`hero-card-color-${card.color}`]: true, 'has-faq': hasFaq }" @click="showFAQs()">
+    <div class="hero-card-wrapper" :class="{ [`hero-card-color-${card.color}`]: true, 'has-faq': hasFaq }"
+        @click="showFAQs()">
         <div class="hero-card-name">{{ card.name }}</div>
         <div v-if="card.tier" class="hero-card-tier">{{ card.tier }}</div>
         <div class="hero-card-type">
@@ -47,7 +48,7 @@ function processCardType(type: Card['type']) {
 
 
 <style lang="scss">
-.hero-card {
+.hero-card-wrapper {
 
     position: relative;
     display: flex;
