@@ -30,6 +30,7 @@ declare interface Card {
     color: 'y' | 'g' | 'b' | 'r' | 'u' | 's';
     tier?: 'I' | 'II' | 'III' | 'IV' | 'H';
     type: CardType;
+    alternative?: boolean;
     text: string;
 }
 
@@ -58,4 +59,18 @@ declare interface FaqRecord {
     q: string;
     a: string;
     ref: string[];
+}
+
+declare module 'virtual:pwa-register/vue' {
+    export interface RegisterSWOptions {
+        immediate?: boolean;
+        onNeedRefresh?: () => void;
+        onOfflineReady?: () => void;
+        onRegisteredSW?: (url: string, registration: ServiceWorkerRegistration | undefined) => void;
+        onRegisterError?: (error: any) => void;
+    }
+
+    export function useRegisterSW(options?: RegisterSWOptions): {
+        updateServiceWorker: (reloadPage?: boolean) => Promise<void>;
+    };
 }

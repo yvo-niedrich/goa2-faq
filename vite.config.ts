@@ -34,6 +34,7 @@ export default defineConfig({
             },
             includeAssets: [
                 'favicon.ico',
+                'github-mark-white.svg',
                 'locales/*.json',
                 'hero/*.png',
                 'icons/*.png',

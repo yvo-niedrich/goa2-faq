@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import HeroCard from '@/components/HeroCard.vue';
-import { cardColumn, sortCardsByColor, sortCardsByTier } from '@/data/heroes';
+import { cardColumn } from '@/helper/cards';
 import HeroPortrait from './HeroPortrait.vue';
 import { useCompanionStore } from '@/stores/companion';
 
@@ -9,9 +9,7 @@ const props = defineProps<{
     hero: Hero;
 }>();
 
-const heroCards = computed(() => props.hero.cards.slice(0).sort((a, b) => {
-    return sortCardsByColor(a, b) || sortCardsByTier(a, b);
-}).reduce<Card[][]>(
+const heroCards = computed(() => props.hero.cards.slice(0).reduce<Card[][]>(
     (acc, current) => {
         acc[cardColumn(current)].push(current);
         return acc;
@@ -74,7 +72,7 @@ function unsetFavorite() {
     row-gap: 3em;
     margin: 0 .15em;
 
-    .hero-card {
+    .hero-card-wrapper {
         margin: 1.5em auto;
     }
 
@@ -90,7 +88,7 @@ function unsetFavorite() {
     @media (max-width: 580px) {
         grid-template-columns: 1fr;
 
-        .hero-card {
+        .hero-card-wrapper {
             margin: 1em auto;
         }
     }

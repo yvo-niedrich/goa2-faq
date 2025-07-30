@@ -1,16 +1,24 @@
+import { useStorage } from '@vueuse/core';
 import { defineStore } from 'pinia';
-import { ref } from 'vue';
 
 export const useFaqStore = defineStore('faq', () => {
-    const currentCardId = ref<string | null>(null);
+    const hero = useStorage<string | null>('goa2-faq.faq.hero', null);
+    const cards = useStorage<string[]>('goa2-faq.faq.cards', []);
+    const question = useStorage<string>('goa2-faq.faq.question', '');
+    const answer = useStorage<string>('goa2-faq.faq.answer', '');
 
-    function show(cardId: string) {
-        currentCardId.value = cardId;
+    function reset() {
+        hero.value = '';
+        cards.value = [];
+        question.value = '';
+        answer.value = '';
     }
 
-    function close() {
-        currentCardId.value = null;
-    }
-
-    return { currentCardId, show, close };
+    return {
+        hero,
+        cards,
+        question,
+        answer,
+        $reset: reset,
+    };
 });

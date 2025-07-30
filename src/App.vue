@@ -8,6 +8,7 @@ import { get } from './data/heroes';
 import TimeIndicator from './components/TimeIndicator.vue';
 import { useAppStore } from './stores/app';
 import { expansions } from './types/Expansion';
+import UpdateNotification from './components/UpdateNotification.vue';
 
 const store = useCompanionStore();
 const selectedHeroName = computed(() => store.id ? get(store.id)?.name : null);
@@ -51,7 +52,7 @@ onMounted(async () => {
 </script>
 
 <template>
-    <header>
+    <header class="no-print">
         <nav>
             <RouterLink to="/hero">{{ $t('app.header.overview') }}</RouterLink>
             <RouterLink to="/me" :class="{ disabled: !selectedHeroName, 'multi-line': !!selectedHeroName }">
@@ -74,12 +75,14 @@ onMounted(async () => {
         <RouterView />
         <FaqPopup />
 
-        <div class="footer">
+        <div class="footer no-print">
             v{{ version_number }} &raquo;
             {{ $t('app.last-update') }}
             <TimeIndicator :date="build_date" />
         </div>
     </div>
+
+    <UpdateNotification />
 </template>
 
 <style scoped lang="scss">
@@ -122,7 +125,7 @@ header {
             display: inline-block;
             height: 100%;
             line-height: 2rem;
-            padding: 0 .75rem;
+            padding: 0 1rem;
             border-left: 1px solid var(--color-border);
             vertical-align: top;
 

@@ -1,4 +1,5 @@
 import { toColor } from '../../src/types/Color';
+import { sortCardsByColor, sortCardsByTier, sortCardsByAlternative } from '../../src/helper/cards';
 import { readFileSync } from 'fs';
 import { __data } from './paths';
 
@@ -9,6 +10,12 @@ interface CardRaw {
     type: string; // (Basic) Skill / Attack (Ranged)
     tier?: 'I' | 'II' | 'III' | 'IV' | 'H' | null; // Top right, next to the name
     text: string; // Markdown Parsable (italics, bold, newlines, ...)
+    alternative?: boolean;
+}
+
+type SortFn<T> = (a: T, b: T) => number;
+function sortBy<T>(compareFns: SortFn<T>[]): SortFn<T> {
+    return (a, b) => compareFns.reduce((acc, fn) => acc || fn(a, b), 0);
 }
 
 const cache: { [file: string]: CardRaw[] } = {};
@@ -69,11 +76,12 @@ export function loadCards(file: string | string[], withTranslation = true): Card
                 type: toType(card.type),
                 text: withTranslation ? `${card.id}.text` : card.text,
                 ...(card.tier ? { tier: card.tier.toUpperCase() as Card['tier'] } : {}),
+                ...(card.alternative ? { alternative: true } : {}),
             });
         }
     }
 
-    return c;
+    return c.sort(sortBy([sortCardsByColor, sortCardsByTier, sortCardsByAlternative]));
 }
 
 export function toType(value: string): CardType {

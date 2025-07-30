@@ -144,7 +144,7 @@ function choice(c: Card) {
         }
     }
 
-    .hero-card {
+    .hero-card-wrapper {
         margin: .5em auto;
     }
 
