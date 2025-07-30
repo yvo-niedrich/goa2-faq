@@ -4,6 +4,7 @@ import HeroCard from '@/components/HeroCard.vue';
 import { cardColumn } from '@/helper/cards';
 import HeroPortrait from './HeroPortrait.vue';
 import { useCompanionStore } from '@/stores/companion';
+import router from '@/router';
 
 const props = defineProps<{
     hero: Hero;
@@ -23,6 +24,7 @@ const isFavorite = computed(() => store.id === props.hero.id)
 function setFavorite(h: Hero) {
     store.reset();
     store.id = h.id;
+    router.push({ name: 'player' })
 }
 
 function unsetFavorite() {
