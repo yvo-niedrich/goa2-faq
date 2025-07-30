@@ -3,8 +3,6 @@ import ProposeFAQ from '@/components/Settings/ProposeFAQ.vue';
 import QrCode from '@/components/Settings/QrCode.vue';
 
 defineProps<{ setting?: string; }>();
-
-const IS_DEV = import.meta.env.DEV;
 </script>
 
 <template>
@@ -18,7 +16,7 @@ const IS_DEV = import.meta.env.DEV;
     </div>
     <div v-else>
         <div class="app-settings">
-            <div v-if="IS_DEV">
+            <div>
                 <RouterLink to="/settings/faq">{{ $t('app.settings.propose-FAQ') }}</RouterLink>
             </div>
             <div>
