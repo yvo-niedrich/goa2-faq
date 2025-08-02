@@ -60,7 +60,7 @@ declare interface Hero {
         movement: number | [number, number];
     };
     cards: Card[];
-    addionalCards?: SpellbookCard[];
+    spellbook?: SpellbookCard[];
 }
 
 declare interface HeroRecord {

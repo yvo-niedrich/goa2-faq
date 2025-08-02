@@ -446,7 +446,7 @@
             "movement": [1, 4]
         },
         "cards": "cards/gydion.json",
-        "additional_cards": "cards/gydion_spellbook.json"
+        "spellbook": "cards/gydion_spellbook.json"
     },
     {
         "id": "neb",

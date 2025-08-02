@@ -1,23 +1,12 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import HeroCard from '@/components/HeroCard.vue';
-import { cardColumn } from '@/helper/cards';
 import HeroPortrait from './HeroPortrait.vue';
+import CardColorColumns from './CardColorColumns.vue';
 import { useCompanionStore } from '@/stores/companion';
 import router from '@/router';
+import Spellbook from './Spellbook.vue';
 
-const props = defineProps<{
-    hero: Hero;
-}>();
-
-const heroCards = computed(() => props.hero.cards.slice(0).reduce<Card[][]>(
-    (acc, current) => {
-        acc[cardColumn(current)].push(current);
-        return acc;
-    },
-    [[], [], [], []] as Card[][]
-))
-
+const props = defineProps<{ hero: Hero; }>();
 const store = useCompanionStore();
 const isFavorite = computed(() => store.id === props.hero.id)
 
@@ -56,46 +45,12 @@ function unsetFavorite() {
             Work in Progress
         </div>
 
-        <div class="card-column-container">
-            <div v-for="(cardColumn, idx) in heroCards" :key="idx">
-                <div v-for="card of cardColumn" :key="card.id">
-                    <HeroCard :card="card" />
-                </div>
-            </div>
-        </div>
+        <CardColorColumns :cards="hero.cards" />
+        <Spellbook :cards="hero.spellbook" />
     </div>
 </template>
 
 <style lang="scss">
-.card-column-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 1.5em;
-    row-gap: 3em;
-    margin: 0 .15em;
-
-    .hero-card-wrapper {
-        margin: 1.5em auto;
-    }
-
-    @media (max-width: 1280px) {
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 2.5em;
-    }
-
-    @media (max-width: 720px) {
-        column-gap: 1.5em;
-    }
-
-    @media (max-width: 580px) {
-        grid-template-columns: 1fr;
-
-        .hero-card-wrapper {
-            margin: 1em auto;
-        }
-    }
-}
-
 .construction-site {
     background-color: #f6c033;
     border: 3px solid #000;

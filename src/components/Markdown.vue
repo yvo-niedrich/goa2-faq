@@ -24,7 +24,8 @@ const supported_icons = [
     'token_barrier',
     'token_blast',
     'token_dud',
-    'token_glitch', // TODO: missing
+    'token_familiar', // TODO: missing
+    'token_glitch', // TODO: placeholder
     'token_grenade',
     'token_ice',
     'token_illusion',
@@ -33,7 +34,7 @@ const supported_icons = [
     'token_smoke_bomb',
     'token_totem',
     'token_tree',
-    'token_zombie' // TODO: missing
+    'token_zombie' // TODO: placeholder
 ];
 
 
