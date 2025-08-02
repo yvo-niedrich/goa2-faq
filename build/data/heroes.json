@@ -445,7 +445,8 @@
             "initiative": 3,
             "movement": [1, 4]
         },
-        "cards": "cards/gydion.json"
+        "cards": "cards/gydion.json",
+        "additional_cards": "cards/gydion_spellbook.json"
     },
     {
         "id": "neb",

@@ -1,26 +1,33 @@
 [
     {
+        "id": "gyd-book-g-magic-missile",
         "name": "Magic Missile",
         "text": "Target a unit in range and not adjacent to you.",
         "color": "gold",
+        "tier": null,
         "school": "cantrip",
         "type": "basic attack - ranged"
     },
     {
+        "id": "gyd-book-g-shocking-grasp",
         "name": "Shocking Grasp",
         "text": "Target a unit adjacent to you.\nAfter the attack: Move the target up to 1 space.",
         "color": "gold",
+        "tier": null,
         "school": "cantrip",
         "type": "basic attack"
     },
     {
+        "id": "gyd-book-g-expeditious-retreat",
         "name": "Expeditious Retreat",
         "text": "Move only in a straight line.",
         "color": "gold",
+        "tier": null,
         "school": "cantrip",
         "type": "basic movement"
     },
     {
+        "id": "gyd-book-r-i-burning-hands",
         "name": "Burning Hands",
         "text": "Target a unit adjacent to you.\nBefore the attack: Up to 1 enemy hero adjacent to the target discards a card, if able.",
         "color": "red",
@@ -29,6 +36,7 @@
         "type": "attack"
     },
     {
+        "id": "gyd-book-r-ii-fireball",
         "name": "Fireball",
         "text": "Target a unit in range, not adjacent to you or to your friendly unit.",
         "color": "red",
@@ -37,6 +45,7 @@
         "type": "attack - ranged"
     },
     {
+        "id": "gyd-book-r-iii-sunburst",
         "name": "Sunburst",
         "text": "Target a unit at maximum range. +1 ::attack:: Attack and +1 ::range:: Range for each other spell card removed from the spellbook.",
         "color": "red",
@@ -45,6 +54,7 @@
         "type": "attack - ranged"
     },
     {
+        "id": "gyd-book-r-ii-vampiric-touch",
         "name": "Vampiric Touch",
         "text": "Target a unit adjacent to you.\nAfter the attack: You may retrieve a discarded card.",
         "color": "red",
@@ -53,6 +63,7 @@
         "type": "attack"
     },
     {
+        "id": "gyd-book-r-ii-create-undead",
         "name": "Create Undead",
         "text": "Respawn a friendly minion in an empty friendly spawn point in range in the battle zone.",
         "color": "red",
@@ -61,6 +72,7 @@
         "type": "skill - ranged"
     },
     {
+        "id": "gyd-book-r-iii-energy-drain",
         "name": "Energy Drain",
         "text": "An enemy hero in range discards a non-basic card, if able. Your team regains 1 spent ::life_counters:: Life counter.",
         "color": "red",
@@ -69,6 +81,7 @@
         "type": "skill - ranged"
     },
     {
+        "id": "gyd-book-g-i-shield",
         "name": "Shield",
         "text": "**This round:** You are immune to basic attacks.\n_(Cancelled if the spell is returned to she spellbook.)_",
         "color": "green",
@@ -77,6 +90,7 @@
         "type": "skill"
     },
     {
+        "id": "gyd-book-g-i-shield",
         "name": "Shield",
         "text": "**This round:** You are immune to basic attacks.\n_(Cancelled if the spell is returned to she spellbook.)_",
         "color": "green",
@@ -85,6 +99,7 @@
         "type": "skill"
     },
     {
+        "id": "gyd-book-g-ii-banishment",
         "name": "Banishment",
         "text": "Place a unit or a token adjacent to you into a space in radius.",
         "color": "green",
@@ -93,6 +108,7 @@
         "type": "skill"
     },
     {
+        "id": "gyd-book-g-iii-invulnerability",
         "name": "Invulnerability",
         "text": "**This Round:** You are immune to non-basic attacks.",
         "color": "green",
@@ -101,6 +117,7 @@
         "type": "skill"
     },
     {
+        "id": "gyd-book-g-ii-dimension-door",
         "name": "Dimension Door",
         "text": "Place yourself into a space at maximum radius. +1 ::area_green:: Radius for each other spell card removed from the spellbook.",
         "color": "green",
@@ -109,6 +126,7 @@
         "type": "skill"
     },
     {
+        "id": "gyd-book-g-ii-find-familiar",
         "name": "Find Familiar",
         "text": "Place a ::token_familiar:: Familiar token in radius.\nYou may remove up to three other spell cards from the spellbook faceup.",
         "color": "green",
@@ -117,6 +135,7 @@
         "type": "skill"
     },
     {
+        "id": "gyd-book-g-iii-cloud-kill",
         "name": "Cloud Kill",
         "text": "An enemy hero in radius discards a basic card, if able.",
         "color": "green",
@@ -125,6 +144,7 @@
         "type": "skill"
     },
     {
+        "id": "gyd-book-b-i-suggestion",
         "name": "Suggestion",
         "text": "If able, an enemy hero in radius moves 3 spaces in a straight line.",
         "color": "blue",
@@ -133,6 +153,7 @@
         "type": "skill"
     },
     {
+        "id": "gyd-book-b-ii-dominate-person",
         "name": "Dominate Person",
         "text": "Target an enemy hero in radius.\nDefeat an enemy minion in radius adjacent to the target.",
         "color": "blue",
@@ -141,6 +162,7 @@
         "type": "skill"
     },
     {
+        "id": "gyd-book-b-iii-power-word-kill",
         "name": "Power Word Kill",
         "text": "Defeate an enemy hero in radius with no cards in hand.",
         "color": "blue",
@@ -149,6 +171,7 @@
         "type": "skill"
     },
     {
+        "id": "gyd-book-b-ii-midas-touch",
         "name": "Midas' Touch",
         "text": "Gain 1 coin for every two other spell cards removed from the spellbook.",
         "color": "blue",
@@ -157,6 +180,7 @@
         "type": "skill"
     },
     {
+        "id": "gyd-book-b-ii-disintegrate",
         "name": "Disintegrate",
         "text": "Remove a token or an enemy non-heavy minion adjacent to you.",
         "color": "blue",
@@ -165,6 +189,7 @@
         "type": "skill"
     },
     {
+        "id": "gyd-book-b-iii-polymorph",
         "name": "Polymorph",
         "text": "Swap an enemy hero in radius with a token in radius or with an enemy minion in radius.",
         "color": "blue",
@@ -173,6 +198,7 @@
         "type": "skill"
     },
     {
+        "id": "gyd-book-p-iv-wish",
         "name": "Wish",
         "text": "Cast any spell in the Spellbook.\nAfter you cast the “Wish” spell three times your team wins the game.",
         "color": "purple",

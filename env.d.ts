@@ -34,6 +34,18 @@ declare interface Card {
     text: string;
 }
 
+declare interface SpellbookCard extends Card {
+    school:
+        | 'cantrip'
+        | 'evocation'
+        | 'necromancy'
+        | 'abjuration'
+        | 'conjuration'
+        | 'enchantment'
+        | 'transmutation'
+        | 'wish';
+}
+
 declare interface Hero {
     id: string;
     name: string;
@@ -48,6 +60,7 @@ declare interface Hero {
         movement: number | [number, number];
     };
     cards: Card[];
+    addionalCards?: SpellbookCard[];
 }
 
 declare interface HeroRecord {
