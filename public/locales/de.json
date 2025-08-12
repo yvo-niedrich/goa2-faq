@@ -624,7 +624,7 @@
     "mra-gold-fissure.text": "Visiere eine benachbarte Einheit an.\nNach dem Angriff: Platziere einen ::token_rock:: Fels-Token in jedes der ersten drei leeren Felder auf der geraden Linie von dir in Richtung des Angriffs.",
     "mra-gold-h-lesser-fissure.text": "Visiere einen benachbarten Helden an.\nNach dem Angriff: Platziere einen ::token_rock:: Fels-Token in jedes der ersten drei leeren Felder auf der geraden Linie von dir in Richtung des Angriffs.",
     "mra-silver-stone-grip.text": "Platziere genau 3 ::token_rock:: Fels-Token in leere Felder benachbart zu einem feindlichen Helden in Reichweite, so weit entfernt von dir wie möglich.",
-    "mra-red-i-seismic-slam.text": "Ein feindlicher Held in Reichweite, benachbart zu Gelände oder einem ::token_rock:: Fels-Token, legt eine Karte ab oder wird besiegt.\n_(Die ::attack:: sekundäre Angriff-Aktion ist nicht Fernkampf.)_",
+    "mra-red-i-seismic-slam.text": "Ein feindlicher Held in Reichweite, benachbart zu Gelände oder einem ::token_rock:: Fels-Token, legt eine Karte ab oder wird besiegt.\n_(Die ::attack:: sekundäre Angriff-Aktion ist kein Fernkampf.)_",
     "mra-blue-i-boulder-rush.text": "Schiebe einen Token oder eine feindliche Einheit, die benachbart zu dir ist, 1 oder 2 Felder weit, Hindernisse ignorierend;\ndu darfst dich bis zu 2 Felder in Richtung des Stoßes bewegen, Hindernisse ignorierend.",
     "mra-green-i-treacherous-ground.text": "Du darfst eine Einheit in Reichweite 1 Feld bewegen, sodass sie an Gelände oder einen ::token_rock:: Fels-Token angrenzt.",
     "mra-red-ii-seismic-assault.text": "Ein feindlicher Held in Reichweite, benachbart zu Gelände oder einem ::token_rock:: Fels-Token, legt eine Karte ab oder wird besiegt.",

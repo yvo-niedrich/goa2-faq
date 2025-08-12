@@ -26,10 +26,8 @@ function unsetFavorite() {
     <div>
         <HeroPortrait :hero="hero">
             <template v-slot:actions>
-                <img v-if="isFavorite" class="btn-favorite active" src="@/components/icons/heart.svg" alt="fav"
-                    width="36px" @click="unsetFavorite">
-                <img v-else class="btn-favorite inactive" src="@/components/icons/heart_inactive.svg" alt="fav"
-                    width="36px" @click="() => setFavorite(hero)">
+                <div v-if="isFavorite" class="btn-favorite active" @click="unsetFavorite">♥</div>
+                <div v-else class="btn-favorite inactive" @click="() => setFavorite(hero)">♥</div>
             </template>
         </HeroPortrait>
 
@@ -78,14 +76,31 @@ function unsetFavorite() {
 }
 
 .btn-favorite {
+    position: absolute;
+    top: .05em;
+    left: .15em;
+    text-decoration: none;
+    background: var(--color-background-highlight);
+    color: #fff;
+    font-size: 2rem;
+    padding: .05em 0.2em;
+    border-radius: 1em;
+    overflow: hidden;
+    font-weight: bold;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(0, 0, 0, 0.75);
+    box-shadow: 0 1px 3px 1px #000;
+    transition: .5s ease-out;
+    z-index: 10;
     cursor: pointer;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
 
-    &.inactive {
-        opacity: .6;
-
-        &:hover {
-            opacity: 1;
-        }
+    &:hover {
+        background: #98c1d9;
     }
 }
 </style>
