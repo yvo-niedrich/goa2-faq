@@ -3,6 +3,7 @@ import { useViewport } from '@/viewport';
 import { computed } from 'vue';
 import HeroStat from './HeroStat.vue';
 import HeroIcon from './icons/HeroIcon.vue';
+import Markdown from './Markdown.vue';
 
 const props = defineProps<{ hero: Hero; portraitMin?: number; level?: number }>();
 const { isTablet, isDesktop, isMobileHorizontal, isMobileVertical } = useViewport();
@@ -34,10 +35,13 @@ const portraitHeight = computed(() => Math.max(props.portraitMin ?? 0, (() => {
                 <HeroStat :name="$t('app.stat.movement')" :value="hero.stats.movement" />
             </div>
             <div v-if="isDesktop || isTablet">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse harum officia deserunt velit
-                voluptates nisi magnam,
-                veritatis consequatur in qui, quibusdam fugit accusantium commodi praesentium provident sunt eum
-                eaque optio.
+                <Markdown v-if="hero.hasAdvice" :text="$t(hero.id + '.advice')" />
+                <template v-else>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse harum officia deserunt velit
+                    voluptates nisi magnam,
+                    veritatis consequatur in qui, quibusdam fugit accusantium commodi praesentium provident sunt eum
+                    eaque optio.
+                </template>
             </div>
         </div>
     </div>

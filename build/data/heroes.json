@@ -381,7 +381,8 @@
             "initiative": 2,
             "movement": 4
         },
-        "cards": "cards/mortimer.json"
+        "cards": "cards/mortimer.json",
+        "advice": "Create Zombies, kill enemies \n **DON'T DIE**."
     },
     {
         "id": "wid",

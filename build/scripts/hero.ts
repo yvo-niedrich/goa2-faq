@@ -6,12 +6,14 @@ import { loadCards } from './cards';
 import '../../env.d.ts';
 
 export interface HeroBuild extends Hero {
-    cardsJson?: string;
+    adviceText?: string;
 }
 
-export function load(filterFn: (h: HeroBuild) => boolean = () => true, withCards = true) {
+export function load(filterFn: (h: HeroBuild) => boolean = () => true) {
     const h: HeroBuild[] = [];
     for (const r of heroes) {
+        const advice = typeof r.advice === 'string' ? r.advice : null;
+
         const hero: HeroBuild = {
             id: r.id,
             name: r.name,
@@ -20,17 +22,20 @@ export function load(filterFn: (h: HeroBuild) => boolean = () => true, withCards
             complexity: r.complexity,
             expansion: toExpansion(r.expansion),
             stats: r.stats as any,
-            cards: withCards && typeof r.cards === 'string' ? loadCards(r.cards) : [],
-            ...(!withCards && typeof r.cards === 'string' ? { cardsJson: r.cards } : {}),
+            cards: typeof r.cards === 'string' ? loadCards(r.cards) : [],
+            hasAdvice: !!advice,
         };
 
         if (filterFn(hero)) {
             translationCache[`${hero.id}.class`] = hero.class;
             hero.class = `${hero.id}.class`;
+            if (advice) {
+                translationCache[`${hero.id}.advice`] = advice;
+            }
 
             h.push(hero);
         } else {
-            console.log(`Hero Skipped: ${hero.name} / ${hero.id}`)
+            console.log(`Hero Skipped: ${hero.name} / ${hero.id}`);
         }
     }
 
