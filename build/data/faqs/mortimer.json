@@ -1,0 +1,12 @@
+{
+    "faq-mor-oiXBV41f": {
+        "q": "Can I take Zombie tokens from the board if all Zombie tokens are already in play?",
+        "a": "Yes. Tokens should come from the Supply first, but if you need to place more tokens than are available in the supply, first remove up to that number of tokens of the same type from the board. Page 18 of the rulebook under \"Place\" clarifies this in further detail.",
+        "ref": ["mor-silver-awaken-"]
+    },
+    "faq-mor-VRbthTGv": {
+        "q": "If I cannot defend against an attack, can I still discard this to place the Zombie tokens?",
+        "a": "Yes. You can always play a card to defend even if the Defense value does not allow you to successfully defend. As this is a Defense/Skill card, you are allowed to place the Zombie tokens. (See p. 14 for more detail.)",
+        "ref": ["mor-silver-awaken-"]
+    }
+}
