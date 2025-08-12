@@ -715,6 +715,8 @@
     "faq-sil-VBPVBU86.answer": "The Fast Travel has all the normal restrictions of a Fast Travel action: there must be no enemy Heroes or Minions in her Zone, and if not, she can move anywhere in her Zone or to an adjacent Zone with no enemy Heroes or Minions.\n_Note that this is a rare instance of a Fast Travel which is not replacing a movement action. Silverarrow could Fast Travel (if valid), even if she cannot move due to another effect._",
     "faq-sil-BNCeD4CM.question": "Does Silverarrow’s Primary Blue (Grasping Roots) affect a Hero who moves in range of Silverarrow during their movement?",
     "faq-sil-BNCeD4CM.answer": "No, movement restrictions are checked at the beginning of the movement.",
+    "6Iy6RJQH.question": "How can Swift's Silver card already be resolved while its action is being performed?",
+    "6Iy6RJQH.answer": "If this card is played before Swift's Gold card, it will already be resolved when the Gold card triggers it again.",
     "faq-tal-bgAzAr8M.question": "What communication is legal for Tali’s Silver (Commune With Spirits)?",
     "faq-tal-bgAzAr8M.answer": "All Table Talk and Communication is fully open - to teammates and opponents (p. 4). A Tali player can give teammates instructions like “Say Blue” or “Say Red if Sabina plays Gold, otherwise say Green,” as long as the opponents can hear (and understand) these instructions. The Tali player may not secretly indicate their desire to their teammates by whispering, gestures, showing cards, a private code, etc.",
     "faq-tal-e2Ja6hsd.question": "If Tali tries to resolve her Silver (Commune with the Spirits) and her whole team is dead or immune, what happens?",
