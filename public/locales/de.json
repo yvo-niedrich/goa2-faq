@@ -377,6 +377,10 @@
     "faq-swi-6Iy6RJQH.answer": "Wenn diese Karte vor Swifts Goldkarte gespielt wurde, ist sie bereits aufgelöst, wenn die Goldkarte ihre Aktion erneut auslöst.",
     "faq-wuk-O48Zw7g2.question": "Wenn man durch einen schweren Minion und einen weiteren läuft \u2014 spielt die Reihenfolge der Minions eine Rolle?",
     "faq-wuk-O48Zw7g2.answer": "„Bis zu zwei Minions“ wird gleichzeitig abgehandelt, daher kann der schwere Minion nicht anvisiert werden und wird nicht besiegt.",
+    "faq-mor-oiXBV41f.question": "Darf ich Zombie-Marker vom Spielplan nehmen, wenn bereits alle Zombie-Marker im Spiel sind?",
+    "faq-mor-oiXBV41f.answer": "Ja. Marker sollten zunächst aus dem Vorrat genommen werden, aber wenn du mehr Marker platzieren musst, als im Vorrat verfügbar sind, entferne zunächst bis zu dieser Anzahl Marker desselben Typs vom Spielplan. Seite 18 des Regelbuchs unter „Platzieren“ erläutert dies im Detail.",
+    "faq-mor-VRbthTGv.question": "Wenn ich mich gegen einen Angriff nicht verteidigen kann, darf ich diese Karte trotzdem abwerfen, um die Zombie-Marker zu platzieren?",
+    "faq-mor-VRbthTGv.answer": "Ja. Du darfst eine Karte immer zur Verteidigung spielen, auch wenn der Verteidigungswert nicht ausreicht, um den Angriff abzuwehren. Da dies eine Verteidigungs-/Fertigkeitskarte ist, darfst du die Zombie-Marker platzieren. (Siehe Seite 14 für weitere Informationen.)",
 
     "bro-gold-onslaught.text": "Visiere eine Einheit benachbart zu dir an. Nach dem Angriff: Bewege dich in das Feld, das sie zuvor besetzt hat, falls möglich.",
     "bro-silver-bulwark.text": "Du darfst eine **abgeworfene** Karte auf die Hand zurücknehmen.\n**Dieser Zug:** Du und befreundete Einheiten im Radius könnt nicht von gegnerischen Helden bewegt, geschoben, getauscht oder platziert werden.",
