@@ -1,5 +1,5 @@
 {
-    "6Iy6RJQH": {
+    "faq-swi-6Iy6RJQH": {
         "q": "How can Swift's Silver card already be resolved while its action is being performed?",
         "a": "If this card is played before Swift's Gold card, it will already be resolved when the Gold card triggers it again.",
         "ref": ["swi-silver-bounce"]

@@ -1,5 +1,5 @@
 {
-    "YvsEXe2a": {
+    "faq-raz-YvsEXe2a": {
         "q": "Each instance of Razzle is “the same hero, except when actions are performed.” Is that only when your own actions are performed, or when enemy actions are performed as well?",
         "a": "During any action, regardless of whether it is performed by your enemy, ally or yourself, all the Razzles other than the active one is considered “another hero”.\n\nCards such as Mortimer’s Crawling Dead (which let you affect “another enemy hero in radius”) or Xargatha's Cleave (which can be repeated on a “different enemy hero”) can target Razzle twice by targeting two Razzle figures.\n\nIt is therefore very important to not have multiple Razzles near a hero that has multi-target discards as it is an easy way to be card killed.",
         "ref": ["raz-gold-stunt-doubles", "raz-gold-h-stunted-doubles"]
