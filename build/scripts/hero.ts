@@ -5,16 +5,12 @@ import { loadCards } from './cards';
 
 import '../../env.d.ts';
 
-export interface HeroBuild extends Hero {
-    adviceText?: string;
-}
-
-export function load(filterFn: (h: HeroBuild) => boolean = () => true) {
-    const h: HeroBuild[] = [];
+export function load(filterFn: (h: Hero) => boolean = () => true) {
+    const h: Hero[] = [];
     for (const r of heroes) {
         const advice = typeof r.advice === 'string' ? r.advice : null;
 
-        const hero: HeroBuild = {
+        const hero: Hero = {
             id: r.id,
             name: r.name,
             class: r.class,
