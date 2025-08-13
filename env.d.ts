@@ -61,6 +61,8 @@ declare interface Hero {
     };
     cards: Card[];
     spellbook?: SpellbookCard[];
+    hasLore?: boolean;
+    hasAdvice?: boolean;
 }
 
 declare interface HeroRecord {
