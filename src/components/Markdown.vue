@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
 import { markdown } from '@/helper/markdown';
 import { computed } from 'vue';

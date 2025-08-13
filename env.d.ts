@@ -82,7 +82,7 @@ declare module 'virtual:pwa-register/vue' {
         onNeedRefresh?: () => void;
         onOfflineReady?: () => void;
         onRegisteredSW?: (url: string, registration: ServiceWorkerRegistration | undefined) => void;
-        onRegisterError?: (error: any) => void;
+        onRegisterError?: (error: unknown) => void;
     }
 
     export function useRegisterSW(options?: RegisterSWOptions): {
