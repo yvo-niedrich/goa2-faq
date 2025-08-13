@@ -35,7 +35,11 @@ const portraitHeight = computed(() => Math.max(props.portraitMin ?? 0, (() => {
                 <HeroStat :name="$t('app.stat.movement')" :value="hero.stats.movement" />
             </div>
             <div v-if="isDesktop || isTablet">
-                <Markdown v-if="hero.hasAdvice" :text="$t(hero.id + '.advice')" />
+                <template v-if="hero.hasAdvice || hero.hasLore">
+                    <Markdown v-if="hero.hasLore" :text="$t(hero.id + '.lore')" />
+                    <hr v-if="hero.hasAdvice && hero.hasLore" />
+                    <Markdown v-if="hero.hasAdvice" :text="$t(hero.id + '.advice')" />
+                </template>
                 <template v-else>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse harum officia deserunt velit
                     voluptates nisi magnam,

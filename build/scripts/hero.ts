@@ -9,6 +9,7 @@ export function load(filterFn: (h: Hero) => boolean = () => true) {
     const h: Hero[] = [];
     for (const r of heroes) {
         const advice = typeof r.advice === 'string' ? r.advice : null;
+        const lore = typeof r.lore === 'string' ? r.lore : null;
 
         const hero: Hero = {
             id: r.id,
@@ -19,15 +20,16 @@ export function load(filterFn: (h: Hero) => boolean = () => true) {
             expansion: toExpansion(r.expansion),
             stats: r.stats as any,
             cards: typeof r.cards === 'string' ? loadCards(r.cards) : [],
+            hasLore: !!lore,
             hasAdvice: !!advice,
         };
 
         if (filterFn(hero)) {
             translationCache[`${hero.id}.class`] = hero.class;
             hero.class = `${hero.id}.class`;
-            if (advice) {
-                translationCache[`${hero.id}.advice`] = advice;
-            }
+          
+            if (advice) translationCache[`${hero.id}.advice`] = advice;
+            if (lore) translationCache[`${hero.id}.lore`] = lore;
 
             h.push(hero);
         } else {
