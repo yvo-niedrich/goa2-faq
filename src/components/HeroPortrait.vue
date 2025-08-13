@@ -34,11 +34,11 @@ const portraitHeight = computed(() => Math.max(props.portraitMin ?? 0, (() => {
                 <HeroStat :name="$t('app.stat.initiative')" :value="hero.stats.initiative" />
                 <HeroStat :name="$t('app.stat.movement')" :value="hero.stats.movement" />
             </div>
-            <div v-if="isDesktop || isTablet">
+            <div class="hero-description" v-if="isDesktop || isTablet">
                 <template v-if="hero.hasAdvice || hero.hasLore">
-                    <Markdown v-if="hero.hasLore" :text="$t(hero.id + '.lore')" />
+                    <Markdown v-if="hero.hasLore" :text="$t(hero.id + '.lore')" class="hero-lore" />
                     <hr v-if="hero.hasAdvice && hero.hasLore" />
-                    <Markdown v-if="hero.hasAdvice" :text="$t(hero.id + '.advice')" />
+                    <Markdown v-if="hero.hasAdvice" :text="$t(hero.id + '.advice')" class="hero-advice" />
                 </template>
                 <template v-else>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse harum officia deserunt velit
@@ -157,6 +157,29 @@ const portraitHeight = computed(() => Math.max(props.portraitMin ?? 0, (() => {
         @media (max-width: 720px) {
             grid-template-columns: 1fr;
             margin: .5em .25em;
+        }
+    }
+
+    .hero-description {
+
+        background-color: rgba(0, 0, 0, 0.5);
+        border: 1px solid var(--color-border);
+        border-radius: 1em;
+        padding: .75em;
+
+        @media (max-width: 1020px) {
+
+            hr,
+            .hero-lore {
+                display: none;
+            }
+        }
+
+        hr {
+            width: 95%;
+            border: 0;
+            height: 2px;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
         }
 
     }
