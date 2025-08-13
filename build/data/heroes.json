@@ -132,7 +132,8 @@
             "initiative": 4,
             "movement": [3, 5]
         },
-        "cards": "cards/rowenna.json"
+        "cards": "cards/rowenna.json",
+		"advice": "*From a young age, Rowenna dreamed of becoming a knight. She trained relentlessly, honing her combat skills and mastering the code of chivalry. Whether facing monstrous beasts or overwhelming odds, Rowenna stands unwavering, ready to defend the innocent, support her comrades, and lead her troops to victory.*\n---\n- Your silver is most effective when jumping to a space adjacent to multiple enemy units.\n- Your best chance to defeat an enemy hero with your gold card is when they have a low-defense card in their discard.\n- Talk to your teammates to maximize the impact of your red cards.\n"
     },
     {
         "id": "gar",
@@ -148,7 +149,8 @@
             "initiative": 3,
             "movement": [5, 6]
         },
-        "cards": "cards/garrus.json"
+        "cards": "cards/garrus.json",
+		"advice": "*Garrus was the reigning champion of the Arena until his defeat at the hands of a stranger, who tricked him into losing his temper. He roams the land, seeking to regain his title and his honor. They say that his shield can deflect a point-blank ballista shot. No one has ever dared to check if it's true.*\n---\n- Attacking second with your gold card can be an easy way to deal extra damage.\n- Your silver card can be very effective against heroes with high movement values.\n- With certain builds, enemies may be forced to prioritize you as a target when you have a card in the discard. Use this to your advantage.\n"
     },
     {
         "id": "bai",
@@ -164,7 +166,8 @@
             "initiative": 4,
             "movement": [5, 6]
         },
-        "cards": "cards/bain.json"
+        "cards": "cards/bain.json",
+		"advice": "*I wouldn't go around asking questions about Bain. Shady character, that one. Some say he is a nobleman looking for his lost sister, some say he is just an ordinary drunk. Drunk or not, he is the best shot this side of the desert. Unless you want him for a job, stay clear of him, partner!*\n---\n- The psychological effect of the bounty marker should not be underestimated.\n- Your silver card can save allies, disrupt enemies, and help clear minion waves faster."
     },
     {
         "id": "whi",
@@ -180,7 +183,8 @@
             "initiative": 7,
             "movement": [3, 5]
         },
-        "cards": "cards/whisper.json"
+        "cards": "cards/whisper.json",
+		"advice": "*Whisper was the Grand Judicator of the Underkingdom when he condemned a powerful noble attempting to escape punishment. Refusing to look the other way, he was blinded and left to die. As if he wasn't dead in the first place! The fools!*\n---\n- Your primary weakness is your limited mobility, with the exception of your green cards.\n- Your gold card can assist your allies in hunting down enemy heroes or scaring them away.\n- However, time your gold carefully; if used at the wrong moment, the target might escape.\n- Your silver makes you difficult to kill, provided there is a wounded enemy nearby.\n"
     },
     {
         "id": "mis",
@@ -196,7 +200,8 @@
             "initiative": 7,
             "movement": [1, 8]
         },
-        "cards": "cards/misa.json"
+        "cards": "cards/misa.json",
+		"advice": "*Misa will fight against overwhelming odds to protect her master. Unfortunately, she has yet to find anyone worthy of her blade and loyalty.*\n---\n- You only have one attack card — make it count.\n- Watch for opportunities to use your silver card for extra mobility and self-healing.\n- Your primary role in the game heavily depends on your blue and green level-up choices, so ensure they align with your teammates.\n- If your team is focused on winning the waves rather than fighting heroes, you probably don't need the \"Slash and Dash.\"\n- Your alt-green is strong, but tricky to land.\n"
     },
     {
         "id": "urs",
@@ -212,7 +217,8 @@
             "initiative": 5,
             "movement": [1, 5]
         },
-        "cards": "cards/ursafar.json"
+        "cards": "cards/ursafar.json",
+		"advice": "*When Ursafar roars, the frost beasts cower in their icy caves, and the tribesmen place fresh fish outside their igloos to appease the great bear.*\n---\n- You excel when enemies come to you; don't waste precious movement on pursuits.\n- Often, the best way to fuel your rage is by attacking a minion with your red or gold cards. Use your blues as a backup source of rage.\n- Your biggest weakness is low base mobility, and your worst nightmare is finding yourself on the wrong side of the board after a lane push.\n- Once enraged, you can use your gold, followed by your silver, as powerful zoning tools.\n"
     },
     {
         "id": "sil",
@@ -228,7 +234,8 @@
             "initiative": 7,
             "movement": [6, 7]
         },
-        "cards": "cards/silverarrow.json"
+        "cards": "cards/silverarrow.json",
+		"advice": "*Silverarrow never imagined she would leave the Forest until the Oracle uttered the prophecy. The hardest step of any path is the very first one; after that, you just keep moving.*\n---\n- Your ranged attacks have extended range, but they can easily be disrupted.\n- Know your weaknesses and don’t let enemies catch you off guard. Staying too close to enemy units makes you vulnerable, so maintain your distance.\n- However, don’t be tempted to avoid the fight entirely — your allies rely on your firepower and utility skills, and abandoning them could cost you the game.\n"
     },
     {
         "id": "min",
@@ -244,7 +251,8 @@
             "initiative": 8,
             "movement": 6
         },
-        "cards": "cards/min.json"
+        "cards": "cards/min.json",
+		"advice": "*The monks of the Order of the Dragon once worshipped the ancient beasts. But with their patrons gone, Min and his brothers had to adopt more practical applications of their beliefs.*\n---\n- End movement in straight lines from enemy heroes to utilize your smoke bomb.\n- Your gold card can be powered up even if your red card was used for movement or defense.\n- Mines cover more ground but are less reliable. Grenades require precise timing.\n"
     },
     {
         "id": "mra",
