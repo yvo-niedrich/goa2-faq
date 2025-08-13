@@ -48,6 +48,8 @@ declare interface Hero {
         movement: number | [number, number];
     };
     cards: Card[];
+    hasLore?: boolean;
+    hasAdvice?: boolean;
 }
 
 declare interface HeroRecord {

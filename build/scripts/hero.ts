@@ -5,14 +5,13 @@ import { loadCards } from './cards';
 
 import '../../env.d.ts';
 
-export interface HeroBuild extends Hero {
-    cardsJson?: string;
-}
-
-export function load(filterFn: (h: HeroBuild) => boolean = () => true, withCards = true) {
-    const h: HeroBuild[] = [];
+export function load(filterFn: (h: Hero) => boolean = () => true) {
+    const h: Hero[] = [];
     for (const r of heroes) {
-        const hero: HeroBuild = {
+        const advice = typeof r.advice === 'string' ? r.advice : null;
+        const lore = typeof r.lore === 'string' ? r.lore : null;
+
+        const hero: Hero = {
             id: r.id,
             name: r.name,
             class: r.class,
@@ -20,17 +19,21 @@ export function load(filterFn: (h: HeroBuild) => boolean = () => true, withCards
             complexity: r.complexity,
             expansion: toExpansion(r.expansion),
             stats: r.stats as any,
-            cards: withCards && typeof r.cards === 'string' ? loadCards(r.cards) : [],
-            ...(!withCards && typeof r.cards === 'string' ? { cardsJson: r.cards } : {}),
+            cards: typeof r.cards === 'string' ? loadCards(r.cards) : [],
+            hasLore: !!lore,
+            hasAdvice: !!advice,
         };
 
         if (filterFn(hero)) {
             translationCache[`${hero.id}.class`] = hero.class;
             hero.class = `${hero.id}.class`;
+          
+            if (advice) translationCache[`${hero.id}.advice`] = advice;
+            if (lore) translationCache[`${hero.id}.lore`] = lore;
 
             h.push(hero);
         } else {
-            console.log(`Hero Skipped: ${hero.name} / ${hero.id}`)
+            console.log(`Hero Skipped: ${hero.name} / ${hero.id}`);
         }
     }
 
