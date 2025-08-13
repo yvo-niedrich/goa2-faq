@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
 import { markdown } from '@/helper/markdown';
 import { computed } from 'vue';
@@ -14,28 +15,28 @@ const supported_icons = [
     'movement',
     'range',
     'radius',
-    'rune_anvil', // TODO: missing
-    'rune_axe', // TODO: missing
-    'rune_bird', // TODO: missing
-    'rune_horn', // TODO: missing
+    'rune_anvil', // TODO: placeholder
+    'rune_axe', // TODO: placeholder
+    'rune_bird', // TODO: placeholder
+    'rune_horn', // TODO: placeholder
     'skill',
     'tiebreaker_blue',
     'tiebreaker_orange',
     'token_barrier',
     'token_blast',
     'token_dud',
-    'token_glitch', // TODO: missing
+    'token_familiar', // TODO: placeholder
+    'token_glitch', // TODO: placeholder
     'token_grenade',
     'token_ice',
     'token_illusion',
     'token_magma',
-    'token_rock', // TODO: missing
+    'token_rock', // TODO: placeholder
     'token_smoke_bomb',
     'token_totem',
     'token_tree',
-    'token_zombie' // TODO: missing
+    'token_zombie' // TODO: placeholder
 ];
-
 
 function replaceIcons(input: string) {
     return input.replace(

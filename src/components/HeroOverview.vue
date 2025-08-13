@@ -1,23 +1,12 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import HeroCard from '@/components/HeroCard.vue';
-import { cardColumn } from '@/helper/cards';
 import HeroPortrait from './HeroPortrait.vue';
+import CardColorColumns from './CardColorColumns.vue';
 import { useCompanionStore } from '@/stores/companion';
 import router from '@/router';
+import Spellbook from './Spellbook.vue';
 
-const props = defineProps<{
-    hero: Hero;
-}>();
-
-const heroCards = computed(() => props.hero.cards.slice(0).reduce<Card[][]>(
-    (acc, current) => {
-        acc[cardColumn(current)].push(current);
-        return acc;
-    },
-    [[], [], [], []] as Card[][]
-))
-
+const props = defineProps<{ hero: Hero; }>();
 const store = useCompanionStore();
 const isFavorite = computed(() => store.id === props.hero.id)
 
@@ -37,14 +26,12 @@ function unsetFavorite() {
     <div>
         <HeroPortrait :hero="hero">
             <template v-slot:actions>
-                <img v-if="isFavorite" class="btn-favorite active" src="@/components/icons/heart.svg" alt="fav"
-                    width="36px" @click="unsetFavorite">
-                <img v-else class="btn-favorite inactive" src="@/components/icons/heart_inactive.svg" alt="fav"
-                    width="36px" @click="() => setFavorite(hero)">
+                <div v-if="isFavorite" class="btn-favorite active" @click="unsetFavorite">♥</div>
+                <div v-else class="btn-favorite inactive" @click="() => setFavorite(hero)">♥</div>
             </template>
         </HeroPortrait>
 
-        <div v-if="['gyd', 'mra', 'sno'].includes(hero.id)" class="construction-site">
+        <div v-if="['gyd'].includes(hero.id)" class="construction-site">
             <svg fill="#000000" height="12vw" viewBox="8 5 55 45" xmlns="http://www.w3.org/2000/svg">
                 <path
                     d="M27.69,34.62l-4.85-7.84.37-.36,1.6,1.37a1.5,1.5,0,0,0,.53,1.93,1.54,1.54,0,0,0,.81.23,1.49,1.49,0,0,0,.87-.27L37,38.2a.62.62,0,0,0,.44.18.64.64,0,0,0,.47-.21.65.65,0,0,0,0-.91L27.8,28.66l5-7.88a1.49,1.49,0,0,0,0-1.62,2.26,2.26,0,0,0-.25-.29L26.74,12a1.5,1.5,0,0,0-1.24-.66h0l-7.67.07a1.22,1.22,0,0,0-1.07.69l-2.37,5.09-.63-.54a.63.63,0,0,0-.9,0,.64.64,0,0,0,0,.91l.93.8-.24.53a1.52,1.52,0,0,0,.59,2,1.42,1.42,0,0,0,.74.2,1.51,1.51,0,0,0,1.27-.7l.78.67L13.4,24.87a2.37,2.37,0,0,0-.76,1.66l-.26,8.58L10.05,45.19A2.35,2.35,0,0,0,11.81,48a2.48,2.48,0,0,0,.54.06,2.35,2.35,0,0,0,2.29-1.83l2.44-10.53.23-7.63,1.4,1,4,6.49-4.38,9.15a2.35,2.35,0,1,0,4.25,2L27.76,36A1.37,1.37,0,0,0,27.69,34.62Z" />
@@ -56,46 +43,12 @@ function unsetFavorite() {
             Work in Progress
         </div>
 
-        <div class="card-column-container">
-            <div v-for="(cardColumn, idx) in heroCards" :key="idx">
-                <div v-for="card of cardColumn" :key="card.id">
-                    <HeroCard :card="card" />
-                </div>
-            </div>
-        </div>
+        <CardColorColumns :cards="hero.cards" />
+        <Spellbook :cards="hero.spellbook" />
     </div>
 </template>
 
 <style lang="scss">
-.card-column-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 1.5em;
-    row-gap: 3em;
-    margin: 0 .15em;
-
-    .hero-card-wrapper {
-        margin: 1.5em auto;
-    }
-
-    @media (max-width: 1280px) {
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 2.5em;
-    }
-
-    @media (max-width: 720px) {
-        column-gap: 1.5em;
-    }
-
-    @media (max-width: 580px) {
-        grid-template-columns: 1fr;
-
-        .hero-card-wrapper {
-            margin: 1em auto;
-        }
-    }
-}
-
 .construction-site {
     background-color: #f6c033;
     border: 3px solid #000;
@@ -123,14 +76,41 @@ function unsetFavorite() {
 }
 
 .btn-favorite {
+    position: absolute;
+    top: .05em;
+    left: .15em;
+    text-decoration: none;
+    background: var(--color-background-highlight);
+    color: #fff;
+    font-size: 2rem;
+    padding: .05em 0.2em;
+    border-radius: 1em;
+    overflow: hidden;
+    font-weight: bold;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(0, 0, 0, 0.75);
+    box-shadow: 0 1px 3px 1px #000;
+    transition: .5s ease-out;
+    z-index: 10;
     cursor: pointer;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
 
-    &.inactive {
-        opacity: .6;
+    &.active {
+        background: var(--color-background-softer);
+        color: rgb(247, 45, 45);
+        text-shadow: 0 0 3px rgba(0, 0, 0, 1);
+    }
 
-        &:hover {
-            opacity: 1;
-        }
+    &:hover {
+        color: rgb(255, 144, 144);
+    }
+
+    &:not(.active):hover {
+        background: #50a0ce;
     }
 }
 </style>

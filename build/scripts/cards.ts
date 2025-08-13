@@ -11,6 +11,7 @@ interface CardRaw {
     tier?: 'I' | 'II' | 'III' | 'IV' | 'H' | null; // Top right, next to the name
     text: string; // Markdown Parsable (italics, bold, newlines, ...)
     alternative?: boolean;
+    school?: SpellbookCard['school'];
 }
 
 type SortFn<T> = (a: T, b: T) => number;
@@ -77,6 +78,7 @@ export function loadCards(file: string | string[], withTranslation = true): Card
                 text: withTranslation ? `${card.id}.text` : card.text,
                 ...(card.tier ? { tier: card.tier.toUpperCase() as Card['tier'] } : {}),
                 ...(card.alternative ? { alternative: true } : {}),
+                ...(card.school ? { school: card.school as unknown } : {}),
             });
         }
     }

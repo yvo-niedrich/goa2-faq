@@ -122,10 +122,10 @@ function handleClick() {
 
     &.animate:hover .name-overlay-text {
         color: #fff;
-        background-color: rgba(0, 0, 0, .8);
+        background-color: rgba(0, 0, 0, .75);
         border-top: 1px solid rgba(255, 255, 255, .8);
         border-bottom: 1px solid rgba(255, 255, 255, .8);
-        box-shadow: 0px 0px .75em 1.25em rgba(0, 0, 0, .75);
+        box-shadow: 0px 0px .75em 1.25em rgba(0, 0, 0, .5);
     }
 }
 </style>

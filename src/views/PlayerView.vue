@@ -9,6 +9,7 @@ import { useViewport } from '@/viewport';
 import HeroCard from '@/components/HeroCard.vue';
 import HeroPortrait from '@/components/HeroPortrait.vue';
 import CardSelectPopup from '@/components/popups/CardSelectPopup.vue';
+import Spellbook from '@/components/Spellbook.vue';
 import { get } from '@/data/heroes';
 import { sortCardsByTier, sortCardTiers } from '@/helper/cards';
 import { useCompanionStore } from '@/stores/companion';
@@ -69,7 +70,6 @@ function tierToLevel(t: string | null) {
 
 const heroLevel = computed(() => cards.value.reduce((agg, card) => agg + tierToLevel(card.data.tier), 1))
 
-
 const viewport = useViewport();
 
 function getVisibleCount(width: number) {
@@ -78,13 +78,10 @@ function getVisibleCount(width: number) {
     return 1;
 }
 
-
 const visibleCount = computed(() => getVisibleCount(viewport.width.value));
 const navigableSlides = computed(() => cards.value.length - Math.floor(visibleCount.value));
 const isAtStart = computed(() => store.focus <= 0);
 const isAtEnd = computed(() => store.focus >= navigableSlides.value);
-
-
 const choice = ref<null | { cards: Card[], select: CardFn }>(null);
 
 
@@ -135,8 +132,6 @@ function setNewCard(cards: Card[], select: CardFn) {
                     <div class="carousel-mask right" :class="{ 'hidden': isAtEnd }" />
                 </template>
 
-
-
                 <Slide v-for="(card, index) in cards" :key="index" class="slide" :class="{
                     'is-left': index === store.focus - 1,
                     'is-right': index === store.focus + Math.floor(visibleCount),
@@ -153,9 +148,8 @@ function setNewCard(cards: Card[], select: CardFn) {
                                 <path d="M6 12L12 6L18 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                     stroke-linejoin="round" />
                             </svg>
-
-
                         </div>
+
                         <div class="card-modification downgrade" :class="{ 'disabled': card.downgrades.length === 0 }"
                             :title="$t('app.card.downgrade')" @click="() => setNewCard(card.downgrades, card.modify)">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="5 7 12 12"
@@ -173,6 +167,8 @@ function setNewCard(cards: Card[], select: CardFn) {
                 </Slide>
             </Carousel>
         </div>
+
+        <Spellbook :cards="hero.spellbook" />
     </div>
 </template>
 

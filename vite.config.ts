@@ -1,11 +1,34 @@
 import { fileURLToPath, URL } from 'node:url';
 
-import { defineConfig } from 'vite';
+import { defineConfig, Plugin } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import vueJsx from '@vitejs/plugin-vue-jsx';
 import vueDevTools from 'vite-plugin-vue-devtools';
-import nightwatchPlugin from 'vite-plugin-nightwatch';
 import { VitePWA } from 'vite-plugin-pwa';
+
+import fs from 'fs';
+import path from 'path';
+
+function minifyLocalesJson(): Plugin {
+    return {
+        name: 'minify-locales-json',
+        apply: 'build',
+        closeBundle() {
+            const localesDir = path.resolve(__dirname, 'dist/locales');
+            if (!fs.existsSync(localesDir)) return;
+
+            fs.readdirSync(localesDir).forEach((file) => {
+                const filePath = path.join(localesDir, file);
+                if (file.endsWith('.json')) {
+                    const content = fs.readFileSync(filePath, 'utf-8');
+                    const minified = JSON.stringify(JSON.parse(content));
+                    fs.writeFileSync(filePath, minified, 'utf-8');
+                    console.log(`minified ${path.relative(process.cwd(), filePath)}...`);
+                }
+            });
+        },
+    };
+}
 
 const hash = (Math.random() + 1).toString(36).substring(2);
 
@@ -25,7 +48,7 @@ export default defineConfig({
         vue(),
         vueJsx(),
         vueDevTools(),
-        nightwatchPlugin(),
+        minifyLocalesJson(),
         VitePWA({
             registerType: 'autoUpdate',
             workbox: {
@@ -61,6 +84,7 @@ export default defineConfig({
             },
         }),
     ],
+
     resolve: {
         alias: {
             '@': fileURLToPath(new URL('./src', import.meta.url)),

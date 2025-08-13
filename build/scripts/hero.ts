@@ -22,12 +22,15 @@ export function load(filterFn: (h: Hero) => boolean = () => true) {
             cards: typeof r.cards === 'string' ? loadCards(r.cards) : [],
             hasLore: !!lore,
             hasAdvice: !!advice,
+            ...(r.spellbook && r.spellbook.length
+                ? { spellbook: loadCards(r.spellbook) as unknown as SpellbookCard[] }
+                : {}),
         };
 
         if (filterFn(hero)) {
             translationCache[`${hero.id}.class`] = hero.class;
             hero.class = `${hero.id}.class`;
-          
+
             if (advice) translationCache[`${hero.id}.advice`] = advice;
             if (lore) translationCache[`${hero.id}.lore`] = lore;
 

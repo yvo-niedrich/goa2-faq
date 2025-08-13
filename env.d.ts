@@ -34,6 +34,18 @@ declare interface Card {
     text: string;
 }
 
+declare interface SpellbookCard extends Card {
+    school:
+        | 'cantrip'
+        | 'evocation'
+        | 'necromancy'
+        | 'abjuration'
+        | 'conjuration'
+        | 'enchantment'
+        | 'transmutation'
+        | 'wish';
+}
+
 declare interface Hero {
     id: string;
     name: string;
@@ -48,6 +60,7 @@ declare interface Hero {
         movement: number | [number, number];
     };
     cards: Card[];
+    spellbook?: SpellbookCard[];
     hasLore?: boolean;
     hasAdvice?: boolean;
 }
@@ -69,7 +82,7 @@ declare module 'virtual:pwa-register/vue' {
         onNeedRefresh?: () => void;
         onOfflineReady?: () => void;
         onRegisteredSW?: (url: string, registration: ServiceWorkerRegistration | undefined) => void;
-        onRegisterError?: (error: any) => void;
+        onRegisterError?: (error: unknown) => void;
     }
 
     export function useRegisterSW(options?: RegisterSWOptions): {
