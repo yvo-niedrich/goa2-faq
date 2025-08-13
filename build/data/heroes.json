@@ -140,7 +140,7 @@
             "movement": [3, 5]
         },
         "cards": "cards/rowenna.json",
-		"advice": "*From a young age, Rowenna dreamed of becoming a knight. She trained relentlessly, honing her combat skills and mastering the code of chivalry. Whether facing monstrous beasts or overwhelming odds, Rowenna stands unwavering, ready to defend the innocent, support her comrades, and lead her troops to victory.*\n---\n- Your silver is most effective when jumping to a space adjacent to multiple enemy units.\n- Your best chance to defeat an enemy hero with your gold card is when they have a low-defense card in their discard.\n- Talk to your teammates to maximize the impact of your red cards.\n"
+		"advice": "From a young age, Rowenna dreamed of becoming a knight. She trained relentlessly, honing her combat skills and mastering the code of chivalry. Whether facing monstrous beasts or overwhelming odds, Rowenna stands unwavering, ready to defend the innocent, support her comrades, and lead her troops to victory.*\n---\n- Your silver is most effective when jumping to a space adjacent to multiple enemy units.\n- Your best chance to defeat an enemy hero with your gold card is when they have a low-defense card in their discard.\n- Talk to your teammates to maximize the impact of your red cards.\n"
     },
     {
         "id": "gar",
@@ -157,7 +157,7 @@
             "movement": [5, 6]
         },
         "cards": "cards/garrus.json",
-		"lore: ": "Garrus was the reigning champion of the Arena until his defeat at the hands of a stranger, who tricked him into losing his temper. He roams the land, seeking to regain his title and his honor. They say that his shield can deflect a point-blank ballista shot. No one has ever dared to check if it's true.",
+		"lore": "Garrus was the reigning champion of the Arena until his defeat at the hands of a stranger, who tricked him into losing his temper. He roams the land, seeking to regain his title and his honor. They say that his shield can deflect a point-blank ballista shot. No one has ever dared to check if it's true.",
 		"advice": "- Attacking second with your gold card can be an easy way to deal extra damage.\n- Your silver card can be very effective against heroes with high movement values.\n- With certain builds, enemies may be forced to prioritize you as a target when you have a card in the discard. Use this to your advantage.\n"
     },
     {
@@ -194,7 +194,7 @@
         },
         "cards": "cards/whisper.json",
 		"lore": "Whisper was the Grand Judicator of the Underkingdom when he condemned a powerful noble attempting to escape punishment. Refusing to look the other way, he was blinded and left to die. As if he wasn't dead in the first place! The fools!",
-		"advice": "Your primary weakness is your limited mobility, with the exception of your green cards.\n- Your gold card can assist your allies in hunting down enemy heroes or scaring them away.\n- However, time your gold carefully; if used at the wrong moment, the target might escape.\n- Your silver makes you difficult to kill, provided there is a wounded enemy nearby.\n"
+		"advice": "- Your primary weakness is your limited mobility, with the exception of your green cards.\n- Your gold card can assist your allies in hunting down enemy heroes or scaring them away.\n- However, time your gold carefully; if used at the wrong moment, the target might escape.\n- Your silver makes you difficult to kill, provided there is a wounded enemy nearby.\n"
     },
     {
         "id": "mis",
