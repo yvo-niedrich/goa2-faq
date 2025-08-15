@@ -29,5 +29,15 @@
         "q": "What are Obstacles?",
         "a": "Obstacles are basically anything on the map: Units (Heroes and Minions), terrain shown on the map, tokens, and any other miniatures. There can only be one Obstacle on each space, and Obstacles generally can’t move through each other. If an ability does allow Obstacles to pass through each other (“you can move through Obstacles”, “Heroes may move through a space with a tree token”), they still may not end movement on such a space.",
         "ref": ["sil-silver-trailblazer"]
+    },
+    "faq-common-xNApYXXu": {
+        "q": "Would an immune hero trigger effects, that require adjacency?",
+        "a": "No. Whenever you are required to check the status of a unit, it counts as targeting, which you cannot do with an immune unit. This is different from cards such as Sabina's Steady Advance where you simply check the presence of units, rather than their status.",
+        "ref": [
+            "mor-red-ii-braains-",
+            "mor-red-iii-braaaaaaaains-",
+            "bry-green-ii-true-grit",
+            "bry-green-iii-die-hard"
+        ]
     }
 }
