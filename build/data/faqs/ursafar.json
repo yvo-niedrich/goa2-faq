@@ -8,5 +8,10 @@
         "q": "Would Ursafar’s Ultimate (Unbound Fury) allow him to move using his Silver (Angry Roar)?",
         "a": "No. The second effect on Angry Roar, +2 Movement, will only increase the Movement value of a card which already has a Movement Action.",
         "ref": ["urs-silver-angry-roar", "urs-purple-iv-unbound-fury"]
+    },
+    "faq-urs-z0mVe4p1": {
+        "q": "Does the additional movement only applied to the card it is printed on?",
+        "a": "Yes. When Ursafar is enraged, his blue allows him to move further with that explicit action. It does not apply to any other cards (there is no “**This round**” indication).",
+        "ref": ["urs-blue-ii-cold-ire", "urs-blue-iii-eyes-of-flame"]
     }
 }
