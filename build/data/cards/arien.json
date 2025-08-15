@@ -77,7 +77,7 @@
         "color": "red",
         "type": "attack - ranged",
         "tier": "II",
-        "text": "Target a unit in range.\nAfter the attack: You may an enemy unit adjacent to you up to 2 spaces.",
+        "text": "Target a unit in range.\nAfter the attack: You may push an enemy unit adjacent to you up to 2 spaces.",
         "alternative": true
     },
     {
