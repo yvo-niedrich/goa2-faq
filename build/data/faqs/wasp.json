@@ -1,7 +1,7 @@
 {
     "faq-wasp-P8qD2hsM": {
         "q": "How does Wasp’s Static Barrier work?",
-        "a": "Static Barrier divides the map into 2 regions: spaces within its radius and outside its radius. Enemy units cannot **move** or **fast travel** across the “barrier” between the two regions:\n- They cannot take a move action (to move or fast travel) to move across the barrier.\n- They cannot use an attack or skill involving movement to cross the barrier.\n- They cannot cross the barrier on their path, even if they cross back. That is, a hero outside the barrier cannot walk into the radius and then walk back out.\n- They can use a “place” or “swap” effect (such as Arien’s Alt Blue) to cross the barrier.\n- They can be pushed across the barrier (pushing is not movement) or moved by another player’s card.",
+        "a": "Static Barrier divides the map into 2 regions: spaces within its radius and outside its radius. Enemy units cannot **move** or **fast travel** across the “barrier” between the two regions:\n- ❌They cannot take a move action (to move or fast travel) to move across the barrier.\n- ❌They cannot use an attack or skill involving movement to cross the barrier.\n- ❌They cannot cross the barrier on their path, even if they cross back. That is, a hero outside the barrier cannot walk into the radius and then walk back out.\n- ✅They can use a “place” or “swap” effect (such as Arien’s Alt Blue) to cross the barrier.\n- ✅They can be pushed across the barrier (pushing is not movement) or moved by another player’s card.",
         "ref": ["was-silver-static-barrier"]
     },
     "faq-wasp-iOUfdU2P": {
@@ -19,5 +19,15 @@
         "q": "Why do Wasp’s Tier II and III abilities say “If you do”? Why would the block fail?",
         "a": "You can always discard a card to attempt to defend, even if it does not defend successfully.",
         "ref": ["was-green-ii-deflect-projectiles", "was-green-iii-reflect-projectiles"]
+    },
+    "faq-wasp-uDFB6GGe": {
+        "q": "Does Wasp’s Gold prevent movement?",
+        "a": "No, Wasp’s dagger interferes with magical placement abilites \u2013 and only if they are controlled by enemy heroes. Normal movement and pushes can still be used by enemy heroes to reposition.",
+        "ref": ["was-gold-magnetic-dagger", "was-gold-h-crackling-dagger"]
+    },
+    "faq-wasp-jjFB6hGs": {
+        "q": "Can enemies from further away use their placement abilities to approach Wasp?",
+        "a": "Yes, the ability does **not** prevent enemey heroes from placing or swapping themselfs (or their friends) into the radius of Wasp’s dagger.",
+        "ref": ["was-gold-magnetic-dagger", "was-gold-h-crackling-dagger"]
     }
 }

@@ -173,6 +173,7 @@
     "was-green-iii-mass-telekinesis.text": "Platziere eine Einheit oder ein Token in Reichweite, das sich nicht in gerader Linie befindet, in ein Feld benachbart zu dir. Darf einmal wiederholt werden.",
     "was-gold-h-crackling-dagger.text": "Visiere einen Helden benachbart zu dir an.\nNach dem Angriff: **Dieser Zug:** Gegnerische Einheiten im Radius dürfen weder platziert noch getauscht werden - weder von sich selbst noch von gegnerischen Helden.",
     "was-purple-iv-high-voltage.text": "Jedes Mal, nachdem du eine Basisfähigkeit ausführst, darfst du einen gegnerischen Minion im Radius besiegen; ein gegnerischer Held, der benachbart zu diesem Minion war, wirft eine Karte ab, falls möglich.",
+
     "sab-gold-point-blank-shot.text": "Visiere eine Einheit in Reichweite an. Nach dem Angriff: Falls das Ziel benachbart zu dir ist, schiebe es 1 Feld.",
     "sab-silver-back-to-back.text": "Tausche mit einem freundlichen Minion im Radius.",
     "sab-red-i-quickdraw.text": "Visiere eine Einheit in Reichweite an. +3 ::attack:: Angriff, falls das Ziel in diesem Zug eine Angriffskarte gespielt hat.",
@@ -192,6 +193,7 @@
     "sab-green-ii-marching-orders.text": "Bewege einen freundlichen Minion im Radius 1 Feld weit zu einem anderen Feld im Radius. Darf einmal wiederholt werden.",
     "sab-gold-h-bang.text": "Visiere einen Helden benachbart zu dir an.\nNach dem Angriff: Schiebe das Ziel 1 Feld.",
     "sab-purple-iv-big-sodding-gun.text": "Dein Basisangriff hat +2 ::range:: Reichweite und +2 ::attack:: Angriff. Wenn du einen gegnerischen Helden schiebst, wirft dieser eine Karte ab oder wird besiegt.",
+
     "xar-gold-cleave.text": "Visiere eine Einheit benachbart zu dir an.\nNach dem Angriff: Darf einmal auf einen anderen gegnerischen Helden wiederholt werden.\n_(Du darfst dies auch wiederholen, wenn das ursprüngliche Ziel ein Minion war.)_",
     "xar-gold-h-desperate-cleave.text": "Visiere einen Helden benachbart zu dir an.\nNach dem Angriff: Darf einmal auf einen anderen gegnerischen Helden wiederholt werden.",
     "xar-silver-sirens-call.text": "Visiere eine gegnerische Einheit in Reichweite an, die nicht benachbart zu dir ist; falls möglich, bewege das Ziel bis zu 3 Felder in ein Feld benachbart zu dir.",
@@ -211,6 +213,7 @@
     "xar-red-ii-long-thrust.text": "Visiere eine Einheit in Reichweite an. +1 ::range:: Reichweite für jede gegnerische Einheit benachbart zu dir.",
     "xar-red-iii-rapid-thrusts.text": "Visiere eine Einheit in Reichweite an. +1 ::range:: Reichweite für jede gegnerische Einheit benachbart zu dir. Darf einmal auf einen anderen gegnerischen Helden wiederholt werden.",
     "xar-red-iii-lethal-spin.text": "Visiere eine Einheit benachbart zu dir an. +3 ::attack:: Angriff für jede weitere gegnerische Einheit benachbart zu dir.",
+
     "dod-gold-dread-razor.text": "**Wähle eins** \u2014\n- Visiere eine Einheit benachbart zu dir an.\n- Falls du benachbart zu einem leeren Spawnpunkt in der Kampfzone bist, visiere eine Einheit in Reichweite an.",
     "dod-gold-h-rusty-razor.text": "**Wähle eins** \u2014\n- Visiere einen Helden benachbart zu dir an.\n- Falls du benachbart zu einem leeren Spawnpunkt in der Kampfzone bist, visiere einen Helden in Reichweite an.",
     "dod-silver-death-trap.text": "Ein gegnerischer Held im Radius, der benachbart zu einem leeren Spawnpunkt in der Kampfzone ist, wirft eine Karte ab, falls möglich.",
@@ -230,6 +233,7 @@
     "dod-red-iii-middlefinger-of-death.text": "**Wähle eins oder beide**\n- auf unterschiedliche Ziele:\n- Visiere eine Einheit benachbart zu dir an.\n- Visiere einen Helden in Reichweite an, der eine oder mehrere Karten im Ablagestapel hat.",
     "dod-red-ii-burning-skull.text": "Visiere eine Einheit in Reichweite an.\n**Nach dem Angriff:** Bewege bis zu 1 Minion benachbart zu dir 1 Feld weit, in ein Feld, das nicht benachbart zu dir ist.",
     "dod-red-iii-blazing-skull.text": "Visiere eine Einheit in Reichweite an.\nNach dem Angriff: Bewege bis zu 2 Minions benachbart zu dir je 1 Feld weit, in Felder, die nicht benachbart zu dir sind.",
+
     "sil-gold-shoot-and-scoot.text": "Visiere eine Einheit auf maximaler Reichweite an.\nNach dem Angriff: Falls möglich, darfst du per Schnellreise in eine benachbarte Zone wechseln.",
     "sil-silver-trailblazer.text": "Du darfst, falls möglich, per Schnellreise reisen.\n**Diese Runde**: Du und freundliche Helden im Radius dürfen Hindernisse bei Bewegungsaktionen ignorieren.",
     "sil-red-i-snap-shot.text": "**Wähle eins \u2014**\n- Visiere eine Einheit in Reichweite an, die zu keiner anderen Einheit benachbart ist.\n- Visiere eine Einheit benachbart zu dir an.",
@@ -249,6 +253,7 @@
     "sil-green-iii-natures-blessing.text": "Ein Held im Radius darf eine abgeworfene Karte zurückholen; falls er das tut, erhält dieser Held 2 Münzen.",
     "sil-purple-iv-wild-hunt.text": "Jedes Mal, bevor du eine Aktion ausführst, darfst du dich 2 Felder in gerader Linie bewegen.",
     "sil-gold-h-keep-the-distance.text": "Visiere einen Helden auf maximaler Reichweite an.\nNach dem Angriff: Falls möglich, darfst du per Schnellreise in eine benachbarte Zone wechseln.",
+
     "tal-gold-ice-blast.text": "Visiere eine Einheit benachbart zu dir an. Wenn das Ziel eine Karte zur Verteidigung abwirft, dann nach dem Angriff: Ein anderer gegnerischer Held im Radius wirft eine Karte derselben Farbe ab, falls möglich.",
     "tal-silver-commune-with-spirits.text": "Ein befreundeter Held im Spiel nennt eine Farbe; du darfst eine Karte dieser Farbe abwerfen. Führe die Primäraktion einer Karte dieser Farbe aus deinem Ablagestapel aus.",
     "tal-red-i-winter-dagger.text": "Visiere eine Einheit benachbart zu dir an.\n+3 ::attack:: Angriff, wenn sich diese Karte nicht im Ablagestapel befindet.",
@@ -266,6 +271,7 @@
     "tal-green-ii-ancestral-totem.text": "Platziere ein ::token_totem:: Totem in Reichweite. Wenn ein befreundeter Nahkampf-Minion benachbart zu einem Totem besiegt würde, entferne stattdessen das Totem.",
     "tal-green-iii-pack-ice.text": "Platziere bis zu 3 ::token_ice:: Eis-Token im Radius. Gegnerische Helden haben -1 ::initiative:: Initiative für jeden Eis-Token, an den sie benachbart sind.",
     "tal-green-iii-venerated-totem.text": "Platziere ein ::token_totem:: Totem in Reichweite. Wenn ein befreundeter Minion benachbart zu einem Totem besiegt würde, entferne stattdessen das Totem. Totems sind immun gegen gegnerische Effekte.",
+
     "tal-purple-iv-reign-of-winter.text": "Jedes Mal, nachdem du mit deinem Basisangriff einen Minion besiegst, wirft ein gegnerischer Held im Radius eine Karte einer Farbe deiner Wahl ab, falls möglich.",
     "tal-gold-h-ice-shard.text": "Visiere einen Helden benachbart zu dir an. Wenn das Ziel eine Karte zur Verteidigung abwirft, dann nach dem Angriff: Ein anderer gegnerischer Held im Radius wirft eine Karte derselben Farbe ab, falls möglich.",
     "row-gold-code-of-chivalry.text": "Visiere eine Einheit benachbart zu dir an.\nVor dem Angriff: Wenn du einen Helden anvisierst, dürfen sowohl du als auch das Ziel eine abgeworfene Karte zurückholen.",
@@ -287,6 +293,7 @@
     "row-red-iii-paragon-of-grace.text": "Visiere eine Einheit benachbart zu dir an.\nNach dem Angriff: Ein befreundeter Held im Radius erhält 1 Münze.\nDarf einmal auf ein anderes Ziel wiederholt werden.",
     "row-red-iii-paragon-of-valor.text": "Visiere eine Einheit benachbart zu dir an.\nNach dem Angriff: Ein befreundeter Held im Radius darf eine abgeworfene Karte zurückholen; falls er das tut, darfst du einmal auf ein anderes Ziel wiederholen.",
     "row-purple-iv-fabled-lance.text": "Alle deine Angriffsaktionen erhalten den Typ „Fernkampf“, visieren eine Einheit in Reichweite an und gelten als hätten sie einen aufgedruckten ::range:: Reichweitenwert von 2.",
+
     "gar-gold-angry-strike.text": "Visiere eine Einheit benachbart zu dir an. +1 ::attack:: Angriff für jede Karte in deinem Ablagestapel.",
     "gar-gold-h-angry-swipe.text": "Visiere einen Helden benachbart zu dir an. +1 ::attack:: Angriff für jede Karte in deinem Ablagestapel.",
     "gar-silver-chilling-howl.text": "Du darfst eine deiner aufgelösten Karten abwerfen.\n**Diese Runde:** Gegnerische Helden im Radius dürfen keine Schnellreise durchführen oder sich mit einer Bewegungsaktion mehr als 2 Felder bewegen.",
@@ -306,6 +313,7 @@
     "gar-blue-iii-testudo-.text": "Bewege eine befreundete Einheit in Reichweite 1 Feld näher zu dir.\nDarf bis zu zweimal wiederholt werden.",
     "gar-red-iii-send-flying.text": "Visiere eine Einheit benachbart zu dir an.\nNach dem Angriff: Du darfst dich bis zu 2 Felder zu einem Feld benachbart zu einem gegnerischen Helden bewegen; falls du das tust, schiebe diesen Helden 3 Felder, Hindernisse werden ignoriert.",
     "gar-green-iii-heavy-pilum.text": "Ein gegnerischer Held in Reichweite wirft eine Karte ab oder wird besiegt. Du darfst dich bis zu 2 Felder bewegen.",
+
     "bai-gold-dead-or-alive.text": "Visiere eine Einheit benachbart zu dir an.\nNach dem Angriff: Du darfst einem gegnerischen Helden im Radius den ::marker_bounty:: Kopfgeldmarker geben.\nEin Held mit dem Kopfgeldmarker gibt beim Besiegtwerden 1 zusätzliches ::life_counters:: Lebensplättchen aus.",
     "bai-gold-h-side-quest.text": "Wenn du benachbart zu einer gegnerischen Einheit bist, gib einem Helden im Radius einen ::marker_bounty:: Kopfgeldmarker.\nEin Held mit dem Kopfgeldmarker gibt beim Besiegtwerden 1 zusätzliches ::life_counters:: Lebensplättchen aus.",
     "bai-silver-get-over-here-.text": "Visiere eine Einheit oder ein Token in Reichweite und in gerader Linie ohne Hindernisse zwischen dir und dem Ziel an. Bewege das Ziel in gerader Linie auf dich zu, bis es benachbart zu dir ist.",
@@ -433,6 +441,10 @@
     "faq-mor-oiXBV41f.answer": "Ja. Marker sollten zunächst aus dem Vorrat genommen werden, aber wenn du mehr Marker platzieren musst, als im Vorrat verfügbar sind, entferne zunächst bis zu dieser Anzahl Marker desselben Typs vom Spielplan. Seite 18 des Regelbuchs unter „Platzieren“ erläutert dies im Detail.",
     "faq-mor-VRbthTGv.question": "Wenn ich mich gegen einen Angriff nicht verteidigen kann, darf ich diese Karte trotzdem abwerfen, um die Zombie-Marker zu platzieren?",
     "faq-mor-VRbthTGv.answer": "Ja. Du darfst eine Karte immer zur Verteidigung spielen, auch wenn der Verteidigungswert nicht ausreicht, um den Angriff abzuwehren. Da dies eine Verteidigungs-/Fertigkeitskarte ist, darfst du die Zombie-Marker platzieren. (Siehe Seite 14 für weitere Informationen.)",
+    "faq-wasp-uDFB6GGe.question": "Verhindert Wasps Gold Bewegungen?",
+    "faq-wasp-uDFB6GGe.answer": "Nein, Wasps Dolch stört nur magische Platzierungsfähigkeiten \u2013 und nur, wenn sie von feindlichen Helden kontrolliert werden. Normale Bewegung und Schubseffekte (verschieben) können von feindlichen Helden weiterhin genutzt werden, um sich neu zu positionieren.",
+    "faq-wasp-jjFB6hGs.question": "Können sich Gegner aus größerer Entfernung mithilfe von Platzierungsfähigkeiten Wasp nähern?",
+    "faq-wasp-jjFB6hGs.answer": "Ja, die Fähigkeit verhindert **nicht**, dass feindliche Helden sich selbst (oder Verbündete) in die Reichweite von Wasps Dolch platzieren oder tauschen.",
 
     "bro-gold-onslaught.text": "Visiere eine Einheit benachbart zu dir an. Nach dem Angriff: Bewege dich in das Feld, das sie zuvor besetzt hat, falls möglich.",
     "bro-silver-bulwark.text": "Du darfst eine **abgeworfene** Karte auf die Hand zurücknehmen.\n**Dieser Zug:** Du und befreundete Einheiten im Radius könnt nicht von gegnerischen Helden bewegt, geschoben, getauscht oder platziert werden.",
@@ -453,6 +465,7 @@
     "bro-green-iii-master-skald.text": "Ein befreundeter Held in Reichweite erhält 2 Münzen; wenn in dieser Runde ein Held besiegt wurde, erhält dieser Held stattdessen 4 Münzen.",
     "bro-gold-h-leap-forward.text": "Visiere einen Helden benachbart zu dir an. Nach dem Angriff: Bewege dich in das Feld, das er zuvor besetzt hat, falls möglich.",
     "bro-purple-iv-one-man-army.text": "Während des Minion-Kampfs zählst du als schwerer Minion; wenn du entfernt würdest, verliere stattdessen den Push.",
+
     "urs-gold-claws-that-catch.text": "**Vor dem Angriff:** Wenn du wütend bist, darfst du dich 1 Feld zu einem Feld benachbart zu einem gegnerischen Helden bewegen. Visiere eine Einheit benachbart zu dir an.\n\n**Diese Runde:** Du bist wütend.",
     "urs-silver-angry-roar.text": "Wenn du wütend bist, führe die Primäraktion einer deiner aktiven Karten mit aktivem Effekt aus.\n\n**Diese Runde:** Du bist wütend.",
     "urs-red-i-prey-drive.text": "Visiere eine Einheit benachbart zu dir an. Nach dem Angriff: Wenn du wütend bist und das Ziel nicht entfernt wurde, entferne bis zu 1 gegnerischen Minion im Radius.\n\n**Diese Runde:** Du bist wütend.",
@@ -472,6 +485,7 @@
     "urs-green-iii-evolutionary-response.text": "**Wenn du wütend bist, wähle eins oder beides \u2014**\n- Führe die Primäraktion einer deiner abgeworfenen Karten aus.\n- Du darfst eine abgeworfene Karte zurückholen.",
     "urs-purple-iv-unbound-fury.text": "Du bist immer wütend, und alle deine aufgelösten Karten zählen als aktiv.",
     "urs-gold-h-jaws-that-bite.text": "Vor dem Angriff: Wenn du wütend bist, darfst du dich 1 Feld zu einem Feld benachbart zu einem gegnerischen Helden bewegen. Visiere einen Helden benachbart zu dir an.\n\n**Diese Runde:** Du bist wütend.",
+
     "whi-gold-swift-justice.text": "**Wähle eins \u2014**\n- Visiere einen Helden in Reichweite mit einem leeren Ablagestapel an. Nach dem Angriff: Falls möglich, führt dieser Held eine Bewegungsaktion auf der Karte aus, mit der er verteidigt hat, und bewegt sich die volle Distanz in gerader Linie.\n- Visiere eine Einheit benachbart zu dir an.",
     "whi-silver-death-seeker.text": "Wenn ein gegnerischer Held im Radius eine Karte im Ablagestapel hat, **Wähle eins \u2014**\n- **Dieser Zug:** Du bist immun gegen gegnerische Effekte.\n- Du darfst eine abgeworfene Karte zurückholen.",
     "whi-red-i-crimson-trail.text": "Vor dem Angriff: Du darfst dich bis zu 1 Feld bewegen, wenn sich ein leerer Minion-Spawnpunkt im Radius der Kampfzone befindet. Visiere eine Einheit benachbart zu dir an.",
@@ -492,6 +506,7 @@
     "whi-green-iii-sealed-fate.text": "Tausche den Platz mit einer benachbarten Einheit oder mit einem gegnerischen Helden in Reichweite, der eine Karte im Ablagestapel hat. Bewege dich bis zu 3 Felder.",
     "whi-purple-iv-grim-reaper.text": "Beim Ausführen von Basisaktionen darfst du eins oder beides wählen.",
     "mis-gold-watch-how-i-soar.text": "**Wähle eins \u2014**\n- Platziere dich auf ein Feld in maximaler Reichweite.\n- Besiege einen Minion benachbart zu dir.",
+
     "mis-silver-swoop-in.text": "Platziere dich auf ein Feld im Radius, das an zwei oder mehr gegnerische Einheiten angrenzt; wenn du das tust, darfst du eine abgeworfene Karte zurückholen.",
     "mis-red-i-challenge-accepted.text": "Visiere eine Einheit benachbart zu dir an. Nach dem Angriff:\n**Dieser Zug:** Erhalte +2 ::defense:: Verteidigung.",
     "mis-red-ii-matter-of-honor.text": "Visiere eine Einheit benachbart zu dir an. Nach dem Angriff:\n**Dieser Zug:** Erhalte +3 ::defense:: Verteidigung.",
