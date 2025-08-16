@@ -45,7 +45,7 @@ function submitToGithub() {
     if (!faqAnswer.value.trim()) labels.push('help wanted');
 
     const issueTitle = `FAQ: ${selectedHero.value?.name ?? '???'}`;
-    const prefixKey = selectedHero.value?.name.substring(0, 3).toLocaleLowerCase ?? 'common';
+    const prefixKey = selectedHero.value?.name.substring(0, 3).toLocaleLowerCase() ?? 'common';
     const body = `
 **Hero**: ${selectedHero.value?.name}
 **Cards**: ${selectedCards.value.map(c => c.name).join(', ') || 'None'}
