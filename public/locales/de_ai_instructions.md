@@ -31,6 +31,7 @@
 | Turn          | **Zug**                       | 1 Runde = 4 Züge                              |
 | Round         | **Runde**                     | Distinguish from "Zug"                        |
 | Move          | Bewegung / bewegen            | Use contextually for movement actions         |
+| Push          | stoßen                        | Units can push other units and objects        |
 | Fizzle        | verpuffen                     | Abilities that can be executed only partially |
 | Fast Travel   | Schnellreise                  | Alternative movement                          |
 | spawn point   | Spawnpunkt                    | Location for minions to appear                |
@@ -45,6 +46,8 @@
   `visiere [X] an` or a grammatically fitting conjugation (e.g., _wird anvisiert_).
 - Always translate **“adjacent”** as:  
   `benachbart` (never "anliegend").
+- Always translate **“push”** as:  
+  `stoßen` (never "schieben" or "drücken").
 
 - Distinguish clearly:
 
@@ -52,6 +55,7 @@
   - **Round** = **Runde**
 
 - Keep all **hero names in English** (never translate):
+
   > Arien, Brogan, Tigerclaw, Wasp, Sabina, Xargatha, Dodger, Rowenna, Garrus, Bain, Whisper,
   > Misa, Ursafar, Silverarrow, Mrak, Cutter, Trinkets, Tali, Swift, Wuk, Hanu, Brynn,
   > Mortimer, Snorri, Razzle, Gydion, NebKher, Ignatia, Takahide, Emmitt
@@ -90,9 +94,9 @@ Make sure to preserve:
 ## Examples
 
 **English**:  
-`Target a unit adjacent to you. After the attack: You may move 1 space.`
+`Target a unit adjacent to you. After the attack: You may move 1 space. Then push an enemy hero 1 space.`
 
 **German**:  
-`Visiere eine Einheit benachbart zu dir an. Nach dem Angriff: Du darfst dich 1 Feld bewegen.`
+`Visiere eine Einheit benachbart zu dir an. Nach dem Angriff: Du darfst dich 1 Feld bewegen. Dann stoße einen feindlichen Helden 1 Feld.`
 
 ---
