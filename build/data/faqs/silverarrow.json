@@ -12,5 +12,10 @@
             "sil-blue-ii-entangling-vines",
             "sil-blue-iii-grappling-branches"
         ]
+    },
+    "faq-sil-itYXMsuM": {
+        "q": "Can Silverarrow's silver allow her to fast-travel through obstacles (and travel move from beach to jungle on the single-lane map)?",
+        "a": "No, ignoring obstacles has no effect on zone adjacency. Additionally, you may ignore obstacles during your movement, but fast travel is a special action that **replaces** movement.",
+        "ref": ["sil-silver-trailblazer"]
     }
 }
