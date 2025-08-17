@@ -346,6 +346,8 @@
     "faq-common-J6uK9mGB.answer": "Reichweite 1 kann nur benachbarte Felder anvisieren (kann aber durch Gegenstände oder Effekte erhöht werden). Reichweite 0 hat keine gültigen Ziele.\nEinige Karten interagieren **ausdrücklich** mit Fernkampf- oder Nahkampfangriffen.",
     "faq-common-Xe16hzf0.question": "Wird mein Effekt in der nächsten Runde ausgelöst?",
     "faq-common-Xe16hzf0.answer": "Nein. Aktive Effekte werden immer am Ende der Runde „zurückgesetzt“: Ein „nächster Zug“-Effekt, der im Zug 4 gespielt wurde, wird **nicht** in die nächste Runde übernommen.",
+    "faq-common-itYXMsuM.question": "Kann mein Held sich selbst mit dieser Fähigkeit anvisieren?",
+    "faq-common-itYXMsuM.answer": "Nein. Wenn deine Aktion dich selbst (deinen Helden) betrifft, wird dies explizit im Kartentext erwähnt. Andernfalls betrifft sie dich nicht, selbst wenn alle Einheiten um dich herum („im Radius“) betroffen sind.",
 
     "faq-ari-hGd1QYgj.question": "Benötigt Ariens Angriff einen Helden hinter dem Ziel?",
     "faq-ari-hGd1QYgj.answer": "Nein, dieser Effekt sagt „**Bis zu** 1 gegnerischer Held“.",
@@ -381,8 +383,8 @@
     "faq-sabina-AR1boyR4.answer": "Ja: Die Karte prüft nur, ob der Held **eine** Angriffskarte **gespielt** hat \u2013 unabhängig davon, ob die Aktion ausgeführt wurde, welche Aktion gewählt wurde oder ob es überhaupt noch dieselbe Karte ist. Es wird sich „gemerkt“, ob eine Karte gespielt wurde \u2013 auch wenn sie danach ersetzt oder abgeworfen wurde.",
 
     "faq-wasp-uDFB6GGe.question": "Verhindert Wasps Gold Bewegungen?",
-    "faq-wasp-uDFB6GGe.answer": "Nein, Wasps Dolch stört nur magische Platzierungsfähigkeiten \u2013 und nur, wenn sie von feindlichen Helden kontrolliert werden. Normale Bewegung und Schubseffekte (stoßen) können von feindlichen Helden weiterhin genutzt werden, um sich neu zu positionieren.",
-    "faq-wasp-jjFB6hGs.question": "Können sich Gegner aus größerer Entfernung mithilfe von Platzierungsfähigkeiten Wasp nähern?",
+    "faq-wasp-uDFB6GGe.answer": "Nein, Wasps Dolch stört nur magische Platzierungsfähigkeiten \u2013 und nur, wenn sie von feindlichen Helden kontrolliert werden. Normale Bewegung und Stoßen können von feindlichen Helden weiterhin genutzt werden, um sich neu zu positionieren.",
+    "faq-wasp-jjFB6hGs.question": "Können sich Gegner aus größerer Entfernung mit Hilfe von Platzierungsfähigkeiten Wasp nähern?",
     "faq-wasp-jjFB6hGs.answer": "Ja, die Fähigkeit verhindert **nicht**, dass feindliche Helden sich selbst (oder Verbündete) in die Reichweite von Wasps Dolch platzieren oder tauschen.",
     "faq-wasp-P8qD2hsM.question": "Wie funktioniert Wasps Static Barrier?",
     "faq-wasp-P8qD2hsM.answer": "Static Barrier teilt das Spielfeld in zwei Zonen: innerhalb und außerhalb des Radius. Gegnerische Einheiten dürfen **nicht** über die „Barriere“ zwischen den beiden Bereichen **bewegt** oder per **Schnellreise** versetzt werden:\n- Sie dürfen keine Bewegungsaktion (auch keine Schnellreise) ausführen, um die Barriere zu überqueren.\n- Sie dürfen keine Angriffs- oder Fähigkeitenkarten verwenden, die Bewegung über die Barriere beinhalten.\n- Sie dürfen die Barriere auch nicht entlang eines Pfads überqueren \u2013 selbst wenn sie wieder zurückkehren würden. Ein Held außerhalb der Barriere darf also nicht in den Radius laufen und dann wieder hinaus.\n- Platzieren und Tauschen (z.B. durch Ariens Alternativ-Blau) sind erlaubt.\n- Gegner dürfen durch andere Effekte über die Barriere geschoben oder bewegt werden (Stoßen ist keine Bewegung im Sinne des Spiels).",
@@ -414,6 +416,8 @@
     "faq-sil-VBPVBU86.answer": "Die Schnellreisen unterliegt allen normalen Einschränkungen einer Schnellreisen-Aktion: Es dürfen sich keine feindlichen Helden oder Minions in ihrer Zone befinden. Ist dies der Fall, kann sie sich überall in ihrer Zone oder in eine benachbarte Zone ohne feindliche Helden oder Minions bewegen.\n_Dies ist ein seltener Fall einer Schnellreise, die keine Bewegungsaktion ersetzt. Silverarrow kann also Schnellreisen durchführen, selbst wenn sie sich aufgrund eines anderen Effekts nicht bewegen darf._",
     "faq-sil-BNCeD4CM.question": "Beeinflusst Silverarrows Primär-Blau (Fesselnde Wurzeln) einen Helden, der sich während seiner Bewegung in ihren Radius bewegt?",
     "faq-sil-BNCeD4CM.answer": "Nein, Bewegungseinschränkungen werden zu Beginn der Bewegung überprüft.",
+    "faq-sil-itYXMsuM.question": "Erlaubt Silvarrows Silberkarte ihr, beim Schnellreisen Hindernisse zu ignorieren (z.B. von Strand zu Dschungel auf der Einbahnstraßenkarte)?",
+    "faq-sil-itYXMsuM.answer": "Nein, das Ignorieren von Hindernissen hat keinen Einfluss auf Zonenadjazenz. Außerdem darfst du während deiner Bewegung Hindernisse ignorieren, aber Schnellreise ist eine besondere Aktion, die die Bewegung **ersetzt**.",
 
     "faq-tal-bgAzAr8M.question": "Welche Kommunikation ist bei Talis Silber (Mit den Geistern sprechen) erlaubt?",
     "faq-tal-bgAzAr8M.answer": "Jedes Gespräch und jegliche kommunikation muss öffentlich stattfinden \u2013 sowohl mit Teammitgliedern als auch Gegnern. Bevor die Karten aufgedeckt werden Tali darf ihrem Team Anweisungen geben wie „Sag Blau“ oder „Sag Rot, wenn Sabina Gold spielt, sonst Grün“, solange auch die Gegner dies hören (und verstehen) können. Die Tali-Spielerin darf jedoch nicht heimlich ihre Wünsche mitteilen \u2013 also kein Flüstern, Gestikulieren, Kartenziehen, geheime Codes usw.",

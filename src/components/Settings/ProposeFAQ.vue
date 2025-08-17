@@ -44,8 +44,15 @@ function submitToGithub() {
     const labels = ['documentation'];
     if (!faqAnswer.value.trim()) labels.push('help wanted');
 
-    const issueTitle = `FAQ: ${selectedHero.value?.name ?? '???'}`;
-    const prefixKey = selectedHero.value?.name.substring(0, 3).toLocaleLowerCase() ?? 'common';
+    let prefixKey: string, heroName: string;
+    if (cards.value.map(k => k.substring(0, 4)).filter((v, i) => cards.value.indexOf(v) === i).length > 1) {
+        prefixKey = 'common';
+        heroName = 'Multiple'
+    } else {
+        prefixKey = selectedHero.value.id;
+        heroName = selectedHero.value.name;
+    }
+    const issueTitle = `FAQ: ${heroName}`;
     const body = `
 **Hero**: ${selectedHero.value?.name}
 **Cards**: ${selectedCards.value.map(c => c.name).join(', ') || 'None'}
@@ -62,7 +69,7 @@ ${JSON.stringify(
             [`faq-${prefixKey}-${faqId.value}`]: {
                 q: faqQuestion.value.trim(),
                 a: faqAnswer.value.trim() || null,
-                ref: selectedCards.value.map(c => c.id),
+                ref: cards.value.sort(),
             }
         },
         null,

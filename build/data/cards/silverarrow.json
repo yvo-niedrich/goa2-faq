@@ -113,7 +113,7 @@
         "color": "green",
         "type": "skill",
         "tier": "II",
-        "text": "A hero  in radius may retrieve a discarded card; if they do, that hero gains 1 coin.",
+        "text": "A hero in radius may retrieve a discarded card; if they do, that hero gains 1 coin.",
         "alternative": true
     },
     {
