@@ -45,7 +45,8 @@ function submitToGithub() {
     if (!faqAnswer.value.trim()) labels.push('help wanted');
 
     let prefixKey: string, heroName: string;
-    if (cards.value.map(k => k.substring(0, 4)).filter((v, i) => cards.value.indexOf(v) === i).length > 1) {
+    const cardKeyList = cards.value.map(k => k.substring(0, 4));
+    if (cardKeyList.filter((v, i) => cardKeyList.indexOf(v) === i).length > 1) {
         prefixKey = 'common';
         heroName = 'Multiple'
     } else {
@@ -54,7 +55,7 @@ function submitToGithub() {
     }
     const issueTitle = `FAQ: ${heroName}`;
     const body = `
-**Hero**: ${selectedHero.value?.name}
+**Hero**: ${heroName}
 **Cards**: ${selectedCards.value.map(c => c.name).join(', ') || 'None'}
 
 **Question**:
