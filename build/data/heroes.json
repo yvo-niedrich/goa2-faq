@@ -283,7 +283,9 @@
             "initiative": 1,
             "movement": [2, 4]
         },
-        "cards": "cards/mrak.json"
+        "cards": "cards/mrak.json",
+		"lore": "In the shadows beneath the old cobblestone bridge, where whispers of forgotten tales and echoes of passing travelers intertwine, resides Mrak. As befits a retired troll geomancer, he isn’t particularly fond of unexpected guests.",
+		"advice": "- Mrak specializes in area denial and control.\n- You are difficult to take down, especially if you level up the alternative red branch.\n- If you struggle with low mobility, the alternative green branch will get you rolling."
     },
     {
         "id": "cut",
@@ -299,7 +301,9 @@
             "initiative": 6,
             "movement": [4, 8]
         },
-        "cards": "cards/cutter.json"
+        "cards": "cards/cutter.json",
+		"lore": "The daring exploits of Cutter, the captain of the skyship Black Sparrow, are the crowd favorite in every tavern across the continent! She traded her life as a noble-born debutante for that of a swashbuckler and a scoundrel.",
+		"advice": "- Both your gold and red cards can be tricky to land, so use your other tools to set them up.\n- Your silver allows you to move long distances at low initiative, enabling aggressive plays.\n- Primary blue and green rely on timing but can force tough choices on your opponents.\n- Your alternate green branch offers reliable mobility and helps set up minion takes.\n- Your alt blue can get you extra coin, if you have an action to spare."
     },
     {
         "id": "tri",
@@ -315,7 +319,9 @@
             "initiative": 6,
             "movement": [7, 8]
         },
-        "cards": "cards/trinkets.json"
+        "cards": "cards/trinkets.json",
+		"lore": "Trinkets is really smart — well, by kobold standards, that is. He was expelled from Drakenhuff after almost destroying the entire city. When he’s not busy constructing doomsday devices or unearthing spare parts, he’s tinkering with his automated turret.",
+		"advice": "- Plan ahead when placing your turret to avoid spending actions on moving it each round.\n- Use the turret to tactically block key spaces.\n- Your level-up choices significantly influence your strategic options, so choose wisely."
     },
     {
         "id": "tal",
@@ -331,7 +337,9 @@
             "initiative": [5, 8],
             "movement": 5
         },
-        "cards": "cards/tali.json"
+        "cards": "cards/tali.json",
+		"lore": "When she heard their voices for the first time, no one believed her. Tali held no grudges. When the frost beasts threatened her tribe, she did what she had to do. And when the village was saved, she left — the spirits were calling her.",
+		"advice": "- Tali relies on her team to do the right thing. Make sure that you are all on the same page.\n- Know when you can afford to discard a card.\n- Your basic attack benefits from attack items more than most."
     },
     {
         "id": "swi",
@@ -347,7 +355,9 @@
             "initiative": 4,
             "movement": [3, 7]
         },
-        "cards": "cards/swift.json"
+        "cards": "cards/swift.json",
+		"lore": "When Swift’s application to the Royal Fleet Academy was declined, she didn’t give up on her dreams of roaming the skies. She joined the mobile scouts just before the Last War and earned her place as the best shot of her regiment.",
+		"advice": "- Threatening to attack both an enemy hero and a minion forces the hero to react.\n- The sniper rifle is more effective for pushing, while the shotgun excels against heroes.\n- Sometimes, it’s better to use your gold card to defeat an adjacent minion.\n- If you’re having difficulty landing attacks, rely on your blue and green Tactician skills."
     },
     {
         "id": "wuk",
@@ -363,7 +373,9 @@
             "initiative": 1,
             "movement": [3, 4]
         },
-        "cards": "cards/wuk.json"
+        "cards": "cards/wuk.json",
+		"lore": "The grove does not need protection; Wuk simply chooses to stay here. Trees make the best company when you prefer not to be disturbed. If you’re daring enough to enter his domain, whatever you do, don’t touch the trees!",
+		"advice": "- Plan ahead. Where will you need those trees next turn? And what about in the next round?\n- You can use trees to block key spaces.\n- Mobility is not your strongest attribute, so move along when the wave is about to push."
     },
     {
         "id": "han",
@@ -379,7 +391,9 @@
             "initiative": 8,
             "movement": [7, 8]
         },
-        "cards": "cards/hanu.json"
+        "cards": "cards/hanu.json",
+		"lore": "A day without mischief is a day wasted. Free from his brother’s wise guidance, Hanu roams the ruins of the old Atlantean capital, playing tricks on any would-be explorer reckless enough to enter the domain of the Great Tricker.",
+		"advice": "- Your gold card will help you stay alive as long as you have an escape route.\n- Your silver can assist your allies in landing attacks, but it can also be used on enemy heroes to force them to move early when they intended to go later.\n- It’s often worth strategizing with your team, even if it reveals your plans. You have many ways to set up your allies for success."
     },
     {
         "id": "bry",
@@ -395,7 +409,9 @@
             "initiative": 7,
             "movement": [5, 6]
         },
-        "cards": "cards/brynn.json"
+        "cards": "cards/brynn.json",
+		"lore": "Born in a remote mountain settlement, Brunn was expected to become a healer like her mother. However, her true passion lay in braving the surrounding wilderness. When a mysterious plague struck and even her mother fell ill, Bryn set out for the fabled grove where the only cure could be found.",
+		"advice": "- When the condition isn’t met, your cards still have an effect. The non-conditional part is less powerful but much more reliable.\n- Coordinate with your team — they can help you unlock the full potential of your cards.\n- Your red ranged attack makes you a better pusher but also leaves you more vulnerable.\n- Use the silver to help your team get minions."		
     },
     {
         "id": "mor",
@@ -429,7 +445,9 @@
             "initiative": 4,
             "movement": [5, 6]
         },
-        "cards": "cards/widget.json"
+        "cards": "cards/widget.json",
+		"lore": "Widget’s tribe clung to the old ways — quite unusual for kobolds. The young warrior paid little attention to fairy tales or the dusty prophecies about the dragons’ return, until one journey led her to a strange egg. When it hatched, she named the youngling Pyro.",
+		"advice": "- Pyro is Widget’s dragon companion, who you can summon using her silver card.\n- While Pyro is on the board, Widget becomes significantly more powerful.\n- Although Pyro is represented by a miniature, he counts as a token and can be removed by a “Clear” action — keep him out of trouble.\n- Winning with this duo comes from properly positioning Pyro and timing your gold attack."
     },
     {
         "id": "sno",
