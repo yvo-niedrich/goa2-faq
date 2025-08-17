@@ -39,5 +39,18 @@
             "bry-green-ii-true-grit",
             "bry-green-iii-die-hard"
         ]
+    },
+    "faq-common-itYXMsuM": {
+        "q": "Can my hero target themself with this ability?",
+        "a": "No. If your action is affecting you (your hero), it will say so in the card text. Otherwise, it will not affect you, even if it targets all units around you (“in radius”).",
+        "ref": [
+            "row-red-i-token-of-gratitude",
+            "row-red-ii-fair-share",
+            "row-red-ii-feat-of-bravery",
+            "row-red-iii-paragon-of-grace",
+            "row-red-iii-paragon-of-valor",
+            "sil-green-ii-fae-healing",
+            "sil-green-iii-natures-blessing"
+        ]
     }
 }
