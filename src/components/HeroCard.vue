@@ -5,7 +5,7 @@ import { count as countFaq } from '@/data/faq'
 import { useAppStore } from '@/stores/app'
 import Markdown from './Markdown.vue';
 
-const props = defineProps<{ card: Card; }>();
+const props = defineProps<{ card: Card | SpellbookCard; }>();
 const hasFaq = computed(() => countFaq(props.card.id) > 0)
 
 function showFAQs() {
@@ -39,8 +39,12 @@ function processCardType(type: Card['type']) {
         <div v-if="card.tier" class="hero-card-tier">{{ card.tier }}</div>
         <div class="hero-card-type">
             {{ processCardType(card.type) }}
+            <div class="hero-card-school" v-if="card['school']">
+                {{ $t('app.spell-school.' + card['school']) }}
+            </div>
         </div>
         <div class="hero-card-text">
+
             <Markdown :text="$t(card.text)" />
         </div>
     </div>
@@ -187,8 +191,14 @@ function processCardType(type: Card['type']) {
         color: #FFFFFF;
         text-shadow: 0 0 8px #000000;
         text-shadow: -1px -1px 1px #000, 1px -1px 1px #000, -1px 1px 1px #000, 1px 1px 1px #000;
-        margin: 0 auto -1px auto;
+        margin: 0 auto -1.5px auto;
         z-index: 1;
+
+        .hero-card-school {
+            font-size: .8em;
+            line-height: 1;
+            background: linear-gradient(to right, rgba(0, 0, 0, 0) 2%, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 98%)
+        }
     }
 
     .hero-card-text {
