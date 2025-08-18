@@ -82,12 +82,8 @@ function unsetFavorite() {
     text-decoration: none;
     background: var(--color-background-highlight);
     color: #fff;
-    font-size: 2rem;
-    padding: .05em 0.2em;
-    border-radius: 1em;
     overflow: hidden;
-    font-weight: bold;
-    line-height: 1;
+
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -99,14 +95,21 @@ function unsetFavorite() {
     cursor: pointer;
     text-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
 
+    font-size: 1.35em;
+    width: 1.1em;
+    height: 1.1em;
+    font-weight: bold;
+    line-height: 0.75em;
+    border-radius: 1em;
+
     &.active {
         background: var(--color-background-softer);
-        color: rgb(247, 45, 45);
+        color: rgb(253, 40, 40);
         text-shadow: 0 0 3px rgba(0, 0, 0, 1);
     }
 
     &:hover {
-        color: rgb(255, 144, 144);
+        color: rgb(255, 90, 90);
     }
 
     &:not(.active):hover {

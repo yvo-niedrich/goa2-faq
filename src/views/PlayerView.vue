@@ -96,7 +96,12 @@ function setNewCard(cards: Card[], select: CardFn) {
 
 <template>
     <div>
-        <HeroPortrait :hero="hero" :level="heroLevel" />
+        <HeroPortrait :hero="hero" :level="heroLevel">
+            <template v-slot:actions>
+                <div v-if="heroLevel > 1" class="btn-reset active" @click="store.resetCards">&#x27F3;</div>
+                <div v-else class="btn-reset inactive">&#x27F3;</div>
+            </template>
+        </HeroPortrait>
 
         <CardSelectPopup v-if="choice?.cards" :cards="choice.cards" :select="choice.select"
             :close="() => choice = null" />
@@ -452,5 +457,54 @@ function setNewCard(cards: Card[], select: CardFn) {
     align-items: center;
     justify-content: center;
 
+}
+
+
+
+.btn-reset {
+    position: absolute;
+    top: .05em;
+    left: .15em;
+    text-decoration: none;
+    background: var(--color-background-highlight);
+    color: #fff;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(0, 0, 0, 0.75);
+    box-shadow: 0 1px 3px 1px #000;
+    transition: .5s ease-out;
+    z-index: 10;
+    cursor: pointer;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
+
+    font-size: 1.35em;
+    width: 1.1em;
+    height: 1.1em;
+    font-weight: bold;
+    border-radius: 1em;
+    line-height: 0.75;
+
+    padding-bottom: .175em;
+
+    &.active {
+        opacity: 0.9;
+        background: var(--color-background-softer);
+        text-shadow: 0 0 3px rgba(0, 0, 0, 1);
+
+        &:hover {
+            color: rgb(190, 190, 190);
+        }
+    }
+
+    &:not(.active):hover {
+        background: #50a0ce;
+    }
+
+    &.inactive {
+        opacity: 0.3;
+    }
 }
 </style>

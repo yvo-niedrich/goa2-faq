@@ -77,8 +77,8 @@ onMounted(async () => {
         <FaqPopup />
 
         <div class="footer no-print">
-            <a :href="repoURL">
-                Github <img src = "/goa2-faq/github-mark-white.svg" width=14/>
+            <a :href="`${repoURL}/releases/tag/v${version_number}`">
+                Github <img src="/github-mark-white.svg" width=14 />
             </a> &raquo;
             v{{ version_number }} &raquo;
             {{ $t('app.last-update') }}
@@ -166,29 +166,27 @@ header {
 .content {
     position: relative;
     transition: 0.2s ease;
-    padding: 1rem 1rem 2rem 1rem;
+    padding: 1rem;
 
     @media (max-width: 1280px) {
-        padding: 1rem 1rem 1.5rem;
+        padding: 1rem;
     }
 
     @media (max-width: 900px) {
-        padding: 1rem .6rem 1.5rem;
+        padding: 1rem .6rem;
     }
 
     @media (max-width: 600px) {
-        padding: 1rem .4rem 1.5rem;
+        padding: 1rem .4rem;
     }
 
     @media (max-width: 480px) {
-        padding: .5rem .3rem 1.5rem;
+        padding: .5rem .3rem;
     }
 
     .footer {
-        position: absolute;
-        bottom: 3px;
-        right: 1.25em;
         color: var(--color-border);
+        text-align: right;
     }
 }
 
