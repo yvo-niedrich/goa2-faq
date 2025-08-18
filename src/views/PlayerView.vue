@@ -92,12 +92,17 @@ function setNewCard(cards: Card[], select: CardFn) {
     choice.value = { cards, select };
 }
 
+function unsetFavorite() {
+    store.reset();
+}
+
 </script>
 
 <template>
     <div>
         <HeroPortrait :hero="hero" :level="heroLevel">
             <template v-slot:actions>
+                <div class="btn-favorite active" @click="unsetFavorite">♥</div>
                 <div v-if="heroLevel > 1" class="btn-reset active" @click="store.resetCards">&#x27F3;</div>
                 <div v-else class="btn-reset inactive">&#x27F3;</div>
             </template>
@@ -178,6 +183,8 @@ function setNewCard(cards: Card[], select: CardFn) {
 </template>
 
 <style scoped lang="scss">
+@use '@/scss/btn-favorite.scss';
+
 .carousel-wrapper {
     display: flex;
     align-items: center;
@@ -464,7 +471,7 @@ function setNewCard(cards: Card[], select: CardFn) {
 .btn-reset {
     position: absolute;
     top: .05em;
-    left: .15em;
+    left: 1.35em;
     text-decoration: none;
     background: var(--color-background-highlight);
     color: #fff;
@@ -487,10 +494,9 @@ function setNewCard(cards: Card[], select: CardFn) {
     border-radius: 1em;
     line-height: 0.75;
 
-    padding-bottom: .175em;
+    padding-left: .085em;
 
     &.active {
-        opacity: 0.9;
         background: var(--color-background-softer);
         text-shadow: 0 0 3px rgba(0, 0, 0, 1);
 

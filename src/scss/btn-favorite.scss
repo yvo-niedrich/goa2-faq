@@ -1,0 +1,42 @@
+.btn-favorite {
+    position: absolute;
+    top: .05em;
+    left: .15em;
+    text-decoration: none;
+    background: var(--color-background-highlight);
+    color: #fff;
+    overflow: hidden;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(0, 0, 0, 0.75);
+    box-shadow: 0 1px 3px 1px #000;
+    transition: .5s ease-out;
+    z-index: 10;
+    cursor: pointer;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
+
+    font-size: 1.35em;
+    width: 1.1em;
+    height: 1.1em;
+    font-weight: bold;
+    line-height: 0.75em;
+    border-radius: 1em;
+
+    &.active {
+        background: var(--color-background-softer);
+        color: rgb(253, 40, 40);
+        text-shadow: 0 0 3px rgba(0, 0, 0, 1);
+    }
+
+    &:hover {
+        color: rgb(255, 90, 90);
+    }
+
+    &:not(.active):hover {
+        opacity: 0.9;
+        background: #50a0ce;
+    }
+}
