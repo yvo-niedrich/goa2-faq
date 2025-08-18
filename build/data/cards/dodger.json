@@ -122,7 +122,7 @@
         "color": "blue",
         "type": "defense",
         "tier": "III",
-        "text": "+4 ::defense:: if there are 2 or more empty spawn points in radius in a battle zone.",
+        "text": "+4 ::defense:: Defense if there are 2 or more empty spawn points in radius in a battle zone.",
         "alternative": false
     },
     {
