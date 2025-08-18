@@ -14,6 +14,7 @@ const store = useCompanionStore();
 const selectedHeroName = computed(() => store.id ? get(store.id)?.name : null);
 const build_date = __APP_BUILD_DATE__;
 const version_number = __APP_VERSION__;
+const repoURL = __APP_REPO__;
 
 const router = useRouter();
 const route = useRoute();
@@ -76,6 +77,9 @@ onMounted(async () => {
         <FaqPopup />
 
         <div class="footer no-print">
+            <a :href="repoURL">
+                Github <img src = "/goa2-faq/github-mark-white.svg" width=14/>
+            </a> &raquo;
             v{{ version_number }} &raquo;
             {{ $t('app.last-update') }}
             <TimeIndicator :date="build_date" />
@@ -184,7 +188,6 @@ header {
         position: absolute;
         bottom: 3px;
         right: 1.25em;
-        font-size: .6rem;
         color: var(--color-border);
     }
 }
