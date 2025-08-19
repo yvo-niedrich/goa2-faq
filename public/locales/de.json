@@ -2,6 +2,7 @@
     "app.header.overview": "Helden",
     "app.header.dashboard": "Mein Profil",
     "app.button.search": "Suchen...",
+    "app.button.select": "Wählen",
     "app.last-update": "Letztes update",
     "app.settings.generate-qr": "QR Code",
     "app.settings.propose-FAQ": "Eine neue Frage stellen",

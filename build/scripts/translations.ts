@@ -13,6 +13,7 @@ export function applicationTranslations(): TranslationMap {
         'app.header.overview': 'Heroes',
         'app.header.dashboard': 'My Dashboard',
         'app.button.search': 'Search...',
+        'app.button.select': 'Select',
         'app.settings.generate-qr': 'QR Code',
         'app.settings.propose-FAQ': 'Add a question',
         'app.sortby.box': 'Expansion',
