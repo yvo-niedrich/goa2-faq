@@ -25,7 +25,7 @@ function choice(c: Card) {
                         <div v-for="(card, id) in cards" :key="id" class="card-select-record">
                             <HeroCard :card="card" />
                             <div style="text-align: center;">
-                                <input class="popup-select" type="button" value="Select" @click="() => choice(card)" />
+                                <input class="popup-select" type="button" :value="$t('app.button.select')" @click="() => choice(card)" />
                             </div>
                         </div>
                     </div>
