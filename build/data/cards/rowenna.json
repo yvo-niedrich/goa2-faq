@@ -50,7 +50,7 @@
         "color": "blue",
         "type": "skill - ranged",
         "tier": "I",
-        "text": "Swap with a friendly unit in range which is adjacent to an enemy hero, or who has a card in the disacrd.",
+        "text": "Swap with a friendly unit in range which is adjacent to an enemy hero, or who has a card in the discard.",
         "alternative": false
     },
     {
