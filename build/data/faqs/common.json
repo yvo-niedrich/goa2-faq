@@ -1,7 +1,7 @@
 {
     "faq-common-OmbzNwt1": {
         "q": "What does immunity protect from?",
-        "a": " Basically everything. An immune unit can’t be targeted or affected by any action. They can choose to move through and ignore tokens.",
+        "a": " Basically everything. An immune unit can’t be targeted or affected by any action. They can choose to move through and ignore tokens.\nBeware that conditional immunity only applies when the sources of an effect matches the condition (eg. “immune to enemy attack actions”)",
         "ref": ["tig-silver-blend-into-shadows"]
     },
     "faq-common-J6uK9mGB": {

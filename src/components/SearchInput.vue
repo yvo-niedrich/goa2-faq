@@ -245,10 +245,12 @@ onBeforeUnmount(() => {
             cursor: pointer;
             text-align: left;
             border-bottom: 1px solid var(--color-border);
-            color: var(--color-border);
+            color: var(--color-text-muted);
 
             &.active {
                 color: var(--color-text);
+                text-shadow: 0 0 4px #000;
+                background-color: rgba(255, 255, 255, 0.1);
             }
 
             &:last-of-type {
@@ -284,7 +286,7 @@ onBeforeUnmount(() => {
         }
 
         .label {
-            font-size: 0.9em;
+            font-size: 0.95em;
         }
 
         .chevron {

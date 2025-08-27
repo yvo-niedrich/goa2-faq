@@ -4,11 +4,6 @@
         "a": "Yes! If Tigerclaw cannot move through the target in a straight line, the effect will “fizzle” — stop resolving — and he will not attack. A crafty opponent can anticipate and deny this attack with clever positioning.",
         "ref": ["tig-gold-blink-strike", "tig-gold-h-nimble-strike"]
     },
-    "faq-tig-mkia6OEY": {
-        "q": "How does Tigerclaw’s Silver (Blend into Shadows) activate?",
-        "a": "Tigerclaw must begin his turn adjacent to an obstacle (including any unit), then place himself into a space in radius that is not adjacent to an enemy unit. If he does so, he will be immune and can move through units during the next turn. Remember that immunity means he cannot be targeted or affected by any action, can move through tokens (not stop movement on them), and may ignore token effects.",
-        "ref": ["tig-silver-blend-into-shadows"]
-    },
     "faq-tig-qmf2Koiz": {
         "q": "Does Tigerclaw’s green thievery skill require an enemy hero?",
         "a": "Yes, to perform it completely. After Tigerclaw performs the first movement on the card, it checks for an adjacent enemy hero to steal from. If there is no adjacent enemy hero, the card “fizzles” — stops resolving — and he will not make the final movement. In this case, it is usually better to simply play the card for its movement.\n - Note that Tigerclaw can move next to an enemy hero with no coins (or whom he chooses not to rob) in order to get the full movement.\n - If Tigerclaw is not able to move 2 spaces in a straight line, he will not make the final movement at all.\n - There are cases where performing Primary Green without an enemy hero is still advantageous, such as if other effects restrict movement actions (such as Arien’s Alt Blue or Xargatha’s Primary Blue) or other effects will reward him for performing a skill action.",

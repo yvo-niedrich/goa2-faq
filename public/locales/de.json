@@ -368,7 +368,7 @@
     "faq-common-xNApYXXu.question": "Löst ein imumer Held Effekte aus, die erfordern, dass eine Einheit benachbart ist?",
     "faq-common-xNApYXXu.answer": "Nein. Immer wenn der Status einer Einheit überprüft werden muss, gilt dies als Zielwahl \u2013 und eine imune Einheit darf nicht als Ziel gewählt werden. Dies unterscheidet sich von Karten wie Sabinas \"Steady Advance\", bei denen nur die Vorhandensein von Einheiten überprüft wird, nicht deren Status.",
     "faq-common-OmbzNwt1.question": "Wovor schützt Immunität?",
-    "faq-common-OmbzNwt1.answer": "Im Grunde vor allem. Eine immunisierte Einheit kann weder anvisiert noch von irgendeiner Aktion betroffen werden. Sie darf durch Tokens hindurchziehen und diese ignorieren.",
+    "faq-common-OmbzNwt1.answer": "Im Grunde vor allem. Eine immunisierte Einheit kann weder anvisiert noch von irgendeiner Aktion betroffen werden. Sie darf durch Tokens hindurchziehen und diese ignorieren.\nAber vorsicht: Bedingte Immunität verhindert nur Effekte, wenn deren Quelle mit der Bedingiung übereinstimmt (zB. “immun gegen gegnerische Angriffsaktionen”)",
     "faq-common-J6uK9mGB.question": "Warum gibt es einen Angriff mit Reichweite 1? Ist das nicht Nahkampf?",
     "faq-common-J6uK9mGB.answer": "Reichweite 1 kann nur benachbarte Felder anvisieren (kann aber durch Gegenstände oder Effekte erhöht werden). Reichweite 0 hat keine gültigen Ziele.\nEinige Karten interagieren **ausdrücklich** mit Fernkampf- oder Nahkampfangriffen.",
     "faq-common-Xe16hzf0.question": "Wird mein Effekt in der nächsten Runde ausgelöst?",
@@ -398,8 +398,6 @@
     "faq-tig-JfrPJWdN.answer": "Werte können auf 0 sinken und sogar negativ werden:\n- Initiativen werden trotzdem in normaler Reihenfolge (höchster zu niedrigster) ausgewertet.\n- Negative Verteidigungswerte werden wie üblich verrechnet und können einen Angriff immer noch abwehren, wenn die Verteidigung mindestens der Angriffsstärke entspricht.\n- Negative Angriffswerte können trotzdem Minions besiegen und müssen wie gewohnt verteidigt werden (ansonsten wird der Held besiegt).",
     "faq-tig-RZOM5aw8.question": "Erfordert Tigerclaws Blink Strike eine Bewegung?",
     "faq-tig-RZOM5aw8.answer": "Ja! Wenn sich Tigerclaw nicht durch das Ziel in gerader Linie bewegen kann, „verpufft“ der Effekt \u2013 also bricht ab \u2013 und er führt keinen Angriff aus. Ein geschickter Gegner kann diese Bewegung durch cleveres Positionieren blockieren.",
-    "faq-tig-mkia6OEY.question": "Wie aktiviert sich Tigerclaws Silberkarte (Blend into Shadows)?",
-    "faq-tig-mkia6OEY.answer": "Tigerclaw muss seinen Zug benachbart zu einem Hindernis beginnen (inkl. jeder Einheit) und sich dann in ein Feld im Radius platzieren, das **nicht** benachbart zu einer gegnerischen Einheit ist. Wenn er das tut, ist er immun und kann sich im nächsten Zug durch Einheiten hindurchbewegen. Immunität bedeutet, dass er nicht anvisiert oder von Aktionen betroffen werden kann, durch Tokens hindurchziehen darf (aber nicht auf ihnen stehenbleiben) und Effekte ignorieren kann.",
 
     "faq-dod-DYMXRSjX.question": "Was ist ein „leerer Minion-Spawnpunkt in der Kampfzone“?",
     "faq-dod-DYMXRSjX.answer": "Dodgers Magie (thematisch) wird stärker, je mehr Minions besiegt werden. Viele ihrer Karten prüfen auf „leere Minion-Spawnpunkte in der Kampfzone“. Das sind die Spawnpunkte, die auf dem Spielbrett aufgedruckt sind \u2013 aber nur in der aktuellen Kampfzone (auf der Dual-Lane-Karte gibt es zwei Zonen). Nur wirklich leere Felder (mit **nichts** darauf) zählen.",

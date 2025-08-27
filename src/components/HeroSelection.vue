@@ -27,7 +27,7 @@ const layouts: {
         groupOrder: sortExpansion,
     },
     'complexity': {
-        sortOrder: [sortByExpansion, sortByComplexity, sortByName],
+        sortOrder: [sortByComplexity, sortByName],
         groupBy: h => `${'\u2605'.repeat(h.complexity)}`,
         groupOrder: (a, b) => a.length - b.length,
     },
