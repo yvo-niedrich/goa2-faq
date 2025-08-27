@@ -463,7 +463,9 @@
             "initiative": 2,
             "movement": [4, 5]
         },
-        "cards": "cards/snorri.json"
+        "cards": "cards/snorri.json",
+		"lore": "Like any other self-respecting dwarf, Snorri never planned to go on an adventure. That plan went south when his former apprentice strayed from the path of tradition and delved into the murky realm of experimental runic graffiti. Snorri needed to adjust his plans.",
+		"advice": "- Plan ahead. Readjusting rune placement costs you an action.\n- The higher your level, the more versatile you become. Ensure you get enough coins."
     },
     {
         "id": "raz",
@@ -479,7 +481,9 @@
             "initiative": 8,
             "movement": [6, 7]
         },
-        "cards": "cards/razzle.json"
+        "cards": "cards/razzle.json",
+		"lore": "A lesser-known fact about magical mirrors is that they break easily. Razzle froze as her mirror shattered into a myriad of twinkling fragments, as if a troupe of mischievous pixies had decided to test their acrobatic skills. When the silence fell, she found herself surrounded by a host of identical faces, each wearing an expression of utter confusion.",
+		"advice": "- At the start of the game or when you respawn, there's only one of you placed on the board.\n- Once a copy is spawned, you cannot spawn it again with your gold card.\n- The more of you in play, the stronger you are.\n- Your survival often relies on keeping your clones within the radius of your silver card."
     },
     {
         "id": "gyd",
@@ -496,6 +500,8 @@
             "movement": [1, 4]
         },
         "cards": "cards/gydion.json",
+		"lore": "Gydion the Archwizard is an odd blend of ancient wisdom and forgetfulness that could make a goldfish look like a meticulous archivist. Despite this, he has an uncanny knack for invoking the right spells at exactly the right moment.",
+		"advice": "- When casting spells, treat the actions on spell cards like any other actions.\n- Keep spells you cannot cast yet in a separate facedown pile while they remain in the spellbook.",
         "spellbook": "cards/gydion_spellbook.json"
     },
     {
@@ -512,7 +518,9 @@
             "initiative": 1,
             "movement": [2, 5]
         },
-        "cards": "cards/nebkher.json"
+        "cards": "cards/nebkher.json",
+		"lore": "NebKher is an enigmatic traveler, draped in exotic garb, his face concealed behind a terrifying mask. Those who have encountered him speak of his unnatural powers over the minds of living beings.",
+		"advice": "- Keep as many opponents within range of your gold as possible to maximize your options.\n- Your silver allows you to rearrange resolved cards of other heroes, which is useful for your gold.\n- Your green cards, paired with your silver, are your main mobility tool. Play them early."
     },
     {
         "id": "ign",
@@ -528,7 +536,9 @@
             "initiative": 2,
             "movement": [4, 5]
         },
-        "cards": "cards/ignatia.json"
+        "cards": "cards/ignatia.json",
+		"lore": "There is a fine line between genius and madness, and Ignatia is the living proof of this. The dwarven fire-mage is as powerful as she is unpredictable, just like the forces she commands.",
+		"advice": "- Always aim to have a target, regardless of which side the tie-breaker coin lands on.\n- The effects tied to your team's color are less likely to be thwarted by an untimely coin flip.\n- Your silver card allows you to take full control of your powers, but it makes you significantly more vulnerable while in use."
     },
     {
         "id": "tak",
@@ -562,6 +572,8 @@
             "initiative": 1,
             "movement": [2, 4]
         },
-        "cards": "cards/emmitt.json"
+        "cards": "cards/emmitt.json",
+		"lore": "Emmitt the Traveler is a visitor from the distant future. Armed with a portable time-travel device, he fights to restore fractured timelines, using both his sharp mind and the occasional power-fist punch, appearing where and when he is needed most.",
+		"advice": "- The effect of your gold card impacts everyone, so be cautious not to endanger your allies.\n- Use your silver to boost mobility, but remember it makes you more vulnerable."
     }
 ]
