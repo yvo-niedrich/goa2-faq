@@ -6,7 +6,7 @@
     },
     "faq-tig-qmf2Koiz": {
         "q": "Does Tigerclaw’s green thievery skill require an enemy hero?",
-        "a": "Yes, to perform it completely. After Tigerclaw performs the first movement on the card, it checks for an adjacent enemy hero to steal from. If there is no adjacent enemy hero, the card “fizzles” — stops resolving — and he will not make the final movement. In this case, it is usually better to simply play the card for its movement.\n - Note that Tigerclaw can move next to an enemy hero with no coins (or whom he chooses not to rob) in order to get the full movement.\n - If Tigerclaw is not able to move 2 spaces in a straight line, he will not make the final movement at all.\n - There are cases where performing Primary Green without an enemy hero is still advantageous, such as if other effects restrict movement actions (such as Arien’s Alt Blue or Xargatha’s Primary Blue) or other effects will reward him for performing a skill action.",
+        "a": "Yes, to perform it completely. After Tigerclaw performs the first movement on the card, it checks for an adjacent enemy hero to steal from. If there is no adjacent enemy hero, the card “fizzles” — stops resolving — and he will not make the final movement. In this case, it is usually better to simply play the card for its movement.\n --- \nThere are cases where performing the action without an enemy hero is still advantageous, such as if other effects restrict movement actions (such as Arien’s Alt Blue or Xargatha’s Primary Blue) or other effects will reward him for performing a skill action.",
         "ref": [
             "tig-green-i-light-fingered",
             "tig-green-ii-pick-pocket",
