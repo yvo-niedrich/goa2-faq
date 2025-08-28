@@ -23,7 +23,7 @@
         "color": "silver",
         "type": "basic skill",
         "tier": null,
-        "text": "A friendly hero in play names a color;\nyou may discard a card of that color.\nPerform the primary aciton on a card of that color in your discard.",
+        "text": "A friendly hero in play names a color;\nyou may discard a card of that color.\nPerform the primary action on a card of that color in your discard.",
         "alternative": false
     },
     {
@@ -59,7 +59,7 @@
         "color": "green",
         "type": "skill",
         "tier": "I",
-        "text": "Place an ::token_ice:: ice token in radius.\nEnemy heroes have -1 ::initiative:: Initiative for every Ice token they are adjacent to.",
+        "text": "Place an ::token_ice:: Ice token in radius.\nEnemy heroes have -1 ::initiative:: Initiative for every Ice token they are adjacent to.",
         "alternative": false
     },
     {
@@ -68,7 +68,7 @@
         "color": "blue",
         "type": "skill",
         "tier": "II",
-        "text": "Choose a direction. Move each enemy unit in radius 1 space in that direciton, if able.",
+        "text": "Choose a direction. Move each enemy unit in radius 1 space in that direction, if able.",
         "alternative": false
     },
     {
@@ -86,7 +86,7 @@
         "color": "green",
         "type": "skill",
         "tier": "II",
-        "text": "Place up to 2 ::token_ice:: ice tokens in radius.\nEnemy heroes have -1 ::initiative:: Initiative for every Ice token they are adjacent to.",
+        "text": "Place up to 2 ::token_ice:: Ice tokens in radius.\nEnemy heroes have -1 ::initiative:: Initiative for every Ice token they are adjacent to.",
         "alternative": false
     },
     {
@@ -140,7 +140,7 @@
         "color": "green",
         "type": "skill",
         "tier": "III",
-        "text": "Place up to 3 ::token_ice:: ice tokens in radius.\nEnemy heroes have -1 ::initiative:: Initiative for every Ice token they are adjacent to.",
+        "text": "Place up to 3 ::token_ice:: Ice tokens in radius.\nEnemy heroes have -1 ::initiative:: Initiative for every Ice token they are adjacent to.",
         "alternative": false
     },
     {

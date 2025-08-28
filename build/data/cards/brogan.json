@@ -167,7 +167,7 @@
         "color": "green",
         "type": "skill - ranged",
         "tier": "III",
-        "text": "A friendly hero in range gains 2 coin2;\nif any hero was defeated this round, that friendly hero gains 4 coins instead.",
+        "text": "A friendly hero in range gains 2 coins;\nif any hero was defeated this round, that friendly hero gains 4 coins instead.",
         "alternative": true
     }
 ]

@@ -149,7 +149,7 @@
         "color": "blue",
         "type": "skill",
         "tier": "III",
-        "text": "If there are two or more friendly minions in radius, you may retrieve a discarded card;\nif you do, you may up to 2 spaces.",
+        "text": "If there are two or more friendly minions in radius, you may retrieve a discarded card;\nif you do, you may move up to 2 spaces.",
         "alternative": true
     },
     {

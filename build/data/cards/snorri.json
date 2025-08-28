@@ -86,7 +86,7 @@
         "color": "red",
         "type": "attack",
         "tier": "II",
-        "text": "Before the atack: if the ::rune_horn:: rune is active, you may move 1 space.\nTarget a unit adjacent to you.\nAfter the attack: If the ::rune_anvil:: rune is active, you may retrieve a discarded card.",
+        "text": "Before the attack: if the ::rune_horn:: rune is active, you may move 1 space.\nTarget a unit adjacent to you.\nAfter the attack: If the ::rune_anvil:: rune is active, you may retrieve a discarded card.",
         "alternative": false
     },
     {
@@ -140,7 +140,7 @@
         "color": "red",
         "type": "attack",
         "tier": "III",
-        "text": "Before the atack: if the ::rune_horn:: rune is active, you may move 1 space.\nTarget a unit adjacent to you.\nAfter the attack: If a rune is active:\n- ::rune_axe::: May repeat once on an enemy minion.\n- ::rune_anvil::: You may retrieve a discarded card.",
+        "text": "Before the attack: if the ::rune_horn:: rune is active, you may move 1 space.\nTarget a unit adjacent to you.\nAfter the attack: If a rune is active:\n- ::rune_axe::: May repeat once on an enemy minion.\n- ::rune_anvil::: You may retrieve a discarded card.",
         "alternative": false
     },
     {

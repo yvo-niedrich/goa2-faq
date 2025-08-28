@@ -50,7 +50,7 @@
         "color": "red",
         "type": "attack",
         "tier": "I",
-        "text": "Target a unit adjacent to you.\nAfter the attack: If enraged, and the target weas not removed, remove up to 1 enemy minion in radius.\n**This round:** You are enraged.",
+        "text": "Target a unit adjacent to you.\nAfter the attack: If enraged, and the target was not removed, remove up to 1 enemy minion in radius.\n**This round:** You are enraged.",
         "alternative": false
     },
     {

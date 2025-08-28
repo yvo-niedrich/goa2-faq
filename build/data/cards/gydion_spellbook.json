@@ -155,7 +155,7 @@
     {
         "id": "gyd-book-b-iii-power-word-kill",
         "name": "Power Word Kill",
-        "text": "Defeate an enemy hero in radius with no cards in hand.",
+        "text": "Defeat an enemy hero in radius with no cards in hand.",
         "color": "blue",
         "tier": "III",
         "school": "enchantment",

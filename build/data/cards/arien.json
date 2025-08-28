@@ -167,7 +167,7 @@
         "color": "green",
         "type": "skill - ranged",
         "tier": "III",
-        "text": "Swap with an enemy minion in range.\nIf it was adjacent to you, may repeact once.",
+        "text": "Swap with an enemy minion in range.\nIf it was adjacent to you, may repeat once.",
         "alternative": true
     }
 ]

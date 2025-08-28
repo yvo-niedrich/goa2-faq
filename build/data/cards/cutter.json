@@ -41,7 +41,7 @@
         "color": "blue",
         "type": "skill",
         "tier": "I",
-        "text": "A enemy hero in radius, adjacent to another enemy unit and not adjacent to you, discards a card, if able.",
+        "text": "An enemy hero in radius, adjacent to another enemy unit and not adjacent to you, discards a card, if able.",
         "alternative": false
     },
     {
@@ -68,7 +68,7 @@
         "color": "blue",
         "type": "skill",
         "tier": "I",
-        "text": "A enemy hero in radius, adjacent to another enemy unit and not adjacent to you, discards a card, if able.",
+        "text": "An enemy hero in radius, adjacent to another enemy unit and not adjacent to you, discards a card, if able.",
         "alternative": false
     },
     {
@@ -122,7 +122,7 @@
         "color": "blue",
         "type": "skill",
         "tier": "III",
-        "text": "A enemy hero in radius, adjacent to another enemy unit and not adjacent to you, discards a card, if able.\nMay repeat once on a different target.",
+        "text": "An enemy hero in radius, adjacent to another enemy unit and not adjacent to you, discards a card, if able.\nMay repeat once on a different target.",
         "alternative": false
     },
     {
