@@ -7,7 +7,9 @@ import { applicationTranslations, translations, verifyTranslations } from './scr
 const uniqueFn = (e: string, i: number, self: string[]) => i === self.indexOf(e);
 
 const heroes = loadHeroes((h) => h.cards.length > 0);
-const faqMap = FaQCardIndex(heroes.map((h) => h.cards.map((c) => c.id)).flat());
+const faqMap = FaQCardIndex(
+    heroes.map((h) => h.cards.map((c) => c.id).concat(h.spellbook?.map((c) => c.id) ?? [])).flat(),
+);
 
 writeHeroData(heroes);
 writeCardFaqMap(faqMap);

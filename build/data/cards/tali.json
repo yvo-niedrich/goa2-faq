@@ -23,7 +23,7 @@
         "color": "silver",
         "type": "basic skill",
         "tier": null,
-        "text": "A friendly hero in play names a color;\nyou may discard a card of that color.\nPerform the primary action on a card of that color in your discard.",
+        "text": "A friendly hero in play names a color; you may discard a card of that color.\nPerform the primary action on a card of that color in your discard.",
         "alternative": false
     },
     {

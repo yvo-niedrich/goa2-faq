@@ -21,7 +21,13 @@ function generateId(length = 8) {
 
 const faq = {} as FAQMap;
 const faqPath = __data + '/faqs';
-const files = readdirSync(faqPath);
+const files = readdirSync(faqPath).sort((a, b) => {
+    // Common FAQ records show after the hero-specific ones
+    if (a === 'common.json') return 1;
+    if (b === 'common.json') return -1;
+    return a.localeCompare(b);
+});
+
 for (const file of files) {
     if (!file.includes('.json')) continue;
 

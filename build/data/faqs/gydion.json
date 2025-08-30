@@ -1,0 +1,7 @@
+{
+    "faq-gyd-K3e6TuJP": {
+        "q": "Does \"Energy Drain\" require a non-immune enemy hero in range for my team to be able to regain 1 spent Life counter?",
+        "a": "Yes, you need to be able to target a hero first.\n\"If able\" after a comma makes the preceding step non-mandatory (p. 17), so it only applies to the \"discard\" step of the instructions.",
+        "ref": ["gyd-red-iii-greater-necromancy", "gyd-book-r-iii-energy-drain"]
+    }
+}

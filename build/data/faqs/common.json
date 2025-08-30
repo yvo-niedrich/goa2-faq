@@ -27,8 +27,8 @@
     },
     "faq-common-Xe16hz1a": {
         "q": "What are Obstacles?",
-        "a": "Obstacles are basically anything on the map: Units (Heroes and Minions), terrain shown on the map, tokens, and any other miniatures. There can only be one Obstacle on each space, and Obstacles generally can’t move through each other. If an ability does allow Obstacles to pass through each other (“you can move through Obstacles”, “Heroes may move through a space with a tree token”), they still may not end movement on such a space.",
-        "ref": ["sil-silver-trailblazer"]
+        "a": "Obstacles are basically anything on the map: Units (Heroes and Minions), terrain shown on the map, tokens, and any other miniatures. There can only be one Obstacle on each space, and Obstacles generally can’t move through each other. If an ability does allow Obstacles to pass through each other (“you can move through Obstacles”, ignore Obstacles”, “Heroes may move through a space with a tree token”), they still may not end movement on such a space.",
+        "ref": ["sil-silver-trailblazer", "gar-red-ii-blunt-force", "gar-red-iii-send-flying"]
     },
     "faq-common-xNApYXXu": {
         "q": "Would an immune hero trigger effects, that require adjacency?",
@@ -52,5 +52,18 @@
             "sil-green-ii-fae-healing",
             "sil-green-iii-natures-blessing"
         ]
+    },
+    "faq-common-fizzle": {
+        "q": "Can I play an action if only some of its instructions can be performed?",
+        "a": "You **must** follow the cards instructions step by step, starting from the top.\n- If you cannot perform the first instruction (e.g., there is no valid target in range, or you cannot make the required movement), you may not perform the action at all.\n- After the first instruction is successfully exectued, you continue resolving the rest of the instructions in order.\n- If you reach an instruction that is not optional and you cannot perform it, the action immediately **fizzles** — no further instructions are resolved. You place the card on your hero dashboard, and your turn ends.\n_See page 10 of the rulebook for additional reference._",
+        "ref": [
+            "bro-red-i-mad-dash",
+            "bro-red-ii-bullrush",
+            "bro-red-iii-furious-charge",
+            "tig-gold-blink-strike",
+            "tig-gold-h-nimble-strike",
+            "gyd-book-r-iii-energy-drain"
+        ],
+        "sources": ["rulebook:p10"]
     }
 }
