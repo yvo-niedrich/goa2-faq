@@ -65,5 +65,17 @@
             "gyd-book-r-iii-energy-drain"
         ],
         "sources": ["rulebook:p10"]
+    },
+    "faq-common-XrLhpx8c": {
+        "q": "How does temporary immunity interact with abilities and triggers that target a unit at end of turn?",
+        "a": "All players resolve their End of Turn abilities **before the turn ends**, so a unit that is immune during “this turn” is still immune when end of turn resolves.\n Because immune units cannot be chosen as targets, they are still protected from end of turn effects such as Min’s Death Grenade.",
+        "ref": [
+            "han-blue-i-unexpected-journey",
+            "han-blue-ii-there-and-back-again",
+            "han-blue-iii-safe-travels",
+            "min-blue-ii-death-grenade",
+            "min-blue-iii-holy-death-grenade"
+        ],
+        "sources": ["rulebook:p7", "rulebook:p17"]
     }
 }
