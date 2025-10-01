@@ -1,11 +1,12 @@
 <script setup lang="ts">
-import { heroes, sortByComplexity, sortByExpansion, sortByName, sortExpansion } from '@/data/heroes';
+import { heroes, expansions, sortByComplexity, sortByExpansion, sortByName, sortExpansion } from '@/data/heroes';
 import HeroIcon from '@/components/icons/HeroIcon.vue'
 import { useViewport } from '@/viewport';
 import { computed, ref } from 'vue';
 import SearchInput from '@/components/SearchInput.vue';
 import { useAppStore } from '@/stores/app';
 import { storeToRefs } from 'pinia';
+import { useI18n } from 'vue-i18n';
 
 defineProps<{
     'onClick'?: (h: Hero) => unknown;
@@ -14,24 +15,30 @@ defineProps<{
 
 type SortFn<T> = (a: T, b: T) => number;
 
+const { t: $translate } = useI18n();
+
 const layouts: {
     [name: string]: {
+        label: string,
         sortOrder: SortFn<Hero>[],
         groupBy: null | ((h: Hero) => string),
         groupOrder: null | SortFn<string>,
     }
 } = {
     'box': {
+        label: 'app.sortby.box',
         sortOrder: [sortByExpansion, sortByComplexity, sortByName],
         groupBy: h => h.expansion,
         groupOrder: sortExpansion,
     },
     'complexity': {
+        label: 'app.sortby.complexity',
         sortOrder: [sortByComplexity, sortByName],
         groupBy: h => `${'\u2605'.repeat(h.complexity)}`,
         groupOrder: (a, b) => a.length - b.length,
     },
     'name': {
+        label: 'app.sortby.name',
         sortOrder: [sortByName],
         groupBy: null,
         groupOrder: null,
@@ -75,14 +82,22 @@ const list = computed(() => {
     return obj;
 });
 
+function objectMap<T, S>(object: { [key: string]: T }, mapFn: (t: T) => S): { [key: string]: S } {
+    return Object.keys(object).reduce(function (result, key) {
+        result[key] = mapFn(object[key])
+        return result
+    }, {})
+}
+
+const sortChoices = computed(() => objectMap(layouts, l => $translate(l.label)));
 </script>
 
 
 <template>
     <div>
         <div class="search-bar">
-            <SearchInput v-model:name="filterName" v-model:expansions="filterExp" v-model:layout="layout"
-                :placeholder="$t('app.button.search')" />
+            <SearchInput v-model:name="filterName" v-model:choices="filterExp" v-model:sortBy="layout"
+                :options="expansions" :sortByOptions="sortChoices" :placeholder="$t('app.button.search')" />
         </div>
         <div v-if="Array.isArray(list)" class="list">
             <HeroIcon v-for="h of list" :key="h.id" :height="portraitHeight * (scale || 1)" :name="h.name"

@@ -1,50 +1,70 @@
 <script setup lang="ts">
 
-import { expansions as expansionsAvailable } from '@/data/heroes'
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue';
 
-defineProps<{ placeholder?: string; }>();
+const props = defineProps<{
+    placeholder?: string;
+    options?: { [key: string]: string } | string[];
+    sortByOptions?: { [key: string]: string } | string[];
+}>();
 
 const name = defineModel<string>('name', { required: true });
-const expansions = defineModel<string[] | null>('expansions', { required: false, default: null });
-const layout = defineModel<string>('layout', { required: false, default: null });
+const choices = defineModel<string[] | null>('choices', { required: false, default: null });
+const sortBy = defineModel<string>('sortBy', { required: false, default: null });
 
-const expOpen = ref(false);
-const layoutOpen = ref(false);
-const dropdownExpRef = ref(null);
-const dropdownLayoutRef = ref(null);
-const count = computed(() => expansionsAvailable.filter(v => expansions.value.includes(v)).length);
+const availableOptions = computed(() => Array.isArray(props.options) ? props.options : Object.keys(props.options ?? {}))
+const availableSortByOptions = computed(() => Array.isArray(props.sortByOptions) ? props.sortByOptions : Object.keys(props.sortByOptions ?? {}))
 
-function toggleExp() {
-    expOpen.value = !expOpen.value;
+const optionOpen = ref(false);
+const sortByOpen = ref(false);
+const dropdownLeftRef = ref(null);
+const dropdownSortByRef = ref(null);
+const countSelected = computed(() => availableOptions.value.filter(v => choices.value.includes(v)).length);
+
+function getChoiceLabel(key: string) {
+    if (typeof props.options === 'object' && props.options.hasOwnProperty(key)) {
+        return props.options[key];
+    }
+    return key;
 }
 
-function selectExpansion(exp: string) {
-    if (expansions.value === null) return;
+function getSortLabel(key: string) {
+    if (typeof props.sortByOptions === 'object' && props.sortByOptions.hasOwnProperty(key)) {
+        return props.sortByOptions[key];
+    }
+    return key;
+}
 
-    const idx = expansions.value.indexOf(exp)
+function toggleChoiceVisible() {
+    optionOpen.value = !optionOpen.value;
+}
+
+function selectChoice(choice: string) {
+    if (choices.value === null) return;
+
+    const idx = choices.value.indexOf(choice)
     if (idx >= 0) {
-        expansions.value.splice(idx, 1);
+        choices.value.splice(idx, 1);
     } else {
-        expansions.value.push(exp);
+        choices.value.push(choice);
     }
 }
 
-function toggleLayout() {
-    layoutOpen.value = !layoutOpen.value;
+function togglesortByVisible() {
+    sortByOpen.value = !sortByOpen.value;
 }
 
-function selectLayout(v: string) {
-    layout.value = v;
-    layoutOpen.value = false;
+function selectsortBy(v: string) {
+    sortBy.value = v;
+    sortByOpen.value = false;
 }
 
 function handleClickOutside(event) {
-    if (dropdownExpRef.value && !dropdownExpRef.value.contains(event.target)) {
-        expOpen.value = false;
+    if (dropdownLeftRef.value && !dropdownLeftRef.value.contains(event.target)) {
+        optionOpen.value = false;
     }
-    if (dropdownLayoutRef.value && !dropdownLayoutRef.value.contains(event.target)) {
-        layoutOpen.value = false;
+    if (dropdownSortByRef.value && !dropdownSortByRef.value.contains(event.target)) {
+        sortByOpen.value = false;
     }
 }
 
@@ -63,18 +83,20 @@ onBeforeUnmount(() => {
     <div class="search-input">
         <div class="search-input__wrapper">
 
-            <div v-if="expansions !== null" class="search-input__selector  selector-left">
-                <div ref="dropdownExpRef" class="selector">
-                    <button class="selector-button" @click="toggleExp">
-                        <span class="icon" :class="{ 'muted': count === 0 }"><img src="@/assets/stack.svg"></span>
-                        <span class="label">{{ count || '\xA0' }}</span>
+            <div v-if="choices !== null && availableOptions.length" class="search-input__selector selector-left">
+                <div ref="dropdownLeftRef" class="selector">
+                    <button class="selector-button" @click="toggleChoiceVisible">
+                        <span class="icon" :class="{ 'muted': countSelected === 0 }">
+                            <img src="@/assets/stack.svg">
+                        </span>
+                        <span class="label">{{ countSelected || '\xA0' }}</span>
                         <span class="chevron">▾</span>
                     </button>
 
-                    <div v-if="expOpen" class="dropdown">
-                        <button v-for="exp in expansionsAvailable" :key="exp" class="dropdown-item"
-                            :class="{ 'active': expansions.includes(exp) }" @click="selectExpansion(exp)">
-                            <span class="label">{{ exp }}</span>
+                    <div v-if="optionOpen" class="dropdown">
+                        <button v-for="exp in availableOptions" :key="exp" class="dropdown-item"
+                            :class="{ 'active': choices.includes(exp) }" @click="selectChoice(exp)">
+                            <span class="label">{{ getChoiceLabel(exp) }}</span>
                         </button>
                     </div>
                 </div>
@@ -88,9 +110,9 @@ onBeforeUnmount(() => {
                     fill="currentColor" stroke="currentColor" />
             </svg>
 
-            <div v-if="expansions !== null" class="search-input__selector selector-right">
-                <div ref="dropdownLayoutRef" class="selector">
-                    <button class="selector-button" @click="toggleLayout">
+            <div v-if="sortBy !== null" class="search-input__selector selector-right">
+                <div ref="dropdownSortByRef" class="selector">
+                    <button class="selector-button" @click="togglesortByVisible">
                         <span class="chevron">
                             <svg height="18px" viewBox="5.5 1 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -105,10 +127,10 @@ onBeforeUnmount(() => {
                         </span>
                     </button>
 
-                    <div v-if="layoutOpen" class="dropdown">
-                        <button v-for="l in ['box', 'complexity', 'name']" :key="l" class="dropdown-item"
-                            :class="{ 'active': layout === l }" @click="selectLayout(l)">
-                            <span class="label">{{ $t('app.sortby.' + l) }}</span>
+                    <div v-if="sortByOpen" class="dropdown">
+                        <button v-for="l in availableSortByOptions" :key="l" class="dropdown-item"
+                            :class="{ 'active': sortBy === l }" @click="selectsortBy(l)">
+                            <span class="label">{{ getSortLabel(l) }}</span>
                         </button>
                     </div>
                 </div>

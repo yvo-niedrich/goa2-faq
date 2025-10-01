@@ -13,7 +13,7 @@ const columns = computed(() => props.cards.slice(0).reduce<Card[][]>(
         return acc;
     },
     [[], [], [], []] as Card[][]
-));
+).filter(c => c && c.length));
 
 </script>
 

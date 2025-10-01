@@ -20,6 +20,9 @@ function unsetFavorite() {
     store.reset();
 }
 
+const cards = computed(() => props.hero.cards);
+const spellbook = computed(() => props.hero.spellbook);
+
 </script>
 
 <template>
@@ -43,8 +46,8 @@ function unsetFavorite() {
             Work in Progress
         </div>
 
-        <CardColorColumns :cards="hero.cards" />
-        <Spellbook :cards="hero.spellbook" />
+        <CardColorColumns :cards="cards" />
+        <Spellbook :cards="spellbook" />
     </div>
 </template>
 
