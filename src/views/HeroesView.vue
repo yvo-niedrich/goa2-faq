@@ -44,7 +44,7 @@ const selectedHero = computed(() => {
     }
 
     .search-bar {
-        width: 30em;
+        width: 32em;
         max-width: 80%;
         margin: 0 auto 1em auto;
         text-align: center;

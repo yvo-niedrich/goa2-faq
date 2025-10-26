@@ -9,7 +9,7 @@ import { useViewport } from '@/viewport';
 import HeroCard from '@/components/HeroCard.vue';
 import HeroPortrait from '@/components/HeroPortrait.vue';
 import CardSelectPopup from '@/components/popups/CardSelectPopup.vue';
-import Spellbook from '@/components/Spellbook.vue';
+import CardColorColumns from '@/components/CardColorColumns.vue';
 import { get } from '@/data/heroes';
 import { sortCardsByTier, sortCardTiers } from '@/helper/cards';
 import { useCompanionStore } from '@/stores/companion';
@@ -173,7 +173,9 @@ function setNewCard(cards: Card[], select: CardFn) {
             </Carousel>
         </div>
 
-        <Spellbook :cards="hero.spellbook" />
+        <div v-if="hero.spellbook && hero.spellbook.length" class="spellbook-container">
+            <CardColorColumns :cards="hero.spellbook" />
+        </div>
     </div>
 </template>
 
@@ -307,6 +309,16 @@ function setNewCard(cards: Card[], select: CardFn) {
     }
 }
 
+.spellbook-container {
+    transition: .25s ease-out;
+    background: linear-gradient(0deg, var(--color-background-mute) 0%, var(--color-background-highlight) 70%);
+    margin: 2px;
+    border-radius: 1em;
+    border: 1px solid #000;
+    box-shadow: 0 0 1px #CCC;
+
+    padding: .5em 1em;
+}
 
 .custom-pagination {
     display: flex;
@@ -458,8 +470,6 @@ function setNewCard(cards: Card[], select: CardFn) {
     justify-content: center;
 
 }
-
-
 
 .btn-reset {
     position: absolute;

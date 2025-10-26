@@ -4,8 +4,8 @@ import { computed, onBeforeUnmount, onMounted, ref } from 'vue';
 
 const props = defineProps<{
     placeholder?: string;
-    options?: { [key: string]: string } | string[];
-    sortByOptions?: { [key: string]: string } | string[];
+    options?: { [key: string]: string } | string[] | readonly string[];
+    sortByOptions?: { [key: string]: string } | string[] | readonly string[];
 }>();
 
 const name = defineModel<string>('name', { required: true });
@@ -80,7 +80,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-    <div class="search-input">
+    <div :class="{ 'search-input': true, 'has-sortby': availableSortByOptions.length }">
         <div class="search-input__wrapper">
 
             <div v-if="choices !== null && availableOptions.length" class="search-input__selector selector-left">
@@ -151,6 +151,8 @@ onBeforeUnmount(() => {
     border-radius: .65em;
     box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, .25);
 
+    margin: 0 auto;
+
     &__wrapper {
         display: flex;
         align-items: center;
@@ -177,13 +179,17 @@ onBeforeUnmount(() => {
     &__icon {
         position: absolute;
         left: auto;
-        right: 2.75em;
+        right: 0.5em;
         top: 50%;
         transform: translateY(-50%);
         width: 1.5em;
         height: 1.5em;
         color: #9ca3af;
         pointer-events: none;
+    }
+
+    &.has-sortby &__icon {
+        right: 2.75em;
     }
 
     &__selector {
@@ -214,12 +220,10 @@ onBeforeUnmount(() => {
         }
 
         &.selector-left .selector-button {
-            // border-right: 1px solid var(--color-border-hover);
             box-shadow: 2px 0 2px -1px var(--color-background-mute);
         }
 
         &.selector-right .selector-button {
-            // border-left: 1px solid var(--color-border);
             box-shadow: -2px 0 3px -1px var(--color-background-mute);
         }
 
