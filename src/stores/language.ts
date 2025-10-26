@@ -13,7 +13,8 @@ export const locales = {
 
 const defaultLocale = (function () {
     const supportedLocales = Object.keys(locales);
-    const browserLocales = navigator.languages || [navigator.language];
+    const browserLocales =
+        typeof navigator !== 'undefined' ? navigator.languages || [navigator.language] : [];
 
     for (const locale of browserLocales) {
         const base = locale.split('-')[0];
