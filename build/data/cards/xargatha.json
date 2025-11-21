@@ -19,11 +19,11 @@
     },
     {
         "id": "xar-silver-sirens-call",
-        "name": "Siren's Call",
+        "name": "Siren’s Call",
         "color": "silver",
         "type": "basic skill - ranged",
         "tier": null,
-        "text": "Target an enemy unit not adjacent to you and in range; if able, move that unit up to 3 spaces to a space adjacent to you.",
+        "text": "Target an enemy unit not adjacent to you and in range; if able, move the target up to 3 spaces to a space adjacent to you.",
         "alternative": false
     },
     {
@@ -41,7 +41,7 @@
         "color": "blue",
         "type": "skill",
         "tier": "I",
-        "text": "**Next turn:** Enemy heroes in radius count as both heroes and terrain, and cannot perform movement actions.\n_(If you move, the radius “moves” with you)_",
+        "text": "**Next turn:** Enemy heroes in radius count as both heroes and terrain, and cannot perform movement actions.\n_(If you move, the radius “moves” with you.)_",
         "alternative": false
     },
     {

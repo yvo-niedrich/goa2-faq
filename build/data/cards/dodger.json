@@ -23,7 +23,7 @@
         "color": "silver",
         "type": "basic skill",
         "tier": null,
-        "text": "An enemy hero in radius who is adjacent to an empty spawn point in the battle zone, discards a card, if able.",
+        "text": "An enemy hero in radius who is adjacent to an empty spawn point in the battle zone discards a card, if able.",
         "alternative": false
     },
     {
@@ -32,7 +32,7 @@
         "color": "purple",
         "type": "ultimate",
         "tier": "IV",
-        "text": "While you are performing an action, all spaces count as if they are in the battle zone and havd a friendly minion spawn point.",
+        "text": "While you are performing an action, all spaces count as if they were in the battle zone and had a friendly minion spawn point.",
         "alternative": false
     },
     {
@@ -68,7 +68,7 @@
         "color": "blue",
         "type": "defense",
         "tier": "II",
-        "text": "+2 ::defense:: Defense if there are 2 or more empty minion spawn points in radius in the battle zone.",
+        "text": "+2 ::defense:: Defense if there are 2 or more empty spawn points in radius in the battle zone.",
         "alternative": false
     },
     {
@@ -122,7 +122,7 @@
         "color": "blue",
         "type": "defense",
         "tier": "III",
-        "text": "+4 ::defense:: Defense if there are 2 or more empty spawn points in radius in a battle zone.",
+        "text": "+4 ::defense:: Defense if there are 2 or more empty spawn points in radius in the battle zone.",
         "alternative": false
     },
     {
@@ -131,7 +131,7 @@
         "color": "red",
         "type": "attack - ranged",
         "tier": "III",
-        "text": "**Choose one, or both, on different targets —**\n- Target a unit adjacent to you.\n- Target a hero in range who has one or  more cards in the discard.",
+        "text": "**Choose one, or both,** on different targets **—**\n- Target a unit adjacent to you.\n- Target a hero in range who has one or  more cards in the discard.",
         "alternative": false
     },
     {

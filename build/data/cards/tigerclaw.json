@@ -113,7 +113,7 @@
         "color": "green",
         "type": "skill - ranged",
         "tier": "II",
-        "text": "Give a hero in range a ::marker_poison:: poison marker.\nThe hero with a poison marker has -1 ::initiative:: Initiative, -1 ::attack:: Attack, and -1 ::defense:: Defense.",
+        "text": "Give a hero in range a ::marker_poison:: Poison marker.\nThe hero with a poison marker has -1 ::initiative:: Initiative, -1 ::attack:: Attack and -1 ::defense:: Defense.",
         "alternative": true
     },
     {
@@ -167,7 +167,7 @@
         "color": "green",
         "type": "skill - ranged",
         "tier": "III",
-        "text": "Give a hero in range a ::marker_poison:: poison marker.\nThe hero with a poison marker has -2 ::initiative:: Initiative, -2 ::attack:: Attack, and -2 ::defense:: Defense.",
+        "text": "Give a hero in range a ::marker_poison:: Poison marker.\nThe hero with a poison marker has -2 ::initiative:: Initiative, -2 ::attack:: Attack and -2 ::defense:: Defense.",
         "alternative": true
     }
 ]
