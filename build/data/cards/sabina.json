@@ -5,7 +5,7 @@
         "color": "gold",
         "type": "basic attack - ranged",
         "tier": null,
-        "text": "After the attack: If the target is adjacent, push the target 1 space.\n_(A unit pushed into an obstacle will stop. This is a valid push)_ ",
+        "text": "Target a unit in range.\nAfter the attack: If the target is adjacent to you, push it 1 space.",
         "alternative": false
     },
     {
@@ -59,7 +59,7 @@
         "color": "green",
         "type": "skill",
         "tier": "I",
-        "text": "Move a friendly minion in radius up to 1 space, to a space in radius. May repeat once.",
+        "text": "Move a friendly minion in radius 1 space, to a space in radius. May repeat once.",
         "alternative": false
     },
     {
@@ -149,7 +149,7 @@
         "color": "blue",
         "type": "skill",
         "tier": "III",
-        "text": "If there are two or more friendly minions in radius, you may retrieve a discarded card;\nif you do, you may move up to 2 spaces.",
+        "text": "If there are two or more friendly minions in radius, you may retrieve a discarded card;\nif you do, move up to 2 spaces.",
         "alternative": true
     },
     {

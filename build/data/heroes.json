@@ -14,8 +14,8 @@
             "movement": [5, 6]
         },
         "cards": "cards/arien.json",
-        "lore": "Start mocking his name, and you'll quickly discover the difference between a mermaid princess and a high elf seafarer.",
-        "advice": "- Use your gold card to move allies out of harm's way, or to set up future attacks.\n- Your silver can force opponents to play around it while it is in your hand and disrupt their plans when you finally activate it.\n- The red and blue level-up choices define your battlefield role the most — will you rely on your blade to fight minion waves up-close or use your magic to harass enemies?\n- Both green branches enhance your mobility but require some practice to master."
+        "lore": "Start mocking his name, and you’ll quickly discover the difference between a mermaid princess and a high elf seafarer.",
+        "advice": "- Use your gold card to move allies out of harm’s way, or to set up future attacks.\n- Your silver can force opponents to play around it while it’s in your hand and disrupt their plans when you finally activate it.\n- The red and blue level-up choices define your battlefield role the most — will you rely on your blade to fight minion waves up-close or your magic to harass enemies?\n- Both green branches enhance your mobility but require some practice to master."
     },
     {
         "id": "bro",
@@ -32,8 +32,8 @@
             "movement": [2, 4]
         },
         "cards": "cards/brogan.json",
-        "lore": "Brogan regained his sense in the midst of battle. War drums resonated with the pounding in his ears, and the elf made a note to quit Drakenhuff Grof. As the enemy mounted their charge, he reached behind him: first feeling the strings of his lute, then the handle of his axe.",
-        "advice": "- Your extreme survivability is your greatest advantage. If opponents are focused on you, they aren't attacking your allies.\n- Don't get stranded away from the action.\n- Utilize fast travel and attacks with bonus movement to offset your low mobility.\n- An attack card in hand can be as much of a threat as an attack card played."
+        "lore": "Brogan regained his senses in the midst of battle. War drums resonated with the pounding in his ears, and the elf made a note to quit Drakenhuff Grog. As the enemy mounted their charge, he reached behind him: first feeling the strings of his lute, then the handle of his axe.",
+        "advice": "- Your extreme survivability is your greatest advantage. If opponents are focused on you, they aren’t attacking your allies.\n- Don’t get stranded away from the action.\n- Utilize fast travel and attacks with bonus movement to offset your low mobility.\n- An attack card in hand can be as much of a threat as an attack card played."
     },
     {
         "id": "tig",
@@ -50,8 +50,8 @@
             "movement": [7, 8]
         },
         "cards": "cards/tigerclaw.json",
-        "lore": "Tigerclaw is as elusive as a shadow in the desert. A useful quality to have, when half the continent wants you dead and the other half wants you quartered first and then dead.",
-        "advice": "- The best defense is not to get hit at all.\n- Use mobility and your silver card to stay alive.\n- Ranged attacks and discard effects are the main threats to you.  \n- Enemies can deny your basic attacks by blocking a crucial space. Don’t let them!"
+        "lore": "Tigerclaw is as elusive as a shadow in the desert. A useful quality to have, when half of the continent wants you dead and the other half wants you quartered first and then dead.",
+        "advice": "- The best defense is to not get hit at all.\n- Use mobility and your silver card to stay alive.\n- Ranged attacks and discard effects are the main threats to you.  \n- Enemies can deny your basic attack by blocking a crucial space. Don’t let them!"
     },
     {
         "id": "was",
@@ -69,7 +69,7 @@
         },
         "cards": "cards/wasp.json",
         "lore": "As all heiresses to the throne of the Gilded Empire, Wasp was exiled from the palace as soon as she could hold a dagger. She needs to learn to control her powers before she can face the ultimate challenge and claim her birthright.",
-        "advice": "- Your basic cards can lock down enemy heroes, preventing their escape or stopping them from threatening you or your allies.\n- While you can successfully fight in melee, you cannot afford to absorb repeated damage or high-value attacks, so choose your targets wisely and know when to disengage.\n- You have many tools to displace your enemies—by placing, pushing, or swapping them. Use these to help your team win minion waves."
+        "advice": "- Your basic cards can lock down enemy heroes, preventing their escape or stopping them from threatening you or your allies.\n- While you can successfully fight in melee, you cannot afford to absorb repeated damage or high-value attacks, so choose your targets wisely and know when to disengage.\n- You have many tools to displace your enemies — by placing, pushing, or swapping them. Use these to help your team win minion waves."
     },
     {
         "id": "sab",
@@ -104,7 +104,7 @@
             "movement": 6
         },
         "cards": "cards/xargatha.json",
-        "lore": "Xargatha was the high priestess of the sacred shrine when it was desecrated and the holy relic was stolen. Her anger and grief were so powerful that they transformed her into a monster. She abandoned the temple to find the thieves and return the relic.",
+        "lore": "Xargatha was the high priestess of the sacred shrine when it was desecrated and the holy relic was stolen. Her anger and grief were so powerful that they’ve changed her into a monster. She abandoned the temple to find the thieves and return the relic.",
         "advice": "- Surround yourself with enemy minions to boost your powers, but be careful not to overextend.\n- Your silver card is versatile, helping you farm minions, assist allies, and set up ambushes.\n- You can use high movement on your primary red card to pursue wounded enemy heroes and finish them off with your gold card."
     },
     {
@@ -122,7 +122,7 @@
             "movement": 5
         },
         "cards": "cards/dodger.json",
-        "lore": "Dodger hated delving through the dusty tomes. It was always the more practical aspect of dark magic that fascinated her, so when a daemon offered to complete her training by bypassing the boring formalities, it took a mirror for her to realize that there was fine print in that contract.",
+        "lore": "Dodger hated delving through the dusty tomes. It was always the more practical aspects of dark magic that fascinated her, so when a daemon offered to complete her training by bypassing the boring formalities, it took a mirror for her to realize that there was fine print in that contract.",
         "advice": "- Your main weakness is your low defense. Keep this in mind when leveling up.\n- You are stronger when there are many empty minion spawn points in the battle zone, which can be achieved by defeating minions or displacing them through other means.\n- Play your silver card on turns when you expect enemy heroes to attack minions."
     },
     {
@@ -411,7 +411,7 @@
         },
         "cards": "cards/brynn.json",
 		"lore": "Born in a remote mountain settlement, Brunn was expected to become a healer like her mother. However, her true passion lay in braving the surrounding wilderness. When a mysterious plague struck and even her mother fell ill, Bryn set out for the fabled grove where the only cure could be found.",
-		"advice": "- When the condition isn’t met, your cards still have an effect. The non-conditional part is less powerful but much more reliable.\n- Coordinate with your team — they can help you unlock the full potential of your cards.\n- Your red ranged attack makes you a better pusher but also leaves you more vulnerable.\n- Use the silver to help your team get minions."		
+		"advice": "- When the condition isn’t met, your cards still have an effect. The non-conditional part is less powerful but much more reliable.\n- Coordinate with your team — they can help you unlock the full potential of your cards.\n- Your red ranged attack makes you a better pusher but also leaves you more vulnerable.\n- Use the silver to help your team get minions."
     },
     {
         "id": "mor",

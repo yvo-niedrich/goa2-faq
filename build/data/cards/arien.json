@@ -5,7 +5,7 @@
         "color": "gold",
         "type": "basic attack",
         "tier": null,
-        "text": "Target a unit adjacent to you.\nBefore the attack: You may move another unit adjacent to the target 1 space.\n_(“Another unit” never includes you.)_",
+        "text": "Target a unit adjacent to you.\nBefore the attack: You may move another unit that is adjacent to the target 1 space.\n_(“Another unit” never includes you.)_",
         "alternative": false
     },
     {
@@ -41,7 +41,7 @@
         "color": "blue",
         "type": "defense",
         "tier": "I",
-        "text": "Ignore all minion defense modifiers.\n_(This includes your minions, as well as the enemy minions.)_",
+        "text": "Ignore all minion defense modifiers.\n_(This includes your minions, as well as enemy minions.)_",
         "alternative": false
     },
     {
@@ -95,7 +95,7 @@
         "color": "blue",
         "type": "movement",
         "tier": "II",
-        "text": "**This turn:** Enemies heroes adjacent to you cannot fast travel, or move more than 1 space with a movement action.",
+        "text": "**This turn:** Enemy heroes adjacent to you cannot fast travel, or move more than 1 space with a movement action.",
         "alternative": true
     },
     {
@@ -149,7 +149,7 @@
         "color": "blue",
         "type": "movement",
         "tier": "III",
-        "text": "**This turn:** Enemies in radius cannot fast travel, or move more than 1 space with a movement action.",
+        "text": "**This turn:** Enemy heroes in radius cannot fast travel, or move more than 1 space with a movement action.",
         "alternative": true
     },
     {
@@ -167,7 +167,7 @@
         "color": "green",
         "type": "skill - ranged",
         "tier": "III",
-        "text": "Swap with an enemy minion in range.\nIf it was adjacent to you, may repeat once.",
+        "text": "Swap with an enemy minion in range; if it was adjacent to you, may repeat once.",
         "alternative": true
     }
 ]
