@@ -122,7 +122,7 @@
         "color": "blue",
         "type": "skill",
         "tier": "III",
-        "text": "Move up to 4 spaces in a straight line, ignoring obstacles. You may place an enemy unit you moved through into a space adjacent to you.",
+        "text": "Move up to 5 spaces in a straight line, ignoring obstacles. You may place an enemy unit you moved through into a space adjacent to you.",
         "alternative": false
     },
     {

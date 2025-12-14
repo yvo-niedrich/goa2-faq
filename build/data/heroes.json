@@ -50,8 +50,8 @@
             "movement": [7, 8]
         },
         "cards": "cards/tigerclaw.json",
-        "lore": "Tigerclaw is as elusive as a shadow in the desert. A useful quality to have, when half of the continent wants you dead and the other half wants you quartered first and then dead.",
-        "advice": "- The best defense is to not get hit at all.\n- Use mobility and your silver card to stay alive.\n- Ranged attacks and discard effects are the main threats to you.  \n- Enemies can deny your basic attack by blocking a crucial space. Don’t let them!"
+        "lore": "Tigerclaw is as elusive as a shadow in the desert. A useful quality to have, when half the continent wants you dead and the other half wants you quartered first and then dead.",
+        "advice": "- The best defense is not to get hit at all.\n- Use mobility and your silver card to stay alive.\n- Ranged attacks and discard effects are the main threats to you.  \n- Enemies can deny your basic attack by blocking a crucial space. Don’t let them!"
     },
     {
         "id": "was",

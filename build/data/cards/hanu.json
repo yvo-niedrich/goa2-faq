@@ -86,7 +86,7 @@
         "color": "green",
         "type": "skill",
         "tier": "II",
-        "text": "Swap two friendly heroes in radius.",
+        "text": "Swap two friendly units in radius.",
         "alternative": false
     },
     {

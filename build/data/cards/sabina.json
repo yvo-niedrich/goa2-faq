@@ -5,7 +5,7 @@
         "color": "gold",
         "type": "basic attack - ranged",
         "tier": null,
-        "text": "Target a unit in range.\nAfter the attack: If the target is adjacent to you, push it 1 space.",
+        "text": "Target a unit in range. After the attack: If the target is adjacent to you, push the target 1 space.",
         "alternative": false
     },
     {
