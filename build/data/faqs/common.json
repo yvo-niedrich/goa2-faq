@@ -27,7 +27,7 @@
     },
     "faq-common-Xe16hz1a": {
         "q": "What are Obstacles?",
-        "a": "Obstacles are basically anything on the map: Units (Heroes and Minions), terrain shown on the map, tokens, and any other miniatures. There can only be one Obstacle on each space, and Obstacles generally can’t move through each other. If an ability does allow Obstacles to pass through each other (“you can move through Obstacles”, ignore Obstacles”, “Heroes may move through a space with a tree token”), they still may not end movement on such a space. Any space with an Obstacle is considered occupied and **not** empty.",
+        "a": "Obstacles are basically anything on the map: Units (Heroes and Minions), terrain shown on the map, tokens, and any other miniatures. There can only be one Obstacle on each space, and Obstacles generally can’t move through each other.\n\nIf an ability does allow Obstacles to pass through each other (“you can move through Obstacles”, ignore Obstacles”, “Heroes may move through a space with a tree token”), they still may not end movement on such a space.\n\nAny space with an Obstacle is considered occupied and **not** empty.",
         "ref": [
             "sil-silver-trailblazer",
             "gar-red-ii-blunt-force",
