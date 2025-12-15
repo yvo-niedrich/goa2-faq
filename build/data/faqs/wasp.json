@@ -1,8 +1,9 @@
 {
     "faq-wasp-P8qD2hsM": {
         "q": "How does Wasp’s Static Barrier work?",
-        "a": "Static Barrier divides the map into 2 regions: spaces within its radius and outside its radius. Enemy units cannot **move** or **fast travel** across the “barrier” between the two regions:\n- ❌They cannot take a move action (to move or fast travel) to move across the barrier.\n- ❌They cannot use an attack or skill involving movement to cross the barrier.\n- ❌They cannot cross the barrier on their path, even if they cross back. That is, a hero outside the barrier cannot walk into the radius and then walk back out.\n- ✅They can use a “place” or “swap” effect (such as Arien’s Alt Blue) to cross the barrier.\n- ✅They can be pushed across the barrier (pushing is not movement) or moved by another player’s card.",
-        "ref": ["was-silver-static-barrier"]
+        "a": "Static Barrier divides the map into 2 regions: spaces within its radius and outside its radius. Enemy units are restricted by the “barrier” as follows:\n- ❌They cannot take a move action (to move or fast travel) to move across the barrier.\n- ❌They cannot use an attack or skill involving movement to cross the barrier.\n- ❌They cannot end any movement on the other side of the barrier - even if they are allowed to “move **through** obstacles”.\n- ❌They cannot push units through the barrier unless the push is “ignoring obstacles” - in which case the target still has to reach an **empty** space.\n- ✅They can use a “swap” effect to cross the barrier and remain on the other side (Swap “does not count as movement or placement.”).\n- ✅ They can perform an attack that targets a unit on the other side of the barrier.\n\n**Reminder**: These restrictions only apply when an **enemy hero** is taking the action.",
+        "ref": ["was-silver-static-barrier"],
+        "sources": ["rulebook:p18", "rulebook:p19", "https://boardgamegeek.com/thread/3500922/article/45992061"]
     },
     "faq-wasp-iOUfdU2P": {
         "q": "How does Wasp’s ability move units and tokens?",

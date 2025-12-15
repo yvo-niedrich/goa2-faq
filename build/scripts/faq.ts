@@ -5,6 +5,7 @@ interface FAQ {
     q: string;
     a: string;
     ref: string[];
+    sources?: string[];
 }
 
 type FAQMap = { [key: string]: FAQ };
