@@ -23,7 +23,7 @@
         "color": "silver",
         "type": "basic skill",
         "tier": null,
-        "text": "Place yourself into a space in radius adjacent to two or more enemy units; if you do, you may retrieve a discarded card.",
+        "text": "Place yourself into a space in radius adjacent to two or more enemy units. If you do, you may retrieve a discarded card.",
         "alternative": false
     },
     {
@@ -86,7 +86,7 @@
         "color": "green",
         "type": "skill",
         "tier": "II",
-        "text": "**Next turn:** Before you perform a primary action, move up to 2 spaces.",
+        "text": "**Next turn:** Before you perform a primary action, you may move up to 2 spaces.",
         "alternative": false
     },
     {
@@ -113,7 +113,7 @@
         "color": "blue",
         "type": "skill",
         "tier": "II",
-        "text": "Move up to 4 spaces in a straight line, ignoring obstacles. An enemy hero you moved through discards a card, if able.",
+        "text": "Move up to 4 spaces in a straight line, ignoring obstacles; an enemy hero you moved through discards a card, if able.",
         "alternative": true
     },
     {
@@ -122,7 +122,7 @@
         "color": "blue",
         "type": "skill",
         "tier": "III",
-        "text": "Move up to 5 spaces in a straight line, ignoring obstacles. You may place an enemy unit you moved through into a space adjacent to you.",
+        "text": "Move up to 5 spaces in a straight line, ignoring obstacles; you may place an enemy unit you moved through into a space adjacent to you.",
         "alternative": false
     },
     {
