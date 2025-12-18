@@ -14,7 +14,7 @@
         "color": "gold",
         "type": "basic attack - ranged",
         "tier": "H",
-        "text": "Target a hero at maximum range.\nAfter the attack: If able, you may fast travel up to an adjacent zone.",
+        "text": "Target a hero at maximum range.\nAfter the attack: If able, you may fast travel to an adjacent zone.",
         "alternative": false
     },
     {
@@ -32,7 +32,7 @@
         "color": "purple",
         "type": "ultimate",
         "tier": "IV",
-        "text": "Each time before you perform an action, you may move 2 spaces in a straight line.",
+        "text": "Each time before you perform an action you may move 2 spaces in a straight line.",
         "alternative": false
     },
     {
