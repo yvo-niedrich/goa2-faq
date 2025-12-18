@@ -5,7 +5,7 @@
         "color": "gold",
         "type": "basic attack - ranged",
         "tier": null,
-        "text": "**Choose one —**\n- Target a hero in range with an empty discard.\nAfter the attack: If able, that hero performs a movement action on the card they defended with, moving full distance in a straight line.\n- Target a unit adjacent to you.",
+        "text": "**Choose one —**\n- Target a hero in range with an empty discard;\nAfter the attack: If able, that hero performs a movement action on the card they defended with, moving full distance in a straight line.\n- Target a unit adjacent to you.",
         "alternative": false
     },
     {
@@ -14,7 +14,7 @@
         "color": "gold",
         "type": "basic attack - ranged",
         "tier": "H",
-        "text": "**Choose one —**\n- Target a hero in range with an empty discard.\nAfter the attack: If able, that hero performs a movement action on the card they defended with, moving full distance in a straight line.\n- Target a hero adjacent to you.",
+        "text": "**Choose one —**\n- Target a hero in range with an empty discard;\nAfter the attack: If able, that hero performs a movement action on the card they defended with, moving full distance in a straight line.\n- Target a hero adjacent to you.",
         "alternative": false
     },
     {
@@ -77,7 +77,7 @@
         "color": "red",
         "type": "attack",
         "tier": "II",
-        "text": "Before the attack: You may move up to 1 space for every empty minion spawn point in radius in the battle zone, up to a maximum of 2 spaces.\nTarget a unit adjacent to you.",
+        "text": "Before the attack: You may move up to 1 space for every empty minion spawn point in radius in the battle zone up to a maximum of 2 spaces.\nTarget a unit adjacent to you.",
         "alternative": false
     },
     {
@@ -104,7 +104,7 @@
         "color": "red",
         "type": "attack",
         "tier": "II",
-        "text": "Target a unit adjacent to you.\nAfter the attack: If an enemy hero in radius has a card in the discard, may repeat once on a different target.",
+        "text": "Target a unit adjacent to you.\nAfter the attack: If an enemy hero in radius has a card in the discard, repeat once on a different target.",
         "alternative": true
     },
     {
@@ -113,7 +113,7 @@
         "color": "green",
         "type": "skill - ranged",
         "tier": "II",
-        "text": "Swap with a unit adjacent to you, or with an enemy hero in range with a card in the discard. Move up to 2 spaces.",
+        "text": "Swap with a unit adjacent to you, or with an enemy hero in range with a card in the discard. You may then move up to 2 spaces.",
         "alternative": true
     },
     {
@@ -131,7 +131,7 @@
         "color": "red",
         "type": "attack",
         "tier": "III",
-        "text": "Before the attack: You may move to 1 space for every empty minion spawn point in radius in the battle zone, up to a maximum of 3 spaces.\nTarget a unit adjacent to you.",
+        "text": "Before the attack: You may move to 1 space for every empty minion spawn point in radius in the battle zone up to a maximum of 3 spaces.\nTarget a unit adjacent to you.",
         "alternative": false
     },
     {
@@ -167,7 +167,7 @@
         "color": "green",
         "type": "skill - ranged",
         "tier": "III",
-        "text": "Swap with a unit adjacent to you, or with an enemy hero in range with a card in the discard. Move up to 3 spaces.",
+        "text": "Swap with a unit adjacent to you, or with an enemy hero in range with a card in the discard. You may then move up to 3 spaces.",
         "alternative": true
     }
 ]
