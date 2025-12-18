@@ -5,7 +5,7 @@
         "color": "gold",
         "type": "basic attack",
         "tier": null,
-        "text": "Before the attack: If enraged, you may move 1 space to a space adjacent to an enemy hero. Target a unit adjacent to you.\n**This round:** You are enraged.",
+        "text": "Before the attack: If enraged, you may move 1 space to a space adjacent to an enemy hero; target a unit adjacent to you.\n**This round:** You are enraged.",
         "alternative": false
     },
     {
@@ -14,7 +14,7 @@
         "color": "gold",
         "type": "basic attack",
         "tier": "H",
-        "text": "Before the attack: If enraged, you may move 1 space to a space adjacent to an enemy hero. Target a hero adjacent to you.\n**This round:** You are enraged.",
+        "text": "Before the attack: If enraged, you may move 1 space to a space adjacent to an enemy hero; target a hero adjacent to you.\n**This round:** You are enraged.",
         "alternative": false
     },
     {
@@ -32,7 +32,7 @@
         "color": "purple",
         "type": "ultimate",
         "tier": "IV",
-        "text": "You are always enraged, and all your resolved cards count as active.",
+        "text": "You are always enraged and all your resolved cards count as active.",
         "alternative": false
     },
     {
