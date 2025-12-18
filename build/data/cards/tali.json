@@ -95,7 +95,7 @@
         "color": "blue",
         "type": "skill",
         "tier": "II",
-        "text": "Up to 1 friendly hero in radius may retrieve a discarded card.\nIf “Guardian Spirit” is in the discard, retrieve it.",
+        "text": "Up to 1 friendly hero in radius may retrieve a discarded card.\nIf Guardian Spirit is in your discard, retrieve it.",
         "alternative": true
     },
     {
@@ -113,7 +113,7 @@
         "color": "green",
         "type": "skill - ranged",
         "tier": "II",
-        "text": "Place a ::token_totem:: in range.\nIf a friendly melee minion adjacent to a Totem would be defeated, remove the totem instead.",
+        "text": "Place a ::token_totem:: Totem token in range.\nIf a friendly melee minion adjacent to a totem would be defeated, remove the totem instead.",
         "alternative": true
     },
     {
@@ -122,7 +122,7 @@
         "color": "blue",
         "type": "skill",
         "tier": "III",
-        "text": "Choose a direction. Move each enemy unit in radius 1 space in that direction, if able.\nIf this card is in the discard, **End of turn:**\nMay repeat once.",
+        "text": "Choose a direction. Move each enemy unit in radius 1 space in that direction, if able.\nIf Blizzard is in your discard, **End of turn:**\nMay repeat once.",
         "alternative": false
     },
     {
@@ -149,7 +149,7 @@
         "color": "blue",
         "type": "skill",
         "tier": "III",
-        "text": "Up to 1 friendly hero in radius may retrieve a discarded card. If “Warrior Spirit” is in the discard, you may retrieve a discarded card.",
+        "text": "Up to 1 friendly hero in radius may retrieve a discarded card. If Warrior Spirit is in your discard, you may retrieve a discarded card.",
         "alternative": true
     },
     {
@@ -167,7 +167,7 @@
         "color": "green",
         "type": "skill - ranged",
         "tier": "III",
-        "text": "Place a ::token_totem:: in range.\nIf a friendly minion adjacent to a totem would be defeated, remove the totem instead.\nTotem tokens are immune to enemy actions.",
+        "text": "Place a ::token_totem:: Totem token in range.\nIf a friendly minion adjacent to a totem would be defeated, remove the totem instead.\nTotem tokens are immune to enemy actions.",
         "alternative": true
     }
 ]
