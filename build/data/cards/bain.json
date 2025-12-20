@@ -5,7 +5,7 @@
         "color": "gold",
         "type": "basic attack",
         "tier": null,
-        "text": "Target a unit adjacent to you.\nAfter the attack: You may give an enemy hero in radius the ::marker_bounty:: Bounty marker.\nA hero with the Bounty marker spends 1 additional ::life_counters:: life counter when defeated.",
+        "text": "Target a unit adjacent to you.\nAfter the attack: You may give an enemy hero in radius a ::marker_bounty:: bounty marker;\nA hero with the bounty marker spends 1 additional ::life_counters:: life counter when defeated.",
         "alternative": false
     },
     {
@@ -14,7 +14,7 @@
         "color": "gold",
         "type": "basic skill",
         "tier": "H",
-        "text": "If you are adjacent to an enemy unit, give a hero in radius a ::marker_bounty:: Bounty marker.\nA hero with the Bounty marker spends 1 additional ::life_counters:: life counter when defeated.",
+        "text": "If you are adjacent to an enemy unit, give a hero in radius a ::marker_bounty:: bounty marker.\nA hero with the bounty marker spends 1 additional ::life_counters:: life counter when defeated.",
         "alternative": false
     },
     {
@@ -23,7 +23,7 @@
         "color": "silver",
         "type": "basic skill - ranged",
         "tier": null,
-        "text": "Target a unit or a token in range and in a straight line, with no obstacles between you and the target. Move that target towards you in a straight line, until you are adjacent.",
+        "text": "Target a unit or a token in a straight line and in range with no obstacles between you and the target; move the target towards you in a straight line, until you are adjacent.",
         "alternative": false
     },
     {
@@ -32,7 +32,7 @@
         "color": "purple",
         "type": "ultimate",
         "tier": "IV",
-        "text": "After you give a hero the ::marker_bounty:: Bounty marker, that hero discards a card.",
+        "text": "After you give a hero the ::marker_bounty:: Bounty marker, that hero discards a card, if able.",
         "alternative": false
     },
     {
@@ -41,7 +41,7 @@
         "color": "blue",
         "type": "skill",
         "tier": "I",
-        "text": "An enemy hero in radius with two or more cards in hand chooses one of those cards.\nGuess that card's color, then reveal it.\nIf you guessed correctly, discard that card;\notherwise you gain 1 coin.\n_(You can only guess colors that could be in that player's hand.)_",
+        "text": "An enemy hero in radius with two or more cards in hand chooses one of those cards;\nGuess that card's color, then reveal the card;\nIf you guessed correctly, discard that card;\notherwise you gain 1 coin.\n_(You can only guess colors that could be in that player's hand.)_",
         "alternative": false
     },
     {
@@ -50,7 +50,7 @@
         "color": "red",
         "type": "attack - ranged",
         "tier": "I",
-        "text": "Target a unit in range and in a straight line with no other units or terrain between you.",
+        "text": "Target a unit in range and in a straight line with no other units, or terrain, between you.",
         "alternative": false
     },
     {
@@ -68,7 +68,7 @@
         "color": "blue",
         "type": "skill",
         "tier": "II",
-        "text": "An enemy hero in radius with two or more cards in hand chooses one of those cards.\nGuess that card's color, then reveal it.\nIf you guessed correctly, discard that card;\notherwise you gain 2 coins.",
+        "text": "An enemy hero in radius with two or more cards in hand chooses one of those cards;\nGuess that card's color, then reveal the card;\nIf you guessed correctly, discard that card;\notherwise you gain 2 coins.",
         "alternative": false
     },
     {
@@ -77,7 +77,7 @@
         "color": "red",
         "type": "attack - ranged",
         "tier": "II",
-        "text": "Target a unit in range and in a straight line with no units or terrain between you.",
+        "text": "Target a unit in range and in a straight line with no units, or terrain, between you.",
         "alternative": false
     },
     {
@@ -122,7 +122,7 @@
         "color": "blue",
         "type": "skill",
         "tier": "III",
-        "text": "An enemy hero in radius with two or more cards in hand chooses one of those cards.\nGuess that card's color, then reveal it.\nIf you guessed correctly, discard that card;\notherwise may repeat once or gain 2 coins.",
+        "text": "An enemy hero in radius with two or more cards in hand chooses one of those cards;\nGuess that card's color, then reveal the card;\nIf you guessed correctly, discard that card;\notherwise you may repeat once or gain 2 coins.",
         "alternative": false
     },
     {
@@ -131,7 +131,7 @@
         "color": "red",
         "type": "attack - ranged",
         "tier": "III",
-        "text": "Target a unit in range and in a straight line with no units or terrain between you.",
+        "text": "Target a unit in range and in a straight line with no units, or terrain, between you.",
         "alternative": false
     },
     {
