@@ -131,7 +131,7 @@
         "color": "red",
         "type": "attack - ranged",
         "tier": "III",
-        "text": "**Choose one, or both,** on different targets **—**\n- Target a unit adjacent to you.\n- Target a hero in range who has one or  more cards in the discard.",
+        "text": "**Choose one or both** (on different targets) **—**\n- Target a unit adjacent to you.\n- Target a hero in range who has one or  more cards in the discard.",
         "alternative": false
     },
     {
@@ -140,7 +140,7 @@
         "color": "green",
         "type": "skill",
         "tier": "III",
-        "text": "If there are 2 or more empty spawn points in radius in the battle zone, gain 2 coins.\nIf you have your Ultimate, gain an ::attack:: Attack item.\n_(Use any spare card from the box with the corresponding icon.)_",
+        "text": "If there are 2 or more empty spawn points in radius in the battle zone, gain 2 coins;\nIf you have your Ultimate, gain +1::attack:: Attack item.\n_(Use any spare card from the box with the corresponding icon.)_",
         "alternative": false
     },
     {
@@ -158,7 +158,7 @@
         "color": "red",
         "type": "attack - ranged",
         "tier": "III",
-        "text": "Target a unit in range.\nAfter the attack: Move up to 2 minions adjacent to you 1 space each, to spaces not adjacent to you.",
+        "text": "Target a unit in range.\nAfter the attack: Move each of up to 2 minions adjacent to you 1 space to a space not adjacent to you.",
         "alternative": true
     },
     {
