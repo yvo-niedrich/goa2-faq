@@ -18,12 +18,13 @@
         "alternative": false
     },
     {
+
         "id": "tri-silver-salvage-parts",
         "name": "Salvage Parts",
         "color": "silver",
         "type": "basic skill",
         "tier": null,
-        "text": "**Choose one —**\n- Place the Turret into an adjacent space. It counts as an obstacle.\n- Remove the Turret; move up to 3 spaces.\n- Remove the Turret; you may retrieve a discarded card.",
+        "text": "**Choose one —**\n- Place the Turret into a space adjacent to you; it counts as an obstacle.\n- Remove the Turret; move up to 3 spaces.\n- Remove the Turret; you may retrieve a discarded card.",
         "alternative": false
     },
     {
@@ -95,7 +96,7 @@
         "color": "blue",
         "type": "skill",
         "tier": "II",
-        "text": "Place up to 2 ::token_barrier:: barrier tokens in radius, with at least one of them adjacent to the Turret.\nYou and friendly heroes gain +1 ::defense:: Defense for each Barrier token they are adjacent to.",
+        "text": "Place up to 2 ::token_barrier:: Barrier tokens in radius, with at least one of them adjacent to the Turret.\nYou and friendly heroes gain +1 ::defense:: Defense for each Barrier token they are adjacent to.",
         "alternative": true
     },
     {
@@ -149,7 +150,7 @@
         "color": "blue",
         "type": "skill",
         "tier": "III",
-        "text": "Place up to 3 ::token_barrier:: barrier tokens in radius, with at least one of them adjacent to the Turret.\nYou and friendly heroes gain +1 ::defense:: Defense for each Barrier token they are adjacent to.",
+        "text": "Place up to 3 ::token_barrier:: Barrier tokens in radius, with at least one of them adjacent to the Turret.\nYou and friendly heroes gain +1 ::defense:: Defense for each Barrier token they are adjacent to.",
         "alternative": true
     },
     {

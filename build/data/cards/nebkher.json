@@ -5,7 +5,7 @@
         "color": "gold",
         "type": "basic skill - ranged",
         "tier": null,
-        "text": "**Choose one —**\n- Perform an action on the card in the previous turn slot of an enemy hero in range; if you would place any tokens, place ::token_illusion:: Illusion tokens instead; skip giving markers.\n- Defeat a minion adjacent to you.",
+        "text": "**Choose one —**\n- Perform an action on the card in the previous turn slot of an enemy hero in range; if you would place any tokens, place ::token_illusion:: Illusion tokens instead; do not use markers.\n- Defeat a minion adjacent to you.",
         "alternative": false
     },
     {
@@ -86,7 +86,7 @@
         "color": "red",
         "type": "attack - ranged",
         "tier": "II",
-        "text": "**Choose one —**\n- Before the attack: Move an ::token_illusion:: Illusion token in range up to 1 space to a space adjacent to an enemy hero in range. Target that hero.\n- Target a unit adjacent to you.",
+        "text": "**Choose one —**\n- Before the attack: Move an ::token_illusion:: Illusion token in range up to 1 space to a space adjacent to an enemy hero in range; target that hero.\n- Target a unit adjacent to you.",
         "alternative": false
     },
     {
@@ -140,7 +140,7 @@
         "color": "red",
         "type": "attack - ranged",
         "tier": "III",
-        "text": "**Choose one —**\n- Before the attack: Move an ::token_illusion:: Illusion token in range up to 2 spaces to a space adjacent to an enemy hero in range. Target that hero.\n- Target a unit adjacent to you.",
+        "text": "**Choose one —**\n- Before the attack: Move an ::token_illusion:: Illusion token in range up to 2 spaces to a space adjacent to an enemy hero in range; target that hero.\n- Target a unit adjacent to you.",
         "alternative": false
     },
     {

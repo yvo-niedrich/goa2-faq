@@ -23,7 +23,7 @@
         "color": "silver",
         "type": "basic skill - ranged",
         "tier": null,
-        "text": "Target an obstacle in range and in a straight line, with no obstacles between you; ignore immunity. Move in a straight line towards that obstacle until you are adjacent to it.",
+        "text": "Target an obstacle in range and in a straight line, with no obstacles between you; ignore immunity. Move in a straight line towards that obstacle until you are adjacent.",
         "alternative": false
     },
     {
@@ -41,7 +41,7 @@
         "color": "blue",
         "type": "skill",
         "tier": "I",
-        "text": "An enemy hero in radius, adjacent to another enemy unit and not adjacent to you, discards a card, if able.",
+        "text": "An enemy hero in radius adjacent to another enemy unit and not adjacent to you discards a card, if able.",
         "alternative": false
     },
     {
@@ -50,7 +50,7 @@
         "color": "red",
         "type": "attack",
         "tier": "I",
-        "text": "**Choose one —**\n-  Before the attack: Move 1 space.\nTarget a hero adjacent to you in the direction of the move; +2 ::attack:: Attack.\n-  Target a unit adjacent to you.",
+        "text": "**Choose one —**\n-  Before the attack: Move 1 space in a straight line.\nTarget a hero adjacent to you in the direction of the move; +2 ::attack:: Attack.\n-  Target a unit adjacent to you.",
         "alternative": false
     },
     {
@@ -68,7 +68,7 @@
         "color": "blue",
         "type": "skill",
         "tier": "I",
-        "text": "An enemy hero in radius, adjacent to another enemy unit and not adjacent to you, discards a card, if able.",
+        "text": "An enemy hero in radius adjacent to another enemy unit and not adjacent to you discards a card, if able.",
         "alternative": false
     },
     {
@@ -122,7 +122,7 @@
         "color": "blue",
         "type": "skill",
         "tier": "III",
-        "text": "An enemy hero in radius, adjacent to another enemy unit and not adjacent to you, discards a card, if able.\nMay repeat once on a different target.",
+        "text": "An enemy hero in radius adjacent to another enemy unit and not adjacent to you, discards a card if able.\nMay repeat once on a different target.",
         "alternative": false
     },
     {
