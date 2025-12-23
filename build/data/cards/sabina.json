@@ -113,7 +113,7 @@
         "color": "red",
         "type": "attack - ranged",
         "tier": "II",
-        "text": "Target a unit in range.\nAfter the attack: If the target was adjacent to you remove up to one enemy minion adjacent to you.\n_(You gain no coins for removing a minion, only defeating.)_",
+        "text": "Target a unit in range.\nAfter the attack: If the target was adjacent to you, remove up to one enemy minion adjacent to you.\n_(You gain no coins for removing a minion, only defeating.)_",
         "alternative": true
     },
     {
@@ -158,7 +158,7 @@
         "color": "red",
         "type": "attack - ranged",
         "tier": "III",
-        "text": "Target a unit in range.\nAfter the attack: If the target was adjacent to you remove up to two enemy minions adjacent to you.",
+        "text": "Target a unit in range.\nAfter the attack: If the target was adjacent to you, remove up to two enemy minions adjacent to you.",
         "alternative": true
     },
     {
