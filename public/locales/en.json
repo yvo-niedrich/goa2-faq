@@ -206,7 +206,7 @@
     "was-blue-iii-kinetic-blast.text": "Push up to 2 enemy units adjacent to you 3 or 4 spaces; if a pushed hero is stopped by an obstacle, that hero discards a card, if able.",
     "was-red-iii-thunder-boomerang.text": "Target a unit in range and not in a straight line.\nAfter the attack: If you targeted a hero, may repeat once on a different target.",
     "was-green-iii-mass-telekinesis.text": "Place a unit or a token in range, which is not in a straight line, into a space adjacent to you.\nMay repeat once.",
-    "sab-gold-point-blank-shot.text": "Target a unit in range. After the attack: If the target is adjacent to you, push the target 1 space.",
+    "sab-gold-point-blank-shot.text": "Target a unit in range. After the attack: If the target is adjacent to you, push it 1 space.",
     "sab-gold-h-bang.text": "Target a hero adjacent to you.\nAfter the attack: Push the target 1 space.",
     "sab-silver-back-to-back.text": "Swap with a friendly minion in radius.",
     "sab-purple-iv-big-sodding-gun.text": "Your basic attack has +2 ::range:: Range and +2 ::attack:: Attack. If you push an enemy hero, that hero discards a card, or is defeated.",
