@@ -3,6 +3,7 @@ import { defineStore } from 'pinia';
 import { ref, watch } from 'vue';
 import { createI18n } from 'vue-i18n';
 
+export const fallbackLocale = 'en';
 export const locales = {
     en: { label: 'English', flag: '🇬🇧' },
     de: { label: 'Deutsch', flag: '🇩🇪' },
@@ -23,7 +24,7 @@ const defaultLocale = (function () {
         }
     }
 
-    return 'en';
+    return fallbackLocale;
 })();
 
 export const useLanguageStore = defineStore('language', () => {
@@ -31,11 +32,7 @@ export const useLanguageStore = defineStore('language', () => {
 
     watch(
         language,
-        (newLang) => {
-            if (newLang) {
-                loadLocale(newLang, true);
-            }
-        },
+        (newLang) => { loadLocale(newLang, true) },
         { immediate: true },
     );
 
@@ -49,13 +46,13 @@ export function getI18n() {
         i18n = createI18n({
             legacy: false,
             locale: store.language,
-            fallbackLocale: 'en',
+            fallbackLocale: fallbackLocale,
             messages: {},
             missingWarn: false,
             fallbackWarn: false,
         });
         loadLocale(store.language)
-            .then(() => loadLocale('en'))
+            .then(() => loadLocale(fallbackLocale))
             .then(() => ((i18n as any).global.missingWarn = true))
             .then(() => ((i18n as any).global.fallbackWarn = true));
     }
@@ -64,9 +61,10 @@ export function getI18n() {
 }
 
 const loadedLanguages = ref<string[]>([]);
-async function loadLocale(locale: string, setLang: boolean = false) {
+async function loadLocale(locale: string|null, setLang: boolean = false) {
+    if (!locale) return;
     if (!i18n) return;
-    if (!loadedLanguages.value.includes(locale) && Object.keys(locales).includes(locale)) {
+    if (locales.hasOwnProperty(locale) && !loadedLanguages.value.includes(locale)) {
         try {
             const messages = await fetch(
                 `${import.meta.env.BASE_URL}locales/${locale}.json?v=${__APP_BUILD_HASH__}`,

@@ -1,14 +1,14 @@
 import { __public, __root } from './paths';
 import { readFileSync, writeFileSync } from 'fs';
 
-import { locales } from '../../src/stores/language';
+import { locales, fallbackLocale } from '../../src/stores/language';
 
 type TranslationMap = { [key: string]: string };
 
 const _cache: { [key: string]: TranslationMap } = {};
 export const path = __public + '/locales';
-export const source = 'en';
-export const translations = Object.keys(locales).filter((l) => l !== 'en');
+export const source = fallbackLocale;
+export const translations = Object.keys(locales).filter((l) => l !== fallbackLocale);
 
 export function applicationTranslations(): TranslationMap {
     return {
