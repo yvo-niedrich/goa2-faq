@@ -441,7 +441,7 @@
     "cut-blue-i-bombardment.text": "An enemy hero in radius, adjacent to another enemy unit and not adjacent to you, discards a card, if able.",
     "cut-red-i-daring-strike.text": "**Choose one —**\n-  Before the attack: Move 1 space.\nTarget a hero adjacent to you in the direction of the move; +2 ::attack:: Attack.\n-  Target a unit adjacent to you.",
     "cut-green-i-brace-for-impact.text": "Move 3 spaces in a straight line, ignoring obstacles, to a space adjacent to an enemy hero; that hero discards a card, if able.",
-    "cut-blue-i-barrage.text": "An enemy hero in radius, adjacent to another enemy unit and not adjacent to you, discards a card, if able.",
+    "cut-blue-ii-barrage.text": "An enemy hero in radius, adjacent to another enemy unit and not adjacent to you, discards a card, if able.",
     "cut-red-ii-bold-thrust.text": "**Choose one —**\n-  Before the attack: Move 1 or 2 spaces in a straight line. Target a hero adjacent to you in the direction of the move; +2 ::attack:: Attack.\n-  Target a unit adjacent to you.",
     "cut-green-ii-ramming-speed.text": "Move 3 or 4 spaces in a straight line, ignoring obstacles, to a space adjacent to an enemy hero; that hero discards a card, if able.",
     "cut-blue-ii-x-marks-the-spot.text": "An enemy hero in radius **chooses one —**\n-  You place that hero in a space in radius.\n-  You gain 2 coins.",
