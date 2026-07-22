@@ -592,7 +592,7 @@
     "cut-blue-i-bombardment.text": "Ein gegnerischer Held im Radius, der benachbart zu einer anderen gegnerischen Einheit ist und nicht benachbart zu dir, wirft eine Karte ab, falls möglich.",
     "cut-red-i-daring-strike.text": "**Wähle eins \u2014**\n- Vor dem Angriff: Bewege dich 1 Feld.\nVisiere einen Helden benachbart zu dir in Bewegungsrichtung an; +2 ::attack:: Angriff.\n- Visiere eine Einheit benachbart zu dir an.",
     "cut-green-i-brace-for-impact.text": "Bewege dich 3 Felder in gerader Linie, Hindernisse ignorierend, zu einem Feld benachbart zu einem gegnerischen Helden; dieser Held wirft eine Karte ab, falls möglich.",
-    "cut-blue-i-barrage.text": "Ein gegnerischer Held im Radius, der benachbart zu einer anderen gegnerischen Einheit ist und nicht benachbart zu dir, wirft eine Karte ab, falls möglich.",
+    "cut-blue-ii-barrage.text": "Ein gegnerischer Held im Radius, der benachbart zu einer anderen gegnerischen Einheit ist und nicht benachbart zu dir, wirft eine Karte ab, falls möglich.",
     "cut-red-ii-bold-thrust.text": "**Wähle eins \u2014**\n- Vor dem Angriff: Bewege dich 1 oder 2 Felder in gerader Linie. Visiere einen Helden benachbart zu dir in Bewegungsrichtung an; +2 ::attack:: Angriff.\n- Visiere eine Einheit benachbart zu dir an.",
     "cut-green-ii-ramming-speed.text": "Bewege dich 3 oder 4 Felder in gerader Linie, Hindernisse ignorierend, zu einem Feld benachbart zu einem gegnerischen Helden; dieser Held wirft eine Karte ab, falls möglich.",
     "cut-blue-ii-x-marks-the-spot.text": "Ein gegnerischer Held im Radius **wählt eins \u2014**\n- Du platzierst diesen Helden in ein Feld im Radius.\n- Du erhältst 2 Münzen.",
