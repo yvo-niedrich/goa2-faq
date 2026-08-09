@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, nextTick, onBeforeUnmount, ref, watch } from 'vue';
 import { useAppStore } from '@/stores/app'
 import { get as getFAQs } from '@/data/faq'
 import Markdown from '../Markdown.vue';
@@ -11,27 +11,69 @@ const records = computed(() => {
     return getFAQs(appStore.currentFaqCardId);
 });
 
+const isOpen = computed(() => records.value.length > 0);
+const popupRef = ref<HTMLElement | null>(null);
+let lastFocused: HTMLElement | null = null;
+
+function onKeydown(event: KeyboardEvent) {
+    if (event.key === 'Escape') {
+        event.stopPropagation();
+        appStore.$closeFaq();
+    }
+}
+
+watch(isOpen, async (open) => {
+    if (open) {
+        lastFocused = document.activeElement as HTMLElement;
+        document.body.style.overflow = 'hidden';
+        document.addEventListener('keydown', onKeydown);
+        await nextTick();
+        popupRef.value?.focus();
+    } else {
+        document.body.style.overflow = '';
+        document.removeEventListener('keydown', onKeydown);
+        lastFocused?.focus?.();
+        lastFocused = null;
+    }
+});
+
+onBeforeUnmount(() => {
+    document.body.style.overflow = '';
+    document.removeEventListener('keydown', onKeydown);
+});
 </script>
 
 <template>
     <Teleport to="body">
-        <div v-if="records.length > 0" class="faq-overlay" @click.self="appStore.$closeFaq">
-            <div class="faq-popup">
-                <button class="close-btn" @click="appStore.$closeFaq">×</button>
-                <div class="scroll-container">
-                    <div class="faq-scroll">
-                        <div v-for="(record, id) in records" :key="id" class="faq-record">
-                            <h3 class="question">
-                                <Markdown :text="$t(record.question)" :inline="true" />
-                            </h3>
-                            <div class="answer">
-                                <Markdown :text="$t(record.answer)" />
+        <Transition name="faq">
+            <div v-if="isOpen" class="faq-overlay" @click.self="appStore.$closeFaq">
+                <div ref="popupRef" class="faq-popup" role="dialog" aria-modal="true"
+                    :aria-label="appStore.currentFaqCardName || $t('app.faq.title')" tabindex="-1">
+                    <button class="close-btn" @click="appStore.$closeFaq" :aria-label="$t('app.button.close')"
+                        :title="$t('app.button.close')">×</button>
+
+                    <div class="faq-header">
+                        <span class="faq-eyebrow">{{ $t('app.faq.title') }}</span>
+                        <span v-if="appStore.currentFaqCardName" class="faq-card-name">
+                            {{ appStore.currentFaqCardName }}
+                        </span>
+                    </div>
+
+                    <div class="scroll-container">
+                        <div class="faq-scroll">
+                            <div v-for="(record, id) in records" :key="id" class="faq-record">
+                                <h3 class="question">
+                                    <Markdown :text="$t(record.question)" :inline="true" />
+                                </h3>
+                                <div class="answer">
+                                    <Markdown :text="$t(record.answer)" />
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </Transition>
     </Teleport>
 </template>
 
@@ -70,6 +112,10 @@ const records = computed(() => {
     display: flex;
     flex-direction: column;
 
+    &:focus {
+        outline: none;
+    }
+
     .close-btn {
         position: absolute;
         top: -0.65em;
@@ -99,6 +145,32 @@ const records = computed(() => {
             color: var(--color-text);
             background-color: var(--color-background-mute);
             border: 1px solid var(--color-border-highlight);
+        }
+    }
+
+    /* names the card the entries belong to, so the popup is never context-free */
+    .faq-header {
+        flex: none;
+        display: flex;
+        flex-direction: column;
+        gap: .1em;
+        padding: 0 2em .6em 0;
+        margin-bottom: .8em;
+        border-bottom: 1px solid var(--color-border-shadow);
+
+        .faq-eyebrow {
+            font-size: .8em;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            color: var(--color-text-muted);
+            line-height: 1.2;
+        }
+
+        .faq-card-name {
+            font-family: 'ModestoPoster', serif;
+            font-size: 1.5em;
+            line-height: 1.2;
+            color: var(--color-heading-bright);
         }
     }
 
@@ -153,7 +225,28 @@ const records = computed(() => {
 
 .faq-scroll {
     overflow-y: auto;
+    overscroll-behavior: contain;
     flex: 1;
     padding-right: 0.5rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-border) transparent;
+}
+
+.faq-enter-active,
+.faq-leave-active {
+    transition: opacity .18s ease-out;
+
+    .faq-popup {
+        transition: transform .18s ease-out;
+    }
+}
+
+.faq-enter-from,
+.faq-leave-to {
+    opacity: 0;
+
+    .faq-popup {
+        transform: translateY(1.5em) scale(.97);
+    }
 }
 </style>

@@ -55,7 +55,9 @@ const columns = computed(() => props.cards.slice(0).reduce<Card[][]>(
                 :placeholder="$t('app.button.search')" />
         </div>
 
-        <div class="card-column-container">
+        <p v-if="!columns.length" class="empty-state">{{ $t('app.search.empty') }}</p>
+
+        <div v-else class="card-column-container">
             <div v-for="(column, idx) in columns" :key="idx">
                 <div v-for="card of column" :key="card.id">
                     <HeroCard :card="card" />
@@ -71,6 +73,13 @@ const columns = computed(() => props.cards.slice(0).reduce<Card[][]>(
     text-align: center;
     margin: .25em auto;
     width: 100%;
+}
+
+.empty-state {
+    text-align: center;
+    color: var(--color-text-muted);
+    font-style: italic;
+    padding: 3em 1em;
 }
 
 .card-column-container {
@@ -95,6 +104,8 @@ const columns = computed(() => props.cards.slice(0).reduce<Card[][]>(
 
     @media (max-width: 580px) {
         grid-template-columns: 1fr;
+        /* leave room for the "?!" badge that hangs off the card's top-left corner */
+        margin: 0 .75em;
 
         .hero-card-wrapper {
             margin: 1em auto;

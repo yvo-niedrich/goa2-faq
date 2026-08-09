@@ -34,6 +34,13 @@ declare interface Card {
     text: string;
 }
 
+declare interface HandCard {
+    data: Card;
+    upgrades: Card[];
+    downgrades: Card[];
+    modify: (card: Card) => boolean | void;
+}
+
 declare interface SpellbookCard extends Card {
     school:
         | 'cantrip'

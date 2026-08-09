@@ -90,6 +90,10 @@ function objectMap<T, S>(object: { [key: string]: T }, mapFn: (t: T) => S): { [k
 }
 
 const sortChoices = computed(() => objectMap(layouts, l => $translate(l.label)));
+const isEmpty = computed(() => {
+    const l = list.value;
+    return Array.isArray(l) ? l.length === 0 : Object.keys(l).length === 0;
+});
 </script>
 
 
@@ -99,7 +103,8 @@ const sortChoices = computed(() => objectMap(layouts, l => $translate(l.label)))
             <SearchInput v-model:name="filterName" v-model:choices="filterExp" v-model:sortBy="layout"
                 :options="expansions" :sortByOptions="sortChoices" :placeholder="$t('app.button.search')" />
         </div>
-        <div v-if="Array.isArray(list)" class="list">
+        <p v-if="isEmpty" class="empty-state">{{ $t('app.search.empty') }}</p>
+        <div v-else-if="Array.isArray(list)" class="list">
             <HeroIcon v-for="h of list" :key="h.id" :height="portraitHeight * (scale || 1)" :name="h.name"
                 :path="h.icon" :complexity="h.complexity" :onClick="() => onClick ? onClick(h) : false" />
         </div>
@@ -117,6 +122,13 @@ const sortChoices = computed(() => objectMap(layouts, l => $translate(l.label)))
 </template>
 
 <style lang="scss">
+.empty-state {
+    text-align: center;
+    color: var(--color-text-muted);
+    font-style: italic;
+    padding: 3em 1em;
+}
+
 .list {
     transition: .5s ease-out;
     text-align: center;

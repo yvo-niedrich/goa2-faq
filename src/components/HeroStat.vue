@@ -11,12 +11,15 @@ const props = withDefaults(defineProps<{
 
 const statValue = computed(() => Array.isArray(props.value) ? props.value[0] : props.value);
 const statPotential = computed(() => Array.isArray(props.value) ? props.value[1] : 0);
+const statLabel = computed(() => statPotential.value > statValue.value
+    ? `${statValue.value}–${statPotential.value}`
+    : `${statValue.value}`);
 </script>
 
 <template>
-    <div class="stat">
-        <div class="stat-name">{{ name }}</div>
-        <div class="stat-value">
+    <div class="stat" role="img" :aria-label="`${name}: ${statLabel}`">
+        <div class="stat-name" aria-hidden="true">{{ name }}</div>
+        <div class="stat-value" aria-hidden="true">
             <div v-for="i in max" :key="i"
                 :class="{ 'stat-bar': true, 'full': statValue >= i, 'potential': statValue < i && statPotential >= i }"
                 :data-bar="i" />
@@ -41,7 +44,7 @@ const statPotential = computed(() => Array.isArray(props.value) ? props.value[1]
             .stat-bar {
                 display: inline-block;
                 vertical-align: middle;
-                height: 55%;
+                height: 60%;
                 width: 10%;
                 margin: auto 1%;
                 border: 1px solid #000;

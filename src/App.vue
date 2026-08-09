@@ -56,35 +56,41 @@ onMounted(async () => {
     <header class="no-print">
         <nav>
             <RouterLink to="/hero">{{ $t('app.header.overview') }}</RouterLink>
-            <RouterLink to="/me" :class="{ disabled: !selectedHeroName, 'multi-line': !!selectedHeroName }">
+            <RouterLink v-if="selectedHeroName" to="/me" class="multi-line">
                 {{ $t('app.header.dashboard') }}
-                <span v-if="selectedHeroName"><br /></span>
-                <span v-if="selectedHeroName" class="selected-hero-name">{{ selectedHeroName }}</span>
+                <br />
+                <span class="selected-hero-name">{{ selectedHeroName }}</span>
             </RouterLink>
-            <RouterLink to="/settings"><img style="margin-top: .4rem;" src="@/assets/gear.svg" width="24" />
+            <span v-else class="nav-link disabled" aria-disabled="true" :title="$t('app.header.dashboard.hint')">
+                {{ $t('app.header.dashboard') }}
+            </span>
+            <RouterLink to="/settings" class="nav-icon" :aria-label="$t('app.header.settings')"
+                :title="$t('app.header.settings')">
+                <img src="@/assets/gear.svg" width="24" alt="" />
             </RouterLink>
 
-
-            <div style="position: absolute; top: 2px; right: 8px;">
+            <div class="nav-language">
                 <LanguageSwitcher />
             </div>
 
         </nav>
     </header>
 
-    <div class="content">
-        <RouterView />
+    <main class="content">
+        <div class="view">
+            <RouterView />
+        </div>
         <FaqPopup />
 
         <div class="footer no-print">
             <a :href="`${repoURL}/releases/tag/v${version_number}`">
-                Github <img src="/github-mark-white.svg" width=14 />
+                Github <img src="/github-mark-white.svg" width=14 alt="" />
             </a> &raquo;
             v{{ version_number }} &raquo;
             {{ $t('app.last-update') }}
             <TimeIndicator :date="build_date" />
         </div>
-    </div>
+    </main>
 
     <UpdateNotification />
 </template>
@@ -98,7 +104,10 @@ header {
     width: 100%;
     position: sticky;
     top: 0;
-    background: rgba(var(--color-background-soft-rgb), .8);
+    flex: none;
+    background: rgba(var(--color-background-soft-rgb), .88);
+    backdrop-filter: blur(8px) saturate(140%);
+    -webkit-backdrop-filter: blur(8px) saturate(140%);
 
     z-index: 10;
     border-bottom: 1px solid black;
@@ -122,10 +131,42 @@ header {
 
         @media (max-width: 500px) {
             text-align: left;
-            padding-left: 1em;
+            padding-left: .5em;
         }
 
-        a {
+        .nav-language {
+            position: absolute;
+            top: 2px;
+            right: 8px;
+
+            @media (max-width: 500px) {
+                right: 4px;
+            }
+        }
+
+        .nav-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 .85rem;
+
+            img {
+                opacity: .8;
+                transition: opacity .2s ease, transform .2s ease;
+            }
+
+            &:hover img,
+            &.router-link-exact-active img {
+                opacity: 1;
+            }
+
+            &:hover img {
+                transform: rotate(30deg);
+            }
+        }
+
+        a,
+        .nav-link {
             display: inline-block;
             height: 100%;
             line-height: 2rem;
@@ -134,8 +175,10 @@ header {
             vertical-align: top;
 
             &.disabled {
-                opacity: 0.5;
-                pointer-events: none;
+                color: var(--color-text-muted);
+                opacity: .7;
+                cursor: not-allowed;
+                user-select: none;
             }
 
             &.multi-line {
@@ -145,19 +188,33 @@ header {
 
             &.router-link-exact-active {
                 color: var(--color-text);
+                position: relative;
+                background-color: rgba(255, 255, 255, .04);
+            }
+
+            /* underline the active tab so the current section is obvious at a glance */
+            &.router-link-exact-active::after {
+                content: "";
+                position: absolute;
+                left: .5rem;
+                right: .5rem;
+                bottom: 0;
+                height: 2px;
+                border-radius: 2px 2px 0 0;
+                background: var(--color-text-hyperlink);
             }
 
             &.router-link-exact-active:hover {
-                background-color: transparent;
+                background-color: rgba(255, 255, 255, .04);
             }
 
-            &:first-of-type {
+            &:first-child {
                 border: 0;
             }
 
             .selected-hero-name {
                 font-size: .75em;
-
+                color: var(--color-heading-bright);
             }
         }
     }
@@ -167,6 +224,17 @@ header {
     position: relative;
     transition: 0.2s ease;
     padding: 1rem;
+
+    /* grow to fill the shell so the footer always rests at the bottom */
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+
+    .view {
+        flex: 1 0 auto;
+        min-width: 0;
+    }
 
     @media (max-width: 1280px) {
         padding: 1rem;
@@ -187,6 +255,8 @@ header {
     .footer {
         color: var(--color-border);
         text-align: right;
+        margin-top: 2rem;
+        padding-top: .5rem;
     }
 }
 

@@ -68,12 +68,24 @@ function handleClickOutside(event) {
     }
 }
 
+function handleEscape(event: KeyboardEvent) {
+    if (event.key !== 'Escape') return;
+    optionOpen.value = false;
+    sortByOpen.value = false;
+}
+
+function clearName() {
+    name.value = '';
+}
+
 onMounted(() => {
     document.addEventListener('click', handleClickOutside);
+    document.addEventListener('keydown', handleEscape);
 });
 
 onBeforeUnmount(() => {
     document.removeEventListener('click', handleClickOutside);
+    document.removeEventListener('keydown', handleEscape);
 });
 
 
@@ -85,26 +97,36 @@ onBeforeUnmount(() => {
 
             <div v-if="choices !== null && availableOptions.length" class="search-input__selector selector-left">
                 <div ref="dropdownLeftRef" class="selector">
-                    <button class="selector-button" @click="toggleChoiceVisible">
+                    <button type="button" class="selector-button" @click="toggleChoiceVisible"
+                        :aria-label="$t('app.search.filter')" :title="$t('app.search.filter')" aria-haspopup="true"
+                        :aria-expanded="optionOpen">
                         <span class="icon" :class="{ 'muted': countSelected === 0 }">
-                            <img src="@/assets/stack.svg">
+                            <img src="@/assets/stack.svg" alt="">
                         </span>
-                        <span class="label">{{ countSelected || '\xA0' }}</span>
-                        <span class="chevron">▾</span>
+                        <span class="label" :class="{ 'count-badge': countSelected > 0 }">{{ countSelected || '\xA0'
+                            }}</span>
+                        <span class="chevron" aria-hidden="true">▾</span>
                     </button>
 
                     <div v-if="optionOpen" class="dropdown">
-                        <button v-for="exp in availableOptions" :key="exp" class="dropdown-item"
-                            :class="{ 'active': choices.includes(exp) }" @click="selectChoice(exp)">
+                        <button type="button" v-for="exp in availableOptions" :key="exp" class="dropdown-item"
+                            :class="{ 'active': choices.includes(exp) }" :aria-pressed="choices.includes(exp)"
+                            @click="selectChoice(exp)">
+                            <span class="check" aria-hidden="true">{{ choices.includes(exp) ? '✓' : '\xA0' }}</span>
                             <span class="label">{{ getChoiceLabel(exp) }}</span>
                         </button>
                     </div>
                 </div>
             </div>
 
-            <input type="text" v-model="name" class="search-input__field" :placeholder="placeholder ?? 'Search...'" />
+            <input type="search" v-model="name" class="search-input__field" :aria-label="placeholder ?? 'Search...'"
+                :placeholder="placeholder ?? 'Search...'" />
 
-            <svg class="search-input__icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <button v-if="name" type="button" class="search-input__clear" @click="clearName"
+                :aria-label="$t('app.button.close')" :title="$t('app.button.close')">×</button>
+
+            <svg v-else class="search-input__icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                aria-hidden="true">
                 <path
                     d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
                     fill="currentColor" stroke="currentColor" />
@@ -112,7 +134,9 @@ onBeforeUnmount(() => {
 
             <div v-if="sortBy !== null" class="search-input__selector selector-right">
                 <div ref="dropdownSortByRef" class="selector">
-                    <button class="selector-button" @click="togglesortByVisible">
+                    <button type="button" class="selector-button" @click="togglesortByVisible"
+                        :aria-label="$t('app.search.sort')" :title="$t('app.search.sort')" aria-haspopup="true"
+                        :aria-expanded="sortByOpen">
                         <span class="chevron">
                             <svg height="18px" viewBox="5.5 1 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -128,8 +152,9 @@ onBeforeUnmount(() => {
                     </button>
 
                     <div v-if="sortByOpen" class="dropdown">
-                        <button v-for="l in availableSortByOptions" :key="l" class="dropdown-item"
-                            :class="{ 'active': sortBy === l }" @click="selectsortBy(l)">
+                        <button type="button" v-for="l in availableSortByOptions" :key="l" class="dropdown-item"
+                            :class="{ 'active': sortBy === l }" :aria-pressed="sortBy === l" @click="selectsortBy(l)">
+                            <span class="check" aria-hidden="true">{{ sortBy === l ? '✓' : '\xA0' }}</span>
                             <span class="label">{{ getSortLabel(l) }}</span>
                         </button>
                     </div>
@@ -176,6 +201,10 @@ onBeforeUnmount(() => {
         }
     }
 
+    &__field::-webkit-search-cancel-button {
+        display: none;
+    }
+
     &__icon {
         position: absolute;
         left: auto;
@@ -188,8 +217,43 @@ onBeforeUnmount(() => {
         pointer-events: none;
     }
 
-    &.has-sortby &__icon {
+    /* one-tap way out of a search that returned nothing */
+    &__clear {
+        position: absolute;
+        right: 0.35em;
+        top: 50%;
+        transform: translateY(-50%);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 1.6em;
+        height: 1.6em;
+        padding: 0 0 .1em 0;
+
+        border: 0;
+        border-radius: 50%;
+        background: #e3e3e3;
+        color: #333;
+        font-size: 1.1em;
+        line-height: 1;
+        cursor: pointer;
+        transition: .15s ease;
+
+        &:hover {
+            background: #c9c9c9;
+            color: #000;
+        }
+    }
+
+    &.has-sortby &__icon,
+    &.has-sortby &__clear {
         right: 2.75em;
+    }
+
+    &.has-sortby &__clear {
+        right: 2.6em;
     }
 
     &__selector {
@@ -299,6 +363,14 @@ onBeforeUnmount(() => {
             background-color: var(--color-background-soft);
         }
 
+        .dropdown-item .check {
+            flex: none;
+            width: 1em;
+            text-align: center;
+            color: var(--color-text-hyperlink);
+            font-weight: bold;
+        }
+
         .icon {
 
             &.muted {
@@ -313,6 +385,22 @@ onBeforeUnmount(() => {
 
         .label {
             font-size: 0.95em;
+        }
+
+        /* make an active filter count read as a badge, not stray text */
+        .label.count-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 1.5em;
+            height: 1.5em;
+            padding: 0 .35em;
+            border-radius: 1em;
+            background: var(--color-background-highlight);
+            color: #fff;
+            font-size: .8em;
+            font-weight: bold;
+            line-height: 1;
         }
 
         .chevron {
