@@ -25,6 +25,7 @@ export function applicationTranslations(): TranslationMap {
         'app.hero.favorite.add': 'Use this hero on my dashboard',
         'app.hero.favorite.remove': 'Remove from my dashboard',
         'app.hero.reset': 'Reset to starting cards',
+        'app.hero.about': 'Lore & tips',
         'app.search.filter': 'Filter',
         'app.search.sort': 'Sort',
         'app.search.empty': 'Nothing matches your search.',

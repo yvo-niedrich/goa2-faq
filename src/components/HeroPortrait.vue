@@ -3,10 +3,12 @@ import { useViewport } from '@/viewport';
 import { computed } from 'vue';
 import HeroStat from './HeroStat.vue';
 import HeroIcon from './icons/HeroIcon.vue';
-import Markdown from './Markdown.vue';
+import HeroDescription from './HeroDescription.vue';
+import CollapsibleSection from './CollapsibleSection.vue';
 
 const props = defineProps<{ hero: Hero; portraitMin?: number; level?: number }>();
-const { isTablet, isDesktop, isMobileHorizontal, isMobileVertical } = useViewport();
+const { isMobile, isTablet, isDesktop, isMobileHorizontal, isMobileVertical } = useViewport();
+const hasDescription = computed(() => props.hero.hasAdvice || props.hero.hasLore);
 const portraitHeight = computed(() => Math.max(props.portraitMin ?? 0, (() => {
     if (isDesktop.value) return 350;
     if (isTablet.value) return 300;
@@ -34,12 +36,15 @@ const portraitHeight = computed(() => Math.max(props.portraitMin ?? 0, (() => {
                 <HeroStat :name="$t('app.stat.initiative')" :value="hero.stats.initiative" />
                 <HeroStat :name="$t('app.stat.movement')" :value="hero.stats.movement" />
             </div>
-            <div class="hero-description" v-if="(isDesktop || isTablet) && (hero.hasAdvice || hero.hasLore)">
-                <Markdown v-if="hero.hasLore" :text="$t(hero.id + '.lore')" class="hero-lore" />
-                <hr v-if="hero.hasAdvice && hero.hasLore" />
-                <Markdown v-if="hero.hasAdvice" :text="$t(hero.id + '.advice')" class="hero-advice" />
+            <div class="hero-description" v-if="(isDesktop || isTablet) && hasDescription">
+                <HeroDescription :hero="hero" />
             </div>
         </div>
+
+        <CollapsibleSection v-if="isMobile && hasDescription" class="hero-description-collapsible"
+            :title="$t('app.hero.about')">
+            <HeroDescription :hero="hero" />
+        </CollapsibleSection>
     </div>
 </template>
 
@@ -160,6 +165,25 @@ const portraitHeight = computed(() => Math.max(props.portraitMin ?? 0, (() => {
         @media (max-width: 720px) {
             grid-template-columns: 1fr;
             margin: .5em .25em;
+        }
+    }
+
+    .hero-description-collapsible {
+        /* sits under both the portrait and the stats */
+        grid-column: 1 / -1;
+        margin-top: .75em;
+
+        hr {
+            width: 95%;
+            border: 0;
+            height: 2px;
+            margin: .75em auto;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+        }
+
+        .hero-advice ul {
+            margin: 0;
+            padding-left: 1.2em;
         }
     }
 

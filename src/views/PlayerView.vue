@@ -5,6 +5,7 @@ import router from '@/router';
 
 import CardCarousel from '@/components/CardCarousel.vue';
 import HeroPortrait from '@/components/HeroPortrait.vue';
+import HeroActionButton from '@/components/HeroActionButton.vue';
 import CardColorColumns from '@/components/CardColorColumns.vue';
 import { get } from '@/data/heroes';
 import { sortCardsByTier, sortCardTiers } from '@/helper/cards';
@@ -69,10 +70,8 @@ const heroLevel = computed(() => cards.value.reduce((agg, card) => agg + tierToL
     <div>
         <HeroPortrait :hero="hero" :level="heroLevel">
             <template v-slot:actions>
-                <button v-if="heroLevel > 1" type="button" class="btn-reset active" @click="store.resetCards"
-                    :title="$t('app.hero.reset')" :aria-label="$t('app.hero.reset')">&#x27F3;</button>
-                <button v-else type="button" class="btn-reset inactive" disabled
-                    :aria-label="$t('app.hero.reset')">&#x27F3;</button>
+                <HeroActionButton icon="reset" :label="$t('app.hero.reset')" :disabled="heroLevel <= 1"
+                    @click="store.resetCards" />
             </template>
         </HeroPortrait>
 
@@ -96,52 +95,4 @@ const heroLevel = computed(() => cards.value.reduce((agg, card) => agg + tierToL
     padding: .5em 1em;
 }
 
-.btn-reset {
-    position: absolute;
-    top: .05em;
-    left: .15em;
-    text-decoration: none;
-    background: var(--color-background-highlight);
-    color: #fff;
-    overflow: hidden;
-    padding: 0;
-    font-family: inherit;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    border: 1px solid rgba(0, 0, 0, 0.75);
-    box-shadow: 0 1px 3px 1px #000;
-    transition: .5s ease-out;
-    z-index: 10;
-    cursor: pointer;
-    text-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
-
-    font-size: 1.35em;
-    width: 1.1em;
-    height: 1.1em;
-    font-weight: bold;
-    border-radius: 1em;
-    line-height: 0.75;
-
-    padding-bottom: .175em;
-
-    &.active {
-        opacity: 0.9;
-        background: var(--color-background-softer);
-        text-shadow: 0 0 3px rgba(0, 0, 0, 1);
-
-        &:hover {
-            color: rgb(190, 190, 190);
-        }
-    }
-
-    &:not(.active):hover {
-        background: #50a0ce;
-    }
-
-    &.inactive {
-        opacity: 0.3;
-    }
-}
 </style>

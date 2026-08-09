@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import HeroPortrait from './HeroPortrait.vue';
+import HeroActionButton from './HeroActionButton.vue';
 import CardColorColumns from './CardColorColumns.vue';
 import { useCompanionStore } from '@/stores/companion';
 import router from '@/router';
@@ -34,12 +35,9 @@ const spellbook = computed(() => props.hero.spellbook);
 
         <HeroPortrait :hero="hero">
             <template v-slot:actions>
-                <button v-if="isFavorite" type="button" class="btn-favorite active" @click="unsetFavorite"
-                    :title="$t('app.hero.favorite.remove')" :aria-label="$t('app.hero.favorite.remove')"
-                    aria-pressed="true">♥</button>
-                <button v-else type="button" class="btn-favorite inactive" @click="() => setFavorite(hero)"
-                    :title="$t('app.hero.favorite.add')" :aria-label="$t('app.hero.favorite.add')"
-                    aria-pressed="false">♥</button>
+                <HeroActionButton icon="favorite" :active="isFavorite"
+                    :label="$t(isFavorite ? 'app.hero.favorite.remove' : 'app.hero.favorite.add')"
+                    @click="isFavorite ? unsetFavorite() : setFavorite(hero)" />
             </template>
         </HeroPortrait>
 
@@ -97,47 +95,4 @@ const spellbook = computed(() => props.hero.spellbook);
     padding: .5em 1em;
 }
 
-.btn-favorite {
-    position: absolute;
-    top: .05em;
-    left: .15em;
-    text-decoration: none;
-    background: var(--color-background-highlight);
-    color: #fff;
-    overflow: hidden;
-    padding: 0;
-    font-family: inherit;
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    border: 1px solid rgba(0, 0, 0, 0.75);
-    box-shadow: 0 1px 3px 1px #000;
-    transition: .5s ease-out;
-    z-index: 10;
-    cursor: pointer;
-    text-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
-
-    font-size: 1.35em;
-    width: 1.1em;
-    height: 1.1em;
-    font-weight: bold;
-    line-height: 0.75em;
-    border-radius: 1em;
-
-    &.active {
-        background: var(--color-background-softer);
-        color: rgb(253, 40, 40);
-        text-shadow: 0 0 3px rgba(0, 0, 0, 1);
-    }
-
-    &:hover {
-        color: rgb(255, 90, 90);
-    }
-
-    &:not(.active):hover {
-        background: #50a0ce;
-    }
-}
 </style>

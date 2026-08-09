@@ -72,8 +72,9 @@ function handleClick() {
 
     .icon-container-left {
         position: absolute;
-        top: 2px;
-        left: 22.5%;
+        top: 4px;
+        left: 23.5%;
+        line-height: 0;
     }
 
     .name-overlay,

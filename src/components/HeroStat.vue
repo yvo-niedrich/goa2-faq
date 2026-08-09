@@ -44,7 +44,7 @@ const statLabel = computed(() => statPotential.value > statValue.value
             .stat-bar {
                 display: inline-block;
                 vertical-align: middle;
-                height: 55%;
+                height: 60%;
                 width: 10%;
                 margin: auto 1%;
                 border: 1px solid #000;
