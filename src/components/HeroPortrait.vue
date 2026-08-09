@@ -34,18 +34,10 @@ const portraitHeight = computed(() => Math.max(props.portraitMin ?? 0, (() => {
                 <HeroStat :name="$t('app.stat.initiative')" :value="hero.stats.initiative" />
                 <HeroStat :name="$t('app.stat.movement')" :value="hero.stats.movement" />
             </div>
-            <div class="hero-description" v-if="isDesktop || isTablet">
-                <template v-if="hero.hasAdvice || hero.hasLore">
-                    <Markdown v-if="hero.hasLore" :text="$t(hero.id + '.lore')" class="hero-lore" />
-                    <hr v-if="hero.hasAdvice && hero.hasLore" />
-                    <Markdown v-if="hero.hasAdvice" :text="$t(hero.id + '.advice')" class="hero-advice" />
-                </template>
-                <template v-else>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse harum officia deserunt velit
-                    voluptates nisi magnam,
-                    veritatis consequatur in qui, quibusdam fugit accusantium commodi praesentium provident sunt eum
-                    eaque optio.
-                </template>
+            <div class="hero-description" v-if="(isDesktop || isTablet) && (hero.hasAdvice || hero.hasLore)">
+                <Markdown v-if="hero.hasLore" :text="$t(hero.id + '.lore')" class="hero-lore" />
+                <hr v-if="hero.hasAdvice && hero.hasLore" />
+                <Markdown v-if="hero.hasAdvice" :text="$t(hero.id + '.advice')" class="hero-advice" />
             </div>
         </div>
     </div>
@@ -82,16 +74,20 @@ const portraitHeight = computed(() => Math.max(props.portraitMin ?? 0, (() => {
         }
 
         .hero-class {
-            color: var(--color-text-highlight);
+            /* sits on the light-blue panel, so it needs weight and a shadow to stay legible */
+            color: var(--color-heading-bright);
             font-style: italic;
-            font-weight: 200;
+            font-weight: 400;
             padding-left: .75em;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, .85);
         }
 
         .hero-level {
             padding-left: 1em;
             font-weight: bold;
             font-size: .6em;
+            color: var(--color-heading-bright);
+            text-shadow: 0 1px 3px rgba(0, 0, 0, .85);
 
             text-align: right;
 
@@ -111,9 +107,16 @@ const portraitHeight = computed(() => Math.max(props.portraitMin ?? 0, (() => {
         .hero-expansion {
             position: absolute;
             right: 0;
-            font-size: .65em;
-            color: var(--color-text-muted);
-            opacity: .5;
+            bottom: .35em;
+            font-size: .7em;
+            line-height: 1.5;
+            letter-spacing: .04em;
+            text-transform: uppercase;
+            color: var(--color-text);
+            background: rgba(0, 0, 0, .35);
+            border: 1px solid rgba(255, 255, 255, .18);
+            border-radius: 1em;
+            padding: 0 .75em;
         }
 
         .hero-complexity {

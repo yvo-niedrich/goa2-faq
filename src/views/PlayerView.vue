@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref, watch } from 'vue';
+import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue';
 import { Carousel, Slide, Navigation } from 'vue3-carousel';
 import 'vue3-carousel/dist/carousel.css';
 
@@ -92,21 +92,76 @@ function setNewCard(cards: Card[], select: CardFn) {
     choice.value = { cards, select };
 }
 
+/**
+ * The edge fades have to follow what is actually clipped, not the focus index:
+ * with a fractional items-to-show the last slide still overflows the viewport
+ * once the carousel has reached its final snap position.
+ */
+const carouselWrapper = ref<HTMLElement | null>(null);
+const edgeClip = ref({ left: 0, right: 0 });
+
+function measureEdges() {
+    const root = carouselWrapper.value;
+    const viewport = root?.querySelector('.carousel__viewport');
+    if (!viewport) return;
+
+    const v = viewport.getBoundingClientRect();
+    let left = 0;
+    let right = 0;
+
+    for (const slide of root!.querySelectorAll('.carousel__slide')) {
+        const s = slide.getBoundingClientRect();
+        // only slides that are partially on screen can be clipped by an edge
+        if (s.right <= v.left + 1 || s.left >= v.right - 1) continue;
+        left = Math.max(left, v.left - s.left);
+        right = Math.max(right, s.right - v.right);
+    }
+
+    edgeClip.value = { left: Math.max(0, Math.round(left)), right: Math.max(0, Math.round(right)) };
+}
+
+let settleUntil = 0;
+let frame = 0;
+
+/** Keep measuring while the slide transition is still running. */
+function trackEdges(duration = 600) {
+    settleUntil = performance.now() + duration;
+    if (frame) return;
+
+    const step = () => {
+        measureEdges();
+        frame = performance.now() < settleUntil ? requestAnimationFrame(step) : 0;
+    };
+    frame = requestAnimationFrame(step);
+}
+
+function maskWidth(clip: number) {
+    return `${Math.min(Math.max(clip * 2.5, 48), 176)}px`;
+}
+
+watch(() => [store.focus, viewport.width.value], () => trackEdges());
+onMounted(() => trackEdges(1200));
+onBeforeUnmount(() => {
+    if (frame) cancelAnimationFrame(frame);
+});
+
 </script>
 
 <template>
     <div>
         <HeroPortrait :hero="hero" :level="heroLevel">
             <template v-slot:actions>
-                <div v-if="heroLevel > 1" class="btn-reset active" @click="store.resetCards">&#x27F3;</div>
-                <div v-else class="btn-reset inactive">&#x27F3;</div>
+                <button v-if="heroLevel > 1" type="button" class="btn-reset active" @click="store.resetCards"
+                    :title="$t('app.hero.reset')" :aria-label="$t('app.hero.reset')">&#x27F3;</button>
+                <button v-else type="button" class="btn-reset inactive" disabled
+                    :aria-label="$t('app.hero.reset')">&#x27F3;</button>
             </template>
         </HeroPortrait>
 
         <CardSelectPopup v-if="choice?.cards" :cards="choice.cards" :select="choice.select"
             :close="() => choice = null" />
 
-        <div class="carousel-wrapper">
+        <div class="carousel-wrapper" ref="carouselWrapper">
             <Carousel :items-to-show="visibleCount" :model-value="store.focus"
                 @update:modelValue="val => store.focus = Math.min(val, navigableSlides)" :wrap-around="false"
                 snap-align="center-even" :breakpoints="{
@@ -118,23 +173,26 @@ function setNewCard(cards: Card[], select: CardFn) {
                 <template #addons>
                     <Navigation>
                         <template #prev>
-                            <button class="nav-button prev" :class="{ disabled: isAtStart }"
-                                :disabled="isAtStart">&laquo;</button>
+                            <button class="nav-button prev" :class="{ disabled: isAtStart }" :disabled="isAtStart"
+                                :aria-label="$t('app.card.previous')" :title="$t('app.card.previous')">&laquo;</button>
                         </template>
                         <template #next>
-                            <button class="nav-button next" :class="{ disabled: isAtEnd }"
-                                :disabled="isAtEnd">&raquo;</button>
+                            <button class="nav-button next" :class="{ disabled: isAtEnd }" :disabled="isAtEnd"
+                                :aria-label="$t('app.card.next')" :title="$t('app.card.next')">&raquo;</button>
                         </template>
                     </Navigation>
 
                     <div class="custom-pagination">
-                        <button v-for="(card, index) in cards" :key="index" class="pagination-bullet"
+                        <button v-for="(card, index) in cards" :key="index" type="button" class="pagination-bullet"
                             :class="[`color-${card.data.color}`, { active: index === store.focus }]"
-                            @click="store.focus = index" aria-label="Go to slide" />
+                            @click="store.focus = index" :aria-label="card.data.name" :title="card.data.name"
+                            :aria-current="index === store.focus" />
                     </div>
 
-                    <div class="carousel-mask left" :class="{ 'hidden': isAtStart }" />
-                    <div class="carousel-mask right" :class="{ 'hidden': isAtEnd }" />
+                    <div class="carousel-mask left" :class="{ 'hidden': edgeClip.left < 4 }"
+                        :style="{ width: maskWidth(edgeClip.left) }" />
+                    <div class="carousel-mask right" :class="{ 'hidden': edgeClip.right < 4 }"
+                        :style="{ width: maskWidth(edgeClip.right) }" />
                 </template>
 
                 <Slide v-for="(card, index) in cards" :key="index" class="slide" :class="{
@@ -144,8 +202,11 @@ function setNewCard(cards: Card[], select: CardFn) {
                 }">
                     <div class="slide-card-container">
 
-                        <div class="card-modification upgrade" :class="{ 'disabled': card.upgrades.length === 0 }"
-                            :title="$t('app.card.upgrade')" @click="() => setNewCard(card.upgrades, card.modify)">
+                        <button type="button" class="card-modification upgrade"
+                            :class="{ 'disabled': card.upgrades.length === 0 }"
+                            :disabled="card.upgrades.length === 0" :title="$t('app.card.upgrade')"
+                            :aria-label="`${$t('app.card.upgrade')}: ${card.data.name}`"
+                            @click="() => setNewCard(card.upgrades, card.modify)">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="5 5 12 12"
                                 fill="none">
                                 <path d="M6 16L12 10L18 16" stroke="currentColor" stroke-width="2"
@@ -153,10 +214,13 @@ function setNewCard(cards: Card[], select: CardFn) {
                                 <path d="M6 12L12 6L18 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                     stroke-linejoin="round" />
                             </svg>
-                        </div>
+                        </button>
 
-                        <div class="card-modification downgrade" :class="{ 'disabled': card.downgrades.length === 0 }"
-                            :title="$t('app.card.downgrade')" @click="() => setNewCard(card.downgrades, card.modify)">
+                        <button type="button" class="card-modification downgrade"
+                            :class="{ 'disabled': card.downgrades.length === 0 }"
+                            :disabled="card.downgrades.length === 0" :title="$t('app.card.downgrade')"
+                            :aria-label="`${$t('app.card.downgrade')}: ${card.data.name}`"
+                            @click="() => setNewCard(card.downgrades, card.modify)">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12" viewBox="5 7 12 12"
                                 fill="none">
                                 <path d="M6 8L12 14L18 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -164,7 +228,7 @@ function setNewCard(cards: Card[], select: CardFn) {
                                 <path d="M6 12L12 18L18 12" stroke="currentColor" stroke-width="2"
                                     stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                        </div>
+                        </button>
 
                         <HeroCard class="card" :card="card.data" />
                     </div>
@@ -243,9 +307,16 @@ function setNewCard(cards: Card[], select: CardFn) {
         display: none;
     }
 
+    /* width is bound inline: it tracks how much of the edge slide is actually clipped */
+    width: 12em;
+
     &.left {
         left: 0;
-        background: linear-gradient(to right, rgba(var(--color-background-soft-rgb), 0.9), transparent);
+        background: linear-gradient(to right,
+                rgb(var(--color-background-soft-rgb)) 0%,
+                rgb(var(--color-background-soft-rgb)) 25%,
+                rgba(var(--color-background-soft-rgb), .6) 55%,
+                transparent 100%);
 
         @media (max-width: 480px) {
             opacity: 0;
@@ -254,7 +325,11 @@ function setNewCard(cards: Card[], select: CardFn) {
 
     &.right {
         right: 0;
-        background: linear-gradient(to left, rgba(var(--color-background-soft-rgb), 0.9), transparent);
+        background: linear-gradient(to left,
+                rgb(var(--color-background-soft-rgb)) 0%,
+                rgb(var(--color-background-soft-rgb)) 25%,
+                rgba(var(--color-background-soft-rgb), .6) 55%,
+                transparent 100%);
 
         @media (max-width: 480px) {
             opacity: 0;
@@ -267,44 +342,55 @@ function setNewCard(cards: Card[], select: CardFn) {
 }
 
 .nav-button {
-    transition: .5s ease-out;
+    transition: .25s ease-out;
 
     position: absolute;
     top: 40%;
-    transform: translateY(-50%) scaleY(2);
-    background: none;
-    border: none;
+    transform: translateY(-50%);
+
+    /* readable, thumb-sized controls instead of near-invisible dark glyphs */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 2.4rem;
+    height: 4.5rem;
+    padding: 0;
+
+    border: 1px solid var(--color-border);
+    border-radius: .5rem;
+    background: rgba(var(--color-background-rgb), .75);
+
     font-size: 2rem;
     font-weight: 800;
+    line-height: 1;
     cursor: pointer;
-    color: var(--color-text-dark);
-    text-shadow: 0 0 1px #666;
+    color: var(--color-heading-bright);
+    text-shadow: 0 1px 2px #000;
     z-index: 10;
-    border-radius: .4rem;
-    padding: 2.25rem .25rem;
 
+    @media (max-width: 480px) {
+        width: 2rem;
+        height: 3.5rem;
+        font-size: 1.6rem;
+    }
 
     &.prev {
         left: -2.15rem;
-        background: linear-gradient(to right, rgba(var(--color-heading-bright-rgb), .4), transparent);
-        background-position: -1em;
-        background-repeat: no-repeat;
     }
 
     &.next {
         right: -2.15rem;
-        background: linear-gradient(to left, rgba(var(--color-heading-bright-rgb), .4), transparent);
-        background-position: 1em;
-        background-repeat: no-repeat;
     }
 
-    &.prev:hover,
-    &.next:hover {
-        background-position: 0;
+    &:hover {
+        background: rgba(var(--color-background-highlight-rgb), .85);
+        border-color: var(--color-border-highlight);
+        color: #fff;
     }
 
     &.disabled {
-        opacity: 0.3;
+        opacity: 0.25;
         pointer-events: none;
     }
 }
@@ -337,21 +423,29 @@ function setNewCard(cards: Card[], select: CardFn) {
     }
 
     .pagination-bullet {
-        height: 1.5em;
+        height: 1.75em;
 
         width: 18%;
 
         max-width: 10em;
         border-radius: .35em;
-        opacity: 0.9;
+        opacity: 0.55;
         cursor: pointer;
         border: 1px solid var(--color-border);
         transition: all 0.2s ease-in-out;
 
+        &:hover {
+            opacity: .85;
+        }
+
+        /* the selected colour reads as raised and fully saturated */
         &.active {
             opacity: 1;
-            border: 1px solid var(--color-border-dark);
-            box-shadow: 0 0 3px #000;
+            border: 1px solid #000;
+            box-shadow:
+                0 0 0 1px var(--color-border-highlight),
+                0 2px 6px rgba(0, 0, 0, .7);
+            transform: translateY(-2px);
         }
 
         &.color-y {
@@ -401,7 +495,10 @@ function setNewCard(cards: Card[], select: CardFn) {
         cursor: pointer;
         height: 2rem;
 
-        opacity: .5;
+        padding: 0;
+        border: 0;
+        color: var(--color-text);
+        opacity: .7;
 
         &>* {
             vertical-align: text-bottom;
@@ -479,6 +576,8 @@ function setNewCard(cards: Card[], select: CardFn) {
     background: var(--color-background-highlight);
     color: #fff;
     overflow: hidden;
+    padding: 0;
+    font-family: inherit;
     display: inline-flex;
     align-items: center;
     justify-content: center;

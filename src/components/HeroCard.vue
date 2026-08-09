@@ -10,7 +10,7 @@ const hasFaq = computed(() => countFaq(props.card.id) > 0)
 
 function showFAQs() {
     if (hasFaq.value) {
-        useAppStore().$showFaq(props.card.id)
+        useAppStore().$showFaq(props.card.id, props.card.name)
     }
 }
 
@@ -34,7 +34,10 @@ function processCardType(type: Card['type']) {
 
 <template>
     <div class="hero-card-wrapper" :class="{ [`hero-card-color-${card.color}`]: true, 'has-faq': hasFaq }"
-        @click="showFAQs()">
+        @click="showFAQs()" @keydown.enter.prevent="showFAQs()" @keydown.space.prevent="showFAQs()"
+        :role="hasFaq ? 'button' : undefined" :tabindex="hasFaq ? 0 : undefined"
+        :title="hasFaq ? $t('app.faq.hint') : undefined"
+        :aria-label="hasFaq ? `${card.name} — ${$t('app.faq.hint')}` : undefined">
         <div class="hero-card-name">{{ card.name }}</div>
         <div v-if="card.tier" class="hero-card-tier">{{ card.tier }}</div>
         <div class="hero-card-type">
@@ -95,23 +98,43 @@ function processCardType(type: Card['type']) {
             top: -0.5em;
             left: -0.5em;
 
-            background-color: rgba(255, 169, 31, 0.75);
-            color: var(--color-text);
-            text-shadow: 0 0 1px rgb(95, 59, 0);
+            background-color: rgba(255, 169, 31, 0.85);
+            color: var(--color-heading-dark);
+            text-shadow: none;
 
             font-weight: bold;
             font-size: 1em;
             padding: 0.25em 0.4em 0.3em 0.4em;
             border-radius: 50%;
-            box-shadow: 0 0 2px rgba(0, 0, 0, 0.75);
+            box-shadow:
+                0 0 0 2px rgba(0, 0, 0, .55),
+                0 2px 5px rgba(0, 0, 0, 0.6);
             z-index: 1;
             line-height: 1;
+            transition: .2s ease;
         }
 
         &:active::before,
-        &:hover::before {
-            background-color: rgba(243, 156, 18, 1);
-            box-shadow: 0 0 2px rgba(0, 0, 0, 1);
+        &:hover::before,
+        &:focus-visible::before {
+            background-color: rgb(255, 190, 70);
+            transform: scale(1.12);
+            box-shadow:
+                0 0 0 2px rgba(0, 0, 0, .7),
+                0 3px 8px rgba(0, 0, 0, 0.8);
+        }
+
+        /* lifting on hover signals the whole card is the hit target */
+        @media (hover: hover) {
+            &:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 6px 14px rgba(0, 0, 0, .45);
+            }
+        }
+
+        &:focus-visible {
+            outline: 2px solid rgb(255, 190, 70);
+            outline-offset: 3px;
         }
     }
 

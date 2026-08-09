@@ -4,6 +4,7 @@ import HeroPortrait from './HeroPortrait.vue';
 import CardColorColumns from './CardColorColumns.vue';
 import { useCompanionStore } from '@/stores/companion';
 import router from '@/router';
+import { RouterLink } from 'vue-router';
 
 const props = defineProps<{ hero: Hero; }>();
 const store = useCompanionStore();
@@ -26,10 +27,19 @@ const spellbook = computed(() => props.hero.spellbook);
 
 <template>
     <div>
+        <RouterLink :to="{ name: 'heroes' }" class="btn-back no-print">
+            <span class="btn-back__arrow" aria-hidden="true">&#x2190;</span>
+            {{ $t('app.button.back') }}
+        </RouterLink>
+
         <HeroPortrait :hero="hero">
             <template v-slot:actions>
-                <div v-if="isFavorite" class="btn-favorite active" @click="unsetFavorite">♥</div>
-                <div v-else class="btn-favorite inactive" @click="() => setFavorite(hero)">♥</div>
+                <button v-if="isFavorite" type="button" class="btn-favorite active" @click="unsetFavorite"
+                    :title="$t('app.hero.favorite.remove')" :aria-label="$t('app.hero.favorite.remove')"
+                    aria-pressed="true">♥</button>
+                <button v-else type="button" class="btn-favorite inactive" @click="() => setFavorite(hero)"
+                    :title="$t('app.hero.favorite.add')" :aria-label="$t('app.hero.favorite.add')"
+                    aria-pressed="false">♥</button>
             </template>
         </HeroPortrait>
 
@@ -42,6 +52,40 @@ const spellbook = computed(() => props.hero.spellbook);
 </template>
 
 <style lang="scss">
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: .4em;
+
+    margin: 0 0 .5em .25em;
+    padding: .35em .9em .35em .7em;
+
+    color: var(--color-text-muted);
+    background: var(--color-background-mute);
+    border: 1px solid var(--color-border-shadow);
+    border-radius: 2em;
+    font-size: .95em;
+    line-height: 1.4;
+
+    transition: .2s ease;
+
+    .btn-back__arrow {
+        transition: transform .2s ease;
+        font-size: 1.1em;
+        line-height: 1;
+    }
+
+    &:hover {
+        color: var(--color-text);
+        background: var(--color-background-softer);
+        border-color: var(--color-border-hover);
+
+        .btn-back__arrow {
+            transform: translateX(-3px);
+        }
+    }
+}
+
 .spellbook-container {
     transition: .25s ease-out;
     background: linear-gradient(0deg, var(--color-background-mute) 0%, var(--color-background-highlight) 70%);
@@ -61,6 +105,8 @@ const spellbook = computed(() => props.hero.spellbook);
     background: var(--color-background-highlight);
     color: #fff;
     overflow: hidden;
+    padding: 0;
+    font-family: inherit;
 
     display: inline-flex;
     align-items: center;
