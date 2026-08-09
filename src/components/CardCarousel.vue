@@ -147,15 +147,15 @@ function setNewCard(cards: Card[], select: HandCard['modify']) {
 .carousel {
     width: 100%;
     margin: 0 auto;
-    padding: 1rem 0 0 0;
+    padding: .75rem 0 0 0;
 
 
     @media (max-width: 750px) {
-        padding-top: 1rem;
+        padding-top: .5rem;
     }
 
     @media (max-width: 480px) {
-        padding-top: .5rem;
+        padding-top: .25rem;
     }
 }
 
@@ -238,12 +238,12 @@ function setNewCard(cards: Card[], select: HandCard['modify']) {
 
 
     @media (max-width: 750px) {
-        margin: 1.15rem 1.5rem;
+        margin: 1rem 1.5rem;
     }
 
 
     @media (max-width: 480px) {
-        margin: 1rem;
+        margin: .25rem 1rem 0 1rem;
     }
 
     .pagination-bullet {
