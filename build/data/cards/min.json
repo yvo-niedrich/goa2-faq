@@ -23,7 +23,7 @@
         "color": "silver",
         "type": "basic skill",
         "tier": null,
-        "text": "Place the ::token_smoke_bomb:: smoke bomb token in radius;\nenemy heroes cannot target another you or another unit if the Smoke bomb token is on a straight line between that enemy hero and their target.",
+        "text": "Place the ::token_smoke_bomb:: smoke bomb token in radius;\nenemy heroes cannot target you or another unit if the Smoke bomb token is on a straight line between that enemy hero and their target.",
         "alternative": false
     },
     {
