@@ -269,8 +269,7 @@ function setNewCard(cards: Card[], select: HandCard['modify']) {
             box-shadow:
                 0 0 0 1px var(--color-border-highlight),
                 0 2px 6px rgba(0, 0, 0, .7);
-            transform: translateY(-2px);
-        }
+                transform: translateY(-1px);        }
 
         &.color-y {
             background-color: var(--color-card-y-primary);

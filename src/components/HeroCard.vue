@@ -131,7 +131,7 @@ function processCardType(type: Card['type']) {
         /* lifting on hover signals the whole card is the hit target */
         @media (hover: hover) {
             &:hover {
-                transform: translateY(-2px);
+                transform: translateY(-1px);
                 box-shadow: 0 6px 14px rgba(0, 0, 0, .45);
             }
         }
