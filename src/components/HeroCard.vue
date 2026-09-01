@@ -66,10 +66,6 @@ function processCardType(type: Card['type']) {
     max-width: 480px;
     min-width: 275px;
 
-    @media (max-width: 400px) {
-        min-width: 0;
-    }
-
     border-radius: 1em;
     border: 1px solid #000;
 
@@ -83,6 +79,10 @@ function processCardType(type: Card['type']) {
 
     padding: 1em .75em;
     margin: 0.75em 0.5em;
+
+    @media (max-width: 400px) {
+        min-width: 0;
+    }
 
     @media (max-width: 1280px) {
         padding: 0.75em 1em;
