@@ -106,8 +106,13 @@ Three main views (see `src/router/index.ts`):
 
 ### Translation Workflow
 - English (`en`) is the source language in `public/locales/en.json`
-- Build process generates `{locale}.missing.json` files showing untranslated keys
-- Translators fill in missing translations and copy to `public/locales/{locale}.json`
+- Locale files are **flat** key→string maps (`faq-sno-JJ6A8Y7Z.answer`, `sno-green-ii-runetrap.text`, …). Only `.text`, `.question`, `.answer`, `.class`, `.advice`, `.lore` keys exist
+- Card **names are never translated** and are always shown in English
+- `npm run build-data` writes `{locale}.missing.json` to the **repo root** (git-ignored, not `public/locales/`) listing untranslated keys, and separately warns about `unexpected` keys that no longer exist in `en.json`
+- Fill the missing keys directly into `public/locales/{locale}.json`, inserting each key next to its sibling keys
+- **Never round-trip a locale file through a JSON serializer.** The files contain `\uXXXX` escapes (e.g. `\u2014` for em dashes) and blank-line grouping that `json.dumps`/`JSON.stringify` destroys, producing a several-hundred-line diff. Insert lines textually, then confirm `git diff --stat` shows only added lines
+- Re-run `npm run build-data` to verify — no `Missing Translations` warning means nothing is missing. The stale `{locale}.missing.json` is **not** removed automatically; delete it by hand
+- Before translating, grep the target locale for existing phrasings of the same fact (e.g. `{hero}.advice` often restates a FAQ) and reuse that wording
 - All supported locales defined in `src/stores/language.ts`
 
 ### AI-Assisted Translation Instructions

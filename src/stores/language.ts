@@ -12,6 +12,10 @@ export const locales = {
     // it: { label: 'Italiano', flag: '🇮🇹' },
 };
 
+export function getLocale(locale: string) {
+    return locales[locale] ?? locales[fallbackLocale];
+}
+
 const defaultLocale = (function () {
     const supportedLocales = Object.keys(locales);
     const browserLocales =

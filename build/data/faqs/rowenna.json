@@ -1,0 +1,10 @@
+{
+    "faq-row-VosqL4ID": {
+        "q": "Your best chance to defeat an enemy hero with your gold card is when they have a low defense card in their discard; why is that?",
+        "a": "The simplest way to kill a hero is by getting a discard on them and waiting for turn 4 when they have no card to defend with. In Rowenna’s case, that doesn't work so well since she heals them first, but if that healed card's defense isn't high enough to block, you still can finish them off with her gold card. In other words, for Rowenna's gold to be effective, look for characters that have already played their high defense cards while having a low defense in the discard.",
+        "ref": [
+            "row-gold-code-of-chivalry",
+            "row-gold-h-earn-the-spurs"
+        ]
+    }
+}

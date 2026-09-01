@@ -70,6 +70,7 @@
 | In the discard | im Ablagestapel    | Discard pile location                       |
 | Face-up        | offen              | Card orientation                            |
 | Face-down      | verdeckt           | Card orientation                            |
+| Ultimate       | Ultimate           | Card Type (the strongest upgrade)           |
 
 ### Combat & Effects
 
@@ -208,3 +209,10 @@ Make sure to preserve:
 `Visiere eine Einheit benachbart zu dir an. Nach dem Angriff: Du darfst dich 1 Feld bewegen. Dann stoße einen feindlichen Helden 1 Feld.`
 
 ---
+
+## Style Conventions in `de.json`
+
+- **Address the reader informally** with `du` / `dein` (e.g. "Visiere eine Einheit benachbart zu **dir** an"). Never use `Sie`.
+- **Quotation marks**: use German quotes `„…“` (opening `„`, closing `“`) — never `"…"` or `“…”`, even when the English source uses them.
+- **Card names stay in English.** The app has no translation keys for card names, so a card referenced in a FAQ is displayed in English: write „Runetrap“, „Oath of Fortitude“, „Energy Drain“.
+- Before translating a FAQ, check whether `{hero}.advice` or a related entry already phrases the same rule in German, and reuse that wording for consistency.
