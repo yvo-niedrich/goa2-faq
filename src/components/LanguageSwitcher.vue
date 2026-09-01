@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue';
-import { useLanguageStore, locales } from '@/stores/language'
+import { useLanguageStore, getLocale, locales } from '@/stores/language'
 import { useViewport } from '@/viewport';
 
 const store = useLanguageStore();
@@ -35,8 +35,8 @@ onBeforeUnmount(() => {
 <template>
     <div ref="dropdownRef" class="language-selector">
         <button class="selector-button" @click="toggle">
-            <span class="flag">{{ locales[store.language].flag }}</span>
-            <span v-if="!isMobile" class="label">{{ locales[store.language].label }}</span>
+            <span class="flag">{{ getLocale(store.language).flag }}</span>
+            <span v-if="!isMobile" class="label">{{ getLocale(store.language).label }}</span>
             <span class="chevron">▾</span>
         </button>
 
