@@ -1,0 +1,10 @@
+{
+    "faq-sno-JJ6A8Y7Z": {
+        "q": "How does “choose” work here?",
+        "a": "The language is different from “Runetrap” and “Oath of Fortitude” to accommodate Snorri's Ultimate (as there can now be two active runes), the player has to choose one of them. If the Ultimate is not active, there is no choice.",
+        "ref": [
+            "sno-green-iii-oath-of-perseverance",
+            "sno-green-iii-runebomb"
+        ]
+    }
+}
