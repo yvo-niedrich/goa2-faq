@@ -4,13 +4,13 @@ import { ref, watch } from 'vue';
 import { createI18n } from 'vue-i18n';
 
 export const fallbackLocale = 'en';
-export const locales: Record<string, { label: string; flag: string; lang?: string }> = {
+export const locales: Record<string, { label: string; flag: string; lang?: string; experimental?: boolean }> = {
     en: { label: 'English', flag: '🇬🇧' },
     de: { label: 'Deutsch', flag: '🇩🇪' },
     // es: { label: 'Español', flag: '🇪🇸' },
     // fr: { label: 'Français', flag: '🇫🇷' },
     // it: { label: 'Italiano', flag: '🇮🇹' },
-    zh: { label: '简体中文', flag: '🇨🇳', lang: 'zh-Hans' },
+    zh: { label: '简体中文', flag: '🇨🇳', lang: 'zh-Hans', experimental: true },
 };
 
 export function getLocale(locale: string) {

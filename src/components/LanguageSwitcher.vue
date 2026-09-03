@@ -37,6 +37,10 @@ onBeforeUnmount(() => {
         <button class="selector-button" @click="toggle">
             <span class="flag">{{ getLocale(store.language).flag }}</span>
             <span v-if="!isMobile" class="label">{{ getLocale(store.language).label }}</span>
+            <span
+                v-if="getLocale(store.language).experimental"
+                class="experimental-badge"
+            >{{ $t('app.language.experimental.badge') }}</span>
             <span class="chevron">▾</span>
         </button>
 
@@ -44,6 +48,10 @@ onBeforeUnmount(() => {
             <button v-for="(lang, code) in locales" :key="code" class="dropdown-item" @click="select(code)">
                 <span class="flag">{{ lang.flag }}</span>
                 <span v-if="!isMobile" class="label">{{ lang.label }}</span>
+                <span
+                    v-if="lang.experimental"
+                    class="experimental-badge"
+                >{{ $t('app.language.experimental.badge') }}</span>
             </button>
         </div>
     </div>
@@ -81,8 +89,10 @@ onBeforeUnmount(() => {
 .dropdown {
     position: absolute;
     top: 100%;
-    left: 0;
-    width: 100%;
+    right: 0;
+    min-width: 100%;
+    width: max-content;
+    max-width: min(20rem, calc(100vw - 1.6em));
     background-color: var(--color-background-mute);
     border: 1px solid var(--color-border);
     border-radius: 4px;
@@ -130,9 +140,22 @@ onBeforeUnmount(() => {
 
 .label {
     font-size: 1em;
+    white-space: nowrap;
 }
 
 .chevron {
     font-size: 0.8em;
+}
+
+.experimental-badge {
+    font-size: 0.65em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    padding: 0.15em 0.4em;
+    border-radius: 3px;
+    background-color: var(--color-warning-background, #fff3cd);
+    color: var(--color-warning-text, #8a6d1a);
+    white-space: nowrap;
 }
 </style>

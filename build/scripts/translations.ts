@@ -29,6 +29,7 @@ export function applicationTranslations(): TranslationMap {
         'app.search.filter': 'Filter',
         'app.search.sort': 'Sort',
         'app.search.empty': 'Nothing matches your search.',
+        'app.language.experimental.badge': 'beta',
         'app.settings.generate-qr': 'QR Code',
         'app.settings.propose-FAQ': 'Add a question',
         'app.sortby.box': 'Expansion',

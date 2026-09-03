@@ -16,6 +16,7 @@
     "app.search.filter": "筛选",
     "app.search.sort": "排序",
     "app.search.empty": "没有找到匹配您搜索的内容。",
+    "app.language.experimental.badge": "测试版",
     "app.settings.generate-qr": "二维码",
     "app.settings.propose-FAQ": "添加问题",
     "app.sortby.box": "扩展包",
