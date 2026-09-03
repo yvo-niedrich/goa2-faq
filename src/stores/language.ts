@@ -4,12 +4,13 @@ import { ref, watch } from 'vue';
 import { createI18n } from 'vue-i18n';
 
 export const fallbackLocale = 'en';
-export const locales = {
+export const locales: Record<string, { label: string; flag: string; lang?: string }> = {
     en: { label: 'English', flag: '🇬🇧' },
     de: { label: 'Deutsch', flag: '🇩🇪' },
     // es: { label: 'Español', flag: '🇪🇸' },
     // fr: { label: 'Français', flag: '🇫🇷' },
     // it: { label: 'Italiano', flag: '🇮🇹' },
+    zh: { label: '简体中文', flag: '🇨🇳', lang: 'zh-Hans' },
 };
 
 export function getLocale(locale: string) {
@@ -34,9 +35,17 @@ const defaultLocale = (function () {
 export const useLanguageStore = defineStore('language', () => {
     const language = useStorage<string | null>('goa2-faq.language', defaultLocale);
 
+    // a locale persisted by an older build may no longer exist (renamed or removed)
+    if (!language.value || !locales.hasOwnProperty(language.value)) {
+        language.value = defaultLocale;
+    }
+
     watch(
         language,
-        (newLang) => { loadLocale(newLang, true) },
+        (newLang) => {
+            setDocumentLang(newLang);
+            loadLocale(newLang, true);
+        },
         { immediate: true },
     );
 
@@ -62,6 +71,16 @@ export function getI18n() {
     }
 
     return i18n;
+}
+
+/**
+ * Keeps <html lang> in sync with the active locale. Beyond a11y this drives glyph
+ * selection for CJK (Han unification) as well as line-breaking rules, so `zh` needs
+ * the more specific `zh-Hans` to render as Simplified Chinese rather than Japanese.
+ */
+function setDocumentLang(locale: string | null) {
+    if (typeof document === 'undefined' || !locale) return;
+    document.documentElement.lang = locales[locale]?.lang ?? locale;
 }
 
 const loadedLanguages = ref<string[]>([]);
